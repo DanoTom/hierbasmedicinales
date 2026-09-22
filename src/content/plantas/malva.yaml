@@ -1,0 +1,35 @@
+nombre: Malva
+tipo: planta
+cientifico:
+  - nombre: Malva sylvestris
+    de: guia-digestiva/9
+familia: { nombre: Malvaceae, agregado: true }
+compuestoActivo: { texto: "Mucílagos (polisacáridos)", de: guia-digestiva/9 }
+acciones: { lista: [Antiinflamatoria de la mucosa, Emoliente], de: guia-digestiva/9 }
+partes:
+  - { parte: flores, de: guia-digestiva/9 }
+  - { parte: hojas, de: guia-digestiva/9 }
+usos:
+  - texto: "Irritación e inflamación de la mucosa digestiva, estreñimiento leve, mucositis, gastritis leve."
+    de: guia-digestiva/9
+  - texto: "Tos y garganta irritada."
+    de: guia-inmunidad/7
+alertas: [embarazo, medicacion]
+contraindicaciones:
+  - texto: "No se conocen contraindicaciones absolutas a dosis normales. Precaución en embarazo."
+    de: guia-digestiva/9
+efectosAdversos:
+  - texto: "Muy poco frecuentes: reacciones alérgicas puntuales."
+    de: guia-digestiva/9
+interacciones:
+  - texto: "Los mucílagos pueden retardar la absorción de otros medicamentos si se toman juntos. Separar 1-2 horas de otros fármacos."
+    de: guia-digestiva/9
+formaDeUso:
+  - texto: "Infusión de flores y hojas: 1-2 cucharadas por taza, 2-3 veces al día. Dejar reposar 15 minutos para que los mucílagos se liberen."
+    de: guia-digestiva/9
+comoActua:
+  - texto: "Llantén, malva y malvavisco contienen mucílagos: polisacáridos que en contacto con agua forman un gel y recubren la mucosa irritada, actuando como una barrera física."
+    de: guia-inmunidad/7
+indice:
+  usos: [mucosa, estrenimiento, tos]
+  preparaciones: [infusion]

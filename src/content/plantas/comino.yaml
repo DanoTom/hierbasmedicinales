@@ -1,0 +1,20 @@
+nombre: Comino
+tipo: planta
+breve: true
+cientifico:
+  - nombre: Cuminum cyminum
+    de: taller-digestivo/8
+familia: { nombre: Apiaceae, agregado: true }
+compuestoActivo: { texto: "Cuminaldehído (aceite esencial)", de: taller-digestivo/8 }
+acciones: { lista: [Carminativa], de: taller-digestivo/8 }
+partes:
+  - { parte: frutos, detalle: "las «semillas» que se usan como especia", agregado: true }
+usos:
+  - texto: "Meteorismo post-prandial, digestión de legumbres."
+    de: taller-digestivo/8
+formaDeUso:
+  - texto: "Infusión, especia."
+    de: taller-digestivo/8
+indice:
+  usos: [gases, digestion]
+  preparaciones: [infusion, fresco]

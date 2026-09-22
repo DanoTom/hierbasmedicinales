@@ -1,0 +1,5 @@
+---
+import { datos } from '../lib/datos';
+const d = await datos();
+---
+<p>{d.plantas.length} plantas, {d.recetas.length} recetas, {d.temas.length} temas, {d.glosario.length} términos</p>

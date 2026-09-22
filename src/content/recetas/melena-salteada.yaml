@@ -1,0 +1,21 @@
+nombre: Melena de león salteada
+orden: 9
+tema: inmunidad
+bajada: "Cocinarla como alimento. Es la manera más agradable de incorporarla."
+de: guia-inmunidad/32
+plantas: [melena-de-leon]
+usos: [mente]
+preparacion: fresco
+ingredientes:
+  - "Melena de león fresca"
+  - "Manteca o aceite de oliva"
+  - "Sal, y opcionalmente ajo y perejil"
+pasos:
+  - texto: "No la laves bajo el agua: absorbe muchísimo líquido y después no dora. Limpiala con un pincel o un paño apenas húmedo."
+  - texto: "Cortala en fetas de alrededor de un centímetro, siguiendo la forma del hongo."
+  - texto: "Sartén bien caliente con poca materia grasa. Ponela y **no la toques** durante tres o cuatro minutos, hasta que se dore."
+  - texto: "Dala vuelta, sumá la manteca, el ajo y la sal recién ahí, y cociná otros tres o cuatro minutos."
+  - texto: "Salpimentá y serví. La textura recuerda a la de un fruto de mar."
+porQue:
+  - texto: "Salar al principio hace que suelte agua y se guise en lugar de dorarse. Recordá también que esto es alimento y no equivale a la cantidad usada en los estudios."
+    de: guia-inmunidad/32

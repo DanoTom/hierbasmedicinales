@@ -1,0 +1,17 @@
+nombre: Saúco
+tipo: planta
+breve: true
+cientifico:
+  - nombre: "Sambucus spp."
+    agregado: true
+    nota: "El material no indica la especie. Se llama saúco a varias especies del género, como Sambucus nigra (europeo) y Sambucus australis (nativo de Argentina)."
+familia: { nombre: Viburnaceae, agregado: true, nota: "Antes se la ubicaba en Adoxaceae o Caprifoliaceae." }
+usos:
+  - texto: "Fiebre y resfrío."
+    de: guia-inmunidad/7
+comoActua:
+  - texto: "Tilo, saúco y equinácea acompañan el cuadro, favorecen la sudoración y el confort. La evidencia de que acorten la duración de la infección es modesta y discutida."
+    de: guia-inmunidad/7
+
+indice:
+  usos: [resfrio]

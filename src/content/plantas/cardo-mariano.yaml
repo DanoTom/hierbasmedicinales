@@ -1,0 +1,31 @@
+nombre: Cardo mariano
+tipo: planta
+cientifico:
+  - nombre: Silybum marianum
+    de: guia-digestiva/6
+familia: { nombre: Asteraceae, agregado: true }
+compuestoActivo: { texto: "Silimarina (flavonolignano)", de: guia-digestiva/6 }
+acciones: { lista: [Hepatoprotectora], de: guia-digestiva/6 }
+partes:
+  - { parte: frutos, detalle: "frutos secos molidos", de: guia-digestiva/14 }
+usos:
+  - texto: "Protección hepatocelular, cirrosis hepática leve, hepatitis tóxica, intoxicación por alcohol."
+    de: guia-digestiva/6
+alertas: [alergias, embarazo, medicacion]
+contraindicaciones:
+  - texto: "Alergia a plantas de la familia Asteraceae. Usar con precaución en embarazo (consultar profesional)."
+    de: guia-digestiva/6
+efectosAdversos:
+  - texto: "Poco frecuentes: efecto laxante leve, náuseas ocasionales."
+    de: guia-digestiva/6
+interacciones:
+  - texto: "Puede interferir con medicamentos metabolizados por el hígado (CYP450). Consultar con profesional."
+    de: guia-digestiva/6
+formaDeUso:
+  - texto: "Extracto estandarizado al 70-80% de silimarina: cápsulas o comprimidos según indicación del fabricante."
+    de: guia-digestiva/6
+  - texto: "Para el cardo mariano (Silybum marianum), la tintura madre es una excelente opción ya que la silimarina se extrae mejor en alcohol. Se usan los frutos secos molidos (parte dura), por lo que corresponde usar 80-90% de alcohol."
+    de: guia-digestiva/14
+indice:
+  usos: [higado]
+  preparaciones: [extracto, tintura]

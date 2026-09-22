@@ -1,0 +1,31 @@
+nombre: Genciana
+tipo: planta
+cientifico:
+  - nombre: Gentiana lutea
+    de: guia-digestiva/8
+familia: { nombre: Gentianaceae, agregado: true }
+compuestoActivo: { texto: "Genciopicrina (iridoide amargo)", de: guia-digestiva/8 }
+acciones: { lista: [Digestiva amarga, Aperitiva], de: guia-digestiva/8 }
+partes:
+  - { parte: raiz, agregado: true }
+usos:
+  - texto: "Inapetencia, digestiones muy lentas, insuficiencia de secreción gástrica, dispepsia con sensación de plenitud."
+    de: guia-digestiva/8
+alertas: [ulcera-gastritis, presion, embarazo]
+contraindicaciones:
+  - texto: "Úlcera gastroduodenal activa, gastritis con hipersecreción ácida, hipertensión arterial, embarazo."
+    de: guia-digestiva/8
+  - texto: "La genciana está contraindicada en úlcera gastroduodenal activa e hipertensión arterial."
+    de: taller-digestivo/9
+efectosAdversos:
+  - texto: "En dosis altas: náuseas, dolor de cabeza. Su sabor extremadamente amargo puede provocar náuseas si se usa mal."
+    de: guia-digestiva/8
+interacciones:
+  - texto: "Puede potenciar el efecto de antihipertensivos."
+    de: guia-digestiva/8
+formaDeUso:
+  - texto: "Tintura o extracto: 20-30 gotas en agua 30 minutos antes de las comidas. No usar más de 4 semanas continuas."
+    de: guia-digestiva/8
+indice:
+  usos: [apetito, digestion]
+  preparaciones: [tintura, extracto]

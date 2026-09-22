@@ -1,0 +1,29 @@
+nombre: Hinojo
+tipo: planta
+cientifico:
+  - nombre: Foeniculum vulgare
+    de: guia-digestiva/7
+familia: { nombre: Apiaceae, agregado: true }
+compuestoActivo: { texto: "Anetol (aceite esencial)", de: guia-digestiva/7 }
+acciones: { lista: [Antiespasmódica, Carminativa], de: guia-digestiva/7 }
+partes:
+  - { parte: frutos, detalle: "frutos (semillas)", de: guia-digestiva/7 }
+usos:
+  - texto: "Gases, distensión abdominal, espasmos intestinales, cólico del lactante (uso externo en masaje)."
+    de: guia-digestiva/7
+alertas: [embarazo, alergias]
+contraindicaciones:
+  - texto: "Embarazo (estimula la musculatura uterina en dosis altas). Alergia a plantas de la familia Apiaceae."
+    de: guia-digestiva/7
+efectosAdversos:
+  - texto: "Raramente: reacciones fotosensibilizantes con extractos concentrados."
+    de: guia-digestiva/7
+interacciones:
+  - texto: "No se conocen interacciones significativas a dosis de infusión habitual."
+    de: guia-digestiva/7
+formaDeUso:
+  - texto: "Infusión de frutos (semillas): 1 cdita por taza, 2-3 veces al día después de las comidas. Para masaje en cólico del lactante: aceite vehicular con gotas de aceite esencial de hinojo."
+    de: guia-digestiva/7
+indice:
+  usos: [gases, espasmos]
+  preparaciones: [infusion, aceite-esencial, uso-externo]

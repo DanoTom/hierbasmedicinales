@@ -1,0 +1,30 @@
+nombre: Bebida caliente con polvo de hongo
+orden: 6
+tema: inmunidad
+bajada: "La forma en que la mayoría de la gente los consume en casa. Tiene truco."
+de: guia-inmunidad/30
+usos: [inmunidad]
+preparacion: polvo
+ingredientes:
+  - "Polvo de hongo (idealmente polvo de extracto, no polvo de hongo crudo)"
+  - "Agua muy caliente, café, leche o bebida vegetal"
+  - "Batidor de mano, mixer o frasco con tapa para agitar"
+  - "Opcional: una pizca de grasa (leche entera, aceite de coco) si el producto contiene triterpenos"
+pasos:
+  - texto: "**Mirá primero qué compraste.** Si el envase dice *extracto*, el trabajo de extracción ya está hecho y solo tenés que disolverlo. Si dice *polvo de hongo* o *hongo molido* a secas, estás ante material crudo y esta bebida va a rendir mucho menos."
+  - texto: "Si es polvo crudo, no lo tires al vaso sin más: hervilo. Ponelo en un jarrito con agua y sostené hervor muy suave **al menos veinte minutos**, revolviendo. Recién ahí sumalo a tu bebida. Es la única manera de que el polvo crudo aporte algo."
+  - texto: "Si es extracto, disolvelo en un poco de líquido caliente formando una pasta antes de agregar el resto. Evita los grumos, que son la queja más común."
+  - texto: "Batí bien: estos polvos no se disuelven del todo, quedan en suspensión, y si no los agitás se van al fondo de la taza y terminan en la pileta."
+  - texto: "Tomalo templado, no hirviendo."
+porQue:
+  - texto: "Los betaglucanos toleran bien el calor; algunos compuestos aromáticos y termolábiles no. Por eso el hervor prolongado se aplica al material crudo, y el extracto ya procesado solo necesita disolverse."
+    de: guia-inmunidad/30
+precauciones:
+  - texto: "**El café con hongo no es neutro.** Si el producto trae cafeína agregada, sumás un estimulante a algo que no lo es, y después es imposible saber a qué atribuir lo que sentís."
+    de: guia-inmunidad/30
+  - texto: "**Cuidado con el polvo suelto y las vías respiratorias.** Estos polvos son muy finos y se aerosolizan al abrir el envase. En personas con alergia a hongos o con asma, abrilo despacio y sin acercar la cara. Se describieron cuadros respiratorios por inhalación de esporas en cultivadores de shiitake."
+    de: guia-inmunidad/30
+  - texto: "**Si el polvo es de micelio sobre grano**, buena parte de lo que estás batiendo en la taza es almidón de cereal. No te va a hacer daño; simplemente no es lo que creías estar comprando."
+    de: guia-inmunidad/30
+  - texto: "**Empezá de a poco.** Las molestias digestivas de los primeros días son frecuentes y suelen ceder. Si no ceden, o si aparece cualquier reacción en la piel, suspendé."
+    de: guia-inmunidad/30

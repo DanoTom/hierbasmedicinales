@@ -1,0 +1,44 @@
+nombre: Tintura madre casera
+orden: 4
+tema: digestivo
+bajada: "Procedimiento general para preparar una tintura madre."
+de: [guia-digestiva/13, guia-digestiva/14]
+plantas: [cardo-mariano, boldo, alcaucil]
+preparacion: tintura
+recomendadoPara:
+  - texto: "Tratamientos de fondo, plantas de uso sostenido (boldo, alcaucil, cardo mariano)."
+    de: guia-digestiva/13
+tablas:
+  - titulo: "Proporciones de alcohol y agua según la parte de la planta"
+    de: guia-digestiva/13
+    columnas: ["Parte de la planta", "Ejemplos", "Alcohol", "Agua", "¿Por qué?"]
+    filas:
+      - ["Partes duras", "Raíces, cortezas, frutos", "80–90%", "10–20%", "El alcohol penetra mejor las estructuras celulares duras para liberar los principios activos"]
+      - ["Partes intermedias", "Tallos, hojas", "60–70%", "30–40%", "Equilibrio entre extracción y preservación de compuestos más solubles en agua"]
+      - ["Partes suaves", "Flores", "50–60%", "40–50%", "Las flores liberan sus principios activos con menor concentración de alcohol"]
+pasos:
+  - texto: "Colocar 100 g de hierba en un frasco de vidrio limpio."
+  - texto: "Agregar un dedo de agua y agitar para hidratar la planta e impregnarla con el líquido."
+  - texto: "Agregar el resto del agua correspondiente y luego el alcohol. Agitar nuevamente."
+  - texto: "Al unirse el agua y el alcohol se genera calor (reacción exotérmica). Es completamente normal, no hay que preocuparse."
+  - texto: "Tapar el frasco y etiquetar con: nombre de la hierba, fecha de preparación, fecha de filtrado, propiedades (opcional)."
+  - texto: "Dejar macerar entre 12 y 28 días en un lugar oscuro y alejado del calor. Agitar el frasco algunos días durante este período para favorecer la liberación de principios activos."
+  - texto: "Una vez cumplido el tiempo, filtrar con un filtro de tela."
+  - texto: "Envasar la solución obtenida en frascos goteros para su uso."
+conservacion:
+  - texto: "Fecha de vencimiento: 2 años a partir de la fecha de preparación, conservando en lugar fresco, oscuro y seco."
+    de: guia-digestiva/14
+formaDeUso:
+  - texto: "Concentración mayor que la infusión: dosis en gotas. Duración del tratamiento: máximo 4-6 semanas continuas, luego descanso."
+    de: guia-digestiva/13
+porQue:
+  - texto: "Mientras más dura la parte de la planta, más alcohol se necesita. El alcohol tiene mayor capacidad que el agua para romper las estructuras celulares y extraer los principios activos."
+    de: guia-digestiva/14
+notas:
+  - texto: "Para el cardo mariano (Silybum marianum), la tintura madre es una excelente opción ya que la silimarina se extrae mejor en alcohol. Se usan los frutos secos molidos (parte dura), por lo que corresponde usar 80-90% de alcohol."
+    de: guia-digestiva/14
+precauciones:
+  - texto: "Sobre las tinturas: conviene saber cuándo no usarlas, «en embarazo y lactancia, en niñas y niños, en personas en abstinencia alcohólica y en quienes toman medicación que interactúa con el alcohol. El contenido alcohólico de una tintura no es despreciable»."
+    de: guia-inmunidad/33
+  - texto: "Hacerla en casa es posible, pero requiere control de graduación alcohólica y de tiempos de maceración, y sobre todo un criterio de calidad de materia prima que no se improvisa."
+    de: guia-inmunidad/32

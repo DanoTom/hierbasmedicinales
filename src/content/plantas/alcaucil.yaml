@@ -1,0 +1,31 @@
+nombre: Alcaucil
+tipo: planta
+cientifico:
+  - nombre: Cynara scolymus
+    de: guia-digestiva/5
+familia: { nombre: Asteraceae, agregado: true }
+compuestoActivo: { texto: "Cinarina (ácido fenólico)", de: guia-digestiva/5 }
+acciones: { lista: [Colagoga, Digestiva amarga], de: guia-digestiva/5 }
+partes:
+  - { parte: hojas, de: guia-digestiva/5 }
+usos:
+  - texto: "Hígado graso leve, colesterol elevado, digestión lenta, dispepsia funcional."
+    de: guia-digestiva/5
+alertas: [vias-biliares, alergias, embarazo, hipolipemiantes, diureticos]
+contraindicaciones:
+  - texto: "Obstrucción biliar, alergia a plantas de la familia Asteraceae, embarazo."
+    de: guia-digestiva/5
+efectosAdversos:
+  - texto: "Poco frecuentes: flatulencias, malestar gastrointestinal leve al inicio del tratamiento."
+    de: guia-digestiva/5
+interacciones:
+  - texto: "Puede potenciar el efecto de medicamentos hipolipemiantes. Precaución con diuréticos."
+    de: guia-digestiva/5
+formaDeUso:
+  - texto: "Extracto estandarizado (cápsulas) o infusión de hojas: 1-2 tazas al día antes de las comidas."
+    de: guia-digestiva/5
+  - texto: "La tintura madre se recomienda para «tratamientos de fondo, plantas de uso sostenido (boldo, alcaucil, cardo mariano)»."
+    de: guia-digestiva/13
+indice:
+  usos: [higado, colesterol, digestion]
+  preparaciones: [extracto, infusion, tintura]

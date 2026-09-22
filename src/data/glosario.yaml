@@ -1,0 +1,265 @@
+# Glosario. Las definiciones con «de» son del material del taller (tal cual).
+# Las marcadas «agregado: true» no están en el material: son definiciones
+# generales, sumadas para ayudar a leer las fichas.
+
+# --- Los cuatro conceptos clave de la guía digestiva -----------------------
+- id: efecto-adverso
+  termino: Efecto adverso
+  pregunta: "¿Qué me genera la planta?"
+  definicion: Es una reacción no deseada que puede ocurrir como consecuencia del uso de una planta, incluso cuando se usa correctamente y a las dosis indicadas. No ocurre en todas las personas, pero es importante conocerlos.
+  ejemplo: el boldo en dosis altas puede causar náuseas o irritación gástrica.
+  de: guia-digestiva/4
+- id: contraindicacion
+  termino: Contraindicación
+  pregunta: "¿Hay algo en mi cuerpo que me impide tomarla?"
+  definicion: Es una condición o situación (enfermedad, estado fisiológico, medicamento) que hace que el uso de una planta sea inadecuado o riesgoso para esa persona en particular. No significa que la planta sea mala, sino que no es adecuada para ese caso específico.
+  ejemplo: el boldo está contraindicado en personas con obstrucción biliar.
+  de: guia-digestiva/4
+- id: interaccion
+  termino: Interacción
+  pregunta: "¿Puede interferir con algún medicamento?"
+  definicion: Ocurre cuando una planta modifica el efecto de un medicamento (o viceversa), ya sea potenciándolo o reduciéndolo. Siempre informar al médico o farmacéutico si se están usando plantas medicinales junto a medicamentos.
+  ejemplo: el jengibre a dosis altas puede potenciar el efecto de anticoagulantes.
+  de: guia-digestiva/4
+- id: dosis
+  termino: Dosis
+  pregunta: "¿Cuánto es suficiente?"
+  definicion: La cantidad adecuada de una planta para obtener el efecto deseado sin generar riesgos. Más cantidad no significa más efecto. En herbolaria, respetar la dosis recomendada es tan importante como en cualquier otro tratamiento. Las dosis indicadas en esta guía son para uso en adultos sanos.
+  de: guia-digestiva/4
+- id: receta-y-dosis
+  termino: Receta (no es lo mismo que dosis)
+  definicion: La receta te dice cuánto material poner en cuánta agua y cuánto tiempo hervirlo. Es información de cocina, igual que la de cualquier caldo. La dosis es otra cosa, cuánto de esa preparación te conviene tomar a vos, cada cuánto y durante cuánto tiempo. Eso depende de tu peso, de tu salud, de la medicación que estés tomando y del producto concreto que hayas comprado.
+  de: guia-inmunidad/2
+
+# --- Cómo actúan las plantas (taller digestivo) ------------------------------
+- id: colagoga
+  termino: Colagoga
+  definicion: Que estimula la liberación de la bilis hacia el intestino. Mejora la digestión de grasas y el drenaje hepático.
+  de: taller-digestivo/6
+  ver: /aprender/como-actuan/
+- id: coleretica
+  termino: Colerética
+  definicion: Que aumenta la producción de bilis.
+  de: taller-digestivo/6
+  ver: /aprender/como-actuan/
+- id: antiespasmodica
+  termino: Antiespasmódica
+  definicion: Relaja la musculatura del tubo digestivo. Actúa sobre los canales de calcio o los receptores muscarínicos de la musculatura lisa, reduciendo los espasmos y el dolor tipo cólico.
+  de: [taller-digestivo/5, taller-digestivo/7]
+  ver: /aprender/como-actuan/
+- id: carminativa
+  termino: Carminativa
+  definicion: Reduce la formación y favorece la eliminación de gases.
+  de: taller-digestivo/8
+  ver: /aprender/como-actuan/
+- id: amarga
+  termino: Digestiva amarga
+  definicion: Estimula la secreción digestiva. Los principios amargos estimulan los receptores gustativos y vagales, activando la secreción de ácido gástrico, jugo pancreático y bilis.
+  de: [taller-digestivo/5, taller-digestivo/9]
+  ver: /aprender/como-actuan/
+- id: antiinflamatoria-mucosa
+  termino: Antiinflamatoria de la mucosa
+  definicion: Protege y calma el revestimiento interno del tubo digestivo. Forma una capa protectora sobre la mucosa, reduce la inflamación local y favorece la cicatrización.
+  de: taller-digestivo/10
+  ver: /aprender/como-actuan/
+- id: antiemetica
+  termino: Antiemética
+  definicion: Reduce o alivia las náuseas y los vómitos.
+  de: taller-digestivo/11
+  ver: /aprender/como-actuan/
+- id: mucosa
+  termino: Mucosa
+  definicion: El revestimiento interno del tubo digestivo.
+  de: taller-digestivo/10
+- id: mucilagos
+  termino: Mucílagos
+  definicion: Polisacáridos que en contacto con agua forman un gel y recubren la mucosa irritada, actuando como una barrera física.
+  de: guia-inmunidad/7
+- id: bilis
+  termino: Bilis
+  definicion: La produce el hígado, se almacena en la vesícula biliar y se libera al intestino para digerir las grasas.
+  de: guia-digestiva/3
+- id: microbiota
+  termino: Microbiota intestinal
+  definicion: La microbiota intestinal regula la digestión, el sistema inmune y la inflamación. Una microbiota saludable contribuye al bienestar digestivo general.
+  de: taller-digestivo/12
+- id: probiotico
+  termino: Probiótico
+  definicion: Microorganismos vivos que, al consumirse en cantidades adecuadas, benefician la salud de la microbiota intestinal. Se obtienen a través de alimentos fermentados.
+  de: taller-digestivo/12
+
+# --- Preparaciones ----------------------------------------------------------
+- id: infusion
+  termino: Infusión
+  definicion: Calentar agua a 80-90º, agregar la planta y tapar. Dejar 5–10 minutos. Ideal para hojas y flores.
+  de: taller-digestivo/13
+  ver: /preparaciones/infusion/
+- id: decoccion
+  termino: Decocción
+  definicion: Poner la planta en agua y hervir 10–20 minutos. Para raíces, cortezas y semillas duras.
+  de: taller-digestivo/13
+  ver: /preparaciones/decoccion/
+- id: tintura-madre
+  termino: Tintura madre
+  definicion: Un extracto vegetal que utiliza una mezcla de agua y alcohol como solvente. El alcohol permite extraer una mayor concentración de principios activos y conservarlos por mucho más tiempo.
+  de: guia-digestiva/13
+  ver: /preparaciones/tintura/
+- id: extracto-seco
+  termino: Extracto seco
+  definicion: Forma estandarizada en cápsulas o comprimidos. Garantiza dosis precisas del principio activo.
+  de: taller-digestivo/13
+  ver: /preparaciones/extracto/
+- id: aceite-esencial
+  termino: Aceite esencial
+  definicion: Altamente concentrado. Uso interno solo con indicación profesional. Uso externo o aromático más frecuente.
+  de: taller-digestivo/13
+  ver: /preparaciones/aceite-esencial/
+- id: doble-extraccion
+  termino: Doble extracción
+  definicion: Extraer con agua caliente y con alcohol, y combinar las dos fracciones al final. Tiene sentido cuando la especie tiene compuestos importantes en ambas solubilidades; el caso paradigmático es el reishi.
+  de: guia-inmunidad/28
+  ver: /preparaciones/extracto/
+- id: estandarizacion
+  termino: Estandarización
+  definicion: El porcentaje declarado de un marcador (betaglucanos, withanólidos, rosavinas) que convierte a un producto en comparable y reproducible.
+  de: guia-inmunidad/34
+- id: reaccion-exotermica
+  termino: Reacción exotérmica
+  definicion: Al unirse el agua y el alcohol se genera calor. Es completamente normal, no hay que preocuparse.
+  de: guia-digestiva/14
+
+# --- Estrés y descanso --------------------------------------------------------
+- id: ansiolitico
+  termino: Ansiolítico
+  definicion: Fármaco que ayuda a disminuir la excitabilidad (por ejemplo clonazepam, alprazolam). Requiere indicación y seguimiento médico.
+  de: taller-estres/3
+- id: hipnotico
+  termino: Hipnótico
+  definicion: Fármaco que favorece el inicio o mantenimiento del sueño (por ejemplo zolpidem). Requiere indicación y seguimiento médico.
+  de: taller-estres/3
+- id: cortisol
+  termino: Cortisol
+  definicion: Con el estrés se activa el sistema de alerta y sube el cortisol. Lo regula el circuito hipotálamo-hipófisis-suprarrenal (el «eje del estrés»).
+  de: [taller-estres/2, guia-inmunidad/8]
+- id: gaba
+  termino: GABA
+  definicion: Neurotransmisor que participa en la regulación del sueño; el sistema GABA es el principal sistema inhibitorio del sistema nervioso central.
+  de: [taller-estres/2, guia-inmunidad/20]
+- id: sistema-limbico
+  termino: Sistema límbico
+  definicion: Parte del sistema nervioso que interviene en la regulación de emociones, memoria y respuesta al estrés.
+  de: taller-estres/6
+- id: sinergia
+  termino: Sinergia
+  definicion: Las plantas tienen múltiples compuestos activos que actúan en conjunto.
+  de: taller-estres/11
+
+# --- Inmunidad, hongos y adaptógenos -----------------------------------------
+- id: modular
+  termino: Modular (la inmunidad)
+  definicion: Ajustar, calibrar, llevar hacia el punto medio. No estimular. Es la palabra que se usa en la literatura seria, en lugar de «subir las defensas».
+  de: guia-inmunidad/5
+  ver: /aprender/sistema-inmune/
+- id: caminos
+  termino: Camino A y camino B
+  definicion: Las dos lógicas con que se usan las plantas medicinales. El camino A alivia un síntoma (se nota en horas, se usa mientras dura el problema). El camino B modula la inmunidad o la respuesta al estrés (se evalúa a las cuatro u ocho semanas, en períodos acotados con descansos).
+  de: guia-inmunidad/6
+  ver: /aprender/dos-caminos/
+- id: inmunidad-innata
+  termino: Inmunidad innata
+  definicion: "El brazo rápido del sistema inmune (minutos a horas), inespecífico: reconoce patrones generales de microorganismos. Incluye barreras (piel, mucosas, acidez gástrica), macrófagos, neutrófilos, células natural killer y el sistema del complemento. En el taller, «el portero del edificio»."
+  de: guia-inmunidad/5
+  ver: /aprender/sistema-inmune/
+- id: inmunidad-adquirida
+  termino: Inmunidad adquirida
+  definicion: "El brazo específico del sistema inmune: reconoce ese invasor y no otro, y guarda memoria duradera. Son los linfocitos T y los linfocitos B, que fabrican anticuerpos a medida. En el taller, «el detective»."
+  de: guia-inmunidad/5
+  ver: /aprender/sistema-inmune/
+- id: inmunidad-entrenada
+  termino: Inmunidad entrenada
+  definicion: La idea de que la inmunidad innata puede quedar preparada aunque no tenga memoria específica. Es el marco donde hoy se estudian los betaglucanos de los hongos.
+  de: guia-inmunidad/10
+- id: adaptogeno
+  termino: Adaptógeno
+  definicion: No es una categoría botánica sino funcional, definida por lo que se supone que estas especies hacen. Según los criterios de Brekhman y Dardymov (1969), debe ser inespecífico, normalizador y poco tóxico.
+  de: guia-inmunidad/8
+  ver: /aprender/adaptogenos/
+- id: betaglucanos
+  termino: Betaglucanos
+  definicion: "Polisacáridos de la pared de las células de los hongos: cadenas de glucosa con una arquitectura ramificada que las células inmunes reconocen. Si el hongo no se extrae con calor, quedan encerrados detrás de la quitina."
+  de: guia-inmunidad/10
+  ver: /aprender/hongos/
+- id: quitina
+  termino: Quitina
+  definicion: El mismo polímero que forma el exoesqueleto de los insectos. Está en la pared de los hongos y es fibra que los humanos no digerimos.
+  de: guia-inmunidad/10
+- id: cuerpo-fructifero
+  termino: Cuerpo fructífero
+  definicion: "Lo que llamamos hongo en el lenguaje corriente: la estructura reproductiva, el equivalente a la manzana."
+  de: guia-inmunidad/10
+- id: micelio
+  termino: Micelio
+  definicion: "El organismo propiamente dicho del hongo: una red de filamentos que crece dentro del sustrato, sea un tronco, la tierra o, en cultivo industrial, un grano."
+  de: guia-inmunidad/10
+- id: dectina-1
+  termino: Dectina-1
+  definicion: El principal receptor con que las células de la inmunidad innata (macrófagos, neutrófilos y células dendríticas) reconocen los betaglucanos de los hongos.
+  de: guia-inmunidad/10
+- id: triterpenos
+  termino: Triterpenos (del reishi)
+  definicion: "Ácidos ganodéricos y compuestos relacionados: metabolitos liposolubles que se concentran en el cuerpo fructífero maduro. Son amargos y casi no pasan al agua."
+  de: [guia-inmunidad/11, guia-inmunidad/12]
+- id: ngf
+  termino: NGF (factor de crecimiento nervioso)
+  definicion: Una neurotrofina, es decir, una proteína que sostiene la supervivencia, el crecimiento y la diferenciación de determinadas neuronas.
+  de: guia-inmunidad/14
+- id: citocromo-p450
+  termino: Citocromo P450
+  definicion: El sistema hepático que metaboliza buena parte de los medicamentos.
+  de: guia-inmunidad/12
+
+# --- Definiciones agregadas (no están en el material del taller) --------------
+- id: dispepsia
+  termino: Dispepsia
+  definicion: Malestar en la parte alta del abdomen durante o después de comer, con pesadez, sensación de llenarse enseguida o ardor.
+  agregado: true
+- id: meteorismo
+  termino: Meteorismo
+  definicion: Acumulación de gases en el intestino, con hinchazón del abdomen.
+  agregado: true
+- id: emoliente
+  termino: Emoliente
+  definicion: Que suaviza y protege una superficie irritada, como la piel o una mucosa.
+  agregado: true
+- id: hepatoprotector
+  termino: Hepatoprotectora
+  definicion: Que protege las células del hígado.
+  agregado: true
+- id: diuretico
+  termino: Diurética
+  definicion: Que aumenta la cantidad de orina. También se llama así a los medicamentos con ese efecto.
+  agregado: true
+- id: peristaltismo
+  termino: Peristaltismo
+  definicion: Las contracciones en onda de los músculos del tubo digestivo, que empujan el contenido hacia adelante.
+  agregado: true
+- id: termolabil
+  termino: Termolábil
+  definicion: Que se altera o se destruye con el calor.
+  agregado: true
+- id: anticoagulante
+  termino: Anticoagulante
+  definicion: Medicamento que hace más lenta la coagulación de la sangre, como la warfarina.
+  agregado: true
+- id: antiagregante
+  termino: Antiagregante
+  definicion: Medicamento que evita que las plaquetas se agrupen, como la aspirina o el clopidogrel.
+  agregado: true
+- id: antihipertensivo
+  termino: Antihipertensivo
+  definicion: Medicamento para bajar la presión arterial.
+  agregado: true
+- id: hipolipemiante
+  termino: Hipolipemiante
+  definicion: Medicamento para bajar el colesterol o los triglicéridos.
+  agregado: true

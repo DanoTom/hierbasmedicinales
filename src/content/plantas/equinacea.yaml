@@ -1,0 +1,20 @@
+nombre: Equinácea
+tipo: planta
+breve: true
+cientifico:
+  - nombre: "Echinacea spp."
+    agregado: true
+    nota: "El material no indica la especie."
+familia: { nombre: Asteraceae, agregado: true }
+usos:
+  - texto: "Fiebre y resfrío."
+    de: guia-inmunidad/7
+comoActua:
+  - texto: "Tilo, saúco y equinácea acompañan el cuadro, favorecen la sudoración y el confort. La evidencia de que acorten la duración de la infección es modesta y discutida."
+    de: guia-inmunidad/7
+alertas: [autoinmune]
+contraindicaciones:
+  - texto: "La equinácea tiene sus propias contraindicaciones en enfermedad autoinmune. Que una planta se venda suelta en una dietética no dice nada sobre su seguridad."
+    de: guia-inmunidad/7
+indice:
+  usos: [resfrio]

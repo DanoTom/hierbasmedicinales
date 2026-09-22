@@ -1,0 +1,20 @@
+nombre: Sauce
+tipo: planta
+breve: true
+cientifico:
+  - nombre: "Salix spp."
+    agregado: true
+    nota: "El material no indica la especie. Se llama sauce a varias especies del género Salix, como el sauce blanco (Salix alba)."
+familia: { nombre: Salicaceae, agregado: true }
+usos:
+  - texto: "Inflamación y dolor."
+    de: guia-inmunidad/7
+comoActua:
+  - texto: "Jengibre, cúrcuma y sauce inhiben enzimas que fabrican los mediadores del dolor y la inflamación. El sauce contiene salicina, precursora directa del ácido acetilsalicílico."
+    de: guia-inmunidad/7
+alertas: [ulcera-gastritis, sangrado]
+contraindicaciones:
+  - texto: "Natural no quiere decir inocuo. El sauce es el ejemplo perfecto: es aspirina vegetal, y comparte con la aspirina las mismas precauciones, incluidas las gástricas y las de sangrado."
+    de: guia-inmunidad/7
+indice:
+  usos: [dolor]

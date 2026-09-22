@@ -1,0 +1,17 @@
+nombre: Eucalipto
+tipo: planta
+breve: true
+cientifico:
+  - nombre: "Eucalyptus spp."
+    agregado: true
+    nota: "El material no indica la especie. El género Eucalyptus incluye muchas especies, como Eucalyptus globulus."
+familia: { nombre: Myrtaceae, agregado: true }
+usos:
+  - texto: "Tos productiva."
+    de: guia-inmunidad/7
+comoActua:
+  - texto: "Tomillo y eucalipto aportan aceites esenciales como el timol y el eucaliptol, con acción expectorante y antiséptica sobre la vía aérea."
+    de: guia-inmunidad/7
+
+indice:
+  usos: [tos]

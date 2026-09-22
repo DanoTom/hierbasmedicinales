@@ -1,0 +1,43 @@
+nombre: Pasionaria
+tipo: planta
+otrosNombres:
+  - nombre: Pasiflora
+    de: taller-estres/5
+cientifico:
+  - nombre: Passiflora incarnata
+    de: taller-estres/8
+  - nombre: Passiflora edulis
+    de: taller-estres/8
+familia: { nombre: Passifloraceae, agregado: true }
+partes:
+  - { parte: partes-aereas, de: taller-estres/8 }
+usos:
+  - texto: "Ansiedad, estrés."
+    de: taller-estres/8
+  - texto: "Dificultad para dormir / insomnio."
+    de: taller-estres/8
+  - texto: "Tensión nerviosa con manifestaciones físicas (palpitaciones, inquietud)."
+    de: taller-estres/8
+  - texto: "Para la noche (descanso / sueño): pasiflora y valeriana «favorecen la relajación y el inicio del sueño»."
+    de: taller-estres/5
+  - texto: "Otros usos: puede ayudar en molestias menstruales; útil en síntomas asociados al estrés (respiración agitada, tensión)."
+    de: taller-estres/8
+alertas: [sedantes, embarazo, lactancia]
+contraindicaciones:
+  - texto: "Evitar en embarazo y lactancia."
+    de: taller-estres/8
+efectosAdversos:
+  - texto: "En altas dosis: náuseas, somnolencia, ↓ frecuencia cardíaca."
+    de: taller-estres/8
+interacciones:
+  - texto: "Puede potenciar sedantes (ej: benzodiazepinas, barbitúricos)."
+    de: taller-estres/8
+formaDeUso:
+  - texto: "Infusión de partes aéreas: ~8 g/L de agua. 1 taza por la noche (puede repetirse según necesidad)."
+    de: taller-estres/8
+comoActua:
+  - texto: "Efecto ansiolítico y sedante suave. Favorece la relajación: ayuda a «bajar revoluciones» antes de dormir."
+    de: taller-estres/8
+indice:
+  usos: [estres, sueno, menstrual]
+  preparaciones: [infusion]

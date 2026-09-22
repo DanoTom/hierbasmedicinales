@@ -1,0 +1,38 @@
+nombre: Melisa
+tipo: planta
+cientifico:
+  - nombre: Melissa officinalis
+    de: taller-estres/6
+familia: { nombre: Lamiaceae, agregado: true }
+partes:
+  - { parte: hojas, de: taller-estres/6 }
+usos:
+  - texto: "Estrés, ansiedad leve."
+    de: taller-estres/6
+  - texto: "Dificultad para relajarse / insomnio leve."
+    de: taller-estres/6
+  - texto: "Molestias digestivas de origen nervioso."
+    de: taller-estres/6
+  - texto: "Para el día (estrés / ansiedad leve): melisa y lavanda «ayudan a reducir el nerviosismo sin generar somnolencia marcada»."
+    de: taller-estres/5
+alertas: [tiroides, embarazo, lactancia, sedantes]
+contraindicaciones:
+  - texto: "Evitar uso prolongado en hipotiroidismo."
+    de: taller-estres/6
+  - texto: "Evitar en embarazo y lactancia."
+    de: taller-estres/6
+interacciones:
+  - texto: "Puede potenciar sedantes (ej: barbitúricos)."
+    de: taller-estres/6
+formaDeUso:
+  - texto: "Infusión de hojas: 10 g/L de agua, 1–2 tazas por día."
+    de: taller-estres/6
+  - texto: "El cedrón es «excelente combinado con menta o melisa»."
+    de: guia-digestiva/7
+comoActua:
+  - texto: "Efecto relajante. Actúa sobre el sistema límbico (regulación de emociones, memoria y respuesta al estrés)."
+    de: taller-estres/6
+indice:
+  usos: [estres, sueno, digestion-nerviosa]
+  preparaciones: [infusion]
+lamina: melisa

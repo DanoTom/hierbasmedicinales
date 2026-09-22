@@ -1,0 +1,85 @@
+# Categorías de acción de la presentación del taller digestivo (diaps. 5 a 11).
+# Las filas copian las tablas de cada diapositiva. «planta» es el nombre del
+# archivo de la ficha (sin .yaml).
+- id: colagogas
+  nombre: Colagogas y coleréticas
+  orden: 1
+  resumen: Estimulan la producción o el flujo de bilis.
+  subtitulo: Actúan sobre el hígado y la vesícula biliar.
+  donde: Hígado · Vesícula biliar
+  mecanismo: Aumentan la producción de bilis (colerético) o estimulan su liberación hacia el intestino (colagogo). Mejoran la digestión de grasas y el drenaje hepático.
+  advertencia: Contraindicado en obstrucción biliar, cálculos biliares grandes o cólico biliar agudo.
+  de: [taller-digestivo/5, taller-digestivo/6]
+  filas:
+    - { planta: boldo, compuesto: "Boldina (alcaloide)", indicacion: "Dispepsia, cálculos biliares leves, digestión pesada", forma: "Infusión de hojas" }
+    - { planta: alcaucil, compuesto: "Cinarina (ácido fenólico)", indicacion: "Hígado graso, colesterol, digestión lenta", forma: "Extracto, infusión" }
+    - { planta: cardo-mariano, compuesto: "Silimarina (flavonolignano)", indicacion: "Protección hepatocelular, cirrosis leve", forma: "Cápsulas, tintura" }
+    - { planta: diente-de-leon, compuesto: "Taraxacina (sesquiterpeno amargo)", indicacion: "Estimulación hepática y biliar, retención de líquidos", forma: "Infusión raíz/hoja" }
+- id: antiespasmodicas
+  nombre: Antiespasmódicas
+  orden: 2
+  resumen: Relajan la musculatura del tubo digestivo.
+  subtitulo: Relajan la musculatura lisa del tubo digestivo.
+  donde: Estómago · Intestino delgado · Colon
+  mecanismo: Actúan sobre los canales de calcio o los receptores muscarínicos de la musculatura lisa, reduciendo los espasmos y el dolor tipo cólico.
+  advertencia: El aceite esencial de menta está contraindicado en reflujo gastroesofágico y en niños pequeños.
+  de: [taller-digestivo/5, taller-digestivo/7]
+  filas:
+    - { planta: menta, compuesto: "Mentol (aceite esencial)", indicacion: "Colon irritable, espasmos intestinales, náuseas", forma: "Aceite esencial (cáps.), infusión" }
+    - { planta: manzanilla, compuesto: "Apigenina (flavonoide)", indicacion: "Espasmos, gastritis leve, cólicos en general", forma: "Infusión de flores" }
+    - { planta: cedron, compuesto: "Citral, limoneno (aceites esenc.)", indicacion: "Espasmos digestivos, ansiedad con síntomas digestivos", forma: "Infusión de hojas" }
+    - { planta: hinojo, compuesto: "Anetol (aceite esencial)", indicacion: "Espasmos + gases, cólico del lactante (uso externo)", forma: "Infusión de frutos" }
+- id: carminativas
+  nombre: Carminativas
+  orden: 3
+  resumen: Favorecen la eliminación de gases.
+  subtitulo: Reducen la formación y favorecen la eliminación de gases.
+  donde: Intestino delgado · Intestino grueso
+  mecanismo: Contienen aceites esenciales (principalmente terpenos) que reducen la tensión superficial de las burbujas de gas y estimulan el peristaltismo intestinal.
+  advertencia: Evitar el anís en embarazo. El jengibre a dosis altas puede interactuar con anticoagulantes.
+  de: [taller-digestivo/5, taller-digestivo/8]
+  filas:
+    - { planta: anis-verde, compuesto: "Anetol (aceite esencial)", indicacion: "Meteorismo, flatulencias, espasmos leves", forma: "Infusión de frutos" }
+    - { planta: hinojo, compuesto: "Anetol, fenchona (ac. esencial)", indicacion: "Gases, distensión, cólicos (doble acción: carmin. + antiespas.)", forma: "Infusión de frutos" }
+    - { planta: jengibre, compuesto: "Gingeroles y shogaoles (fenoles)", indicacion: "Náuseas, gases, digestión lenta, dismotilidad", forma: "Infusión, fresco, cáps." }
+    - { planta: comino, compuesto: "Cuminaldehído (aceite esencial)", indicacion: "Meteorismo post-prandial, digestión de legumbres", forma: "Infusión, especia" }
+- id: amargas
+  nombre: Digestivas y amargas
+  orden: 4
+  resumen: Estimulan la secreción digestiva.
+  subtitulo: Estimulan la secreción gástrica y pancreática.
+  donde: Boca · Estómago · Páncreas
+  mecanismo: Los principios amargos estimulan los receptores gustativos y vagales, activando la secreción de ácido gástrico, jugo pancreático y bilis. Mejoran la digestión global.
+  advertencia: La genciana está contraindicada en úlcera gastroduodenal activa e hipertensión arterial.
+  de: [taller-digestivo/5, taller-digestivo/9]
+  filas:
+    - { planta: jengibre, compuesto: "Gingeroles (fenilalcanoides)", indicacion: "Estimula la motilidad gástrica, antiemético", forma: "Fresco, infusión, cáps." }
+    - { planta: alcaucil, compuesto: "Cinarina (ácido fenólico)", indicacion: "Dispepsia funcional, digestión lenta y pesada", forma: "Extracto estandarizado" }
+    - { planta: genciana, compuesto: "Genciopicrina (iridoide amargo)", indicacion: "Inapetencia, digestiones muy lentas", forma: "Tintura, extracto (amargo)" }
+    - { planta: romero, compuesto: "Ácido rosmarínico (polifenol)", indicacion: "Digestión pesada, espasmos leves, carminativo suave", forma: "Infusión" }
+- id: mucosa
+  nombre: Antiinflamatorias de la mucosa
+  orden: 5
+  resumen: Protegen y calman la mucosa digestiva.
+  subtitulo: Protegen y calman el revestimiento interno del tubo digestivo.
+  donde: Esófago · Estómago · Intestino
+  mecanismo: Contienen mucílagos, flavonoides o principios activos que forman una capa protectora sobre la mucosa, reducen la inflamación local y favorecen la cicatrización.
+  advertencia: El regaliz convencional (con glicirricina) puede provocar hipertensión y retención de sodio. Preferir el extracto DGL.
+  de: [taller-digestivo/5, taller-digestivo/10]
+  filas:
+    - { planta: manzanilla, compuesto: "Apigenina, alfa-bisabolol (flavon./terp.)", indicacion: "Gastritis, mucosa irritada, colon inflamado", forma: "Infusión concentrada" }
+    - { planta: regaliz, compuesto: "Glicirricina / DGL (triterpeno)", indicacion: "Úlcera gástrica, esofagitis, mucosa inflamada", forma: "Extracto DGL (desglicolado)" }
+    - { planta: malva, compuesto: "Mucílagos (polisacáridos)", indicacion: "Mucositis, irritación intestinal, estreñimiento leve", forma: "Infusión de flores/hojas" }
+    - { planta: sabila, compuesto: "Acemanano (polisacárido)", indicacion: "Colon irritable, constipación, mucosa intestinal", forma: "Jugo (uso interno)" }
+- id: antiemeticas
+  nombre: Antieméticas
+  orden: 6
+  resumen: Reducen o alivian las náuseas y los vómitos.
+  subtitulo: Reducen o alivian las náuseas y los vómitos.
+  donde: Estómago · Sistema nervioso central
+  mecanismo: Actúan sobre los receptores de serotonina (5-HT3) y dopamina del sistema nervioso entérico, y reducen la hipermotilidad gástrica. El jengibre es el antiemético vegetal con mayor evidencia científica.
+  advertencia: El jengibre a dosis altas puede potenciar anticoagulantes. En náuseas del embarazo, consultar al profesional antes de usar.
+  de: taller-digestivo/11
+  filas:
+    - { planta: jengibre, compuesto: "Gingeroles y shogaoles (fenoles)", indicacion: "Náuseas de embarazo, quimioterapia, movimiento y postoperatorio", forma: "Infusión, cáps., fresco" }
+    - { planta: manzanilla, compuesto: "Apigenina (flavonoide)", indicacion: "Náuseas asociadas a espasmos, gastritis o ansiedad digestiva", forma: "Infusión de flores" }

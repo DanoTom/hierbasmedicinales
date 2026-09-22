@@ -1,0 +1,59 @@
+nombre: Melena de león
+tipo: hongo
+cientifico:
+  - nombre: Hericium erinaceus
+    de: guia-inmunidad/14
+familia: { nombre: Hericiaceae, agregado: true }
+partes:
+  - { parte: cuerpo-fructifero, de: guia-inmunidad/14 }
+  - { parte: micelio, de: guia-inmunidad/14 }
+comoActua:
+  - de: guia-inmunidad/14
+    texto: |-
+      Acá vamos despacio, porque es la especie sobre la que circula más entusiasmo y más confusión.
+
+      La melena contiene dos familias de compuestos que están en tejidos distintos: las hericenonas, derivados del alcohol bencílico, se encuentran en el cuerpo fructífero; las erinacinas, diterpenoides de tipo ciatano, se encuentran en el micelio.
+
+      En cultivos celulares, ambas familias inducen la síntesis del factor de crecimiento nervioso o NGF. El NGF es una neurotrofina: una proteína que sostiene la supervivencia, el crecimiento y la diferenciación de determinadas neuronas, entre ellas las sensitivas, las simpáticas y las colinérgicas del prosencéfalo basal. Fue descubierta por Rita Levi-Montalcini y Stanley Cohen, trabajo que les valió el Premio Nobel de Medicina en 1986.
+
+      Y acá está el argumento farmacológico fino: el NGF es una proteína grande, que no atraviesa la barrera hematoencefálica. Por eso resultan interesantes moléculas pequeñas y lipofílicas capaces de llegar al tejido nervioso e inducir allí su producción. De la erinacina A se demostró en ratas que alcanza tejido cerebral.
+usos:
+  - texto: "Foco, memoria y claridad mental."
+    de: guia-inmunidad/14
+  - texto: "Es además un hongo culinario: se cultiva, se consigue fresca y se cocina."
+    de: guia-inmunidad/14
+evidencia:
+  - de: guia-inmunidad/14
+    texto: |-
+      El estudio más citado es un ensayo japonés doble ciego y controlado con placebo, publicado en 2009, en adultos de cincuenta a ochenta años con deterioro cognitivo leve. Participaron treinta personas, quince por grupo, durante dieciséis semanas. El grupo que recibió el hongo mejoró en una escala de función cognitiva, y la mejoría retrocedió después de suspender. Es un resultado interesante y también un estudio muy chico.
+
+      Hay trabajos posteriores, entre ellos un ensayo piloto con micelio enriquecido en erinacina A y estudios en adultos jóvenes sanos con resultados mixtos y muestras pequeñas. En conjunto: hipótesis atractiva, mecanismo plausible, evidencia clínica todavía preliminar.
+
+      **La inconsistencia que nadie menciona:** la enorme mayoría de los productos comerciales son de cuerpo fructífero, es decir hericenonas, mientras que una parte importante de la evidencia neurotrófica más específica está hecha sobre erinacinas, que están en el micelio. El salto desde *hay un mecanismo descrito* hasta *esta gomita mejora tu memoria* tiene, entonces, dos fallas encadenadas: la familia de compuestos y la cantidad.
+alertas: [alergias, embarazo, lactancia]
+cuidados:
+  - situacion: "Alergia a hongos"
+    texto: "Hay reportes de reacciones cutáneas y respiratorias. Si sos alérgica o alérgico a hongos, evitala."
+    de: guia-inmunidad/15
+  - situacion: "Embarazo y lactancia"
+    texto: "Sin datos de seguridad suficientes."
+    de: guia-inmunidad/15
+  - situacion: "Molestias digestivas"
+    texto: "Puede generar incomodidad gástrica al inicio, sobre todo con productos poco extraídos."
+    de: guia-inmunidad/15
+  - situacion: "Expectativas"
+    texto: "No es una precaución médica pero sí sanitaria: es la especie con mayor distancia entre lo que promete el marketing y lo que muestran los estudios."
+    de: guia-inmunidad/15
+formaDeUso:
+  - texto: "En los ensayos se administró repartida en tres tomas diarias con las comidas, no en un horario particular."
+    de: guia-inmunidad/14
+recuadros:
+  - titulo: "Comerla es una opción, y es distinta"
+    de: guia-inmunidad/15
+    texto: "La melena de león es comestible y se cultiva localmente. Se consigue fresca y también deshidratada. Se cocina salteada y tiene una textura fibrosa que suele compararse con la de un fruto de mar. Ahora bien: comerla es alimento, no una dosis terapéutica, y no equivale a lo que se usó en los estudios. Es una manera excelente de incorporarla, siempre que no le pidas lo que no puede dar."
+  - titulo: "Sobre las gomitas"
+    de: guia-inmunidad/35
+    texto: "El problema de una gomita de melena de león no es que sea peligrosa: es que difícilmente pueda contener lo que haría falta."
+indice:
+  usos: [mente]
+  preparaciones: [fresco, extracto, polvo]

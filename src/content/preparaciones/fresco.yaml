@@ -1,0 +1,16 @@
+nombre: En la comida
+orden: 6
+clave: fresco
+bajada: "Fresco, como especia o como alimento: lo más fácil de sumar al día a día."
+secciones:
+  - titulo: "Fresco / especia"
+    items:
+      - texto: "Jengibre, cúrcuma, ajo — se usan directamente en la alimentación cotidiana. Fácil y accesible."
+        de: taller-digestivo/13
+  - titulo: "Hongos de mesa"
+    items:
+      - texto: "Shiitake y maitake son hongos de mesa antes que suplementos. Se consiguen en verdulerías, se cocinan y forman parte de la comida."
+        de: guia-inmunidad/18
+      - texto: "Sobre la melena de león: comerla es alimento, no una dosis terapéutica, y no equivale a lo que se usó en los estudios. Es una manera excelente de incorporarla, siempre que no le pidas lo que no puede dar."
+        de: guia-inmunidad/15
+recetas: [melena-salteada, shiitake-bien-cocido]

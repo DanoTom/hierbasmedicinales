@@ -1,0 +1,37 @@
+nombre: Amargo aperitivo digestivo
+orden: 2
+tema: digestivo
+de: guia-digestiva/11
+plantas: [diente-de-leon, manzanilla]
+usos: [apetito, digestion, higado]
+preparacion: tintura
+recomendadoPara:
+  - texto: "Preparar el sistema digestivo antes de las comidas. Estimula la secreción gástrica y biliar. Consumir 30 minutos antes de comer."
+    de: guia-digestiva/11
+ingredientes:
+  - "30 g de diente de león"
+  - "30 g de flores de manzanilla"
+  - "10 g de cáscara de naranja amarga"
+  - "10 g de hojas de carqueja"
+  - "600 ml de alcohol de uso alimenticio"
+  - "400 ml de agua potable"
+  - "Frasco de vidrio de al menos 1500 ml"
+  - "Colador y frascos gotero"
+  - "Etiqueta para el frasco"
+pasos:
+  - texto: "Colocar las hierbas en el frasco de vidrio."
+  - texto: "Agregar un dedo de agua y agitar para hidratar las hierbas."
+  - texto: "Mezclar el agua y el alcohol, y verter sobre las hierbas."
+  - texto: "Cerrar, etiquetar y guardar en lugar fresco y oscuro."
+  - texto: "Agitar todos los días durante 21 días."
+  - texto: "Al cumplir los 21 días, colar y enfrascar en goteros."
+  - texto: "Etiquetar y guardar en lugar fresco y oscuro."
+formaDeUso:
+  - texto: "15 ml (1 cucharada) antes de cada comida principal."
+    de: guia-digestiva/11
+conservacion:
+  - texto: "Hasta 2 años en lugar fresco, oscuro y seco."
+    de: guia-digestiva/11
+precauciones:
+  - texto: "Es una preparación con alcohol. Sobre las tinturas, la guía de inmunidad aconseja saber cuándo no usarlas: «en embarazo y lactancia, en niñas y niños, en personas en abstinencia alcohólica y en quienes toman medicación que interactúa con el alcohol. El contenido alcohólico de una tintura no es despreciable»."
+    de: guia-inmunidad/33

@@ -1,0 +1,33 @@
+nombre: Diente de león
+tipo: planta
+cientifico:
+  - nombre: Taraxacum officinale
+    de: guia-digestiva/6
+familia: { nombre: Asteraceae, agregado: true }
+compuestoActivo: { texto: "Taraxacina (sesquiterpeno amargo)", de: guia-digestiva/6 }
+acciones: { lista: [Colagoga, Diurética, Digestiva amarga], de: guia-digestiva/6 }
+partes:
+  - { parte: hojas, de: guia-digestiva/6 }
+  - { parte: raiz, de: guia-digestiva/6 }
+  - { parte: flores, detalle: "para el vinagre fermentado", de: guia-digestiva/12 }
+usos:
+  - texto: "Estimulación hepática y biliar, retención de líquidos, inapetencia, digestión lenta."
+    de: guia-digestiva/6
+alertas: [vias-biliares, alergias, ulcera-gastritis, diureticos, diabetes]
+contraindicaciones:
+  - texto: "Obstrucción biliar, alergia a Asteraceae, úlcera péptica activa."
+    de: guia-digestiva/6
+efectosAdversos:
+  - texto: "Poco frecuentes: reacciones alérgicas en personas sensibles a la familia Asteraceae."
+    de: guia-digestiva/6
+interacciones:
+  - texto: "Puede potenciar el efecto de diuréticos y de medicamentos para la diabetes."
+    de: guia-digestiva/6
+formaDeUso:
+  - texto: "Infusión de hojas o raíz: 1-2 cucharaditas por taza, 2-3 veces al día. La raíz tostada puede usarse como sustituto del café."
+    de: guia-digestiva/6
+  - texto: "Vinagre fermentado: variante con flores de diente de león (digestivo y diurético)."
+    de: guia-digestiva/12
+indice:
+  usos: [higado, liquidos, apetito, digestion]
+  preparaciones: [infusion, fermentado]

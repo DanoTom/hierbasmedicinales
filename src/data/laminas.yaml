@@ -1,0 +1,45 @@
+# Láminas botánicas: de dónde sale cada una y con qué licencia.
+# Solo imágenes de dominio público verificadas. La página /creditos/ se arma
+# con este archivo. ancho, alto y tamanos los completa scripts/laminas/procesar.mjs.
+- id: lavanda
+  especie: Lavandula angustifolia
+  titulo: Lavandula angustifolia
+  autor: Walther Otto Müller (dibujo), en la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen, lámina 87
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons. Es la misma imagen que se usó en la presentación del taller de estrés y descanso (diap. 7).
+  url: https://commons.wikimedia.org/wiki/File:Lavandula_angustifolia_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-087.jpg
+  ancho: 438
+  alto: 597
+  tamanos:
+    - 320
+    - 438
+- id: melisa
+  especie: Melissa officinalis
+  titulo: Melissa officinalis
+  autor: Walther Otto Müller (dibujo), en la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen, lámina 94
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons. Es la misma imagen que se usó en la presentación del taller de estrés y descanso (diap. 6).
+  url: https://commons.wikimedia.org/wiki/File:Melissa_officinalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-094.jpg
+  ancho: 441
+  alto: 594
+  tamanos:
+    - 320
+    - 441
+- id: valeriana
+  especie: Valeriana officinalis
+  titulo: Valeriana officinalis
+  autor: Dibujantes de la obra de Franz Eugen Köhler (Walther Otto Müller, C. F. Schmidt)
+  obra: Köhler's Medizinal-Pflanzen, lámina 143
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons. Es la misma imagen que se usó en la presentación del taller de estrés y descanso (diap. 9).
+  url: https://commons.wikimedia.org/wiki/File:Valeriana_officinalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-143.jpg
+  ancho: 453
+  alto: 593
+  tamanos:
+    - 320
+    - 453

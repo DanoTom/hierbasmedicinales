@@ -1,0 +1,14 @@
+nombre: Fermentados
+orden: 8
+clave: fermentado
+bajada: "Incorporar fermentados a la alimentación cotidiana como aliados del sistema digestivo."
+secciones:
+  - titulo: "¿Qué es un probiótico?"
+    items:
+      - texto: "Microorganismos vivos que, al consumirse en cantidades adecuadas, benefician la salud de la microbiota intestinal. Se obtienen a través de alimentos fermentados."
+        de: taller-digestivo/12
+  - titulo: "¿Por qué importa la microbiota?"
+    items:
+      - texto: "La microbiota intestinal regula la digestión, el sistema inmune y la inflamación. Una microbiota saludable contribuye al bienestar digestivo general."
+        de: taller-digestivo/12
+recetas: [vinagre-de-lavanda]

@@ -1,0 +1,38 @@
+nombre: Infusión
+orden: 1
+clave: infusion
+bajada: "Agua caliente sobre la planta, tapado. Ideal para hojas y flores."
+secciones:
+  - titulo: "Cómo se hace"
+    items:
+      - texto: "Calentar agua a 80-90º, agregar la planta y tapar. Dejar 5–10 minutos. Ideal para hojas y flores."
+        de: taller-digestivo/13
+  - titulo: "Saquito o planta suelta: no es todo lo mismo"
+    items:
+      - texto: "Saquito → dosis más estandarizada, generalmente más suave."
+        de: taller-estres/4
+      - texto: "Planta suelta → mayor concentración, más variable."
+        de: taller-estres/4
+  - titulo: "¿De qué depende el efecto?"
+    items:
+      - texto: "Cantidad de planta. Tiempo de infusión. Parte de la planta utilizada."
+        de: taller-estres/4
+      - texto: "No es lo mismo «tomar un té» que usar una planta con un objetivo. La constancia importa."
+        de: taller-estres/4
+  - titulo: "Qué extrae y cuándo sirve"
+    items:
+      - texto: "Compuestos aromáticos y algunos hidrosolubles livianos. Adecuada para hojas y flores (tulsi, tilo, manzanilla). Insuficiente para hongos y para raíces duras."
+        de: guia-inmunidad/28
+      - texto: "**Hacer infusión de hongo** es uno de los errores más frecuentes: cinco minutos de agua caliente no degradan la quitina. Estás tomando agua con gusto a hongo."
+        de: guia-inmunidad/33
+  - titulo: "¿Infusión o tintura?"
+    tabla:
+      de: guia-digestiva/13
+      columnas: ["", "Infusión / Decocción", "Tintura madre"]
+      filas:
+        - ["Velocidad de acción", "Más rápida — ideal para síntomas agudos (espasmos, náuseas, gases)", "Algo más lenta al inicio, pero sostenida en el tiempo"]
+        - ["Uso recomendado", "Molestias puntuales y tratamientos cortos", "Tratamientos de fondo, plantas de uso sostenido (boldo, alcaucil, cardo mariano)"]
+        - ["Concentración", "Menor", "Mayor — dosis en gotas"]
+        - ["Conservación", "Horas a temperatura ambiente o hasta 48 hs en heladera", "Hasta 2 años en lugar fresco y oscuro"]
+        - ["Duración del tratamiento", "A demanda", "Máximo 4-6 semanas continuas, luego descanso"]
+recetas: [infusion-antinauseas, infusion-de-tulsi]

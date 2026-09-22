@@ -1,0 +1,17 @@
+nombre: Aceite esencial
+orden: 5
+clave: aceite-esencial
+bajada: "Altamente concentrado. El uso externo o aromático es el más frecuente."
+secciones:
+  - titulo: "Qué es"
+    items:
+      - texto: "Altamente concentrado. Uso interno solo con indicación profesional. Uso externo o aromático más frecuente."
+        de: taller-digestivo/13
+  - titulo: "Lo que dicen las fichas"
+    items:
+      - texto: "Menta: el aceite esencial está contraindicado en reflujo gastroesofágico y en niños pequeños; el aceite esencial puro no debe usarse en mucosas ni en el rostro de niños."
+        de: [taller-digestivo/7, guia-digestiva/6]
+      - texto: "Lavanda: el aceite esencial puro no debe ingerirse sin supervisión profesional."
+        de: guia-digestiva/10
+      - texto: "Romero: el aceite esencial en dosis altas puede ser convulsivante."
+        de: guia-digestiva/9

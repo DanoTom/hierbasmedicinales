@@ -1,0 +1,30 @@
+nombre: Romero
+tipo: planta
+cientifico:
+  - nombre: Rosmarinus officinalis
+    de: guia-digestiva/9
+    nota: "Hoy muchos botánicos lo ubican en el género Salvia, como Salvia rosmarinus (dato agregado)."
+familia: { nombre: Lamiaceae, agregado: true }
+compuestoActivo: { texto: "Ácido rosmarínico (polifenol)", de: guia-digestiva/9 }
+acciones: { lista: [Digestiva, Colerética suave, Carminativa], de: guia-digestiva/9 }
+partes:
+  - { parte: hojas, de: guia-digestiva/9 }
+usos:
+  - texto: "Digestión pesada, espasmos digestivos leves, insuficiencia biliar leve, flatulencias."
+    de: guia-digestiva/9
+alertas: [embarazo, presion, epilepsia, anticoagulantes]
+contraindicaciones:
+  - texto: "Embarazo en dosis medicinales (no en cantidades culinarias). Hipertensión arterial con extractos concentrados. Epilepsia."
+    de: guia-digestiva/9
+efectosAdversos:
+  - texto: "Poco frecuentes: dermatitis de contacto. El aceite esencial en dosis altas puede ser convulsivante."
+    de: guia-digestiva/9
+interacciones:
+  - texto: "Puede interferir con anticoagulantes y antihipertensivos a dosis altas."
+    de: guia-digestiva/9
+formaDeUso:
+  - texto: "Infusión de hojas: 1 cucharadita por taza, 1-2 veces al día después de las comidas. También como condimento."
+    de: guia-digestiva/9
+indice:
+  usos: [digestion, espasmos, gases, higado]
+  preparaciones: [infusion, fresco]

@@ -1,0 +1,17 @@
+nombre: Llantén
+tipo: planta
+breve: true
+cientifico:
+  - nombre: "Plantago spp."
+    agregado: true
+    nota: "El material no indica la especie. Suele llamarse llantén a Plantago major y Plantago lanceolata."
+familia: { nombre: Plantaginaceae, agregado: true }
+usos:
+  - texto: "Tos y garganta irritada."
+    de: guia-inmunidad/7
+comoActua:
+  - texto: "Llantén, malva y malvavisco contienen mucílagos: polisacáridos que en contacto con agua forman un gel y recubren la mucosa irritada, actuando como una barrera física."
+    de: guia-inmunidad/7
+
+indice:
+  usos: [tos]

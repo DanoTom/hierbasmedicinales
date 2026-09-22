@@ -1,0 +1,21 @@
+nombre: Extracto seco y cápsulas
+orden: 4
+clave: extracto
+bajada: "Formas estandarizadas: cantidad conocida por unidad."
+secciones:
+  - titulo: "Qué es"
+    items:
+      - texto: "Forma estandarizada en cápsulas o comprimidos. Garantiza dosis precisas del principio activo."
+        de: taller-digestivo/13
+      - texto: "Extracto seco en cápsula: sí. Cantidad conocida por unidad. Es el formato que permite comparar con la evidencia disponible."
+        de: guia-inmunidad/35
+  - titulo: "Estandarización"
+    items:
+      - texto: "El porcentaje de betaglucanos, de withanólidos o de rosavinas es lo que convierte a un producto en comparable y reproducible. Señal de alarma: ningún marcador declarado."
+        de: guia-inmunidad/34
+  - titulo: "Doble extracción"
+    items:
+      - texto: "Las dos fracciones (agua caliente y alcohol), combinadas al final. Tiene sentido cuando la especie tiene compuestos importantes en ambas solubilidades. El caso paradigmático es el reishi."
+        de: guia-inmunidad/28
+      - texto: "**Un mito para desarmar.** La doble extracción se convirtió en un argumento de venta aplicado a todo por igual, como si fuera sinónimo de calidad. No lo es: es una técnica **apropiada para algunas especies**. Pagar un sobreprecio por un maitake de doble extracción, cuando lo que te interesa de esa especie son los betaglucanos hidrosolubles, es pagar por un paso que no te aporta. La regla real es sencilla: agua caliente siempre, alcohol solo si la especie lo justifica."
+        de: guia-inmunidad/28

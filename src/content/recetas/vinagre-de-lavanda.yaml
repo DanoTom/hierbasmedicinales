@@ -1,0 +1,39 @@
+nombre: Vinagre fermentado de lavanda
+orden: 3
+tema: digestivo
+de: [guia-digestiva/12, taller-digestivo/12]
+plantas: [lavanda, diente-de-leon]
+usos: [microbiota]
+preparacion: fermentado
+recomendadoPara:
+  - texto: "Incorporar probióticos a la alimentación cotidiana. Usar como aderezo o disuelto en agua. También puede prepararse con flores de diente de león, pétalos de rosa o flores de caléndula."
+    de: guia-digestiva/12
+ingredientes:
+  - "500 ml de agua potable"
+  - "3 cucharadas bien colmadas de azúcar rubia"
+  - "Jugo de medio limón"
+  - "20 g de flores de lavanda secas"
+  - "Frasco de vidrio de boca ancha"
+  - "Frasco de vidrio de boca angosta con tapa"
+  - "Lienzos para cubrir los frascos"
+  - "Banditas elásticas"
+  - "Etiqueta para el frasco"
+pasos:
+  - titulo: "Fase 1 — Días 1 a 7"
+    texto: "Colocar todos los ingredientes en el frasco de boca ancha y revolver bien. Tapar con un lienzo y sostener con una banda elástica. Mantener a temperatura ambiente, revolviendo una vez por día para evitar la formación de hongos en la superficie."
+  - titulo: "Fase 2 — Semanas 2 a 4"
+    texto: "Colar el líquido y pasar a un frasco de boca angosta. Cubrir nuevamente con lienzo y banda elástica. Continuar la fermentación a temperatura ambiente por 3 semanas más, sin necesidad de revolver."
+  - titulo: "Final"
+    texto: "Cuando el proceso de fermentación esté completo (total: aprox. 4 semanas), reemplazar el lienzo por una tapa rosca."
+formaDeUso:
+  - texto: "Como aderezo en ensaladas o una cucharadita disuelta en un vaso de agua."
+    de: guia-digestiva/12
+conservacion:
+  - texto: "Conservar en heladera una vez finalizada la fermentación."
+    de: guia-digestiva/12
+porQue:
+  - texto: "Días 1–7: las flores de lavanda inician la extracción en frío. Semanas 2–4: fermentación espontánea sin revolver; la lavanda ya aportó sus principios activos."
+    de: taller-digestivo/12
+notas:
+  - texto: "Este vinagre puede prepararse con cualquier flor comestible y medicinal. Algunas variantes: flores de diente de león (digestivo y diurético), pétalos de rosa (antioxidante) o flores de caléndula (antiinflamatoria)."
+    de: guia-digestiva/12

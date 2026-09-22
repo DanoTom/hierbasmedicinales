@@ -1,0 +1,35 @@
+nombre: Manzanilla
+tipo: planta
+cientifico:
+  - nombre: Matricaria chamomilla
+    de: guia-digestiva/7
+familia: { nombre: Asteraceae, agregado: true }
+compuestoActivo: { texto: "Apigenina (flavonoide)", de: guia-digestiva/7 }
+acciones: { lista: [Antiespasmódica, Antiinflamatoria, Antiemética], de: guia-digestiva/7 }
+partes:
+  - { parte: flores, de: guia-digestiva/7 }
+usos:
+  - texto: "Gastritis leve, espasmos digestivos, cólicos, náuseas, mucosa intestinal irritada, ansiedad con síntomas digestivos."
+    de: guia-digestiva/7
+alertas: [alergias, embarazo, anticoagulantes]
+contraindicaciones:
+  - texto: "Alergia a plantas de la familia Asteraceae. Precaución en embarazo en dosis altas."
+    de: guia-digestiva/7
+  - texto: "En la infusión antináuseas: «En caso de embarazo, consumir solo con jengibre (omitir la manzanilla)»."
+    de: guia-digestiva/11
+efectosAdversos:
+  - texto: "Raramente: reacciones alérgicas (dermatitis de contacto o sistémica) en personas sensibles a Asteraceae."
+    de: guia-digestiva/7
+interacciones:
+  - texto: "Puede potenciar levemente el efecto de anticoagulantes (warfarina) con uso prolongado y dosis altas."
+    de: guia-digestiva/7
+formaDeUso:
+  - texto: "Infusión de flores: 1 cucharada por taza, dejar reposar tapado 10 minutos, colar. 2-4 tazas al día."
+    de: guia-digestiva/7
+recuadros:
+  - titulo: "Aliviar no es modular"
+    texto: "Ni la manzanilla te va a levantar las defensas, ni el reishi te va a cortar la tos hoy."
+    de: guia-inmunidad/6
+indice:
+  usos: [mucosa, espasmos, nauseas, digestion-nerviosa]
+  preparaciones: [infusion]

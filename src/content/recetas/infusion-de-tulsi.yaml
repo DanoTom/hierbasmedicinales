@@ -1,0 +1,20 @@
+nombre: Infusión de tulsi
+orden: 8
+tema: inmunidad
+bajada: "La más simple de todas, y una de las pocas que se hace en infusión y no en decocción."
+de: guia-inmunidad/31
+plantas: [tulsi]
+usos: [estres]
+preparacion: infusion
+ingredientes:
+  - "Hojas secas de tulsi: una cucharadita por taza"
+  - "Agua a punto de hervor, no hirviendo a borbotones"
+  - "Tapa o platito para cubrir la taza"
+pasos:
+  - texto: "Calentá el agua hasta que aparezcan las primeras burbujas y retirala del fuego."
+  - texto: "Volcala sobre las hojas y **tapá inmediatamente**."
+  - texto: "Dejá reposar **de cinco a siete minutos**."
+  - texto: "Colá y tomá."
+porQue:
+  - texto: "Los compuestos activos del tulsi son en buena medida volátiles y aromáticos. El agua a borbotones los degrada, y si no tapás la taza se van con el vapor. Literalmente se te escapan por el aire: tapar no es un gesto decorativo."
+    de: guia-inmunidad/31

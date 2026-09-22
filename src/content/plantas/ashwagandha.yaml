@@ -1,0 +1,66 @@
+nombre: Ashwagandha
+tipo: planta
+cientifico:
+  - nombre: Withania somnifera
+    de: guia-inmunidad/20
+familia: { nombre: "Solanaceae (solanáceas)", de: guia-inmunidad/20 }
+partes:
+  - { parte: raiz, de: guia-inmunidad/20 }
+comoActua:
+  - de: guia-inmunidad/20
+    texto: |-
+      Es la especie mejor estudiada de toda esta guía, y también la que tiene las precauciones más concretas. Pertenece a las solanáceas, la misma familia del tomate, la papa y la berenjena.
+
+      Sus compuestos característicos son los withanólidos, lactonas esteroidales. Actúan sobre el eje hipotálamo-hipófisis-suprarrenal, que es el circuito que regula la producción de cortisol: en los ensayos, quienes la toman muestran descensos del cortisol sérico matutino frente a placebo.
+
+      Existe además evidencia de actividad sobre el sistema GABA, el principal sistema inhibitorio del sistema nervioso central, y sobre receptores de adenosina. Ese es el mecanismo que se propone para el efecto sobre el sueño, y también la razón por la cual puede sumar efecto con sedantes.
+usos:
+  - texto: "Estrés percibido y ansiedad leve: es su uso mejor respaldado."
+    de: guia-inmunidad/20
+  - texto: "Calidad del sueño, con esquemas de toma nocturna en varios ensayos."
+    de: guia-inmunidad/20
+  - texto: "Se evalúa a las seis u ocho semanas y suele usarse en ciclos, con descansos, y no de forma indefinida."
+    de: guia-inmunidad/20
+evidencia:
+  - de: guia-inmunidad/20
+    texto: |-
+      El estudio de referencia es un ensayo prospectivo, aleatorizado, doble ciego y controlado con placebo publicado en 2012 en *Indian Journal of Psychological Medicine*, con sesenta y cuatro adultos con estrés crónico durante sesenta días. El cortisol sérico descendió cerca de un veintiocho por ciento en el grupo tratado frente a cerca de un ocho por ciento en el grupo placebo, y las escalas de estrés mejoraron de forma clara. Es un estudio de un solo centro y con muestra moderada, replicado después en su hallazgo sobre cortisol por metaanálisis posteriores, que a la vez son más cautos sobre cuánto cambia el estrés percibido.
+
+      Hay también ensayos específicos sobre insomnio y ansiedad con resultados favorables.
+alertas: [embarazo, tiroides, higado, sedantes, autoinmune, inmunosupresores, alergias]
+cuidados:
+  - situacion: "Embarazo"
+    texto: "Evitar. Se le atribuye tradicionalmente actividad abortiva y no hay datos de seguridad."
+    de: guia-inmunidad/21
+  - situacion: "Tiroides"
+    texto: "Aumenta T4 y T3 y desciende TSH, por estímulo del eje tiroideo y por conversión periférica. En hipotiroidismo subclínico eso se estudió como potencialmente favorable; en hipertiroidismo o con levotiroxina, el mismo efecto es un riesgo. Hay reportes de tirotoxicosis. Requiere control de laboratorio, no prohibición automática."
+    de: guia-inmunidad/21
+  - situacion: "Hígado"
+    texto: "Hay casos publicados de daño hepático, en general colestásico, con latencia de dos a doce semanas. Ver el recuadro «Hepatotoxicidad»."
+    de: guia-inmunidad/21
+  - situacion: "Enfermedad hepática avanzada"
+    texto: "Desaconsejada en cirrosis y hepatopatía avanzada."
+    de: guia-inmunidad/36
+  - situacion: "Sedantes, ansiolíticos y alcohol"
+    texto: "Puede sumar efecto por la vía GABA."
+    de: guia-inmunidad/21
+  - situacion: "Enfermedad autoinmune e inmunosupresores"
+    texto: "Precaución por su actividad inmunomoduladora."
+    de: guia-inmunidad/21
+  - situacion: "Alergia a solanáceas"
+    texto: "Pertenece a esa familia botánica."
+    de: guia-inmunidad/21
+formaDeUso:
+  - texto: "Sobre el horario: los estudios usaron dos esquemas, repartida en dos tomas diarias o en una única toma nocturna cuando el objetivo era el sueño. Si la buscás por descanso, la toma de noche tiene respaldo directo."
+    de: guia-inmunidad/21
+recuadros:
+  - titulo: "Hepatotoxicidad: qué se sabe y qué mirar"
+    precaucion: true
+    de: guia-inmunidad/21
+    texto: |-
+      Una serie de casos publicada en 2020 en *Liver International*, con pacientes de Islandia y de la red estadounidense de daño hepático por fármacos, describió cinco casos de lesión hepática asociada a suplementos con ashwagandha. Todos presentaron ictericia y síntomas como náuseas, decaimiento y picazón, tras una latencia de dos a doce semanas. El patrón fue colestásico o mixto, ninguno evolucionó a insuficiencia hepática y las pruebas se normalizaron en uno a cinco meses. La base de datos LiverTox la clasifica hoy como causa probable de daño hepático clínicamente aparente y desaconseja su uso en personas con enfermedad hepática avanzada.
+
+      En perspectiva: los casos son infrecuentes frente al enorme volumen de consumo, y en los ensayos clínicos a dosis habituales no aparecieron alteraciones de las enzimas hepáticas. Pero existen, y varios países emitieron alertas. Las señales para consultar sin demora son orina oscura, ojos o piel amarillos, picazón generalizada y cansancio inexplicable.
+indice:
+  usos: [estres, sueno]
+  preparaciones: [extracto]

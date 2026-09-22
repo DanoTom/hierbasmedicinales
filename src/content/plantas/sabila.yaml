@@ -1,0 +1,32 @@
+nombre: Sábila
+tipo: planta
+otrosNombres:
+  - nombre: Aloe
+    de: guia-digestiva/10
+cientifico:
+  - nombre: Aloe vera
+    de: guia-digestiva/10
+familia: { nombre: Asphodelaceae, agregado: true }
+compuestoActivo: { texto: "Acemanano (polisacárido)", de: guia-digestiva/10 }
+acciones: { lista: [Antiinflamatoria de la mucosa, Laxante suave], de: guia-digestiva/10 }
+partes:
+  - { parte: gel, detalle: "gel interior, sin látex", de: guia-digestiva/10 }
+usos:
+  - texto: "Colon irritable, estreñimiento ocasional, mucosa intestinal inflamada."
+    de: guia-digestiva/10
+alertas: [embarazo, lactancia, ninos, corazon, diureticos, diabetes]
+contraindicaciones:
+  - texto: "Síndrome de colon irritable severo, embarazo, lactancia, niños menores de 12 años, enfermedades inflamatorias intestinales activas (Crohn, colitis ulcerosa) sin supervisión."
+    de: guia-digestiva/10
+efectosAdversos:
+  - texto: "El látex (parte amarilla bajo la piel) es fuertemente laxante y puede causar calambres y diarrea. El jugo interno (gel) es el que tiene uso seguro."
+    de: guia-digestiva/10
+interacciones:
+  - texto: "El látex de aloe puede potenciar glucósidos cardíacos y diuréticos. Puede interferir con antidiabéticos."
+    de: guia-digestiva/10
+formaDeUso:
+  - texto: "Jugo de pulpa (gel interior, sin látex): 50-100 ml antes de las comidas. Usar productos estandarizados y certificados sin aloína."
+    de: guia-digestiva/10
+indice:
+  usos: [colon-irritable, estrenimiento, mucosa]
+  preparaciones: [jugo]

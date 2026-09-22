@@ -1,0 +1,18 @@
+nombre: Polvo de hongo
+orden: 7
+clave: polvo
+bajada: "La forma más común de tomar hongos en casa. Tiene truco."
+secciones:
+  - titulo: "Polvo crudo o extracto"
+    items:
+      - texto: "Polvo crudo sin extraer: con reparos. En hongos, la quitina bloquea el aprovechamiento salvo que lo hiervas. En raíces no está prohibido, es ineficiente."
+        de: guia-inmunidad/35
+      - texto: "Si el envase dice *extracto*, el trabajo de extracción ya está hecho y solo tenés que disolverlo. Si dice *polvo de hongo* o *hongo molido* a secas, estás ante material crudo."
+        de: guia-inmunidad/30
+  - titulo: "Errores frecuentes"
+    items:
+      - texto: "**Tomar el polvo crudo en un yogur o un licuado frío.** Sin calor no hay extracción. Es el mismo problema, agravado por la ausencia total de temperatura."
+        de: guia-inmunidad/33
+      - texto: "**Cafés y bebidas funcionales: cuidado.** Suelen aportar cantidades muy por debajo de las estudiadas, y con frecuencia cafeína agregada que confunde la lectura del efecto."
+        de: guia-inmunidad/35
+recetas: [bebida-con-polvo-de-hongo]

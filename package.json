@@ -1,0 +1,32 @@
+{
+  "name": "la-botica",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Cuaderno de plantas medicinales: el material de los talleres, ordenado para consultar desde el celular.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/generar-service-worker.mjs",
+    "preview": "astro preview",
+    "check": "node scripts/verificar-contenido.mjs",
+    "laminas": "node scripts/laminas/descargar.mjs",
+    "iconos": "node scripts/generar-iconos.mjs",
+    "links": "node scripts/verificar-links.mjs",
+    "capturas": "node scripts/capturas.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^7.3.1",
+    "@fontsource-variable/atkinson-hyperlegible-next": "^5.3.0",
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "astro": "^7.3.3",
+    "js-yaml": "^5.4.2",
+    "minisearch": "^7.2.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1",
+    "sharp": "^0.35.4"
+  }
+}

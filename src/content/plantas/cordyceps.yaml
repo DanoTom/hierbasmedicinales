@@ -1,0 +1,60 @@
+nombre: Cordyceps
+tipo: hongo
+cientifico:
+  - nombre: Cordyceps militaris
+    de: guia-inmunidad/16
+  - nombre: Cordyceps sinensis
+    de: guia-inmunidad/16
+    nota: "Hoy se la clasifica como Ophiocordyceps sinensis (dato agregado)."
+familia: { nombre: Cordycipitaceae, agregado: true, nota: "Es la familia de Cordyceps militaris; la especie silvestre tibetana hoy se ubica en Ophiocordycipitaceae." }
+partes:
+  - { parte: cuerpo-fructifero, de: guia-inmunidad/16 }
+  - { parte: micelio, detalle: "micelio fermentado", de: guia-inmunidad/16 }
+comoActua:
+  - de: guia-inmunidad/16
+    texto: |-
+      Primero una aclaración que ahorra dinero: bajo el nombre *cordyceps* se venden dos cosas distintas. *Cordyceps sinensis* es la especie silvestre del altiplano tibetano, un hongo que parasita larvas de mariposa, extraordinariamente cara y prácticamente imposible de conseguir auténtica; lo que suele comercializarse bajo ese nombre es en realidad un micelio fermentado derivado de ella. *Cordyceps militaris* se cultiva industrialmente, es accesible, y es la especie sobre la que se hicieron los estudios clínicos modernos.
+
+      Sus compuestos característicos son nucleósidos: la cordicepina, que es 3'-desoxiadenosina, y la propia adenosina. La cordicepina es estructuralmente casi idéntica a la adenosina, con la diferencia de que le falta un grupo hidroxilo en la ribosa. Esa similitud es la clave de su farmacología: interviene en vías ligadas al metabolismo energético celular y actúa sobre receptores de adenosina. Contiene además polisacáridos con actividad inmunomoduladora, como los demás hongos de esta guía.
+usos:
+  - texto: "Energía, resistencia y rendimiento físico: es el uso más estudiado."
+    de: guia-inmunidad/16
+  - texto: "Fatiga y recuperación después del ejercicio."
+    de: guia-inmunidad/16
+  - texto: "Tradicionalmente se toma de día o antes de la actividad física, ya que puede resultar levemente activante."
+    de: guia-inmunidad/16
+evidencia:
+  - de: guia-inmunidad/16
+    texto: |-
+      La evidencia más consistente es la de rendimiento aeróbico. Un ensayo aleatorizado publicado en 2017 mostró que tres semanas de suplementación mejoraron el consumo máximo de oxígeno y el tiempo hasta el agotamiento en adultos sanos. Revisiones posteriores señalan que el efecto aparece con uso crónico, de al menos dos semanas, y no con una toma aguda, y advierten sobre la heterogeneidad de los productos, las dosis y las poblaciones estudiadas.
+
+      Hay además ensayos sobre marcadores inmunológicos e inflamatorios, y estudios sobre sueño ligados a la acción de la cordicepina sobre receptores de adenosina, con resultados preliminares.
+
+      En síntesis: dentro del grupo de los hongos, es el que tiene la evidencia más clara para un uso concreto y acotado (rendimiento físico) y el que menos justifica las promesas amplias.
+alertas: [autoinmune, inmunosupresores, anticoagulantes, embarazo, lactancia]
+cuidados:
+  - situacion: "Enfermedad autoinmune"
+    texto: "Por su acción inmunoestimulante. Es la contraindicación principal."
+    de: guia-inmunidad/17
+  - situacion: "Inmunosupresores o trasplante"
+    texto: "Contraindicado por el mismo motivo."
+    de: guia-inmunidad/17
+  - situacion: "Anticoagulantes"
+    texto: "Precaución, por acción antiplaquetaria descrita para varios hongos medicinales."
+    de: guia-inmunidad/17
+  - situacion: "Embarazo y lactancia"
+    texto: "Sin datos suficientes; se aconseja abstenerse."
+    de: guia-inmunidad/17
+  - situacion: "Toma nocturna"
+    texto: "Puede resultar activante en personas sensibles. Mejor de día."
+    de: guia-inmunidad/17
+formaDeUso:
+  - texto: "La decocción de hongo entero o en trozos es «el método base para reishi, cordyceps o cualquier hongo deshidratado en trozos»."
+    de: guia-inmunidad/29
+recuadros:
+  - titulo: "Al comprar cordyceps"
+    de: guia-inmunidad/17
+    texto: "Fijate que diga *Cordyceps militaris* y qué parte se usó. Un precio desproporcionado justificado por la rareza del *sinensis* silvestre es una de las estafas más habituales del rubro. Y desconfiá de los productos que solo declaran *micelio sobre grano* sin informar contenido de cordicepina o adenosina."
+indice:
+  usos: [energia, inmunidad]
+  preparaciones: [decoccion, extracto, polvo]

@@ -1,0 +1,31 @@
+nombre: Anís verde
+tipo: planta
+cientifico:
+  - nombre: Pimpinella anisum
+    de: guia-digestiva/8
+familia: { nombre: Apiaceae, agregado: true }
+compuestoActivo: { texto: "Anetol (aceite esencial)", de: guia-digestiva/8 }
+acciones: { lista: [Carminativa, Antiespasmódica suave], de: guia-digestiva/8 }
+partes:
+  - { parte: frutos, de: guia-digestiva/8 }
+usos:
+  - texto: "Meteorismo, flatulencias, espasmos digestivos leves, digestión lenta."
+    de: guia-digestiva/8
+alertas: [embarazo, alergias]
+contraindicaciones:
+  - texto: "Embarazo (puede tener efecto estrogénico en dosis altas). Alergia a plantas de la familia Apiaceae."
+    de: guia-digestiva/8
+  - texto: "Evitar el anís en embarazo."
+    de: taller-digestivo/8
+efectosAdversos:
+  - texto: "Raramente: reacciones alérgicas en personas sensibles a la familia Apiaceae."
+    de: guia-digestiva/8
+interacciones:
+  - texto: "No se conocen interacciones significativas a dosis habituales."
+    de: guia-digestiva/8
+formaDeUso:
+  - texto: "Infusión de frutos: 1 cucharadita por taza, después de las comidas. También como condimento en preparaciones culinarias."
+    de: guia-digestiva/8
+indice:
+  usos: [gases, espasmos, digestion]
+  preparaciones: [infusion, fresco]

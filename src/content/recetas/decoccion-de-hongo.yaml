@@ -1,0 +1,21 @@
+nombre: Decocción de hongo entero o en trozos
+orden: 5
+tema: inmunidad
+bajada: "El método base para reishi, cordyceps o cualquier hongo deshidratado en trozos."
+de: guia-inmunidad/29
+plantas: [reishi, cordyceps]
+usos: [inmunidad]
+preparacion: decoccion
+ingredientes:
+  - "Hongo deshidratado en láminas o trozos: una cucharada sopera colmada por cada dos tazas de agua"
+  - "Una olla con tapa, preferentemente no de aluminio"
+  - "Colador fino"
+pasos:
+  - texto: "Enjuagá rápido los trozos con agua fría para sacar polvo del secado."
+  - texto: "Ponelos en la olla con el agua fría y llevá a hervor suave. Arrancar con agua fría permite que el calor penetre gradualmente el tejido."
+  - texto: "Una vez que rompe el hervor, bajá al mínimo y mantené **entre cuarenta y sesenta minutos** con la tapa entornada. Para reishi, que es especialmente duro, apuntá a los sesenta."
+  - texto: "El líquido va a reducirse a algo más de la mitad y va a tomar color caoba. Colá."
+  - texto: "Se conserva hasta tres días en heladera, en frasco de vidrio cerrado. Se recalienta sin volver a hervir."
+porQue:
+  - texto: "El hervor prolongado es lo que degrada parcialmente la quitina y libera los betaglucanos al agua. Una infusión de cinco minutos, por muy caliente que esté, no alcanza a hacer ese trabajo."
+    de: guia-inmunidad/29

@@ -1,0 +1,19 @@
+nombre: Cúrcuma
+tipo: planta
+breve: true
+cientifico:
+  - nombre: "Curcuma longa"
+    agregado: true
+    nota: "El material no indica el nombre científico; es el de la cúrcuma que se usa como especia."
+familia: { nombre: Zingiberaceae, agregado: true }
+usos:
+  - texto: "Inflamación y dolor."
+    de: guia-inmunidad/7
+comoActua:
+  - texto: "Jengibre, cúrcuma y sauce inhiben enzimas que fabrican los mediadores del dolor y la inflamación. El sauce contiene salicina, precursora directa del ácido acetilsalicílico."
+    de: guia-inmunidad/7
+formaDeUso:
+  - texto: "Fresco o como especia: jengibre, cúrcuma y ajo «se usan directamente en la alimentación cotidiana. Fácil y accesible»."
+    de: taller-digestivo/13
+indice:
+  usos: [dolor]

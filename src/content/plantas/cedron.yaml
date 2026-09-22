@@ -1,0 +1,29 @@
+nombre: Cedrón
+tipo: planta
+cientifico:
+  - nombre: Aloysia citriodora
+    de: guia-digestiva/7
+familia: { nombre: Verbenaceae, agregado: true }
+compuestoActivo: { texto: "Citral y limoneno (aceites esenciales)", de: guia-digestiva/7 }
+acciones: { lista: [Antiespasmódica, Ansiolítica digestiva], de: guia-digestiva/7 }
+partes:
+  - { parte: hojas, detalle: "frescas o secas", de: guia-digestiva/7 }
+usos:
+  - texto: "Espasmos digestivos, colon irritable asociado a ansiedad o estrés, digestión lenta nerviosa."
+    de: guia-digestiva/7
+alertas: [embarazo]
+contraindicaciones:
+  - texto: "Embarazo (uso moderado, consultar profesional). No hay contraindicaciones absolutas bien documentadas."
+    de: guia-digestiva/7
+efectosAdversos:
+  - texto: "Muy poco frecuentes: fotosensibilidad leve con uso de extractos concentrados y exposición al sol."
+    de: guia-digestiva/7
+interacciones:
+  - texto: "No se conocen interacciones significativas a dosis normales de infusión."
+    de: guia-digestiva/7
+formaDeUso:
+  - texto: "Infusión de hojas frescas o secas: 1 cucharadita por taza, 2-3 veces al día. Excelente combinada con menta o melisa."
+    de: guia-digestiva/7
+indice:
+  usos: [espasmos, colon-irritable, digestion-nerviosa]
+  preparaciones: [infusion]

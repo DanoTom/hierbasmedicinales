@@ -1,0 +1,20 @@
+nombre: Decocción de raíz de astrágalo
+orden: 7
+tema: inmunidad
+bajada: "La preparación tradicional, y la más eficiente para esta especie."
+de: guia-inmunidad/31
+plantas: [astragalo]
+usos: [inmunidad]
+preparacion: decoccion
+ingredientes:
+  - "Raíz de astrágalo en láminas: unas cuantas láminas por litro de agua"
+  - "Olla con tapa"
+pasos:
+  - texto: "Poné las láminas en agua fría y dejalas reposar unos veinte minutos antes de encender el fuego. La raíz es leñosa y se hidrata despacio."
+  - texto: "Llevá a hervor y luego mantené a fuego mínimo **entre treinta y cuarenta y cinco minutos**."
+  - texto: "Colá. Queda un líquido dorado, de sabor dulzón y suave, muy distinto del amargor del reishi."
+  - texto: "Se puede usar como base de sopas y caldos, que es la manera tradicional de incorporarlo, en lugar de tomarlo solo."
+  - texto: "Recordá el criterio de temporada: es una preparación para hacer **antes** del invierno, no durante un cuadro febril."
+porQue:
+  - texto: "Acá no hay quitina que romper: el hervor prolongado sirve para vencer la dureza del tejido leñoso y permitir que los polisacáridos pasen al agua."
+    de: guia-inmunidad/31

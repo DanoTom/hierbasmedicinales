@@ -1,0 +1,45 @@
+nombre: Tintura madre
+orden: 3
+clave: tintura
+bajada: "Extractos concentrados en alcohol: más potencia, más duración."
+secciones:
+  - titulo: "Qué es"
+    items:
+      - texto: "Una tintura madre es un extracto vegetal que utiliza una mezcla de agua y alcohol como solvente. A diferencia de la infusión o la decocción, el alcohol permite extraer una mayor concentración de principios activos y conservarlos por mucho más tiempo. Es la preparación fitoterapéutica con mayor estabilidad y concentración disponible para uso domiciliario."
+        de: guia-digestiva/13
+      - texto: "Planta en alcohol (40–70%) durante 15–30 días. Concentrada, dosis en gotas. Larga conservación."
+        de: taller-digestivo/13
+      - texto: "Alcohol (tintura): extrae compuestos liposolubles (triterpenos, resinas, hericenonas). Tiene sentido solo si la especie tiene compuestos relevantes en esa fracción. En reishi y chaga sí; en la mayoría de los comestibles no aporta demasiado."
+        de: guia-inmunidad/28
+  - titulo: "¿Cuándo conviene usar una tintura en lugar de una infusión?"
+    tabla:
+      de: guia-digestiva/13
+      columnas: ["", "Infusión / Decocción", "Tintura madre"]
+      filas:
+        - ["Velocidad de acción", "Más rápida — ideal para síntomas agudos (espasmos, náuseas, gases)", "Algo más lenta al inicio, pero sostenida en el tiempo"]
+        - ["Uso recomendado", "Molestias puntuales y tratamientos cortos", "Tratamientos de fondo, plantas de uso sostenido (boldo, alcaucil, cardo mariano)"]
+        - ["Concentración", "Menor", "Mayor — dosis en gotas"]
+        - ["Conservación", "Horas a temperatura ambiente o hasta 48 hs en heladera", "Hasta 2 años en lugar fresco y oscuro"]
+        - ["Duración del tratamiento", "A demanda", "Máximo 4-6 semanas continuas, luego descanso"]
+  - titulo: "Proporciones de alcohol y agua según la parte de la planta"
+    tabla:
+      de: guia-digestiva/13
+      columnas: ["Parte de la planta", "Ejemplos", "Alcohol", "Agua", "¿Por qué?"]
+      filas:
+        - ["Partes duras", "Raíces, cortezas, frutos", "80–90%", "10–20%", "El alcohol penetra mejor las estructuras celulares duras para liberar los principios activos"]
+        - ["Partes intermedias", "Tallos, hojas", "60–70%", "30–40%", "Equilibrio entre extracción y preservación de compuestos más solubles en agua"]
+        - ["Partes suaves", "Flores", "50–60%", "40–50%", "Las flores liberan sus principios activos con menor concentración de alcohol"]
+    items:
+      - texto: "Mientras más dura la parte de la planta, más alcohol se necesita. El alcohol tiene mayor capacidad que el agua para romper las estructuras celulares y extraer los principios activos."
+        de: guia-digestiva/14
+  - titulo: "Cuándo no usarla"
+    items:
+      - texto: "Lo que sí conviene que sepas es cuándo no usarla: en embarazo y lactancia, en niñas y niños, en personas en abstinencia alcohólica y en quienes toman medicación que interactúa con el alcohol. El contenido alcohólico de una tintura no es despreciable."
+        de: guia-inmunidad/33
+      - texto: "Hacerla en casa es posible, pero requiere control de graduación alcohólica y de tiempos de maceración, y sobre todo un criterio de calidad de materia prima que no se improvisa."
+        de: guia-inmunidad/32
+  - titulo: "Los materiales no coinciden en todo"
+    items:
+      - texto: "La presentación del taller digestivo habla de alcohol al 40–70% durante 15–30 días; la guía digestiva da proporciones de 50 a 90% según la parte de la planta y una maceración de 12 a 28 días. La guía digestiva es la que da el detalle paso a paso (la tabla de arriba y la receta)."
+        de: [taller-digestivo/13, guia-digestiva/13, guia-digestiva/14]
+recetas: [tintura-madre, amargo-aperitivo]

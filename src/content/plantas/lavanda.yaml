@@ -1,0 +1,63 @@
+nombre: Lavanda
+tipo: planta
+cientifico:
+  - nombre: Lavandula angustifolia
+    de: [guia-digestiva/10, taller-estres/7]
+  - nombre: Lavandula officinalis
+    de: taller-estres/7
+familia: { nombre: Lamiaceae, agregado: true }
+compuestoActivo: { texto: "Linalol y acetato de linalilo (aceite esencial)", de: [guia-digestiva/10, taller-digestivo/12] }
+acciones: { lista: [Antiespasmódica suave, Ansiolítica], de: guia-digestiva/10 }
+partes:
+  - { parte: flores, de: [guia-digestiva/10, taller-estres/7] }
+usos:
+  - texto: "Espasmos digestivos asociados a ansiedad o estrés, colon irritable funcional, digestión nerviosa. Uso en fermentados como aporte probiótico aromático."
+    de: guia-digestiva/10
+  - texto: "Estrés, ansiedad leve."
+    de: taller-estres/7
+  - texto: "Tensión nerviosa / sobreexcitación."
+    de: taller-estres/7
+  - texto: "Cefaleas y molestias digestivas de origen nervioso."
+    de: taller-estres/7
+  - texto: "Puede favorecer el descanso."
+    de: taller-estres/7
+  - texto: "Para el día (estrés / ansiedad leve): melisa y lavanda «ayudan a reducir el nerviosismo sin generar somnolencia marcada»."
+    de: taller-estres/5
+alertas: [embarazo, lactancia, sedantes, hormonas]
+contraindicaciones:
+  - texto: "Embarazo (evitar aceite esencial en uso interno). El aceite esencial puro no debe ingerirse sin supervisión profesional."
+    de: guia-digestiva/10
+  - texto: "Evitar en embarazo y lactancia."
+    de: taller-estres/7
+  - texto: "Evitar en patologías hormonodependientes."
+    de: taller-estres/7
+efectosAdversos:
+  - texto: "En uso externo: raramente dermatitis de contacto. En uso interno de aceite esencial: náuseas si se excede la dosis."
+    de: guia-digestiva/10
+interacciones:
+  - texto: "Puede potenciar fármacos que actúan sobre GABA (ej: clonazepam, alprazolam)."
+    de: taller-estres/7
+  - texto: "No se conocen interacciones significativas con el uso de la planta en infusión o fermentado."
+    de: guia-digestiva/10
+formaDeUso:
+  - texto: "Infusión de flores secas: 1 cucharadita por taza, 1-2 veces al día."
+    de: guia-digestiva/10
+  - texto: "Infusión de flores: ~8 g/L de agua, 1–2 tazas por día."
+    de: taller-estres/7
+  - texto: "Fermentado de vinagre: 1 cucharadita en agua o como aderezo."
+    de: guia-digestiva/10
+  - texto: "Otras formas de uso: aromaterapia (aceite esencial, almohada, ambiente) y uso tópico (efecto suavizante)."
+    de: taller-estres/7
+comoActua:
+  - texto: "Efecto relajante, ansiolítico y antiespasmódico. Actúa a nivel del sistema nervioso, modulando el estado de ánimo y la tensión."
+    de: taller-estres/7
+  - texto: "Acción: antiespasmódica suave, calmante del sistema nervioso entérico."
+    de: taller-digestivo/12
+diferencias:
+  - "Interacciones: la guía digestiva dice que no se conocen interacciones significativas con la planta en infusión o fermentado, pero la presentación de estrés y descanso advierte que puede potenciar fármacos que actúan sobre GABA (clonazepam, alprazolam). Si tomás ansiolíticos o pastillas para dormir, consultá antes."
+  - "Embarazo: la guía digestiva pide evitar el aceite esencial en uso interno; la presentación de estrés y descanso dice evitarla en embarazo y lactancia, sin distinguir la forma de uso."
+  - "Cantidad para la infusión: la guía la da en cucharaditas por taza (1 cucharadita) y la presentación en gramos por litro (~8 g/L). Son dos maneras de medir; no se contradicen necesariamente."
+indice:
+  usos: [estres, digestion-nerviosa, espasmos, colon-irritable, tension, sueno, microbiota]
+  preparaciones: [infusion, fermentado, aceite-esencial, uso-externo]
+lamina: lavanda

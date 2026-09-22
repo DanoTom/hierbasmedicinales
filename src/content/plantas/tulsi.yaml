@@ -1,0 +1,61 @@
+nombre: Tulsi
+tipo: planta
+otrosNombres:
+  - nombre: Albahaca sagrada
+    agregado: true
+    nota: "Nombre con el que suele encontrarse en español (en la bibliografía de la guía aparece como «holy basil»)."
+cientifico:
+  - nombre: Ocimum tenuiflorum
+    de: guia-inmunidad/26
+    nota: "antes Ocimum sanctum"
+familia: { nombre: Lamiaceae, agregado: true }
+partes:
+  - { parte: hojas, de: guia-inmunidad/26 }
+comoActua:
+  - de: guia-inmunidad/26
+    texto: |-
+      Es pariente cercana de la albahaca de cocina y, de todo el grupo, la más suave y la más fácil de incorporar: se toma en infusión de hojas, como cualquier té de hierbas.
+
+      Su composición está dominada por compuestos aromáticos: eugenol, carvacrol, beta-cariofileno, ácido rosmarínico y triterpenos como el ácido ursólico y el ácido oleanólico, que son los marcadores que se usan para evaluar calidad. A ese conjunto se atribuyen efectos antioxidantes, antiinflamatorios y de amortiguación de la respuesta al estrés.
+
+      El eugenol, además de aromático, tiene actividad antiagregante plaquetaria leve, y esa es la base de su principal precaución por interacción.
+usos:
+  - texto: "Estrés cotidiano y descanso, con un perfil claramente suave."
+    de: guia-inmunidad/26
+  - texto: "Digestión: es un uso tradicional muy extendido."
+    de: guia-inmunidad/26
+  - texto: "Tradición ayurvédica: se la considera una planta de uso cotidiano, casi doméstico."
+    de: guia-inmunidad/26
+evidencia:
+  - de: guia-inmunidad/26
+    texto: |-
+      Una revisión sistemática publicada en 2017 en *Evidence-Based Complementary and Alternative Medicine* reunió veinticuatro estudios en humanos sobre efectos metabólicos, inmunológicos y neurocognitivos, y concluyó que los resultados son favorables pero que las limitaciones metodológicas son importantes.
+
+      Posteriormente, un ensayo aleatorizado, doble ciego y controlado con placebo publicado en 2022 en *Frontiers in Nutrition*, con cien voluntarios durante ocho semanas, evaluó un extracto estandarizado sobre medidas de estrés y sueño, e informó menor respuesta de cortisol salival ante una prueba de estrés agudo. Es de los trabajos más prolijos disponibles sobre esta especie.
+
+      En conjunto es una planta con evidencia modesta pero con un perfil de seguridad notablemente bueno para uso cotidiano en infusión.
+alertas: [anticoagulantes, cirugia, embarazo, tiroides]
+cuidados:
+  - situacion: "Anticoagulantes y antiagregantes"
+    texto: "El eugenol tiene actividad antiplaquetaria leve; se describe potencial aditivo."
+    de: guia-inmunidad/27
+  - situacion: "Cirugía programada"
+    texto: "Suspender con anticipación, por el mismo motivo."
+    de: guia-inmunidad/27
+  - situacion: "Embarazo"
+    texto: "Datos insuficientes y actividad uterotónica descrita a dosis terapéuticas; se aconseja precaución."
+    de: guia-inmunidad/27
+  - situacion: "Búsqueda de embarazo"
+    texto: "Estudios en animales con extractos a dosis altas mostraron reducción del recuento y la movilidad espermática. No hay datos en humanos, pero conviene saberlo."
+    de: guia-inmunidad/27
+  - situacion: "Tiroides"
+    texto: "Evidencia preliminar de influencia sobre hormonas tiroideas; precaución si hay patología tiroidea."
+    de: guia-inmunidad/27
+formaDeUso:
+  - texto: "Se toma en infusión de hojas, como cualquier té de hierbas."
+    de: guia-inmunidad/26
+  - texto: "La infusión simple es «adecuada para hojas y flores (tulsi, tilo, manzanilla)»."
+    de: guia-inmunidad/28
+indice:
+  usos: [estres, sueno, digestion]
+  preparaciones: [infusion, extracto]

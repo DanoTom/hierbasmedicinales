@@ -1,0 +1,27 @@
+nombre: Infusión antináuseas
+orden: 1
+tema: digestivo
+de: guia-digestiva/11
+plantas: [jengibre, manzanilla]
+usos: [nauseas]
+preparacion: infusion
+recomendadoPara:
+  - texto: "Náuseas en general. En caso de embarazo, consumir solo con jengibre (omitir la manzanilla)."
+    de: guia-digestiva/11
+ingredientes:
+  - "2 fetas de jengibre fresco"
+  - "2 cucharaditas de flores de manzanilla (aprox. 4 g)"
+  - "500 ml de agua potable"
+  - "Olla y colador"
+pasos:
+  - texto: "Colocar las 2 fetas de jengibre en una olla con 500 ml de agua."
+  - texto: "Llevar al fuego hasta que rompa hervor y dejar hervir 5 minutos."
+  - texto: "Apagar el fuego y agregar las 2 cucharaditas de manzanilla."
+  - texto: "Tapar y dejar reposar 10 minutos."
+  - texto: "Colar y servir."
+formaDeUso:
+  - texto: "Hasta 4 tazas al día."
+    de: guia-digestiva/11
+conservacion:
+  - texto: "Se prepara al momento del uso. Puede conservarse hasta 2 horas a temperatura ambiente o en botella tapada en heladera hasta 48 horas."
+    de: guia-digestiva/11

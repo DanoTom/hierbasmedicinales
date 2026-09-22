@@ -1,0 +1,33 @@
+nombre: Boldo
+tipo: planta
+cientifico:
+  - nombre: Peumus boldus
+    de: guia-digestiva/5
+familia: { nombre: Monimiaceae, agregado: true }
+compuestoActivo: { texto: "Boldina (alcaloide)", de: guia-digestiva/5 }
+acciones: { lista: [Colagoga, Colerética], de: guia-digestiva/5 }
+partes:
+  - { parte: hojas, de: guia-digestiva/5 }
+usos:
+  - texto: "Dispepsia, digestión lenta y pesada, cálculos biliares leves, insuficiencia hepática leve."
+    de: guia-digestiva/5
+alertas: [vias-biliares, higado, embarazo, lactancia, anticoagulantes]
+contraindicaciones:
+  - texto: "Obstrucción biliar, cólico biliar agudo, cálculos biliares grandes, embarazo y lactancia, insuficiencia hepática severa."
+    de: guia-digestiva/5
+  - texto: "Contraindicado en obstrucción biliar, cálculos biliares grandes o cólico biliar agudo."
+    de: taller-digestivo/6
+efectosAdversos:
+  - texto: "En dosis altas: náuseas, vómitos, irritación gastrointestinal. Raramente: nefrotoxicidad con uso prolongado."
+    de: guia-digestiva/5
+interacciones:
+  - texto: "No combinar con anticoagulantes (warfarina). Precaución con otros hepatoprotectores."
+    de: guia-digestiva/5
+formaDeUso:
+  - texto: "Infusión de hojas: 1 cdita por taza, 2-3 veces al día después de las comidas. No usar más de 4 semanas seguidas."
+    de: guia-digestiva/5
+  - texto: "La tintura madre se recomienda para «tratamientos de fondo, plantas de uso sostenido (boldo, alcaucil, cardo mariano)»."
+    de: guia-digestiva/13
+indice:
+  usos: [digestion, higado]
+  preparaciones: [infusion, tintura]

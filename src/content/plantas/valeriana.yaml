@@ -1,0 +1,39 @@
+nombre: Valeriana
+tipo: planta
+cientifico:
+  - nombre: Valeriana officinalis
+    de: taller-estres/9
+familia: { nombre: Caprifoliaceae, agregado: true, nota: "Antes se la ubicaba en su propia familia, Valerianaceae." }
+partes:
+  - { parte: raiz, de: taller-estres/9 }
+usos:
+  - texto: "Insomnio / dificultad para conciliar el sueño."
+    de: taller-estres/9
+  - texto: "Ansiedad con mucha activación."
+    de: taller-estres/9
+  - texto: "Cefaleas y tensión muscular."
+    de: taller-estres/9
+  - texto: "Espasmos digestivos o musculares."
+    de: taller-estres/9
+  - texto: "Para la noche (descanso / sueño): pasiflora y valeriana «favorecen la relajación y el inicio del sueño»."
+    de: taller-estres/5
+alertas: [sedantes, embarazo, lactancia]
+contraindicaciones:
+  - texto: "Evitar en embarazo y lactancia."
+    de: taller-estres/9
+efectosAdversos:
+  - texto: "En algunas personas puede generar efecto contrario (excitación)."
+    de: taller-estres/9
+interacciones:
+  - texto: "Puede potenciar sedantes (ej: benzodiazepinas, barbitúricos, alcohol)."
+    de: taller-estres/9
+formaDeUso:
+  - texto: "Decocción de la raíz: ~9 g/L de agua. Tomar por la noche."
+    de: taller-estres/9
+comoActua:
+  - texto: "Efecto sedante y ansiolítico. Favorece el inicio del sueño: ayuda a un descanso más profundo."
+    de: taller-estres/9
+indice:
+  usos: [sueno, estres, tension, espasmos]
+  preparaciones: [decoccion]
+lamina: valeriana

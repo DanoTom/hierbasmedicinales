@@ -1,0 +1,20 @@
+nombre: Shiitake bien cocido
+orden: 10
+tema: inmunidad
+bajada: "Con la precaución que casi nadie conoce."
+de: guia-inmunidad/32
+plantas: [shiitake-y-maitake]
+usos: [inmunidad]
+preparacion: fresco
+ingredientes:
+  - "Shiitake fresco o rehidratado"
+  - "Aceite, sal"
+  - "Si es seco: agua caliente para rehidratar"
+pasos:
+  - texto: "Si usás seco, rehidratalo en agua caliente entre veinte y treinta minutos. **Guardá esa agua**: tiene mucho sabor y compuestos solubles, y es una base de caldo excelente."
+  - texto: "Sacale el pie, que es fibroso, y reservalo para caldos. Cortá los sombreros en tiras."
+  - texto: "Salteá a fuego fuerte durante **al menos ocho a diez minutos**, o guisalo veinte minutos."
+  - texto: "No lo uses jamás crudo ni apenas sellado: ni en ensaladas, ni en carpaccios, ni en licuados."
+porQue:
+  - texto: "El lentinan es termolábil. La cocción suficiente lo desnaturaliza y previene la dermatitis por shiitake, una reacción de hipersensibilidad que aparece uno o dos días después de comerlo crudo o poco cocido."
+    de: guia-inmunidad/32

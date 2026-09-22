@@ -1,0 +1,52 @@
+nombre: Rhodiola
+tipo: planta
+cientifico:
+  - nombre: Rhodiola rosea
+    de: guia-inmunidad/24
+familia: { nombre: Crassulaceae, agregado: true }
+partes:
+  - { parte: raiz, de: guia-inmunidad/24 }
+  - { parte: rizoma, de: guia-inmunidad/24 }
+comoActua:
+  - de: guia-inmunidad/24
+    texto: |-
+      Crece a gran altitud y en latitudes muy altas, lo que no es un dato decorativo: buena parte de su química parece relacionada con la resistencia celular a la falta de oxígeno y al frío.
+
+      Tiene dos grupos de marcadores. Las rosavinas son fenilpropanoides exclusivos de *Rhodiola rosea* dentro del género, lo que las convierte en el marcador botánico que permite verificar que el producto es realmente de esta especie. El salidrósido, en cambio, está presente en muchas especies del género, y es al que se atribuye buena parte de la actividad adaptogénica: se estudió por sus efectos sobre la resistencia celular al estrés, la función mitocondrial y la neuroprotección.
+
+      En la planta, la proporción natural entre rosavinas y salidrósido es de aproximadamente tres a uno, y los extractos estandarizados suelen reproducirla. También se describió actividad sobre enzimas del metabolismo de neurotransmisores, lo que explica por qué es la más *activante* del grupo.
+usos:
+  - texto: "Fatiga mental y física, sobre todo la asociada a períodos de sobrecarga."
+    de: guia-inmunidad/24
+  - texto: "Concentración y rendimiento cognitivo bajo presión."
+    de: guia-inmunidad/24
+  - texto: "Se toma de día: en personas sensibles puede interferir con el sueño si se toma tarde."
+    de: guia-inmunidad/24
+evidencia:
+  - de: guia-inmunidad/24
+    texto: |-
+      Una revisión sistemática publicada en 2012 en *BMC Complementary and Alternative Medicine* analizó once estudios sobre fatiga física y mental. Dos de seis ensayos en fatiga física y tres de cinco en fatiga mental reportaron efecto. Los autores concluyen que la investigación es contradictoria, y señalan que todos los estudios incluidos tienen riesgo de sesgo alto o poco claro. Es una conclusión importante y suele omitirse en el material comercial.
+
+      Hay además ensayos abiertos en fatiga prolongada con resultados favorables y buen perfil de tolerancia, y trabajos sobre su uso combinado con antidepresivos.
+
+      Hay un fenómeno particular que vale la pena conocer: se describe una respuesta bifásica según la cantidad, en la que las cantidades mayores tienden a producir efectos de tipo estimulante en lugar del alivio de la fatiga que se busca. Más no es mejor, y acá de un modo bastante literal.
+alertas: [bipolar, antidepresivos, embarazo, lactancia]
+cuidados:
+  - situacion: "Trastorno bipolar"
+    texto: "Precaución por sus propiedades activantes sobre el sistema monoaminérgico y el riesgo teórico de precipitar un episodio. No hay casos publicados, pero conviene que el psiquiatra tratante lo sepa."
+    de: guia-inmunidad/25
+  - situacion: "Antidepresivos y psicofármacos"
+    texto: "Consultar antes de combinar."
+    de: guia-inmunidad/25
+  - situacion: "Toma vespertina"
+    texto: "Puede dificultar la conciliación del sueño."
+    de: guia-inmunidad/25
+  - situacion: "Embarazo y lactancia"
+    texto: "Sin datos suficientes."
+    de: guia-inmunidad/25
+  - situacion: "Autenticidad del producto"
+    texto: "Es una de las especies con más adulteración documentada. Sin rosavinas declaradas, no hay manera de saber si es Rhodiola rosea."
+    de: guia-inmunidad/25
+indice:
+  usos: [energia, mente]
+  preparaciones: [extracto]

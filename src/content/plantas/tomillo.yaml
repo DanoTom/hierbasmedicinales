@@ -1,0 +1,17 @@
+nombre: Tomillo
+tipo: planta
+breve: true
+cientifico:
+  - nombre: "Thymus vulgaris"
+    agregado: true
+    nota: "El material no indica el nombre científico; es el del tomillo común."
+familia: { nombre: Lamiaceae, agregado: true }
+usos:
+  - texto: "Tos productiva."
+    de: guia-inmunidad/7
+comoActua:
+  - texto: "Tomillo y eucalipto aportan aceites esenciales como el timol y el eucaliptol, con acción expectorante y antiséptica sobre la vía aérea."
+    de: guia-inmunidad/7
+
+indice:
+  usos: [tos]

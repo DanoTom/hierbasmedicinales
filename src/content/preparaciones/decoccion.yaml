@@ -1,0 +1,30 @@
+nombre: Decocción
+orden: 2
+clave: decoccion
+bajada: "Hervir la planta en agua. Para raíces, cortezas, semillas duras y hongos."
+secciones:
+  - titulo: "Cómo se hace"
+    items:
+      - texto: "Poner la planta en agua y hervir 10–20 minutos. Para raíces, cortezas y semillas duras."
+        de: taller-digestivo/13
+  - titulo: "Qué extrae y cuándo sirve"
+    items:
+      - texto: "Agua caliente (decocción): betaglucanos y otros polisacáridos, compuestos hidrosolubles. Tiene sentido siempre, en cualquier hongo: el calor es lo que permite superar la quitina. En raíces leñosas, para vencer la dureza del tejido."
+        de: guia-inmunidad/28
+      - texto: "Una raíz leñosa necesita hervor prolongado no porque haya una pared que romper sino porque el agua tarda en penetrarla."
+        de: guia-inmunidad/20
+  - titulo: "Errores frecuentes"
+    items:
+      - texto: "**Suspender el hervor apenas rompe el punto de ebullición.** El trabajo de extracción sucede durante el hervor sostenido, no en el momento en que arranca."
+        de: guia-inmunidad/33
+  - titulo: "Los tiempos cambian según el material"
+    items:
+      - texto: "En la presentación del taller digestivo: hervir 10–20 minutos (raíces, cortezas y semillas duras)."
+        de: taller-digestivo/13
+      - texto: "Hongo entero o en trozos: entre cuarenta y sesenta minutos a fuego mínimo; para reishi, apuntar a los sesenta."
+        de: guia-inmunidad/29
+      - texto: "Raíz de astrágalo: remojo de unos veinte minutos y luego entre treinta y cuarenta y cinco minutos a fuego mínimo."
+        de: guia-inmunidad/31
+      - texto: "Raíz de valeriana: decocción, ~9 g/L de agua (la presentación no indica el tiempo de hervor)."
+        de: taller-estres/9
+recetas: [decoccion-de-hongo, decoccion-de-astragalo]

@@ -1,0 +1,17 @@
+nombre: Malvavisco
+tipo: planta
+breve: true
+cientifico:
+  - nombre: "Althaea officinalis"
+    agregado: true
+    nota: "El material no indica el nombre científico; es el que corresponde habitualmente al malvavisco."
+familia: { nombre: Malvaceae, agregado: true }
+usos:
+  - texto: "Tos y garganta irritada."
+    de: guia-inmunidad/7
+comoActua:
+  - texto: "Llantén, malva y malvavisco contienen mucílagos: polisacáridos que en contacto con agua forman un gel y recubren la mucosa irritada, actuando como una barrera física."
+    de: guia-inmunidad/7
+
+indice:
+  usos: [tos]

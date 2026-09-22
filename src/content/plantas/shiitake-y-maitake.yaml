@@ -1,0 +1,66 @@
+nombre: Shiitake y maitake
+tipo: hongo
+otrosNombres:
+  - nombre: Shiitake
+    de: guia-inmunidad/18
+  - nombre: Maitake
+    de: guia-inmunidad/18
+cientifico:
+  - nombre: Lentinula edodes
+    de: guia-inmunidad/18
+    nota: "shiitake"
+  - nombre: Grifola frondosa
+    de: guia-inmunidad/18
+    nota: "maitake"
+familia: { nombre: "Omphalotaceae (shiitake) y Grifolaceae (maitake)", agregado: true, nota: "Algunas clasificaciones ubican al maitake en Meripilaceae." }
+partes:
+  - { parte: cuerpo-fructifero, detalle: "habitualmente como alimento", de: guia-inmunidad/18 }
+comoActua:
+  - de: guia-inmunidad/18
+    texto: |-
+      Los agrupo porque comparten una característica que los diferencia del resto: son hongos de mesa antes que suplementos. Se consiguen en verdulerías, se cocinan y forman parte de la comida.
+
+      El betaglucano característico del shiitake es el lentinan, una beta-1,3-glucano que se estudió tanto que en Japón llegó a usarse por vía intravenosa como adyuvante en oncología. Actúa por la vía ya conocida: receptores de reconocimiento de patrones sobre macrófagos, células natural killer y linfocitos T. El shiitake aporta además eritadenina, un compuesto estudiado por su relación con el perfil lipídico.
+
+      En el maitake, el grupo de polisacáridos más investigado se conoce como fracción D, aislada en los años ochenta y estudiada por su efecto sobre la actividad de los macrófagos.
+usos:
+  - texto: "Alimento con betaglucanos, incorporado con regularidad."
+    de: guia-inmunidad/18
+  - texto: "Shiitake: además se estudió su relación con marcadores inmunológicos e inflamatorios."
+    de: guia-inmunidad/18
+  - texto: "Maitake: es la especie con más trabajo sobre fracciones polisacarídicas purificadas."
+    de: guia-inmunidad/18
+evidencia:
+  - de: guia-inmunidad/18
+    texto: |-
+      Hay un ensayo dietético de cuatro semanas en adultos sanos en el que el consumo diario de shiitake se asoció con cambios en varios marcadores de función inmune y con descenso de proteína C reactiva. Es evidencia de alimento, no de suplemento, y esa distinción es justamente lo valioso.
+
+      En el caso del maitake, la mayor parte del trabajo está hecho sobre fracciones purificadas en modelos celulares y animales, y en algunos ensayos humanos acotados. Es interesante y está lejos de ser concluyente.
+alertas: [alergias, autoinmune]
+cuidados:
+  - situacion: "Shiitake crudo o mal cocido"
+    texto: "Es la precaución específica más importante y casi nadie la conoce: ver el recuadro «Dermatitis por shiitake»."
+    de: guia-inmunidad/19
+  - situacion: "Alergia a hongos"
+    texto: "Se describieron neumonitis por hipersensibilidad tras la inhalación de esporas, sobre todo en personas que los cultivan."
+    de: guia-inmunidad/19
+  - situacion: "Enfermedad autoinmune"
+    texto: "Precaución con los extractos concentrados, no con el consumo alimentario habitual."
+    de: guia-inmunidad/19
+  - situacion: "Consumo prolongado de polvo de shiitake"
+    texto: "Se reportaron casos de dermatitis, fotosensibilidad y molestias digestivas."
+    de: guia-inmunidad/19
+formaDeUso:
+  - texto: "Mi lectura práctica: estos dos se aprovechan mejor comiéndolos con regularidad que comprándolos en cápsulas. Salen más baratos, son ricos y el hábito es más fácil de sostener que una toma diaria."
+    de: guia-inmunidad/18
+recuadros:
+  - titulo: "Dermatitis por shiitake: cocinalo bien"
+    precaucion: true
+    de: guia-inmunidad/19
+    texto: |-
+      El lentinan es termolábil. Cuando el shiitake se come crudo o poco cocido, llega intacto y en personas predispuestas desencadena una reacción de hipersensibilidad retardada muy característica: lesiones rojas lineales y con picazón que parecen marcas de latigazo, distribuidas sobre el tronco y los miembros, que aparecen entre veinticuatro y cuarenta y ocho horas después de comerlo. Una revisión sistemática de casos publicados encontró que la mayoría había consumido el hongo crudo y alrededor de un quinto poco cocido.
+
+      Es benigna y se resuelve sola en días o semanas, pero es aparatosa y asusta. La prevención es simple: cocinar el shiitake bien, salteado a fuego fuerte varios minutos o guisado, y nunca en preparaciones crudas tipo carpaccio o licuado.
+indice:
+  usos: [inmunidad]
+  preparaciones: [fresco, extracto, polvo]

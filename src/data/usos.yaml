@@ -1,0 +1,142 @@
+# Índice «por uso»: para buscar desde la necesidad y no desde la planta.
+# Cada planta indica en su ficha (indice.usos) a qué usos pertenece, según lo
+# que dice el material del taller. «buscar» son palabras que alguien puede
+# escribir en el buscador para llegar acá (no son datos del taller).
+- id: digestion
+  nombre: Digestión lenta o pesada
+  grupo: digestion
+  descripcion: Dispepsia, digestión lenta, pesadez o sensación de plenitud.
+  buscar: [dispepsia, pesadez, indigestion, empacho, plenitud, estomago, digerir]
+  orden: 1
+- id: digestion-nerviosa
+  nombre: Estómago y nervios
+  grupo: digestion
+  descripcion: Molestias digestivas que aparecen con la ansiedad o el estrés.
+  buscar: [nervios, ansiedad, estres, estomago, panza]
+  orden: 2
+- id: higado
+  nombre: Hígado y vesícula
+  grupo: digestion
+  descripcion: Estimular la bilis, acompañar y proteger el hígado.
+  buscar: [higado, vesicula, bilis, biliar, hepatico]
+  orden: 3
+- id: gases
+  nombre: Gases e hinchazón
+  grupo: digestion
+  descripcion: Flatulencias, meteorismo, distensión abdominal.
+  buscar: [gases, hinchazon, flatulencia, meteorismo, distension, inflamada, panza]
+  orden: 4
+- id: espasmos
+  nombre: Espasmos y cólicos
+  grupo: digestion
+  descripcion: Retorcijones, espasmos intestinales, dolor tipo cólico.
+  buscar: [colico, retorcijon, espasmo, dolor de panza, calambre]
+  orden: 5
+- id: nauseas
+  nombre: Náuseas
+  grupo: digestion
+  descripcion: Náuseas y ganas de vomitar.
+  buscar: [nausea, vomito, mareo, asco]
+  orden: 6
+- id: mucosa
+  nombre: Gastritis y mucosa irritada
+  grupo: digestion
+  descripcion: Gastritis, úlcera, esofagitis, mucosa digestiva inflamada.
+  buscar: [gastritis, ulcera, acidez, ardor, esofagitis, mucosa]
+  orden: 7
+- id: colon-irritable
+  nombre: Colon irritable
+  grupo: digestion
+  descripcion: Colon irritable y molestias intestinales funcionales.
+  buscar: [colon, intestino irritable, colitis]
+  orden: 8
+- id: estrenimiento
+  nombre: Estreñimiento
+  grupo: digestion
+  descripcion: Estreñimiento leve u ocasional.
+  buscar: [estrenimiento, constipacion, laxante, transito]
+  orden: 9
+- id: apetito
+  nombre: Falta de apetito
+  grupo: digestion
+  descripcion: Inapetencia; preparar el estómago antes de comer.
+  buscar: [apetito, inapetencia, aperitivo, amargo]
+  orden: 10
+- id: liquidos
+  nombre: Retención de líquidos
+  grupo: digestion
+  descripcion: Retención de líquidos.
+  buscar: [retencion, liquidos, diuretico, hinchazon de piernas]
+  orden: 11
+- id: colesterol
+  nombre: Colesterol e hígado graso
+  grupo: digestion
+  descripcion: Colesterol elevado, hígado graso leve.
+  buscar: [colesterol, higado graso, grasa]
+  orden: 12
+- id: microbiota
+  nombre: Microbiota y fermentados
+  grupo: digestion
+  descripcion: Sumar probióticos a la alimentación de todos los días.
+  buscar: [probiotico, fermentado, microbiota, flora intestinal, vinagre]
+  orden: 13
+- id: estres
+  nombre: Estrés y ansiedad leve
+  grupo: nervios
+  descripcion: Nerviosismo, tensión nerviosa, estrés sostenido.
+  buscar: [estres, ansiedad, nervios, nerviosismo, angustia, calmar, relajar, tension]
+  orden: 14
+- id: sueno
+  nombre: Sueño y descanso
+  grupo: nervios
+  descripcion: Dificultad para dormir o para descansar bien.
+  buscar: [dormir, insomnio, sueno, descanso, descansar, noche]
+  orden: 15
+- id: tension
+  nombre: Dolor de cabeza y tensión
+  grupo: nervios
+  descripcion: Cefaleas y tensión muscular o nerviosa.
+  buscar: [cabeza, cefalea, jaqueca, migrana, contractura, tension muscular]
+  orden: 16
+- id: menstrual
+  nombre: Molestias menstruales
+  grupo: nervios
+  descripcion: Molestias durante la menstruación.
+  buscar: [menstruacion, menstrual, periodo, regla, dolor menstrual]
+  orden: 17
+- id: tos
+  nombre: Tos y garganta
+  grupo: defensas
+  descripcion: Tos, garganta irritada, tos con flema.
+  buscar: [tos, garganta, flema, catarro, expectorante, bronquios]
+  orden: 18
+- id: resfrio
+  nombre: Resfrío y fiebre
+  grupo: defensas
+  descripcion: Acompañar un resfrío o un cuadro con fiebre.
+  buscar: [resfrio, gripe, fiebre, catarro, sudar]
+  orden: 19
+- id: dolor
+  nombre: Inflamación y dolor
+  grupo: defensas
+  descripcion: Dolor e inflamación.
+  buscar: [dolor, inflamacion, antiinflamatorio, analgesico]
+  orden: 20
+- id: inmunidad
+  nombre: Inmunidad
+  grupo: defensas
+  descripcion: Acompañar al sistema inmune con uso sostenido (el «camino B» del taller).
+  buscar: [defensas, inmune, inmunologico, sistema inmune, modular, prevenir]
+  orden: 21
+- id: energia
+  nombre: Energía y cansancio
+  grupo: energia
+  descripcion: Fatiga física o mental, rendimiento, recuperación.
+  buscar: [energia, cansancio, fatiga, agotamiento, rendimiento, deporte]
+  orden: 22
+- id: mente
+  nombre: Memoria y concentración
+  grupo: energia
+  descripcion: Foco, memoria y claridad mental.
+  buscar: [memoria, concentracion, foco, mente, claridad]
+  orden: 23

@@ -1,0 +1,31 @@
+nombre: Regaliz
+tipo: planta
+cientifico:
+  - nombre: Glycyrrhiza glabra
+    de: guia-digestiva/9
+familia: { nombre: Fabaceae, agregado: true }
+compuestoActivo: { texto: "Glicirricina / DGL (triterpeno)", de: guia-digestiva/9 }
+acciones: { lista: [Antiinflamatoria de la mucosa, Gastroprotectora], de: guia-digestiva/9 }
+partes:
+  - { parte: raiz, agregado: true }
+usos:
+  - texto: "Úlcera gástrica y duodenal, esofagitis, gastritis, mucosa digestiva inflamada o irritada."
+    de: guia-digestiva/9
+alertas: [presion, corazon, rinon, embarazo, diureticos, corticoides]
+contraindicaciones:
+  - texto: "Hipertensión arterial (con glicirricina), insuficiencia cardíaca, edema, hipopotasemia, embarazo, insuficiencia renal."
+    de: guia-digestiva/9
+efectosAdversos:
+  - texto: "Con glicirricina: retención de sodio, pérdida de potasio, hipertensión, pseudohiperaldosteronismo. El extracto DGL (desglicolado) elimina estos riesgos."
+    de: guia-digestiva/9
+  - texto: "El regaliz convencional (con glicirricina) puede provocar hipertensión y retención de sodio. Preferir el extracto DGL."
+    de: taller-digestivo/10
+interacciones:
+  - texto: "Potencia corticosteroides. Puede interferir con antihipertensivos y diuréticos."
+    de: guia-digestiva/9
+formaDeUso:
+  - texto: "Extracto DGL (desglicolado): cápsulas o comprimidos masticables antes de las comidas. Evitar el regaliz natural convencional para uso interno prolongado."
+    de: guia-digestiva/9
+indice:
+  usos: [mucosa]
+  preparaciones: [extracto]

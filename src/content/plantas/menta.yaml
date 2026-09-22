@@ -1,0 +1,31 @@
+nombre: Menta
+tipo: planta
+cientifico:
+  - nombre: Mentha × piperita
+    de: guia-digestiva/6
+familia: { nombre: Lamiaceae, agregado: true }
+compuestoActivo: { texto: "Mentol (aceite esencial)", de: guia-digestiva/6 }
+acciones: { lista: [Antiespasmódica, Carminativa], de: guia-digestiva/6 }
+partes:
+  - { parte: hojas, de: guia-digestiva/6 }
+usos:
+  - texto: "Colon irritable, espasmos intestinales, náuseas, flatulencias, digestión lenta."
+    de: guia-digestiva/6
+alertas: [reflujo, ninos, presion, inmunosupresores, medicacion]
+contraindicaciones:
+  - texto: "Reflujo gastroesofágico, hernia de hiato, niños menores de 2 años (aceite esencial). El aceite esencial puro no debe usarse en mucosas ni en el rostro de niños."
+    de: guia-digestiva/6
+  - texto: "El aceite esencial de menta está contraindicado en reflujo gastroesofágico y en niños pequeños."
+    de: taller-digestivo/7
+efectosAdversos:
+  - texto: "Ardor o reflujo si se usa en personas con hernia de hiato. El aceite esencial en dosis altas puede causar náuseas paradójicas."
+    de: guia-digestiva/6
+interacciones:
+  - texto: "Puede interferir con ciclosporina y algunos antihipertensivos. El aceite esencial puede aumentar la absorción de algunos fármacos."
+    de: guia-digestiva/6
+formaDeUso:
+  - texto: "Infusión: 1 cdita de hojas secas por taza, 3 veces al día entre comidas. Para colon irritable: cápsulas de aceite esencial con cubierta entérica."
+    de: guia-digestiva/6
+indice:
+  usos: [colon-irritable, espasmos, nauseas, gases, digestion]
+  preparaciones: [infusion, aceite-esencial]

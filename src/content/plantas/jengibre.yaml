@@ -1,0 +1,44 @@
+nombre: Jengibre
+tipo: planta
+cientifico:
+  - nombre: Zingiber officinale
+    de: guia-digestiva/8
+familia: { nombre: Zingiberaceae, agregado: true }
+compuestoActivo: { texto: "Gingeroles y shogaoles (fenoles)", de: guia-digestiva/8 }
+acciones: { lista: [Antiemético, Digestivo, Carminativo], de: guia-digestiva/8 }
+partes:
+  - { parte: rizoma, detalle: "se usa fresco, en fetas", agregado: true }
+usos:
+  - texto: "Náuseas (embarazo, quimioterapia, postoperatorio, viaje), digestión lenta, gases, dismotilidad gástrica."
+    de: guia-digestiva/8
+  - texto: "Inflamación y dolor: es una de las plantas del «camino A», las que alivian el síntoma."
+    de: guia-inmunidad/7
+alertas: [vias-biliares, embarazo, anticoagulantes, diabetes]
+contraindicaciones:
+  - texto: "Cálculos biliares (consultar con profesional). En dosis altas durante el embarazo: consultar al médico."
+    de: guia-digestiva/8
+  - texto: "En náuseas del embarazo, consultar al profesional antes de usar."
+    de: taller-digestivo/11
+efectosAdversos:
+  - texto: "En dosis altas: ardor, reflujo, diarrea. Raramente: reacciones alérgicas."
+    de: guia-digestiva/8
+interacciones:
+  - texto: "Potencia el efecto de anticoagulantes (warfarina, AAS) a dosis altas. Puede interferir con antidiabéticos."
+    de: guia-digestiva/8
+  - texto: "El jengibre a dosis altas puede potenciar anticoagulantes."
+    de: taller-digestivo/11
+formaDeUso:
+  - texto: "Infusión: 2 fetas de jengibre fresco en agua hirviendo 5 minutos. También fresco en comidas o en cápsulas estandarizadas."
+    de: guia-digestiva/8
+  - texto: "Fresco o como especia: jengibre, cúrcuma y ajo «se usan directamente en la alimentación cotidiana. Fácil y accesible»."
+    de: taller-digestivo/13
+comoActua:
+  - texto: "El jengibre es el antiemético vegetal con mayor evidencia científica."
+    de: taller-digestivo/11
+  - texto: "Jengibre, cúrcuma y sauce inhiben enzimas que fabrican los mediadores del dolor y la inflamación."
+    de: guia-inmunidad/7
+diferencias:
+  - "Embarazo: la receta de infusión antináuseas dice que en caso de embarazo se tome «solo con jengibre (omitir la manzanilla)», mientras que la ficha pide consultar al médico en dosis altas y la diapositiva 11 dice «En náuseas del embarazo, consultar al profesional antes de usar». Ante un embarazo, lo prudente es consultar primero."
+indice:
+  usos: [nauseas, digestion, gases, dolor]
+  preparaciones: [infusion, fresco, extracto]

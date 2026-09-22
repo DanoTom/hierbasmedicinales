@@ -1,0 +1,19 @@
+nombre: Tilo
+tipo: planta
+breve: true
+cientifico:
+  - nombre: "Tilia spp."
+    agregado: true
+    nota: "El material no indica la especie."
+familia: { nombre: Malvaceae, agregado: true, nota: "Antes se lo ubicaba en su propia familia, Tiliaceae." }
+usos:
+  - texto: "Fiebre y resfrío."
+    de: guia-inmunidad/7
+comoActua:
+  - texto: "Tilo, saúco y equinácea acompañan el cuadro, favorecen la sudoración y el confort. La evidencia de que acorten la duración de la infección es modesta y discutida."
+    de: guia-inmunidad/7
+formaDeUso:
+  - texto: "La infusión simple es «adecuada para hojas y flores (tulsi, tilo, manzanilla)»."
+    de: guia-inmunidad/28
+indice:
+  usos: [resfrio]

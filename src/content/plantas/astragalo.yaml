@@ -1,0 +1,56 @@
+nombre: Astrágalo
+tipo: planta
+cientifico:
+  - nombre: Astragalus membranaceus
+    de: guia-inmunidad/22
+familia: { nombre: Fabaceae, agregado: true }
+partes:
+  - { parte: raiz, de: guia-inmunidad/22 }
+comoActua:
+  - de: guia-inmunidad/22
+    texto: |-
+      Es, de todo el grupo, el que más directamente se vincula con la inmunidad, y por eso mismo el que tiene las contraindicaciones más claras.
+
+      Sus componentes más estudiados son los polisacáridos de astrágalo, que activan macrófagos y linfocitos T, acompañados por saponinas del grupo de los astragalósidos y por flavonoides. La descripción correcta no es moduladora sino inmunoestimulante: empuja la actividad inmune en una dirección.
+
+      Ese mismo mecanismo, que es su gracia, es lo que lo vuelve inapropiado cuando la inmunidad ya está sobreactivada o cuando se la está frenando a propósito con medicación. No es una precaución teórica ni un exceso de celo: es la consecuencia lógica de cómo funciona.
+usos:
+  - texto: "Uso tradicional preventivo, orientado a reducir la frecuencia de infecciones respiratorias altas."
+    de: guia-inmunidad/22
+  - texto: "Por temporadas: en otoño, antes del invierno, y no durante el cuadro agudo."
+    de: guia-inmunidad/22
+  - texto: "En la medicina tradicional china forma parte de fórmulas para estados de fatiga y convalecencia."
+    de: guia-inmunidad/22
+evidencia:
+  - de: guia-inmunidad/22
+    texto: |-
+      Acá hay que ser franca. Existe un cuerpo importante de investigación mecanística y preclínica que documenta los efectos inmunomoduladores, antiinflamatorios y antioxidantes de sus polisacáridos y saponinas. Existen también revisiones de sus aplicaciones clínicas en trastornos respiratorios que concluyen que no hay evidencia clínica directa sólida, y que harían falta ensayos bien diseñados para establecer eficacia y seguridad en esas indicaciones.
+
+      O sea: mecanismo bien descrito, tradición larguísima, ensayos clínicos concluyentes todavía no. Vale usarlo sabiendo eso.
+alertas: [autoinmune, inmunosupresores, fiebre, embarazo, lactancia, anticoagulantes, diabetes]
+cuidados:
+  - situacion: "Enfermedad autoinmune"
+    texto: "Evitar. Es la contraindicación central, y se desprende directamente de su mecanismo."
+    de: guia-inmunidad/23
+  - situacion: "Inmunosupresores o trasplante de órgano"
+    texto: "Contraindicado: iría en sentido opuesto al del tratamiento."
+    de: guia-inmunidad/23
+  - situacion: "Infección aguda con fiebre"
+    texto: "La tradición lo evita en esa situación, y vale la pena respetarlo."
+    de: guia-inmunidad/23
+  - situacion: "Embarazo y lactancia"
+    texto: "Sin datos suficientes."
+    de: guia-inmunidad/23
+  - situacion: "Anticoagulantes y antidiabéticos"
+    texto: "Precaución, por interacciones descritas para el género."
+    de: guia-inmunidad/23
+formaDeUso:
+  - texto: "Un detalle práctico importante: se usa antes, no durante. La tradición evita administrarlo en plena infección con fiebre, y el razonamiento contemporáneo va en la misma línea. Es lo contrario de lo que hace la mayoría, que lo compra cuando ya está resfriada."
+    de: guia-inmunidad/22
+recuadros:
+  - titulo: "Sobre el formato del astrágalo"
+    de: guia-inmunidad/23
+    texto: "Se consigue en raíz cortada en láminas, ideal para decocción, y como extracto seco. El polvo crudo no está contraindicado, simplemente es ineficiente: como la raíz es leñosa y fibrosa, hervirla extrae bastante más que tragarla molida. Es una lógica distinta de la de los hongos, donde el problema era la quitina."
+indice:
+  usos: [inmunidad, energia]
+  preparaciones: [decoccion, extracto]

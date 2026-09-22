@@ -1,0 +1,63 @@
+nombre: Reishi
+tipo: hongo
+cientifico:
+  - nombre: Ganoderma lucidum
+    de: guia-inmunidad/12
+familia: { nombre: Ganodermataceae, agregado: true }
+partes:
+  - { parte: cuerpo-fructifero, de: guia-inmunidad/12 }
+comoActua:
+  - de: guia-inmunidad/12
+    texto: |-
+      El reishi tiene dos familias de compuestos que hacen cosas distintas y que se extraen con solventes distintos, y de ahí se desprende casi todo lo demás.
+
+      Por un lado, sus betaglucanos, hidrosolubles, actúan por la vía de reconocimiento que describimos más arriba: son leídos por los receptores de las células inmunes y ajustan su respuesta en vez de encenderla a ciegas.
+
+      Por otro, sus triterpenos —los ácidos ganodéricos y compuestos relacionados— son metabolitos secundarios liposolubles que se concentran en el cuerpo fructífero maduro. A ellos se atribuye el amargor, buena parte del efecto calmante y antiinflamatorio, y también la acción sobre la agregación plaquetaria. En esa última acción participa además la adenosina que el hongo contiene naturalmente, y que actúa por un mecanismo propio.
+usos:
+  - texto: "Modulación inmune sostenida, con uso continuado durante semanas."
+    de: guia-inmunidad/12
+  - texto: "Acompañamiento en estrés prolongado y en dificultades para descansar."
+    de: guia-inmunidad/12
+  - texto: "Tradicionalmente se toma de noche, aunque vale la pena saber de dónde sale esa costumbre."
+    de: guia-inmunidad/12
+evidencia:
+  - de: guia-inmunidad/12
+    texto: |-
+      **Sobre el horario.** No existen ensayos que comparen la toma matutina contra la nocturna. Lo que sí está bien establecido es que el efecto sobre la inmunidad depende de la continuidad, no de la hora. La costumbre de tomarlo de noche viene de su uso tradicional como calmante y de estudios en roedores donde extractos de *Ganoderma* aumentaron el sueño de ondas lentas. Si buscás el efecto sobre el descanso, tomarlo de noche es razonable; si buscás el efecto inmunomodulador, lo que importa es que no te lo saltees.
+
+      **Sobre las plaquetas.** Hay estudios que muestran inhibición de la agregación plaquetaria en laboratorio, y un estudio clínico antiguo y pequeño, en voluntarios sanos y en pacientes con enfermedad aterosclerótica, en el que dos semanas de toma inhibieron significativamente la agregación inducida por ADP. No hay ensayos modernos de interacción con anticoagulantes. Alcanza para tomar la precaución en serio, no para afirmar que la interacción está demostrada clínicamente.
+
+      También se describió en laboratorio que triterpenoides del reishi inhiben varias enzimas del citocromo P450, el sistema hepático que metaboliza buena parte de los medicamentos. Es una vía adicional, todavía preclínica, por la que podría interferir con tratamientos crónicos.
+alertas: [anticoagulantes, cirugia, presion, medicacion, embarazo, lactancia, inmunosupresores]
+cuidados:
+  - situacion: "Anticoagulantes y antiagregantes"
+    texto: "Warfarina, aspirina, clopidogrel. Puede sumar efecto antiplaquetario. Es la precaución más importante del reishi."
+    de: guia-inmunidad/13
+  - situacion: "Cirugía programada"
+    texto: "Suspender con una a dos semanas de anticipación, en línea con la recomendación general para suplementos herbales."
+    de: guia-inmunidad/13
+  - situacion: "Presión baja o antihipertensivos"
+    texto: "Se describieron triterpenos con inhibición de la enzima convertidora de angiotensina en laboratorio, el mismo blanco de varios antihipertensivos."
+    de: guia-inmunidad/13
+  - situacion: "Medicación crónica en general"
+    texto: "Por la posible interferencia con el citocromo P450. Conviene consultarlo si tomás algo todos los días."
+    de: guia-inmunidad/13
+  - situacion: "Embarazo, lactancia y trasplantes"
+    texto: "Sin datos de seguridad suficientes en los dos primeros; contraindicado con inmunosupresores."
+    de: guia-inmunidad/13
+formaDeUso:
+  - texto: "Extracto de doble extracción, o decocción prolongada si trabajás con el hongo entero. Los triterpenos casi no pasan al agua, de modo que una infusión simple deja afuera buena parte de lo interesante."
+    de: guia-inmunidad/13
+  - texto: "La doble extracción tiene sentido cuando la especie tiene compuestos importantes en ambas solubilidades: «El caso paradigmático es el reishi»."
+    de: guia-inmunidad/28
+recuadros:
+  - titulo: "El truco del amargor"
+    de: guia-inmunidad/11
+    texto: "Los triterpenos del reishi (ácidos ganodéricos, ácidos lucidénicos y compuestos emparentados) tienen un sabor amargo intenso y característico; algunos son perceptibles en diluciones extraordinariamente altas. Como se concentran en el cuerpo fructífero maduro, el amargor funciona como un indicador casero razonable: un producto de reishi que no amarga probablemente sea micelio sobre grano, o esté mal extraído, o traiga muy poca cantidad."
+  - titulo: "Aliviar no es modular"
+    de: guia-inmunidad/6
+    texto: "Confundir los dos caminos produce dos frustraciones típicas: la persona que toma reishi tres días porque se resfrió y concluye que no sirve, y la persona que toma manzanilla todas las noches convencida de que está fortaleciendo su inmunidad.\n\n*Ni la manzanilla te va a levantar las defensas, ni el reishi te va a cortar la tos hoy.*"
+indice:
+  usos: [inmunidad, estres, sueno]
+  preparaciones: [decoccion, extracto, tintura, polvo]
