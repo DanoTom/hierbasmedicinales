@@ -1,0 +1,46 @@
+# Láminas a buscar en Wikimedia Commons para las fichas que todavía no tienen.
+#
+# «buscar»: nombre científico de la ficha y sinónimos aceptados, en el orden en
+#   que se prueban. El script busca primero en la obra de Köhler (1887, dominio
+#   público) una lámina titulada «<nombre> - Köhler–s Medizinal-Pflanzen-NNN».
+# «archivo»: si se conoce una lámina concreta de otra obra de dominio público
+#   (Curtis's Botanical Magazine, Lindman, Thomé…), se pone acá el título exacto
+#   («File:...») después de revisarla a mano.
+#
+# Sinónimos verificados: Matricaria recutita = M. chamomilla; Mentha piperita =
+# M. × piperita; Salvia rosmarinus = Rosmarinus officinalis; Aloysia citrodora /
+# Lippia citriodora = Aloysia citriodora; Ocimum sanctum = O. tenuiflorum.
+- { planta: alcaucil, buscar: [Cynara scolymus] }
+- { planta: anis-verde, buscar: [Pimpinella anisum] }
+- { planta: ashwagandha, buscar: [Withania somnifera] }
+- { planta: astragalo, buscar: [Astragalus membranaceus] }
+- { planta: boldo, buscar: [Peumus boldus] }
+- { planta: cardo-mariano, buscar: [Silybum marianum] }
+- { planta: cedron, buscar: [Aloysia citriodora, Aloysia citrodora, Lippia citriodora] }
+- { planta: comino, buscar: [Cuminum cyminum] }
+- { planta: cordyceps, buscar: [Cordyceps militaris] }
+- { planta: curcuma, buscar: [Curcuma longa] }
+- { planta: diente-de-leon, buscar: [Taraxacum officinale] }
+- { planta: equinacea, buscar: [Echinacea purpurea, Echinacea angustifolia] }
+- { planta: eucalipto, buscar: [Eucalyptus globulus] }
+- { planta: genciana, buscar: [Gentiana lutea] }
+- { planta: hinojo, buscar: [Foeniculum vulgare] }
+- { planta: jengibre, buscar: [Zingiber officinale] }
+- { planta: llanten, buscar: [Plantago major, Plantago lanceolata] }
+- { planta: malva, buscar: [Malva sylvestris] }
+- { planta: malvavisco, buscar: [Althaea officinalis] }
+- { planta: manzanilla, buscar: [Matricaria chamomilla, Matricaria recutita] }
+- { planta: melena-de-leon, buscar: [Hericium erinaceus] }
+- { planta: menta, buscar: [Mentha × piperita, Mentha piperita] }
+- { planta: pasionaria, buscar: [Passiflora incarnata] }
+- { planta: regaliz, buscar: [Glycyrrhiza glabra] }
+- { planta: reishi, buscar: [Ganoderma lucidum] }
+- { planta: rhodiola, buscar: [Rhodiola rosea] }
+- { planta: romero, buscar: [Rosmarinus officinalis, Salvia rosmarinus] }
+- { planta: sabila, buscar: [Aloe vera, Aloe barbadensis] }
+- { planta: sauce, buscar: [Salix alba, Salix fragilis] }
+- { planta: sauco, buscar: [Sambucus nigra] }
+- { planta: shiitake-y-maitake, buscar: [Lentinula edodes, Grifola frondosa] }
+- { planta: tilo, buscar: [Tilia cordata, Tilia platyphyllos] }
+- { planta: tomillo, buscar: [Thymus vulgaris] }
+- { planta: tulsi, buscar: [Ocimum tenuiflorum, Ocimum sanctum] }

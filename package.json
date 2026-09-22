@@ -10,6 +10,7 @@
     "preview": "astro preview",
     "check": "node scripts/verificar-contenido.mjs",
     "laminas": "node scripts/laminas/descargar.mjs",
+    "laminas:procesar": "node scripts/laminas/procesar.mjs",
     "iconos": "node scripts/generar-iconos.mjs",
     "links": "node scripts/verificar-links.mjs",
     "capturas": "node scripts/capturas.mjs",

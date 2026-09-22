@@ -62,6 +62,20 @@ const bajada = r.bajada ?? plano(r.recomendadoPara[0]?.texto ?? '');
   }
 
   {
+    r.precauciones.length > 0 && (
+      <div class="bloque">
+        <section class="precauciones" aria-labelledby="t-prec">
+          <h2 id="t-prec">
+            <Icono nombre="atencion" />
+            Precauciones
+          </h2>
+          <ListaDatos items={r.precauciones} />
+        </section>
+      </div>
+    )
+  }
+
+  {
     r.tablas.map((t) => (
       <section class="bloque">
         <h2>{t.titulo}</h2>
@@ -132,18 +146,6 @@ const bajada = r.bajada ?? plano(r.recomendadoPara[0]?.texto ?? '');
       <section class="bloque" aria-labelledby="t-notas">
         <h2 id="t-notas">Variantes y notas</h2>
         <ListaDatos items={r.notas} />
-      </section>
-    )
-  }
-
-  {
-    r.precauciones.length > 0 && (
-      <section class="precauciones bloque" aria-labelledby="t-prec">
-        <h2 id="t-prec">
-          <Icono nombre="atencion" />
-          Precauciones
-        </h2>
-        <ListaDatos items={r.precauciones} />
       </section>
     )
   }
