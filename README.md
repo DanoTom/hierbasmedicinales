@@ -79,6 +79,12 @@ publica solo en uno o dos minutos. Es gratis.
 
 La versión de Node la toma sola del archivo `.node-version` (Node 22).
 
+**Si Cloudflare no muestra la pestaña «Pages»** y solo ofrece crear un *Worker*
+importando el repositorio, también sirve: elegí el mismo repositorio y la misma
+rama, con **Build command** `npm run build` y **Deploy command**
+`npx wrangler deploy`. La configuración está en `wrangler.jsonc` y la dirección
+queda del estilo `https://la-botica.<tu-cuenta>.workers.dev`.
+
 ### ¿Público o privado?
 
 El sitio le pide a Google y a los demás buscadores que **no lo indexen**: es un
