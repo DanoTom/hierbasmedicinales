@@ -1,0 +1,21 @@
+---
+import Aviso from './Aviso.astro';
+import { SITIO } from '../config';
+---
+<footer class="pie">
+  <div class="contenedor">
+    <Aviso variante="pie" />
+    <ul class="pie__enlaces">
+      <li><a href="/usos/">Buscar por uso</a></li>
+      <li><a href="/preparaciones/">Preparaciones</a></li>
+      <li><a href="/aprender/">Aprender</a></li>
+      <li><a href="/glosario/">Glosario</a></li>
+      <li><a href="/seguridad/">Seguridad</a></li>
+      <li><a href="/el-taller/">El taller</a></li>
+      <li><a href="/creditos/">Créditos</a></li>
+    </ul>
+    <p class="pie__credito">
+      Material de los talleres de {SITIO.espacio} ({SITIO.docente}). Láminas botánicas de dominio público.
+    </p>
+  </div>
+</footer>

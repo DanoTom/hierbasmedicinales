@@ -29,7 +29,7 @@ talleres de plantas medicinales (material en [`/fuentes`](fuentes/)).
 | Favoritos | `localStorage` del dispositivo | Sin cuentas ni servidor. |
 | Offline / instalable | **PWA** propia: `manifest.webmanifest` + service worker generado después del build con la lista de todos los archivos | Precarga todo el sitio: una vez abierto, funciona sin conexión. |
 | Imágenes | `sharp` → WebP en varios tamaños, `srcset`, `loading="lazy"` | Rendimiento en celular. |
-| Tipografías | Self-hosted con Fontsource | Sin depender de Google Fonts, y funcionan offline. |
+| Tipografías | Fraunces + Figtree, self-hosted con Fontsource | Sin depender de Google Fonts, y funcionan offline. |
 | Deploy | **Cloudflare Pages** conectado al repositorio de GitHub | Gratis, rápido, se actualiza solo con cada cambio. Si no puedo conectarlo yo, dejo instrucciones paso a paso. |
 | Verificación | Playwright (capturas móvil y escritorio), chequeo de links propio, Lighthouse | Pedido explícito. |
 
@@ -130,8 +130,9 @@ filetes con un ornamento pequeño. Mucho aire, grilla limpia.
 
 - **Fraunces** (variable, con eje de tamaño óptico) para títulos: serif con
   carácter, evoca etiquetas antiguas sin ser disfraz.
-- **Atkinson Hyperlegible Next** para el cuerpo: diseñada para máxima
-  legibilidad (baja visión).
+- **Figtree** para el cuerpo: sans serif contemporánea, muy legible, con
+  letras abiertas y buena altura de x. (Primero probé Atkinson Hyperlegible
+  Next, pero su cero tachado hacía que «10 minutos» se leyera «1Ø».)
 - Cuerpo **18 px mínimo** (19 px en pantallas grandes), interlineado 1,6,
   líneas de hasta ~65 caracteres. Ningún texto por debajo de 16 px.
 - Escala 1,25: 16 · 18 · 22,5 · 28 · 35 · 44 · 55 px.

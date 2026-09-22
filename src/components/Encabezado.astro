@@ -1,0 +1,15 @@
+---
+/** Encabezado de página: antetítulo, título y bajada. */
+interface Props {
+  titulo: string;
+  antetitulo?: string;
+  bajada?: string;
+}
+const { titulo, antetitulo, bajada } = Astro.props;
+---
+<header class="encabezado">
+  {antetitulo && <span class="antetitulo">{antetitulo}</span>}
+  <h1>{titulo}</h1>
+  {bajada && <p class="bajada">{bajada}</p>}
+  <slot />
+</header>

@@ -1,0 +1,80 @@
+---
+import Base from '../layouts/Base.astro';
+import Encabezado from '../components/Encabezado.astro';
+import Lamina from '../components/Lamina.astro';
+import { datos } from '../lib/datos';
+import { SITIO } from '../config';
+
+const d = await datos();
+const conLamina = d.laminas.map((l) => ({ l, planta: d.plantas.find((p) => p.data.lamina === l.id)! }));
+const sinLamina = d.plantas.filter((p) => !p.data.lamina);
+---
+<Base titulo="Créditos" descripcion="De dónde salen el contenido, las láminas y las tipografías." ancho="texto">
+  <Encabezado antetitulo="Sobre este cuaderno" titulo="Créditos" />
+
+  <section class="bloque" style="margin-top: 0" aria-labelledby="t-cont">
+    <h2 id="t-cont">Contenido</h2>
+    <p>
+      Todo el contenido sale del material de los talleres de <strong>{SITIO.espacio}</strong> ({SITIO.docente}): dos guías en PDF y
+      dos presentaciones. En cada ficha dice de qué documento y de qué página sale cada dato. Más detalles en
+      <a href="/el-taller/">El taller</a>.
+    </p>
+  </section>
+
+  <section class="bloque" aria-labelledby="t-laminas">
+    <h2 id="t-laminas">Láminas botánicas</h2>
+    <p>Solo se usan láminas de dominio público, con la especie verificada contra el nombre científico de la ficha.</p>
+    {
+      conLamina.map(({ l, planta }) => (
+        <div class="credito">
+          <Lamina planta={planta} lamina={l} />
+          <div>
+            <p>
+              <strong>{planta.data.nombre}</strong> — <i>{l.data.especie}</i>
+            </p>
+            <p>{l.data.autor}.</p>
+            <p>
+              <i>{l.data.obra}</i>, {l.data.anio}.
+            </p>
+            <p>
+              <strong>Licencia:</strong> {l.data.licencia}.
+            </p>
+            <p class="fuente">
+              {l.data.origen}
+              {l.data.url && (
+                <>
+                  {' '}
+                  <a href={l.data.url} rel="noopener">
+                    Ver en Wikimedia Commons
+                  </a>
+                  .
+                </>
+              )}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+    <p style="margin-top: var(--e-4)">
+      Las otras {sinLamina.length} fichas muestran, por ahora, un ornamento de etiqueta de botica en lugar de una lámina: todavía
+      no hay una lámina de dominio público verificada para cada una.
+    </p>
+  </section>
+
+  <section class="bloque" aria-labelledby="t-img">
+    <h2 id="t-img">Otras imágenes</h2>
+    <p>
+      <strong>Diagrama del aparato digestivo</strong> (tema «El sistema digestivo»): Mariana Ruiz Villarreal (LadyofHats), dominio
+      público, vía Wikimedia Commons. Es el mismo diagrama que se mostró en el taller (diap. 4).{' '}
+      <a href="https://commons.wikimedia.org/wiki/File:Digestive_system_diagram_es.svg" rel="noopener">Ver en Wikimedia Commons</a>.
+    </p>
+  </section>
+
+  <section class="bloque" aria-labelledby="t-tipos">
+    <h2 id="t-tipos">Tipografías</h2>
+    <p>
+      <strong>Fraunces</strong> (The Fraunces Project Authors) y <strong>Figtree</strong> (The Figtree Project Authors), ambas con
+      licencia SIL Open Font License 1.1.
+    </p>
+  </section>
+</Base>

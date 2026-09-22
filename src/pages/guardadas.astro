@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import Encabezado from '../components/Encabezado.astro';
+import Icono from '../components/Icono.astro';
+import { datos } from '../lib/datos';
+
+const d = await datos();
+const elementos = [
+  ...d.plantas.map((p) => ({
+    id: `planta:${p.id}`,
+    titulo: p.data.nombre,
+    detalle: p.data.cientifico.map((c) => c.nombre).join(' · '),
+    url: `/plantas/${p.id}/`,
+    tipo: p.data.tipo === 'hongo' ? 'Hongo' : 'Planta',
+  })),
+  ...d.recetas.map((r) => ({
+    id: `receta:${r.id}`,
+    titulo: r.data.nombre,
+    detalle: r.data.bajada ?? '',
+    url: `/recetas/${r.id}/`,
+    tipo: 'Receta',
+  })),
+];
+---
+<Base titulo="Guardadas" descripcion="Tus plantas y recetas guardadas en este dispositivo." ancho="texto">
+  <Encabezado
+    antetitulo="Tu lista"
+    titulo="Guardadas"
+    bajada="Las plantas y recetas que guardaste. Quedan en este celular o computadora."
+  />
+  <div data-guardadas>
+    <div class="vacio" data-vacio>
+      <Icono nombre="guardar" />
+      <p><strong>Todavía no guardaste nada.</strong></p>
+      <p>En cada ficha y en cada receta hay un botón «Guardar». Lo que guardes va a aparecer acá.</p>
+      <p><a class="boton" href="/plantas/">Ver las plantas</a></p>
+    </div>
+    <div class="resultados" data-lista hidden></div>
+  </div>
+  <script type="application/json" id="datos-guardadas" set:html={JSON.stringify(elementos)} />
+</Base>
+
+<script>
+  import { leerGuardadas, alternarGuardada } from '../scripts/guardadas';
+
+  interface Elemento {
+    id: string;
+    titulo: string;
+    detalle: string;
+    url: string;
+    tipo: string;
+  }
+  const todos: Elemento[] = JSON.parse(document.getElementById('datos-guardadas')!.textContent!);
+  const raiz = document.querySelector<HTMLElement>('[data-guardadas]')!;
+  const lista = raiz.querySelector<HTMLElement>('[data-lista]')!;
+  const vacio = raiz.querySelector<HTMLElement>('[data-vacio]')!;
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+
+  function pintar() {
+    const ids = leerGuardadas();
+    const items = ids.map((id) => todos.find((t) => t.id === id)).filter(Boolean) as Elemento[];
+    vacio.hidden = items.length > 0;
+    lista.hidden = items.length === 0;
+    lista.innerHTML =
+      `<p class="resultados__estado">${items.length === 1 ? '1 guardada' : `${items.length} guardadas`}</p><ul>` +
+      items
+        .map(
+          (e) => `<li style="display:flex;align-items:center;gap:.5rem">
+            <a class="resultado" style="flex:1" href="${e.url}">
+              <span class="resultado__titulo">${esc(e.titulo)}</span>
+              <span class="resultado__detalle">${esc(e.tipo)}${e.detalle ? ' · ' + esc(e.detalle) : ''}</span>
+            </a>
+            <button type="button" class="boton boton--secundario" data-quitar="${e.id}" aria-label="Quitar ${esc(e.titulo)} de la lista">Quitar</button>
+          </li>`,
+        )
+        .join('') +
+      '</ul>';
+  }
+  lista.addEventListener('click', (ev) => {
+    const b = (ev.target as HTMLElement).closest<HTMLButtonElement>('[data-quitar]');
+    if (!b) return;
+    alternarGuardada(b.dataset.quitar!);
+    pintar();
+  });
+  pintar();
+</script>

@@ -1,0 +1,62 @@
+---
+import Base from '../../layouts/Base.astro';
+import Encabezado from '../../components/Encabezado.astro';
+import { datos, TEMAS_APARTE } from '../../lib/datos';
+
+const d = await datos();
+const temas = d.temas.filter((t) => !TEMAS_APARTE.includes(t.id));
+const secciones = [
+  {
+    titulo: 'Sistema digestivo',
+    items: [
+      ...temas.filter((t) => t.data.taller === 'digestivo').map((t) => ({ href: `/aprender/${t.id}/`, titulo: t.data.titulo, texto: t.data.bajada })),
+      {
+        href: '/aprender/como-actuan/',
+        titulo: 'Cómo actúan las plantas',
+        texto: 'Colagogas, antiespasmódicas, carminativas, amargas, antiinflamatorias y antieméticas: qué hace cada grupo y dónde.',
+      },
+      { href: '/preparaciones/fermentado/', titulo: 'Probióticos y microbiota', texto: 'Qué es un probiótico y por qué importa la microbiota.' },
+    ],
+  },
+  {
+    titulo: 'Estrés y descanso',
+    items: temas.filter((t) => t.data.taller === 'estres').map((t) => ({ href: `/aprender/${t.id}/`, titulo: t.data.titulo, texto: t.data.bajada })),
+  },
+  {
+    titulo: 'Inmunidad, hongos y adaptógenos',
+    items: temas.filter((t) => t.data.taller === 'inmunidad').map((t) => ({ href: `/aprender/${t.id}/`, titulo: t.data.titulo, texto: t.data.bajada })),
+  },
+  {
+    titulo: 'Para todos los temas',
+    items: [
+      { href: '/seguridad/', titulo: 'Seguridad', texto: 'Precauciones generales, interacciones, antes de una cirugía y señales para consultar.' },
+      { href: '/glosario/', titulo: 'Glosario', texto: 'Las palabras del taller, explicadas.' },
+      { href: '/el-taller/', titulo: 'El taller', texto: 'Las cartas de la docente, los documentos y la bibliografía.' },
+    ],
+  },
+];
+---
+<Base titulo="Aprender" descripcion="Los temas de los talleres: sistema digestivo, estrés y descanso, sistema inmune, adaptógenos y hongos.">
+  <Encabezado
+    antetitulo="Temas del taller"
+    titulo="Aprender"
+    bajada="Lo que vimos en los talleres, con más aire, para leer de a poco y volver cuando haga falta."
+  />
+  {
+    secciones.map((s, i) => (
+      <section class="seccion" aria-labelledby={`s-${i}`}>
+        <h2 id={`s-${i}`}>{s.titulo}</h2>
+        <ul class="grilla">
+          {s.items.map((it) => (
+            <li>
+              <a class="tarjeta" href={it.href}>
+                <span class="tarjeta__titulo">{it.titulo}</span>
+                <span class="tarjeta__texto">{it.texto}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>

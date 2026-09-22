@@ -1,0 +1,52 @@
+---
+/** Página de un tema del taller (Markdown de src/content/temas). */
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Encabezado from './Encabezado.astro';
+import Icono from './Icono.astro';
+import { datos, type Tema } from '../lib/datos';
+import { textoRefs } from '../lib/fuentes';
+
+interface Props {
+  tema: Tema;
+  volver?: { href: string; texto: string };
+  antetitulo?: string;
+}
+const { tema, volver, antetitulo } = Astro.props;
+const { Content } = await render(tema);
+const d = await datos();
+const plantas = tema.data.plantas.map((id) => d.plantas.find((p) => p.id === id)!);
+const TALLER = {
+  digestivo: 'Taller de sistema digestivo',
+  estres: 'Taller de estrés y descanso',
+  inmunidad: 'Guía Inmunidad inteligente',
+  general: 'Del taller',
+} as const;
+---
+<Base titulo={tema.data.titulo} descripcion={tema.data.bajada} ancho="texto">
+  {volver && <a class="volver" href={volver.href}><Icono nombre="izquierda" />{volver.texto}</a>}
+  <Encabezado antetitulo={antetitulo ?? TALLER[tema.data.taller]} titulo={tema.data.titulo} bajada={tema.data.bajada} />
+  <div class="prosa">
+    <Content />
+  </div>
+  {
+    plantas.length > 0 && (
+      <section class="bloque" aria-labelledby="t-fichas">
+        <h2 id="t-fichas">Fichas relacionadas</h2>
+        <ul class="chips">
+          {plantas.map((p) => (
+            <li>
+              <a class="chip" href={`/plantas/${p.id}/`}>
+                <Icono nombre={p.data.tipo === 'hongo' ? 'hongo' : 'hoja'} />
+                {p.data.nombre}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+  <p class="fuente" style="margin-top: var(--e-6)">
+    <span class="fuente__rotulo">Todo este tema sale de: </span>{textoRefs(tema.data.de)}.
+  </p>
+</Base>

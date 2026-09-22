@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import Encabezado from '../components/Encabezado.astro';
+import Buscador from '../components/Buscador.astro';
+---
+<Base titulo="Buscar" descripcion="Buscá una planta, un malestar o una receta." ancho="texto">
+  <Encabezado antetitulo="Buscador" titulo="Buscar" />
+  <Buscador sincronizarUrl autofoco />
+  <noscript>
+    <p class="recuadro">
+      El buscador necesita JavaScript. Mientras tanto podés recorrer <a href="/plantas/">todas las plantas</a> o
+      <a href="/usos/">buscar por uso</a>.
+    </p>
+  </noscript>
+</Base>

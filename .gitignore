@@ -5,3 +5,4 @@ dist/
 *.log
 /capturas/tmp/
 __pycache__/
+capturas/

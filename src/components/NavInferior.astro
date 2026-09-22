@@ -1,0 +1,19 @@
+---
+import Icono from './Icono.astro';
+import { NAV_CELULAR, estaActivo } from '../lib/navegacion';
+const ruta = Astro.url.pathname;
+---
+<nav class="nav-inferior" aria-label="Navegación principal">
+  <ul>
+    {
+      NAV_CELULAR.map((item) => (
+        <li>
+          <a href={item.href} aria-current={estaActivo(ruta, item.href) ? 'page' : undefined}>
+            <Icono nombre={item.icono} />
+            <span>{item.texto}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

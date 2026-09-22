@@ -1,0 +1,7 @@
+---
+import Tema from '../components/Tema.astro';
+import { datos } from '../lib/datos';
+const { temas } = await datos();
+const tema = temas.find((t) => t.id === 'el-taller')!;
+---
+<Tema tema={tema} antetitulo="Sobre este cuaderno" />

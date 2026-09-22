@@ -1,0 +1,10 @@
+---
+/** Nota de procedencia: «Fuente: Guía digestiva, pág. 5». */
+import { textoRefs } from '../lib/fuentes';
+interface Props {
+  refs: readonly string[];
+  class?: string;
+}
+const { refs, class: clase } = Astro.props;
+---
+{refs.length > 0 && <p class:list={['fuente', clase]}><span class="fuente__rotulo">Fuente: </span>{textoRefs(refs)}</p>}

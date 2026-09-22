@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import Encabezado from '../../components/Encabezado.astro';
+import { datos } from '../../lib/datos';
+import { plano } from '../../lib/texto';
+
+const d = await datos();
+const temas = [
+  { id: 'digestivo', nombre: 'Del taller de sistema digestivo' },
+  { id: 'inmunidad', nombre: 'De la guía Inmunidad inteligente' },
+] as const;
+const nombrePlanta = (id: string) => d.plantas.find((p) => p.id === id)?.data.nombre ?? id;
+---
+<Base titulo="Recetas" descripcion="Las recetas del taller, paso a paso.">
+  <Encabezado
+    antetitulo="Recetario"
+    titulo="Recetas"
+    bajada="Paso a paso, tal como las dio el taller: ingredientes, preparación, cómo se usa y cómo se conserva."
+  />
+  {
+    temas.map((t) => (
+      <section class="seccion" aria-labelledby={`t-${t.id}`}>
+        <h2 id={`t-${t.id}`}>{t.nombre}</h2>
+        <ul class="grilla">
+          {d.recetas
+            .filter((r) => r.data.tema === t.id)
+            .map((r) => (
+              <li>
+                <a class="tarjeta" href={`/recetas/${r.id}/`}>
+                  <span class="tarjeta__titulo">{r.data.nombre}</span>
+                  <span class="tarjeta__texto">{r.data.bajada ?? plano(r.data.recomendadoPara[0]?.texto ?? '')}</span>
+                  {r.data.plantas.length > 0 && (
+                    <span class="tarjeta__meta">Con {r.data.plantas.map(nombrePlanta).join(', ').toLowerCase()}</span>
+                  )}
+                </a>
+              </li>
+            ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>

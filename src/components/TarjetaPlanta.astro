@@ -1,0 +1,40 @@
+---
+import Lamina from './Lamina.astro';
+import { laminaDe, numeroDe, resumenUsos, type Planta } from '../lib/datos';
+import { PARTES, PREPARACIONES } from '../lib/vocabulario';
+
+interface Props {
+  planta: Planta;
+  encabezado?: 'h2' | 'h3';
+}
+const { planta, encabezado = 'h2' } = Astro.props;
+const d = planta.data;
+const lamina = await laminaDe(planta);
+const nro = await numeroDe(planta.id);
+const usos = await resumenUsos(planta, 3);
+const Titulo = encabezado;
+---
+<a
+  class="tarjeta-planta"
+  href={`/plantas/${planta.id}/`}
+  data-usos={d.indice.usos.join(' ')}
+  data-partes={d.partes.map((p) => p.parte).join(' ')}
+  data-preparaciones={d.indice.preparaciones.join(' ')}
+  data-tipo={d.tipo}
+>
+  <Lamina planta={planta} lamina={lamina} />
+  <span class="tarjeta-planta__cuerpo">
+    <span class="tarjeta-planta__nro">Nº {nro}</span>
+    <Titulo class="tarjeta-planta__nombre" style="margin:0">{d.nombre}</Titulo>
+    <span class="tarjeta-planta__cientifico">{d.cientifico.map((c) => c.nombre).join(' · ')}</span>
+    {usos.length > 0 && <span class="tarjeta-planta__usos">{usos.join(' · ')}</span>}
+    {
+      (d.tipo === 'hongo' || d.breve) && (
+        <span class="tarjeta-planta__marcas">
+          {d.tipo === 'hongo' && <span class="marca-mini">Hongo</span>}
+          {d.breve && <span class="marca-mini">Ficha breve</span>}
+        </span>
+      )
+    }
+  </span>
+</a>

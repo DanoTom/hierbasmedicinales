@@ -1,0 +1,9 @@
+---
+/** Texto con párrafos y formato mínimo (ver src/lib/texto.ts). */
+import { parrafos } from '../lib/texto';
+interface Props {
+  texto: string;
+}
+const ps = parrafos(Astro.props.texto);
+---
+<div class="parrafos">{ps.map((p) => <p set:html={p} />)}</div>

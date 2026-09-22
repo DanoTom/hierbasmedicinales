@@ -1,0 +1,32 @@
+---
+import Sello from './Sello.astro';
+import Icono from './Icono.astro';
+import { SITIO, tituloSitio } from '../config';
+import { NAV_PRINCIPAL, estaActivo } from '../lib/navegacion';
+const ruta = Astro.url.pathname;
+---
+<header class="cabecera">
+  <div class="contenedor cabecera__fila">
+    <a class="marca" href="/" aria-label={`${tituloSitio}: ir al inicio`}>
+      <Sello class="marca__sello" />
+      <span>
+        <span class="marca__nombre">{tituloSitio}</span>
+        <span class="marca__sub">{SITIO.subtitulo}</span>
+      </span>
+    </a>
+    <nav class="nav-superior" aria-label="Secciones">
+      <ul>
+        {
+          NAV_PRINCIPAL.map((item) => (
+            <li>
+              <a href={item.href} aria-current={estaActivo(ruta, item.href) ? 'page' : undefined}>
+                {item.icono === 'buscar' && <Icono nombre="buscar" />}
+                {item.texto}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

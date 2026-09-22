@@ -1,0 +1,392 @@
+---
+import Base from '../../layouts/Base.astro';
+import Lamina from '../../components/Lamina.astro';
+import ListaDatos from '../../components/ListaDatos.astro';
+import PanelPrecauciones from '../../components/PanelPrecauciones.astro';
+import Fuente from '../../components/Fuente.astro';
+import Parrafos from '../../components/Parrafos.astro';
+import Icono from '../../components/Icono.astro';
+import BotonGuardar from '../../components/BotonGuardar.astro';
+import BotonImprimir from '../../components/BotonImprimir.astro';
+import {
+  datos,
+  numeroDe,
+  laminaDe,
+  recetasDePlanta,
+  categoriasDePlanta,
+  refsDePlanta,
+  type Planta,
+} from '../../lib/datos';
+import { documentosDe, textoRefs } from '../../lib/fuentes';
+import { ALERTAS, DOCUMENTOS, PARTES, PREPARACIONES } from '../../lib/vocabulario';
+import { plano } from '../../lib/texto';
+
+export async function getStaticPaths() {
+  const { plantas } = await datos();
+  return plantas.map((planta, i) => ({
+    params: { planta: planta.id },
+    props: { planta, anterior: plantas[i - 1], siguiente: plantas[i + 1] },
+  }));
+}
+
+interface Props {
+  planta: Planta;
+  anterior?: Planta;
+  siguiente?: Planta;
+}
+const { planta, anterior, siguiente } = Astro.props;
+const d = planta.data;
+const { usos } = await datos();
+const nro = await numeroDe(planta.id);
+const lamina = await laminaDe(planta);
+const recetas = await recetasDePlanta(planta.id);
+const categorias = await categoriasDePlanta(planta.id);
+const docs = documentosDe(refsDePlanta(planta));
+const usosIndice = d.indice.usos.map((u) => usos.find((x) => x.id === u)!);
+const recuadros = d.recuadros.filter((r) => !r.precaucion);
+const deGuiaInmunidad = (x?: { de: string[] }) => !!x && x.de.some((r) => r.startsWith('guia-inmunidad')) && !d.breve;
+const tituloActua = deGuiaInmunidad(d.comoActua[0]) ? 'Por qué haría efecto' : 'Cómo actúa';
+const hayActua = d.comoActua.length > 0 || d.compuestoActivo || d.acciones;
+const tipo = d.tipo === 'hongo' ? 'Hongo' : 'Planta';
+const alertasTexto = d.alertas.map((a) => ALERTAS[a].toLowerCase());
+const descripcion = `${d.nombre} (${d.cientifico.map((c) => c.nombre).join(', ')}): ${plano(d.usos[0]?.texto ?? '')}`;
+const hayAgregados = [...d.cientifico, d.familia, ...d.partes, ...d.otrosNombres].some((x) => x && 'agregado' in x && x.agregado);
+---
+<Base titulo={d.nombre} descripcion={descripcion}>
+  <a class="volver no-imprimir" href="/plantas/"><Icono nombre="izquierda" />Todas las plantas</a>
+
+  <article>
+    <header class="ficha__cabecera encabezado">
+      <div class="ficha__titulo">
+        <span class="antetitulo">Nº {nro} · {tipo}{d.breve ? ' · ficha breve' : ''}</span>
+        <h1>{d.nombre}</h1>
+        <p class="ficha__cientifico">
+          {
+            d.cientifico.map((c, i) => (
+              <>
+                {i > 0 && ' · '}
+                {c.nombre}
+                {c.agregado && (
+                  <>
+                    {' '}
+                    <span class="agregado" title="Dato agregado: no está en el material del taller">agregado</span>
+                  </>
+                )}
+              </>
+            ))
+          }
+          {
+            d.cientifico
+              .filter((c) => c.nota)
+              .map((c) => (
+                <span class="nota">
+                  {d.cientifico.length > 1 && <i>{c.nombre}: </i>}
+                  {c.nota}
+                </span>
+              ))
+          }
+        </p>
+      </div>
+      {
+        d.alertas.length > 0 && (
+          <a class="aviso-precauciones no-imprimir" href="#precauciones">
+            <Icono nombre="atencion" />
+            <span>
+              <strong>Tiene precauciones</strong> — cuidado especial con {alertasTexto.slice(0, 4).join(', ')}
+              {alertasTexto.length > 4 ? ' y más' : ''}. <span class="subrayado">Ver precauciones</span>
+            </span>
+          </a>
+        )
+      }
+      <div class="acciones no-imprimir">
+        <BotonGuardar id={`planta:${planta.id}`} />
+        <BotonImprimir />
+      </div>
+    </header>
+
+    <div class="ficha">
+      <aside class="ficha__lateral" aria-label="Lámina y datos">
+        <div class="ficha__lamina">
+          <Lamina planta={planta} lamina={lamina} tamano="grande" prioridad />
+        </div>
+        <dl class="ficha__datos">
+          {
+            d.partes.length > 0 && (
+              <div>
+                <dt>Parte que se usa</dt>
+                <dd>
+                  {d.partes.map((p, i) => (
+                    <>
+                      {i > 0 && ', '}
+                      {PARTES[p.parte].toLowerCase()}
+                      {p.detalle && ` (${p.detalle})`}
+                      {p.agregado && (
+                        <>
+                          {' '}
+                          <span class="agregado" title="Dato agregado: no está en el material del taller">agregado</span>
+                        </>
+                      )}
+                    </>
+                  ))}
+                </dd>
+              </div>
+            )
+          }
+          {
+            d.familia && (
+              <div>
+                <dt>Familia</dt>
+                <dd>
+                  {d.familia.nombre}
+                  {d.familia.agregado && (
+                    <>
+                      {' '}
+                      <span class="agregado" title="Dato agregado: no está en el material del taller">agregado</span>
+                    </>
+                  )}
+                  {d.familia.nota && <span class="fuente-item">{d.familia.nota}</span>}
+                </dd>
+              </div>
+            )
+          }
+          {
+            d.otrosNombres.length > 0 && (
+              <div>
+                <dt>Otros nombres</dt>
+                <dd>
+                  {d.otrosNombres.map((o, i) => (
+                    <>
+                      {i > 0 && ', '}
+                      {o.nombre}
+                      {o.agregado && (
+                        <>
+                          {' '}
+                          <span class="agregado" title="Dato agregado: no está en el material del taller">agregado</span>
+                        </>
+                      )}
+                    </>
+                  ))}
+                </dd>
+              </div>
+            )
+          }
+          {
+            d.indice.preparaciones.length > 0 && (
+              <div>
+                <dt>Preparaciones</dt>
+                <dd>{d.indice.preparaciones.map((p) => PREPARACIONES[p].toLowerCase()).join(', ')}</dd>
+              </div>
+            )
+          }
+        </dl>
+      </aside>
+
+      <div class="ficha__contenido">
+        {
+          d.breve && (
+            <div class="recuadro recuadro--nota ficha__breve">
+              <p>
+                <strong>Ficha breve.</strong> El material del taller solo menciona {d.tipo === 'hongo' ? 'este hongo' : 'esta planta'}, sin
+                una ficha completa. Acá está todo lo que dice; lo que no figura, no está en el material.
+              </p>
+            </div>
+          )
+        }
+
+        {
+          d.usos.length > 0 && (
+            <section class="bloque" aria-labelledby="t-usos" style="margin-top: var(--e-5)">
+              <h2 id="t-usos">Para qué se usa</h2>
+              <ListaDatos items={d.usos} />
+            </section>
+          )
+        }
+
+        <div class="bloque">
+          <PanelPrecauciones planta={planta} />
+        </div>
+
+        {
+          d.diferencias.length > 0 && (
+            <section class="recuadro recuadro--nota" aria-labelledby="t-dif">
+              <h2 id="t-dif" class="recuadro__titulo">Los materiales no coinciden en todo</h2>
+              <ul>
+                {d.diferencias.map((x) => (
+                  <li>{x}</li>
+                ))}
+              </ul>
+              <p class="fuente">Nota de edición: compara lo que dicen los distintos documentos del taller.</p>
+            </section>
+          )
+        }
+
+        {
+          (d.formaDeUso.length > 0 || recetas.length > 0) && (
+            <section class="bloque" aria-labelledby="t-uso">
+              <h2 id="t-uso">Cómo se usa</h2>
+              {d.formaDeUso.length > 0 && <ListaDatos items={d.formaDeUso} />}
+              {recetas.length > 0 && (
+                <>
+                  <h3>Recetas con {d.nombre.toLowerCase()}</h3>
+                  <ul class="chips">
+                    {recetas.map((r) => (
+                      <li>
+                        <a class="chip" href={`/recetas/${r.id}/`}>
+                          <Icono nombre="taza" />
+                          {r.data.nombre}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </section>
+          )
+        }
+
+        {
+          hayActua && (
+            <section class="bloque" aria-labelledby="t-actua">
+              <h2 id="t-actua">{tituloActua}</h2>
+              {(d.compuestoActivo || d.acciones) && (
+                <dl class="ficha__datos" style="margin: 0 0 var(--e-4)">
+                  {d.acciones && (
+                    <div>
+                      <dt>Acción</dt>
+                      <dd>
+                        {d.acciones.lista.join(' · ')}
+                        <span class="fuente-item">{textoRefs(d.acciones.de)}</span>
+                      </dd>
+                    </div>
+                  )}
+                  {d.compuestoActivo && (
+                    <div>
+                      <dt>Compuesto activo</dt>
+                      <dd>
+                        {d.compuestoActivo.texto}
+                        <span class="fuente-item">{textoRefs(d.compuestoActivo.de)}</span>
+                      </dd>
+                    </div>
+                  )}
+                </dl>
+              )}
+              {d.comoActua.length > 0 && <ListaDatos items={d.comoActua} comoTexto={d.comoActua.length === 1 || !d.breve} />}
+            </section>
+          )
+        }
+
+        {
+          d.evidencia.length > 0 && (
+            <section class="bloque" aria-labelledby="t-evid">
+              <h2 id="t-evid">Qué dice la evidencia</h2>
+              <ListaDatos items={d.evidencia} comoTexto />
+            </section>
+          )
+        }
+
+        {
+          recuadros.map((r) => (
+            <aside class="recuadro">
+              <h3 class="recuadro__titulo">{r.titulo}</h3>
+              <Parrafos texto={r.texto} />
+              <Fuente refs={r.de} />
+            </aside>
+          ))
+        }
+
+        {
+          categorias.length > 0 && (
+            <section class="bloque" aria-labelledby="t-cat">
+              <h2 id="t-cat">En las diapositivas del taller</h2>
+              <p>
+                Aparece en {categorias.length === 1 ? 'la categoría' : 'las categorías'} de acción{' '}
+                {categorias.map((c, i) => (
+                  <>
+                    {i > 0 && (i === categorias.length - 1 ? ' y ' : ', ')}
+                    <a href={`/aprender/como-actuan/#${c.categoria.id}`}>{c.categoria.data.nombre.toLowerCase()}</a>
+                  </>
+                ))}
+                .
+              </p>
+              <div class="tabla tabla--apilable">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">Categoría</th>
+                      <th scope="col">Indicación principal</th>
+                      <th scope="col">Forma de uso</th>
+                      <th scope="col">Compuesto activo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {categorias.flatMap((c) =>
+                      c.filas.map((f) => (
+                        <tr>
+                          <td data-rotulo="Categoría">{c.categoria.data.nombre}</td>
+                          <td data-rotulo="Indicación principal">{f.indicacion}</td>
+                          <td data-rotulo="Forma de uso">{f.forma}</td>
+                          <td data-rotulo="Compuesto activo">{f.compuesto}</td>
+                        </tr>
+                      )),
+                    )}
+                  </tbody>
+                </table>
+              </div>
+              <Fuente refs={categorias.flatMap((c) => c.categoria.data.de).filter((r) => !r.endsWith('/5'))} />
+            </section>
+          )
+        }
+
+        <section class="bloque no-imprimir" aria-labelledby="t-otros">
+          <h2 id="t-otros">Otras plantas para lo mismo</h2>
+          <ul class="chips">
+            {
+              usosIndice.map((u) => (
+                <li>
+                  <a class="chip" href={`/usos/${u.id}/`}>
+                    {u.data.nombre}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+
+        <section class="bloque" aria-labelledby="t-fuentes">
+          <h2 id="t-fuentes">De dónde sale esta ficha</h2>
+          <ul>
+            {docs.map((doc) => <li>{DOCUMENTOS[doc].titulo}</li>)}
+          </ul>
+          {
+            hayAgregados && (
+              <p class="fuente">
+                Los datos marcados <span class="agregado">agregado</span> no están en el material del taller: se sumaron para
+                completar la ficha (nombre científico o familia botánica) y se verificaron aparte.
+              </p>
+            )
+          }
+          <p class="impreso-desde">{Astro.url.href}</p>
+        </section>
+      </div>
+    </div>
+  </article>
+
+  <nav class="vecinos no-imprimir" aria-label="Otras fichas">
+    {
+      anterior && (
+        <a href={`/plantas/${anterior.id}/`}>
+          <small>← Anterior</small>
+          <span>{anterior.data.nombre}</span>
+        </a>
+      )
+    }
+    {
+      siguiente && (
+        <a class="vecinos__sig" href={`/plantas/${siguiente.id}/`}>
+          <small>Siguiente →</small>
+          <span>{siguiente.data.nombre}</span>
+        </a>
+      )
+    }
+  </nav>
+</Base>

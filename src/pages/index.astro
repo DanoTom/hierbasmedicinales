@@ -1,5 +1,118 @@
 ---
-import { datos } from '../lib/datos';
+import Base from '../layouts/Base.astro';
+import Buscador from '../components/Buscador.astro';
+import Aviso from '../components/Aviso.astro';
+import Filete from '../components/Filete.astro';
+import Icono from '../components/Icono.astro';
+import { datos, GRUPOS_USO, plantasDeUso } from '../lib/datos';
+import { SITIO } from '../config';
+
 const d = await datos();
+const iconosGrupo = { digestion: 'cuenco', nervios: 'luna', defensas: 'pulmon', energia: 'sol' } as const;
+/** Usos destacados en el inicio (el resto está en /usos/). */
+const destacados = ['digestion', 'gases', 'nauseas', 'mucosa', 'estres', 'sueno', 'tos', 'resfrio', 'inmunidad', 'energia'];
+const usos = await Promise.all(
+  destacados.map(async (id) => {
+    const u = d.usos.find((x) => x.id === id)!;
+    return { u, n: (await plantasDeUso(id)).length };
+  }),
+);
+const hongos = d.plantas.filter((p) => p.data.tipo === 'hongo').length;
+const saludo = SITIO.duena ? `Hola, ${SITIO.duena}` : 'Tu cuaderno de plantas';
 ---
-<p>{d.plantas.length} plantas, {d.recetas.length} recetas, {d.temas.length} temas, {d.glosario.length} términos</p>
+<Base>
+  <section class="portada">
+    <div class="etiqueta portada__etiqueta">
+      <span class="antetitulo">{saludo}</span>
+      <h1>¿Qué necesitás hoy?</h1>
+      <p class="bajada">
+        Todo lo del taller en un solo lugar: {d.plantas.length - hongos} plantas, {hongos} hongos, {d.recetas.length} recetas y
+        cómo prepararlas.
+      </p>
+    </div>
+    <div class="portada__buscador">
+      <Buscador nivel="h3" />
+    </div>
+  </section>
+
+  <Filete />
+
+  <section class="seccion" aria-labelledby="t-usos">
+    <div class="titulo-seccion">
+      <h2 id="t-usos">Buscar por lo que te pasa</h2>
+      <a href="/usos/">Ver todos los usos</a>
+    </div>
+    <ul class="lista-usos">
+      {
+        usos.map(({ u, n }) => (
+          <li>
+            <a href={`/usos/${u.id}/`}>
+              <span>{u.data.nombre}</span>
+              <span class="cuenta" aria-label={`${n} plantas`}>{n}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-cuaderno">
+    <div class="titulo-seccion">
+      <h2 id="t-cuaderno">Recorrer el cuaderno</h2>
+    </div>
+    <ul class="grilla">
+      <li>
+        <a class="tarjeta" href="/plantas/">
+          <Icono nombre="hoja" class="tarjeta__icono" />
+          <span class="tarjeta__titulo">Plantas y hongos</span>
+          <span class="tarjeta__texto">Una ficha por cada una, con usos, preparación y precauciones.</span>
+          <span class="tarjeta__meta">{d.plantas.length} fichas</span>
+        </a>
+      </li>
+      <li>
+        <a class="tarjeta" href="/recetas/">
+          <Icono nombre="taza" class="tarjeta__icono" />
+          <span class="tarjeta__titulo">Recetas</span>
+          <span class="tarjeta__texto">Infusión antináuseas, amargo aperitivo, vinagre de lavanda, decocciones…</span>
+          <span class="tarjeta__meta">{d.recetas.length} recetas</span>
+        </a>
+      </li>
+      <li>
+        <a class="tarjeta" href="/preparaciones/">
+          <Icono nombre="frasco" class="tarjeta__icono" />
+          <span class="tarjeta__titulo">Preparaciones</span>
+          <span class="tarjeta__texto">Infusión, decocción, tintura madre, extractos y más: cuándo conviene cada una.</span>
+          <span class="tarjeta__meta">{d.preparaciones.length} formas de preparar</span>
+        </a>
+      </li>
+      <li>
+        <a class="tarjeta" href="/aprender/">
+          <Icono nombre="libro" class="tarjeta__icono" />
+          <span class="tarjeta__titulo">Aprender</span>
+          <span class="tarjeta__texto">El sistema digestivo, estrés y descanso, el sistema inmune, adaptógenos y hongos.</span>
+          <span class="tarjeta__meta">Temas del taller</span>
+        </a>
+      </li>
+      <li>
+        <a class="tarjeta" href="/glosario/">
+          <Icono nombre="letras" class="tarjeta__icono" />
+          <span class="tarjeta__titulo">Glosario</span>
+          <span class="tarjeta__texto">Qué quiere decir colagoga, carminativa, contraindicación, adaptógeno…</span>
+          <span class="tarjeta__meta">{d.glosario.length} términos</span>
+        </a>
+      </li>
+      <li>
+        <a class="tarjeta" href="/seguridad/">
+          <Icono nombre="escudo" class="tarjeta__icono" />
+          <span class="tarjeta__titulo">Seguridad</span>
+          <span class="tarjeta__texto">Natural no siempre significa inofensivo: interacciones y señales para consultar.</span>
+          <span class="tarjeta__meta">Precauciones generales</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="seccion" aria-label="Aviso">
+    <Aviso />
+  </section>
+</Base>

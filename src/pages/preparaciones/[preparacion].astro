@@ -1,0 +1,73 @@
+---
+import Base from '../../layouts/Base.astro';
+import Encabezado from '../../components/Encabezado.astro';
+import ListaDatos from '../../components/ListaDatos.astro';
+import Tabla from '../../components/Tabla.astro';
+import TarjetaPlanta from '../../components/TarjetaPlanta.astro';
+import Icono from '../../components/Icono.astro';
+import { datos, plantasDePreparacion, type Preparacion } from '../../lib/datos';
+
+export async function getStaticPaths() {
+  const { preparaciones } = await datos();
+  return preparaciones.map((preparacion) => ({ params: { preparacion: preparacion.id }, props: { preparacion } }));
+}
+interface Props {
+  preparacion: Preparacion;
+}
+const { preparacion } = Astro.props;
+const p = preparacion.data;
+const d = await datos();
+const recetas = p.recetas.map((id) => d.recetas.find((r) => r.id === id)!);
+const plantas = await plantasDePreparacion(p.clave);
+---
+<Base titulo={p.nombre} descripcion={p.bajada}>
+  <a class="volver" href="/preparaciones/"><Icono nombre="izquierda" />Todas las preparaciones</a>
+  <Encabezado antetitulo="Preparación" titulo={p.nombre} bajada={p.bajada} />
+
+  <div class="prosa">
+    {
+      p.secciones.map((s) => (
+        <section class="bloque" style="margin-top: var(--e-6)">
+          <h2>{s.titulo}</h2>
+          {s.tabla && <Tabla columnas={s.tabla.columnas} filas={s.tabla.filas} de={s.tabla.de} />}
+          {s.items.length > 0 && <ListaDatos items={s.items} />}
+        </section>
+      ))
+    }
+  </div>
+
+  {
+    recetas.length > 0 && (
+      <section class="seccion" aria-labelledby="t-recetas">
+        <h2 id="t-recetas">Recetas</h2>
+        <ul class="grilla">
+          {recetas.map((r) => (
+            <li>
+              <a class="tarjeta" href={`/recetas/${r.id}/`}>
+                <Icono nombre="taza" class="tarjeta__icono" />
+                <span class="tarjeta__titulo">{r.data.nombre}</span>
+                {r.data.bajada && <span class="tarjeta__texto">{r.data.bajada}</span>}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    plantas.length > 0 && (
+      <section class="seccion" aria-labelledby="t-plantas">
+        <h2 id="t-plantas">Plantas que se preparan así</h2>
+        <p>Según las fichas del taller.</p>
+        <ul class="plantas">
+          {plantas.map((pl) => (
+            <li>
+              <TarjetaPlanta planta={pl} encabezado="h3" />
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+</Base>

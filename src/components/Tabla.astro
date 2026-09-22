@@ -1,0 +1,32 @@
+---
+/** Tabla del material del taller. En el celular cada fila se apila. */
+import Fuente from './Fuente.astro';
+import { enLinea } from '../lib/texto';
+interface Props {
+  columnas: string[];
+  filas: string[][];
+  de?: string[];
+  titulo?: string;
+}
+const { columnas, filas, de = [], titulo } = Astro.props;
+---
+<div class="tabla tabla--apilable">
+  <table>
+    {titulo && <caption>{titulo}</caption>}
+    <thead>
+      <tr>{columnas.map((c) => <th scope="col">{c}</th>)}</tr>
+    </thead>
+    <tbody>
+      {
+        filas.map((fila) => (
+          <tr>
+            {fila.map((celda, i) => (
+              <td data-rotulo={columnas[i]} set:html={enLinea(celda)} />
+            ))}
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
+<Fuente refs={de} />

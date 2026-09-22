@@ -1,0 +1,177 @@
+---
+import Base from '../../layouts/Base.astro';
+import Encabezado from '../../components/Encabezado.astro';
+import ListaDatos from '../../components/ListaDatos.astro';
+import Fuente from '../../components/Fuente.astro';
+import Tabla from '../../components/Tabla.astro';
+import Icono from '../../components/Icono.astro';
+import BotonGuardar from '../../components/BotonGuardar.astro';
+import BotonImprimir from '../../components/BotonImprimir.astro';
+import { datos, type Receta } from '../../lib/datos';
+import { enLinea, plano } from '../../lib/texto';
+import { ALERTAS, PREPARACIONES } from '../../lib/vocabulario';
+
+export async function getStaticPaths() {
+  const { recetas } = await datos();
+  return recetas.map((receta) => ({ params: { receta: receta.id }, props: { receta } }));
+}
+interface Props {
+  receta: Receta;
+}
+const { receta } = Astro.props;
+const r = receta.data;
+const d = await datos();
+const plantas = r.plantas.map((id) => d.plantas.find((p) => p.id === id)!);
+const prep = r.preparacion ? d.preparaciones.find((p) => p.data.clave === r.preparacion) : undefined;
+const bajada = r.bajada ?? plano(r.recomendadoPara[0]?.texto ?? '');
+---
+<Base titulo={r.nombre} descripcion={bajada} ancho="texto">
+  <a class="volver no-imprimir" href="/recetas/"><Icono nombre="izquierda" />Todas las recetas</a>
+  <Encabezado antetitulo="Receta" titulo={r.nombre} bajada={r.bajada}>
+    <div class="acciones no-imprimir">
+      <BotonGuardar id={`receta:${receta.id}`} />
+      <BotonImprimir />
+    </div>
+  </Encabezado>
+
+  {
+    plantas.length > 0 && (
+      <aside class="aviso-precauciones" style="margin-bottom: var(--e-5)">
+        <Icono nombre="atencion" />
+        <span>
+          <strong>Antes de prepararla</strong>, revisá las precauciones de{' '}
+          {plantas.map((p, i) => (
+            <>
+              {i > 0 && (i === plantas.length - 1 ? ' y ' : ', ')}
+              <a href={`/plantas/${p.id}/#precauciones`}>{p.data.nombre.toLowerCase()}</a>
+            </>
+          ))}
+
+        </span>
+      </aside>
+    )
+  }
+
+  {
+    r.recomendadoPara.length > 0 && (
+      <section class="bloque" style="margin-top: 0" aria-labelledby="t-para">
+        <h2 id="t-para">Recomendado para</h2>
+        <ListaDatos items={r.recomendadoPara} />
+      </section>
+    )
+  }
+
+  {
+    r.tablas.map((t) => (
+      <section class="bloque">
+        <h2>{t.titulo}</h2>
+        <Tabla columnas={t.columnas} filas={t.filas} de={t.de} />
+      </section>
+    ))
+  }
+
+  {
+    r.ingredientes.length > 0 && (
+      <section class="bloque" aria-labelledby="t-ing">
+        <h2 id="t-ing">{r.tema === 'inmunidad' ? 'Qué necesitás' : 'Ingredientes'}</h2>
+        <ul class="ingredientes">
+          {r.ingredientes.map((i) => (
+            <li set:html={enLinea(i)} />
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    r.pasos.length > 0 && (
+      <section class="bloque" aria-labelledby="t-pasos">
+        <h2 id="t-pasos">{r.tema === 'inmunidad' ? 'Paso a paso' : 'Preparación'}</h2>
+        <ol class="pasos">
+          {r.pasos.map((p) => (
+            <li>
+              {p.titulo && <span class="pasos__titulo">{p.titulo}</span>}
+              <span set:html={enLinea(p.texto)} />
+            </li>
+          ))}
+        </ol>
+        <Fuente refs={r.de} />
+      </section>
+    )
+  }
+
+  {
+    r.porQue.length > 0 && (
+      <aside class="recuadro">
+        <h3 class="recuadro__titulo">Por qué</h3>
+        <ListaDatos items={r.porQue} />
+      </aside>
+    )
+  }
+
+  {
+    r.formaDeUso.length > 0 && (
+      <section class="bloque" aria-labelledby="t-uso">
+        <h2 id="t-uso">Forma de uso</h2>
+        <ListaDatos items={r.formaDeUso} />
+      </section>
+    )
+  }
+
+  {
+    r.conservacion.length > 0 && (
+      <section class="bloque" aria-labelledby="t-cons">
+        <h2 id="t-cons">Conservación</h2>
+        <ListaDatos items={r.conservacion} />
+      </section>
+    )
+  }
+
+  {
+    r.notas.length > 0 && (
+      <section class="bloque" aria-labelledby="t-notas">
+        <h2 id="t-notas">Variantes y notas</h2>
+        <ListaDatos items={r.notas} />
+      </section>
+    )
+  }
+
+  {
+    r.precauciones.length > 0 && (
+      <section class="precauciones bloque" aria-labelledby="t-prec">
+        <h2 id="t-prec">
+          <Icono nombre="atencion" />
+          Precauciones
+        </h2>
+        <ListaDatos items={r.precauciones} />
+      </section>
+    )
+  }
+
+  {
+    (plantas.length > 0 || prep) && (
+      <section class="bloque no-imprimir" aria-labelledby="t-rel">
+        <h2 id="t-rel">Relacionado</h2>
+        <ul class="chips">
+          {plantas.map((p) => (
+            <li>
+              <a class="chip" href={`/plantas/${p.id}/`}>
+                <Icono nombre={p.data.tipo === 'hongo' ? 'hongo' : 'hoja'} />
+                {p.data.nombre}
+              </a>
+            </li>
+          ))}
+          {prep && (
+            <li>
+              <a class="chip" href={`/preparaciones/${prep.id}/`}>
+                <Icono nombre="frasco" />
+                {prep.data.nombre}
+              </a>
+            </li>
+          )}
+        </ul>
+      </section>
+    )
+  }
+  <p class="impreso-desde">{Astro.url.href}</p>
+</Base>

@@ -1,0 +1,83 @@
+---
+import Base from '../../layouts/Base.astro';
+import Encabezado from '../../components/Encabezado.astro';
+import TarjetaPlanta from '../../components/TarjetaPlanta.astro';
+import Icono from '../../components/Icono.astro';
+import Aviso from '../../components/Aviso.astro';
+import { datos, plantasDeUso, recetasDeUso, GRUPOS_USO, type Uso } from '../../lib/datos';
+
+export async function getStaticPaths() {
+  const { usos } = await datos();
+  return usos.map((uso) => ({ params: { uso: uso.id }, props: { uso } }));
+}
+interface Props {
+  uso: Uso;
+}
+const { uso } = Astro.props;
+const plantas = await plantasDeUso(uso.id);
+const recetas = await recetasDeUso(uso.id);
+const conPrecauciones = plantas.filter((p) => p.data.alertas.length).length;
+const notas: Record<string, string> = {
+  inmunidad:
+    'Estas son plantas y hongos del «camino B»: se evalúan a las cuatro u ocho semanas y no sirven para cortar un resfrío. Para aliviar síntomas, mirá «Resfrío y fiebre» o «Tos y garganta».',
+  resfrio:
+    'Son plantas del «camino A», que acompañan el cuadro. El astrágalo, en cambio, se usa antes del invierno y no durante una infección con fiebre.',
+};
+---
+<Base titulo={uso.data.nombre} descripcion={`Plantas y recetas del taller para ${uso.data.nombre.toLowerCase()}.`}>
+  <a class="volver" href="/usos/"><Icono nombre="izquierda" />Todos los usos</a>
+  <Encabezado antetitulo={GRUPOS_USO[uso.data.grupo]} titulo={uso.data.nombre} bajada={uso.data.descripcion} />
+
+  {
+    notas[uso.id] && (
+      <div class="recuadro recuadro--nota" style="margin-top: 0">
+        <p>{notas[uso.id]}</p>
+        <p class="fuente">
+          Ver <a href="/aprender/dos-caminos/">Los dos caminos</a> (Guía Inmunidad inteligente, págs. 6–7).
+        </p>
+      </div>
+    )
+  }
+
+  <section class="seccion" aria-labelledby="t-plantas" style="margin-top: var(--e-5)">
+    <h2 id="t-plantas">{plantas.length === 1 ? '1 planta' : `${plantas.length} plantas y hongos`}</h2>
+    {
+      conPrecauciones > 0 && (
+        <p>
+          <Icono nombre="atencion" /> Antes de elegir, abrí la ficha y leé las precauciones: {conPrecauciones === plantas.length ? 'todas tienen' : `${conPrecauciones} de ${plantas.length} tienen`} alguna.
+        </p>
+      )
+    }
+    <ul class="plantas">
+      {
+        plantas.map((p) => (
+          <li>
+            <TarjetaPlanta planta={p} encabezado="h3" />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  {
+    recetas.length > 0 && (
+      <section class="seccion" aria-labelledby="t-recetas">
+        <h2 id="t-recetas">Recetas</h2>
+        <ul class="grilla">
+          {recetas.map((r) => (
+            <li>
+              <a class="tarjeta" href={`/recetas/${r.id}/`}>
+                <span class="tarjeta__titulo">{r.data.nombre}</span>
+                {r.data.bajada && <span class="tarjeta__texto">{r.data.bajada}</span>}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  <section class="seccion">
+    <Aviso />
+  </section>
+</Base>

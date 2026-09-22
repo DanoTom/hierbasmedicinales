@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import Encabezado from '../components/Encabezado.astro';
+import Fuente from '../components/Fuente.astro';
+import { datos } from '../lib/datos';
+import { normalizar } from '../lib/texto';
+
+const { glosario } = await datos();
+const letra = (t: string) => normalizar(t.charAt(0)).toUpperCase();
+const letras = [...new Set(glosario.map((g) => letra(g.data.termino)))];
+const primeraDe = new Map<string, string>();
+for (const g of glosario) if (!primeraDe.has(letra(g.data.termino))) primeraDe.set(letra(g.data.termino), g.id);
+---
+<Base titulo="Glosario" descripcion="Las palabras del taller, explicadas." ancho="texto">
+  <Encabezado
+    antetitulo="Para leer las fichas"
+    titulo="Glosario"
+    bajada="Entender el lenguaje de la salud es el primer paso para cuidarnos mejor."
+  />
+  <nav aria-label="Letras">
+    <ul class="abecedario">
+      {letras.map((l) => <li><a href={`#${primeraDe.get(l)}`}>{l}</a></li>)}
+    </ul>
+  </nav>
+  <dl class="glosario">
+    {
+      glosario.map((g) => (
+        <div id={g.id}>
+          <dt>
+            {g.data.termino}
+            {g.data.pregunta && <span class="pregunta">{g.data.pregunta}</span>}
+          </dt>
+          <dd>
+            <p>{g.data.definicion}</p>
+            {g.data.ejemplo && (
+              <p>
+                <em>Ejemplo:</em> {g.data.ejemplo}
+              </p>
+            )}
+            {g.data.ver && (
+              <p>
+                <a href={g.data.ver}>Leer más</a>
+              </p>
+            )}
+            {g.data.agregado ? (
+              <p class="fuente">
+                <span class="agregado">agregado</span> Definición general: no está en el material del taller.
+              </p>
+            ) : (
+              <Fuente refs={g.data.de ?? []} />
+            )}
+          </dd>
+        </div>
+      ))
+    }
+  </dl>
+</Base>

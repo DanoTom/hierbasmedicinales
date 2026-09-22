@@ -1,0 +1,13 @@
+---
+import Icono from './Icono.astro';
+---
+<button type="button" class="boton boton--secundario" data-imprimir hidden>
+  <Icono nombre="imprimir" />
+  <span>Imprimir</span>
+</button>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-imprimir]').forEach((b) => {
+    b.hidden = false;
+    b.addEventListener('click', () => window.print());
+  });
+</script>

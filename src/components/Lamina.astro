@@ -1,0 +1,53 @@
+---
+/**
+ * Lámina botánica de una planta, o un ornamento de etiqueta de botica si
+ * todavía no hay una lámina de dominio público verificada.
+ */
+import Ornamento from './Ornamento.astro';
+import type { Planta, Lamina as LaminaT } from '../lib/datos';
+
+interface Props {
+  planta: Planta;
+  lamina?: LaminaT;
+  tamano?: 'mini' | 'grande';
+  /** Cargar de inmediato (la lámina principal de una ficha). */
+  prioridad?: boolean;
+}
+const { planta, lamina, tamano = 'mini', prioridad = false } = Astro.props;
+const sizes = tamano === 'mini' ? '(min-width: 40em) 300px, 84px' : '(min-width: 56em) 22rem, 90vw';
+const srcset = lamina?.data.tamanos.map((t) => `/laminas/${lamina.id}-${t}.webp ${t}w`).join(', ');
+const menor = lamina?.data.tamanos[0];
+const mayor = lamina?.data.tamanos.at(-1);
+const inicial = planta.data.nombre.charAt(0);
+---
+{
+  lamina ? (
+    <figure class:list={['lamina', `lamina--${tamano}`]}>
+      <img
+        src={`/laminas/${lamina.id}-${tamano === 'mini' ? menor : mayor}.webp`}
+        srcset={srcset}
+        sizes={sizes}
+        width={lamina.data.ancho}
+        height={lamina.data.alto}
+        alt={tamano === 'grande' ? `Lámina botánica antigua de ${lamina.data.especie}: la planta entera con sus flores y detalles.` : ''}
+        loading={prioridad ? 'eager' : 'lazy'}
+        fetchpriority={prioridad ? 'high' : undefined}
+        decoding="async"
+      />
+      {tamano === 'grande' && (
+        <figcaption>
+          <i>{lamina.data.especie}</i> · {lamina.data.obra} ({lamina.data.anio}). {lamina.data.licencia.split(' (')[0]}.{' '}
+          <a href="/creditos/">Créditos</a>
+        </figcaption>
+      )}
+    </figure>
+  ) : (
+    <div class:list={['lamina', 'lamina--vacia', `lamina--${tamano}`]} aria-hidden="true">
+      <div>
+        <Ornamento class="lamina__ornamento" tipo={planta.data.tipo === 'hongo' ? 'hongo' : 'ramita'} />
+        <div class="lamina__inicial">{inicial}</div>
+        {tamano === 'grande' && <span class="lamina__rotulo">{planta.data.cientifico.map((c) => c.nombre).join(' · ')}</span>}
+      </div>
+    </div>
+  )
+}

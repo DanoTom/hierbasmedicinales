@@ -1,0 +1,7 @@
+---
+import Tema from '../components/Tema.astro';
+import { datos } from '../lib/datos';
+const { temas } = await datos();
+const tema = temas.find((t) => t.id === 'seguridad')!;
+---
+<Tema tema={tema} antetitulo="Para todos los temas" />

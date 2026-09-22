@@ -1,0 +1,127 @@
+---
+import Base from '../../layouts/Base.astro';
+import Encabezado from '../../components/Encabezado.astro';
+import TarjetaPlanta from '../../components/TarjetaPlanta.astro';
+import { datos, GRUPOS_USO } from '../../lib/datos';
+import { PARTES, PREPARACIONES } from '../../lib/vocabulario';
+
+const d = await datos();
+const partesUsadas = new Set(d.plantas.flatMap((p) => p.data.partes.map((x) => x.parte)));
+const prepsUsadas = new Set(d.plantas.flatMap((p) => p.data.indice.preparaciones));
+const grupos = Object.entries(GRUPOS_USO).map(([id, nombre]) => ({
+  nombre,
+  usos: d.usos.filter((u) => u.data.grupo === id),
+}));
+---
+<Base titulo="Plantas y hongos" descripcion="Todas las plantas y hongos del taller, con filtros por uso, parte de la planta y preparación.">
+  <Encabezado
+    antetitulo="El herbario"
+    titulo="Plantas y hongos"
+    bajada={`${d.plantas.length} fichas en orden alfabético. Podés filtrarlas por lo que necesitás.`}
+  />
+
+  <form class="filtros no-imprimir" data-filtros hidden aria-labelledby="t-filtros">
+    <p class="filtros__titulo" id="t-filtros">Filtrar</p>
+    <div class="campo">
+      <label for="f-uso">¿Para qué?</label>
+      <select id="f-uso" name="uso">
+        <option value="">Todos los usos</option>
+        {
+          grupos.map((g) => (
+            <optgroup label={g.nombre}>
+              {g.usos.map((u) => (
+                <option value={u.id}>{u.data.nombre}</option>
+              ))}
+            </optgroup>
+          ))
+        }
+      </select>
+    </div>
+    <div class="campo">
+      <label for="f-parte">Parte que se usa</label>
+      <select id="f-parte" name="parte">
+        <option value="">Todas las partes</option>
+        {Object.entries(PARTES).filter(([k]) => partesUsadas.has(k as never)).map(([k, v]) => <option value={k}>{v}</option>)}
+      </select>
+    </div>
+    <div class="campo">
+      <label for="f-prep">Preparación</label>
+      <select id="f-prep" name="preparacion">
+        <option value="">Todas las preparaciones</option>
+        {Object.entries(PREPARACIONES).filter(([k]) => prepsUsadas.has(k as never)).map(([k, v]) => <option value={k}>{v}</option>)}
+      </select>
+    </div>
+    <div class="campo">
+      <label for="f-tipo">Tipo</label>
+      <select id="f-tipo" name="tipo">
+        <option value="">Plantas y hongos</option>
+        <option value="planta">Solo plantas</option>
+        <option value="hongo">Solo hongos</option>
+      </select>
+    </div>
+    <div class="filtros__pie">
+      <p class="filtros__cuenta" role="status" data-cuenta>{d.plantas.length} fichas</p>
+      <button type="reset" class="boton boton--secundario" data-limpiar hidden>Quitar filtros</button>
+    </div>
+  </form>
+
+  <ul class="plantas" data-lista>
+    {
+      d.plantas.map((p) => (
+        <li>
+          <TarjetaPlanta planta={p} />
+        </li>
+      ))
+    }
+  </ul>
+  <p class="sin-resultados" data-vacio hidden>
+    Ninguna planta cumple con todos esos filtros. Probá quitando alguno.
+  </p>
+</Base>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-filtros]')!;
+  const items = [...document.querySelectorAll<HTMLLIElement>('[data-lista] > li')];
+  const cuenta = form.querySelector<HTMLElement>('[data-cuenta]')!;
+  const limpiar = form.querySelector<HTMLButtonElement>('[data-limpiar]')!;
+  const vacio = document.querySelector<HTMLElement>('[data-vacio]')!;
+  const campos = ['uso', 'parte', 'preparacion', 'tipo'] as const;
+  const atributo = { uso: 'usos', parte: 'partes', preparacion: 'preparaciones', tipo: 'tipo' } as const;
+  form.hidden = false;
+
+  // Estado inicial desde la dirección (?uso=sueno)
+  const params = new URLSearchParams(location.search);
+  for (const c of campos) {
+    const v = params.get(c);
+    const sel = form.elements.namedItem(c) as HTMLSelectElement;
+    if (v && [...sel.options].some((o) => o.value === v)) sel.value = v;
+  }
+
+  function aplicar() {
+    const valores = Object.fromEntries(campos.map((c) => [c, (form.elements.namedItem(c) as HTMLSelectElement).value]));
+    let visibles = 0;
+    for (const li of items) {
+      const tarjeta = li.firstElementChild as HTMLElement;
+      const ok = campos.every((c) => {
+        const v = valores[c];
+        if (!v) return true;
+        return (tarjeta.dataset[atributo[c]] ?? '').split(' ').includes(v);
+      });
+      li.hidden = !ok;
+      if (ok) visibles++;
+    }
+    const activos = campos.some((c) => valores[c]);
+    cuenta.textContent = activos
+      ? `${visibles} de ${items.length} fichas`
+      : `${items.length} fichas`;
+    limpiar.hidden = !activos;
+    vacio.hidden = visibles > 0;
+    const u = new URL(location.href);
+    for (const c of campos) valores[c] ? u.searchParams.set(c, valores[c]) : u.searchParams.delete(c);
+    history.replaceState(null, '', u);
+  }
+  form.addEventListener('change', aplicar);
+  form.addEventListener('reset', () => setTimeout(aplicar));
+  form.addEventListener('submit', (e) => e.preventDefault());
+  aplicar();
+</script>

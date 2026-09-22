@@ -1,0 +1,74 @@
+---
+/**
+ * Lista de datos con su fuente. Si todos vienen del mismo lugar, la fuente
+ * va una sola vez al final. Si vienen de documentos distintos, se agrupan por
+ * fuente («Según la Guía digestiva, pág. 10:») en el orden en que aparecen.
+ */
+import Fuente from './Fuente.astro';
+import { parrafos } from '../lib/texto';
+import { textoRefs } from '../lib/fuentes';
+
+interface Item {
+  texto: string;
+  de: string[];
+}
+interface Props {
+  items: Item[];
+  /** Mostrar como párrafos aunque haya varios ítems. */
+  comoTexto?: boolean;
+}
+const { items, comoTexto = false } = Astro.props;
+
+const grupos: { clave: string; refs: string[]; items: Item[] }[] = [];
+for (const i of items) {
+  const clave = textoRefs(i.de);
+  const g = grupos.find((x) => x.clave === clave);
+  if (g) g.items.push(i);
+  else grupos.push({ clave, refs: i.de, items: [i] });
+}
+const unaFuente = grupos.length <= 1;
+const lista = (its: Item[]) => !comoTexto && its.length > 1;
+---
+{
+  unaFuente ? (
+    <>
+      {lista(items) ? (
+        <ul class="lista-datos">
+          {items.map((i) => (
+            <li set:html={parrafos(i.texto).join(' ')} />
+          ))}
+        </ul>
+      ) : (
+        items.map((i) => (
+          <div class="parrafos">
+            {parrafos(i.texto).map((p) => (
+              <p set:html={p} />
+            ))}
+          </div>
+        ))
+      )}
+      <Fuente refs={items.flatMap((i) => i.de)} />
+    </>
+  ) : (
+    grupos.map((g) => (
+      <div class="grupo-fuente">
+        <p class="grupo-fuente__rotulo">Según {g.clave.replace(/^(Guía|Diapositivas|Taller)/, (m) => (m === 'Guía' ? 'la Guía' : m === 'Taller' ? 'el taller' : 'las diapositivas'))}:</p>
+        {lista(g.items) ? (
+          <ul class="lista-datos">
+            {g.items.map((i) => (
+              <li set:html={parrafos(i.texto).join(' ')} />
+            ))}
+          </ul>
+        ) : (
+          g.items.map((i) => (
+            <div class="parrafos">
+              {parrafos(i.texto).map((p) => (
+                <p set:html={p} />
+              ))}
+            </div>
+          ))
+        )}
+      </div>
+    ))
+  )
+}

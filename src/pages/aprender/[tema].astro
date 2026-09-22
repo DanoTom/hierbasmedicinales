@@ -1,0 +1,13 @@
+---
+import Tema from '../../components/Tema.astro';
+import { datos, TEMAS_APARTE, type Tema as TemaT } from '../../lib/datos';
+
+export async function getStaticPaths() {
+  const { temas } = await datos();
+  return temas.filter((t) => !TEMAS_APARTE.includes(t.id)).map((tema) => ({ params: { tema: tema.id }, props: { tema } }));
+}
+interface Props {
+  tema: TemaT;
+}
+---
+<Tema tema={Astro.props.tema} volver={{ href: '/aprender/', texto: 'Todos los temas' }} />

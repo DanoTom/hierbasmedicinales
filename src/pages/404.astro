@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/Base.astro';
+import Encabezado from '../components/Encabezado.astro';
+import Buscador from '../components/Buscador.astro';
+---
+<Base titulo="No encontrada" ancho="texto">
+  <Encabezado antetitulo="Página no encontrada" titulo="Esta página no está" bajada="Puede que la dirección haya cambiado. Probá buscando:" />
+  <Buscador />
+  <p style="margin-top: var(--e-5)"><a class="boton" href="/">Ir al inicio</a></p>
+</Base>

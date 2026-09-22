@@ -1,0 +1,50 @@
+---
+import Base from '../../layouts/Base.astro';
+import Encabezado from '../../components/Encabezado.astro';
+import Tabla from '../../components/Tabla.astro';
+import { datos, plantasDePreparacion } from '../../lib/datos';
+
+const d = await datos();
+const preps = await Promise.all(d.preparaciones.map(async (p) => ({ p, n: (await plantasDePreparacion(p.data.clave)).length })));
+---
+<Base titulo="Preparaciones" descripcion="Infusión, decocción, tintura madre, extractos y más: qué extrae cada método y cuándo conviene.">
+  <Encabezado
+    antetitulo="Cómo se preparan"
+    titulo="Preparaciones"
+    bajada="Un extracto es siempre una selección: según el solvente que uses, te llevás unos compuestos y dejás otros."
+  />
+  <ul class="grilla">
+    {
+      preps.map(({ p, n }) => (
+        <li>
+          <a class="tarjeta" href={`/preparaciones/${p.id}/`}>
+            <span class="tarjeta__titulo">{p.data.nombre}</span>
+            <span class="tarjeta__texto">{p.data.bajada}</span>
+            <span class="tarjeta__meta">
+              {n} {n === 1 ? 'planta' : 'plantas'}
+              {p.data.recetas.length > 0 && ` · ${p.data.recetas.length} ${p.data.recetas.length === 1 ? 'receta' : 'recetas'}`}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <section class="seccion" aria-labelledby="t-metodo">
+    <h2 id="t-metodo">Por qué el método cambia el resultado</h2>
+    <p class="prosa">
+      La misma especie, en el mismo hongo, preparada de dos maneras distintas, puede darte resultados completamente
+      diferentes. No porque una preparación sea mágica sino porque los compuestos tienen solubilidades distintas.
+    </p>
+    <Tabla
+      columnas={['Método', 'Qué extrae', 'Cuándo tiene sentido']}
+      filas={[
+        ['Agua caliente (decocción)', 'Betaglucanos y otros polisacáridos, compuestos hidrosolubles', 'Siempre, en cualquier hongo: el calor es lo que permite superar la quitina. En raíces leñosas, para vencer la dureza del tejido.'],
+        ['Alcohol (tintura)', 'Compuestos liposolubles: triterpenos, resinas, hericenonas', 'Solo si la especie tiene compuestos relevantes en esa fracción. En reishi y chaga sí; en la mayoría de los comestibles no aporta demasiado.'],
+        ['Doble extracción', 'Las dos fracciones, combinadas al final', 'Cuando la especie tiene compuestos importantes en ambas solubilidades. El caso paradigmático es el reishi.'],
+        ['Infusión simple', 'Compuestos aromáticos y algunos hidrosolubles livianos', 'Adecuada para hojas y flores (tulsi, tilo, manzanilla). Insuficiente para hongos y para raíces duras.'],
+      ]}
+      de={['guia-inmunidad/28']}
+    />
+  </section>
+</Base>

@@ -1,0 +1,52 @@
+---
+/**
+ * Buscador grande. Muestra los resultados debajo mientras se escribe.
+ * Sin JavaScript, el formulario lleva a /buscar/?q=… igual.
+ */
+import Icono from './Icono.astro';
+interface Props {
+  rotulo?: string;
+  autofoco?: boolean;
+  /** Nivel de los títulos de los grupos de resultados. */
+  nivel?: 'h2' | 'h3';
+  /** Mantener la búsqueda en la dirección (?q=), para /buscar/. */
+  sincronizarUrl?: boolean;
+  ayuda?: boolean;
+}
+const {
+  rotulo = 'Buscá una planta, un malestar o una receta',
+  autofoco = false,
+  nivel = 'h2',
+  sincronizarUrl = false,
+  ayuda = true,
+} = Astro.props;
+const idCampo = `busqueda-${Math.random().toString(36).slice(2, 7)}`;
+---
+<div class="buscador" data-buscador data-nivel={nivel} data-url={sincronizarUrl ? 'si' : 'no'}>
+  <form action="/buscar/" method="get" role="search">
+    <label class="buscador__rotulo" for={idCampo}>{rotulo}</label>
+    <div class="buscador__campo">
+      <Icono nombre="buscar" />
+      <input
+        id={idCampo}
+        type="search"
+        name="q"
+        autocomplete="off"
+        autocapitalize="none"
+        spellcheck="false"
+        enterkeyhint="search"
+        placeholder="manzanilla, dormir, tos…"
+        autofocus={autofoco}
+      />
+      <button type="button" class="buscador__borrar" hidden aria-label="Borrar la búsqueda">
+        <Icono nombre="cerrar" />
+      </button>
+    </div>
+  </form>
+  {ayuda && <p class="buscador__ayuda">No hace falta escribir tildes ni el nombre exacto.</p>}
+  <div class="resultados" aria-live="polite"></div>
+</div>
+<script>
+  import { iniciarBuscador } from '../scripts/buscador';
+  document.querySelectorAll<HTMLElement>('[data-buscador]').forEach((b) => iniciarBuscador(b));
+</script>

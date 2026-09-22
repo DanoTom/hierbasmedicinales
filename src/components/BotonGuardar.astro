@@ -1,0 +1,19 @@
+---
+/**
+ * Botón para guardar una planta o receta en la lista del dispositivo.
+ * Necesita JavaScript: sin él queda oculto.
+ */
+import Icono from './Icono.astro';
+interface Props {
+  id: string; // «planta:boldo», «receta:vinagre-de-lavanda»
+}
+const { id } = Astro.props;
+---
+<button type="button" class="boton boton--secundario" data-guardar={id} hidden>
+  <Icono nombre="guardar" />
+  <span data-guardar-texto>Guardar</span>
+</button>
+<script>
+  import { iniciarBotonesGuardar } from '../scripts/guardadas';
+  iniciarBotonesGuardar();
+</script>

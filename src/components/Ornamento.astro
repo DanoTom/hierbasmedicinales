@@ -1,0 +1,28 @@
+---
+/** Ramita ornamental (filetes, placeholders de lámina). Decorativa. */
+interface Props {
+  class?: string;
+  tipo?: 'ramita' | 'hongo';
+}
+const { class: clase, tipo = 'ramita' } = Astro.props;
+---
+{
+  tipo === 'hongo' ? (
+    <svg class={clase} viewBox="0 0 64 48" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 26c0-11 10-19 22-19s22 8 22 19c-7 2.5-14.5 3.5-22 3.5S17 28.5 10 26z" />
+      <path d="M17 25.5c1-2.5 2.5-4.5 4.5-6M24.5 27.5c.3-3 1.2-5.5 3-8M39.5 27.5c-.3-3-1.2-5.5-3-8M47 25.5c-1-2.5-2.5-4.5-4.5-6" stroke-width="1" />
+      <path d="M26.5 29.2c-.7 4.8-.5 9.5 1.5 13.3h8c2-3.8 2.2-8.5 1.5-13.3" />
+      <path d="M4 44.5c8-1.2 16-1.6 24-1.9M36 42.6c8 .3 16 .7 24 1.9" stroke-width="1" />
+      <circle cx="26" cy="13.5" r="1.4" /><circle cx="37.5" cy="12" r="1.1" /><circle cx="44" cy="18" r="1" /><circle cx="19.5" cy="18.5" r="1" />
+    </svg>
+  ) : (
+    <svg class={clase} viewBox="0 0 64 48" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M32 46V8" />
+      <path d="M32 36c-6.5.2-12-3.6-14.5-9.5 6.8-.4 12.3 3.2 14.5 9.5zM32 36c6.5.2 12-3.6 14.5-9.5-6.8-.4-12.3 3.2-14.5 9.5z" />
+      <path d="M32 24.5c-5.2 0-9.4-3.2-11.2-7.8 5.4-.2 9.6 2.9 11.2 7.8zM32 24.5c5.2 0 9.4-3.2 11.2-7.8-5.4-.2-9.6 2.9-11.2 7.8z" />
+      <path d="M32 14c-2.6-1.8-3.4-5.2-2-8.5 2.5 1.6 3.3 5 2 8.5zM32 14c2.6-1.8 3.4-5.2 2-8.5-2.5 1.6-3.3 5-2 8.5z" />
+      <path d="M2 42c9-2 18-2.8 27-2.8M35 39.2c9 0 18 .8 27 2.8" stroke-width="1" />
+      <path d="M24.5 30.5c-3.5-.3-6.2-2.2-7.5-4.5M39.5 30.5c3.5-.3 6.2-2.2 7.5-4.5" stroke-width="0.9" opacity="0.7" />
+    </svg>
+  )
+}

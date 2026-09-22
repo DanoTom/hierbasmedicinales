@@ -1,0 +1,69 @@
+---
+/**
+ * Estructura común de todas las páginas: <head>, cabecera, navegación,
+ * contenido y pie.
+ */
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/componentes.css';
+import '../styles/imprimir.css';
+import Cabecera from '../components/Cabecera.astro';
+import NavInferior from '../components/NavInferior.astro';
+import Pie from '../components/Pie.astro';
+import { SITIO, tituloSitio } from '../config';
+
+interface Props {
+  titulo?: string;
+  descripcion?: string;
+  /** Página angosta (texto largo) o ancha (grillas). */
+  ancho?: 'texto' | 'pagina';
+}
+const { titulo, descripcion = SITIO.descripcion, ancho = 'pagina' } = Astro.props;
+const tituloCompleto = titulo ? `${titulo} · ${tituloSitio}` : `${tituloSitio} · ${SITIO.subtitulo}`;
+const canonica = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{tituloCompleto}</title>
+    <meta name="description" content={descripcion} />
+    <link rel="canonical" href={canonica} />
+    <!-- Cuaderno personal con material de un taller: no se indexa en buscadores. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#f5eedf" />
+    <meta name="color-scheme" content="light" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/iconos/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/iconos/icono-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/iconos/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content={tituloSitio} />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="preload" href="/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/fraunces-opsz.woff2" as="font" type="font/woff2" crossorigin />
+    <meta property="og:title" content={tituloCompleto} />
+    <meta property="og:description" content={descripcion} />
+    <meta property="og:locale" content="es_AR" />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+    <Cabecera />
+    <main id="contenido" tabindex="-1">
+      <div class:list={['contenedor', ancho === 'texto' && 'contenedor--texto']}>
+        <slot />
+      </div>
+    </main>
+    <Pie />
+    <NavInferior />
+    <script is:inline>
+      if ('serviceWorker' in navigator && location.hostname !== 'localhost') {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').catch(function () {});
+        });
+      }
+    </script>
+  </body>
+</html>

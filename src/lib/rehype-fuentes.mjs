@@ -1,6 +1,9 @@
 /**
- * Plugin para los temas en Markdown: convierte un párrafo que dice
- * «[[fuente: guia-inmunidad/4-5]]» en una nota de procedencia con formato.
+ * Plugin para los temas en Markdown:
+ * - convierte un párrafo que dice «[[fuente: guia-inmunidad/4-5]]» en una
+ *   nota de procedencia con formato;
+ * - agrega a cada celda de las tablas el rótulo de su columna
+ *   (data-rotulo), para que en el celular cada fila se lea como una ficha.
  */
 const DOCS = {
   'guia-digestiva': ['Guía digestiva', 'pág.', 'págs.'],
@@ -27,8 +30,32 @@ function recorrer(nodo, fn) {
   nodo.children.forEach((hijo) => recorrer(hijo, fn));
 }
 
+const textoDe = (n) => (n.type === 'text' ? n.value : (n.children ?? []).map(textoDe).join(''));
+
+function rotularTabla(tabla) {
+  const filas = [];
+  const juntar = (n) => {
+    if (n.type === 'element' && n.tagName === 'tr') filas.push(n);
+    else (n.children ?? []).forEach(juntar);
+  };
+  juntar(tabla);
+  const [cabecera, ...resto] = filas;
+  if (!cabecera) return;
+  const rotulos = cabecera.children.filter((c) => c.type === 'element').map((c) => textoDe(c).trim());
+  for (const fila of resto) {
+    fila.children
+      .filter((c) => c.type === 'element')
+      .forEach((celda, i) => {
+        celda.properties = { ...celda.properties, dataRotulo: rotulos[i] ?? '' };
+      });
+  }
+}
+
 export default function rehypeFuentes() {
   return (arbol) => {
+    recorrer(arbol, (nodo) => {
+      if (nodo.type === 'element' && nodo.tagName === 'table') rotularTabla(nodo);
+    });
     recorrer(arbol, (nodo) => {
       if (nodo.type !== 'element' || nodo.tagName !== 'p' || nodo.children?.length !== 1) return;
       const t = nodo.children[0];

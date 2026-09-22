@@ -1,0 +1,98 @@
+---
+/**
+ * Precauciones de una ficha: bien visibles, arriba, en su propio recuadro.
+ * Todo el texto sale del material del taller.
+ */
+import Icono from './Icono.astro';
+import ListaDatos from './ListaDatos.astro';
+import Fuente from './Fuente.astro';
+import Parrafos from './Parrafos.astro';
+import { ALERTAS } from '../lib/vocabulario';
+import type { Planta } from '../lib/datos';
+
+interface Props {
+  planta: Planta;
+}
+const d = Astro.props.planta.data;
+const recuadros = d.recuadros.filter((r) => r.precaucion);
+const hay =
+  d.contraindicaciones.length + d.efectosAdversos.length + d.interacciones.length + d.cuidados.length + recuadros.length > 0;
+const refsCuidados = d.cuidados.flatMap((c) => c.de);
+---
+<section class="precauciones" id="precauciones" aria-labelledby="titulo-precauciones">
+  <h2 id="titulo-precauciones"><Icono nombre="atencion" />Precauciones</h2>
+  {
+    hay ? (
+      <p class="precauciones__intro">Lo que el material del taller pide tener en cuenta.</p>
+    ) : (
+      <p class="precauciones__intro">
+        El material del taller no menciona precauciones específicas para {d.nombre.toLowerCase()}.
+      </p>
+    )
+  }
+  {
+    d.alertas.length > 0 && (
+      <div class="alertas">
+        <p class="alertas__rotulo">Cuidado especial con:</p>
+        <ul class="chips">
+          {d.alertas.map((a) => (
+            <li class="chip chip--alerta">{ALERTAS[a]}</li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+  {
+    d.contraindicaciones.length > 0 && (
+      <>
+        <h3>Contraindicaciones</h3>
+        <ListaDatos items={d.contraindicaciones} />
+      </>
+    )
+  }
+  {
+    d.efectosAdversos.length > 0 && (
+      <>
+        <h3>Efectos adversos</h3>
+        <ListaDatos items={d.efectosAdversos} />
+      </>
+    )
+  }
+  {
+    d.interacciones.length > 0 && (
+      <>
+        <h3>Interacciones con medicamentos</h3>
+        <ListaDatos items={d.interacciones} />
+      </>
+    )
+  }
+  {
+    d.cuidados.length > 0 && (
+      <>
+        <h3>Cuándo tener cuidado</h3>
+        <dl class="cuidados">
+          {d.cuidados.map((c) => (
+            <div>
+              <dt>{c.situacion}</dt>
+              <dd>{c.texto}</dd>
+            </div>
+          ))}
+        </dl>
+        <Fuente refs={refsCuidados} />
+      </>
+    )
+  }
+  {
+    recuadros.map((r) => (
+      <div class="recuadro recuadro--cuidado">
+        <h3 class="recuadro__titulo">{r.titulo}</h3>
+        <Parrafos texto={r.texto} />
+        <Fuente refs={r.de} />
+      </div>
+    ))
+  }
+  <p class="precauciones__pie">
+    «La ausencia de datos no es sinónimo de seguridad.» Si algo no figura acá, no quiere decir que no haga falta
+    cuidarse: ante cualquier duda, consultá.
+  </p>
+</section>

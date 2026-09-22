@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import Encabezado from '../../components/Encabezado.astro';
+import Icono from '../../components/Icono.astro';
+import { datos, GRUPOS_USO, plantasDeUso } from '../../lib/datos';
+
+const d = await datos();
+const iconos = { digestion: 'cuenco', nervios: 'luna', defensas: 'pulmon', energia: 'sol' } as const;
+const grupos = await Promise.all(
+  (Object.keys(GRUPOS_USO) as (keyof typeof GRUPOS_USO)[]).map(async (g) => ({
+    id: g,
+    nombre: GRUPOS_USO[g],
+    usos: await Promise.all(
+      d.usos.filter((u) => u.data.grupo === g).map(async (u) => ({ u, n: (await plantasDeUso(u.id)).length })),
+    ),
+  })),
+);
+---
+<Base titulo="Buscar por uso" descripcion="Índice por uso: buscá desde lo que te pasa (digestión, sueño, tos…) y no solo desde la planta.">
+  <Encabezado
+    antetitulo="Índice por uso"
+    titulo="¿Para qué la necesitás?"
+    bajada="Elegí lo que te pasa y vas a ver las plantas y recetas del taller que lo mencionan."
+  />
+  {
+    grupos.map((g) => (
+      <section class="usos-grupo" aria-labelledby={`g-${g.id}`}>
+        <h2 id={`g-${g.id}`}>
+          <Icono nombre={iconos[g.id]} />
+          {g.nombre}
+        </h2>
+        <ul class="lista-usos">
+          {g.usos.map(({ u, n }) => (
+            <li>
+              <a href={`/usos/${u.id}/`}>
+                <span>{u.data.nombre}</span>
+                <span class="cuenta" aria-label={`${n} ${n === 1 ? 'planta' : 'plantas'}`}>{n}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+  <p class="fuente" style="margin-top: var(--e-6)">
+    Este índice lo armé a partir de lo que dice cada ficha: una planta aparece en un uso cuando el material del taller lo
+    menciona.
+  </p>
+</Base>

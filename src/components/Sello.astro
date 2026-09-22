@@ -1,0 +1,14 @@
+---
+/** Sello de la marca: un frasco de botica con una hoja. Decorativo. */
+interface Props {
+  class?: string;
+}
+const { class: clase } = Astro.props;
+---
+<svg class={clase} viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+  <circle cx="24" cy="24" r="23" fill="#2e5436" />
+  <circle cx="24" cy="24" r="20.2" fill="none" stroke="#b59350" stroke-width="0.9" />
+  <path d="M18.5 12.5h11M19.8 12.5v3.6c-3.9 1.3-6.3 4.4-6.3 8.2v7.2a2.6 2.6 0 0 0 2.6 2.6h15.8a2.6 2.6 0 0 0 2.6-2.6v-7.2c0-3.8-2.4-6.9-6.3-8.2v-3.6" fill="#fbf7ee" stroke="#fbf7ee" stroke-width="1.2" stroke-linejoin="round" />
+  <path d="M17.2 24.5h13.6v6.4H17.2z" fill="#ebe1cb" />
+  <path d="M20.5 30.2c.2-3.8 2.4-6.2 7-6.6-.4 4.3-2.7 6.6-7 6.6zM20.5 30.2l4.4-3.9" fill="#2e5436" stroke="#2e5436" stroke-width="0.8" stroke-linecap="round" />
+</svg>

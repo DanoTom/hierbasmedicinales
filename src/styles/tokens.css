@@ -1,0 +1,97 @@
+/*
+ * Sistema de diseño — tokens.
+ * Concepto: boticario clásico con ejecución moderna. Papel crema, tinta
+ * sepia, verde botánico, filetes finos. Contrastes verificados (WCAG AA,
+ * la mayoría AAA): ver PLAN.md.
+ */
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/fraunces-opsz.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/fraunces-opsz-italic.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url('/fonts/figtree.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'Figtree';
+  font-style: italic;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url('/fonts/figtree-italic.woff2') format('woff2-variations');
+}
+
+:root {
+  /* Color */
+  --papel: #f5eedf;
+  --papel-claro: #fbf7ee;
+  --papel-hondo: #ebe1cb;
+  --tinta: #2b2118;
+  --tinta-suave: #5b4a39;
+  --verde: #2e5436;
+  --verde-hondo: #1e3a25;
+  --verde-tenue: #dce5d2;
+  --sepia: #7a5634;
+  --oro: #b59350;
+  --lacre: #8a3520;
+  --lacre-tenue: #f6e2d6;
+  --linea: #d8cbb0; /* filetes suaves sobre papel (decorativo) */
+
+  /* Tipografía */
+  --f-titulo: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --f-texto: 'Figtree', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Escala (1,25). 1rem = 18 px en celular, 19 px en pantallas grandes */
+  --t-mini: 0.889rem; /* 16 px: lo más chico que se usa */
+  --t-chico: 0.944rem; /* 17 px */
+  --t-base: 1rem; /* 18 px */
+  --t-m: 1.25rem; /* 22,5 px */
+  --t-l: 1.5625rem; /* 28 px */
+  --t-xl: 1.953rem; /* 35 px */
+  --t-xxl: 2.441rem; /* 44 px */
+  --t-xxxl: 3.052rem; /* 55 px */
+
+  /* Espaciado (base 4 px) */
+  --e-1: 0.25rem;
+  --e-2: 0.5rem;
+  --e-3: 0.75rem;
+  --e-4: 1rem;
+  --e-5: 1.5rem;
+  --e-6: 2rem;
+  --e-7: 3rem;
+  --e-8: 4rem;
+  --e-9: 6rem;
+
+  /* Forma */
+  --radio: 3px;
+  --radio-m: 6px;
+  --tactil: 48px; /* área táctil mínima (pedido: 44 px) */
+  --ancho-texto: 38rem;
+  --ancho-pagina: 72rem;
+  --alto-nav: 4.25rem;
+
+  --sombra: 0 1px 0 rgb(122 86 52 / 0.12), 0 6px 18px -10px rgb(43 33 24 / 0.25);
+  --foco: 0 0 0 3px var(--papel), 0 0 0 6px var(--verde-hondo);
+
+  /* Marco de etiqueta de botica: doble filete con esquinas recortadas */
+  --marco-etiqueta: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M8.5.5h31a8 8 0 0 0 8 8v31a8 8 0 0 0-8 8h-31a8 8 0 0 0-8-8v-31a8 8 0 0 0 8-8z' fill='%23FBF7EE' stroke='%237A5634'/%3E%3Cpath d='M11.3 4h25.4a12 12 0 0 0 7.3 7.3v25.4a12 12 0 0 0-7.3 7.3H11.3A12 12 0 0 0 4 36.7V11.3A12 12 0 0 0 11.3 4z' fill='none' stroke='%237A5634' stroke-width='.75'/%3E%3C/svg%3E");
+}
+
+@media (min-width: 64em) {
+  :root {
+    --alto-nav: 0px;
+  }
+}

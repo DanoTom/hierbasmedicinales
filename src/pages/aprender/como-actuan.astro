@@ -1,0 +1,82 @@
+---
+import Base from '../../layouts/Base.astro';
+import Encabezado from '../../components/Encabezado.astro';
+import Icono from '../../components/Icono.astro';
+import Fuente from '../../components/Fuente.astro';
+import { datos } from '../../lib/datos';
+
+const d = await datos();
+const planta = (id: string) => d.plantas.find((p) => p.id === id)!;
+---
+<Base titulo="Cómo actúan las plantas" descripcion="Las categorías de acción del taller digestivo: qué hace cada grupo de plantas y dónde actúa." ancho="texto">
+  <a class="volver" href="/aprender/"><Icono nombre="izquierda" />Todos los temas</a>
+  <Encabezado
+    antetitulo="Taller de sistema digestivo"
+    titulo="Cómo actúan las plantas"
+    bajada="Las plantas no actúan todas igual: cada una tiene un mecanismo específico."
+  />
+  <nav aria-label="Categorías" class="no-imprimir">
+    <ul class="chips">
+      {
+        d.categorias.map((c) => (
+          <li>
+            <a class="chip" href={`#${c.id}`}>
+              {c.data.nombre}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <p class="fuente">
+    <span class="fuente__rotulo">Fuente: </span>Diapositivas del taller digestivo, diap. 5.
+  </p>
+
+  {
+    d.categorias.map((c) => (
+      <section class="bloque" id={c.id} aria-labelledby={`t-${c.id}`}>
+        <h2 id={`t-${c.id}`}>{c.data.nombre}</h2>
+        <p class="bajada" style="font-size: var(--t-base); margin-bottom: var(--e-4)">
+          {c.data.subtitulo}
+        </p>
+        <p>
+          <strong>Dónde actúan:</strong> {c.data.donde}
+        </p>
+        <p>
+          <strong>Mecanismo de acción:</strong> {c.data.mecanismo}
+        </p>
+        <div class="tabla tabla--apilable">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Planta</th>
+                <th scope="col">Compuesto activo</th>
+                <th scope="col">Indicación principal</th>
+                <th scope="col">Forma de uso</th>
+              </tr>
+            </thead>
+            <tbody>
+              {c.data.filas.map((f) => (
+                <tr>
+                  <td data-rotulo="Planta">
+                    <a href={`/plantas/${f.planta}/`}>{planta(f.planta).data.nombre}</a>{' '}
+                    <i style="font-size: var(--t-chico)">{planta(f.planta).data.cientifico[0].nombre}</i>
+                  </td>
+                  <td data-rotulo="Compuesto activo">{f.compuesto}</td>
+                  <td data-rotulo="Indicación principal">{f.indicacion}</td>
+                  <td data-rotulo="Forma de uso">{f.forma}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div class="recuadro recuadro--cuidado" style="margin-top: var(--e-3)">
+          <p>
+            <Icono nombre="atencion" /> {c.data.advertencia}
+          </p>
+        </div>
+        <Fuente refs={c.data.de.filter((r) => !r.endsWith('/5'))} />
+      </section>
+    ))
+  }
+</Base>
