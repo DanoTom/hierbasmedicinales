@@ -6,7 +6,7 @@ documentos, y qué falta.
 
 > Estado: **completo**. Última revisión: 22 de septiembre de 2026.
 
-**Resumen para leer rápido:** todo el contenido del sitio sale de los cuatro documentos del taller, con la página o diapositiva de cada dato. Hay **37 fichas** (27 completas y 10 breves), **10 recetas**, **8 preparaciones**, **10 temas**, un **glosario de 56 términos** y un **índice de 23 usos**. En la sección 3 están los puntos donde los documentos no coinciden, y en la 4 lo que falta. La sección 8 junta las preguntas que conviene que revise quien dio o tomó el taller.
+**Resumen para leer rápido:** todo el contenido del sitio sale de los cuatro documentos del taller, con la página o diapositiva de cada dato. Hay **37 fichas** (27 completas y 10 breves; 35 con lámina botánica antigua), **10 recetas**, **8 preparaciones**, **10 temas**, un **glosario de 56 términos** y un **índice de 23 usos**. En la sección 3 están los puntos donde los documentos no coinciden, y en la 4 lo que falta. La sección 8 junta las preguntas que conviene que revise quien dio o tomó el taller.
 
 ---
 
@@ -205,9 +205,11 @@ Las diferencias que importan para la seguridad se muestran también en la ficha,
    amarga (ingredientes del amargo), rosa y caléndula (variantes del vinagre), ajo (fresco/especia),
    chaga (tabla de métodos). No tienen ficha; el buscador las encuentra en las páginas donde se
    nombran.
-7. **Láminas botánicas:** solo hay 3 (melisa, lavanda, valeriana, las mismas de la presentación).
-   Para las otras 34 falta correr `npm run laminas` desde una computadora con acceso a Wikimedia
-   Commons (ver README).
+7. **Láminas botánicas:** 35 de las 37 fichas tienen lámina (ver la sección 5.1). Quedan sin lámina,
+   con el ornamento de botica: **astrágalo** (no se encontraron láminas antiguas de *Astragalus membranaceus*
+   en Wikimedia Commons) y **tulsi** (la única lámina, de la *Flora de Filipinas* de Blanco, figura
+   en Commons como *Ocimum tenuiflorum*, *O. canum* y *Ocimum sp.*: la especie es dudosa). La ficha
+   de shiitake y maitake muestra solo el maitake: no hay una lámina antigua del shiitake.
 
 ---
 
@@ -234,6 +236,37 @@ Nada de esto cambia usos, dosis, preparaciones ni propiedades. En el sitio apare
   breve» y dos aclaraciones en los usos «Inmunidad» y «Resfrío y fiebre» (qué es camino A y camino
   B, con enlace al tema).
 
+### 5.1 Láminas botánicas (22 de septiembre de 2026)
+
+Las láminas no salen del material del taller (salvo melisa, lavanda y valeriana, que son las mismas
+de la presentación). Se bajaron de Wikimedia Commons con `npm run laminas`; todas son de dominio
+público. **Cada una se revisó mirando la imagen** y comparándola con el nombre científico de la ficha
+(forma de hojas, flores, frutos y el rótulo de la lámina cuando lo tiene).
+
+- **Köhler's Medizinal-Pflanzen (1887), 21 fichas:** anís verde, boldo, comino, cúrcuma, diente de
+  león, eucalipto, genciana, hinojo, jengibre, lavanda, malva, malvavisco, manzanilla, melisa, menta,
+  regaliz, romero, saúco, tilo, tomillo y valeriana.
+- **Otras obras antiguas, 14 fichas** (elegidas a mano, con los créditos en
+  `scripts/laminas/manifiesto.yaml`): alcaucil (Blackwell, *A curious herbal*, 1737), ashwagandha
+  (*Flora Graeca*, 1819), cardo mariano y llantén (Thomé, 1885), cedrón (Redouté, *Nouveau
+  Duhamel*), cordyceps y reishi (Sowerby, 1797), equinácea (*The Botanical Magazine*, 1787),
+  melena de león (Bulliard, 1780), pasionaria (acuarela de Mary Vaux Walcott), rhodiola (*Flora
+  Danica*, 1765), sábila (Redouté, *Plantarum historia succulentarum*, 1802), sauce (*Flora
+  Batava*, 1800) y shiitake y maitake (*Flora Batava*, 1881, solo el maitake).
+- **Notas junto a la lámina** (se ven en la ficha y en Créditos):
+  - Fichas de género (eucalipto, equinácea, llantén, sauce, saúco, tilo): el material no dice la
+    especie; la nota aclara cuál muestra la lámina (por ejemplo, *Tilia cordata*).
+  - Fichas con dos especies (cordyceps, pasionaria, shiitake y maitake): la lámina muestra una sola.
+  - Nombre antiguo en la lámina: ashwagandha (*Physalis somnifera*), cedrón (*Verbena triphylla*),
+    melena de león (*Hydnum erinaceus*), sábila (*Aloe vulgaris*), maitake (*Polyporus frondosus*);
+    manzanilla figura en Commons como *Matricaria recutita*.
+- **Descartadas al revisar:** dos láminas de pasionaria de revistas inglesas (Commons no confirma la
+  especie y las hojas no son las de *P. incarnata*), una del Códice de Gottorf que parece
+  *P. caerulea*, un aloe del mismo códice que no parece *Aloe vera*, y una lámina de aloe con
+  licencia CC BY-SA (no es dominio público).
+- **Créditos:** se sacó el número de lámina de las de Köhler: era el número del archivo en Commons, no
+  el del libro (el jengibre, por ejemplo, dice «172» impreso y figuraba como 146).
+
 ## 6. Ajustes de redacción mínimos
 
 Para que el texto se entienda fuera del documento original:
@@ -259,6 +292,7 @@ Para que el texto se entienda fuera del documento original:
 - **Enlaces:** `npm run links` revisa los 3.794 enlaces internos de las 100 páginas: 0 rotos.
 - **Sin conexión:** `npm run offline` corta la red y navega fichas, recetas, filtros, búsqueda y
   láminas.
+- **Láminas:** cada una se miró y se comparó con el nombre científico de su ficha (sección 5.1).
 
 ## 8. Para revisar con quien dio el taller
 

@@ -312,3 +312,236 @@
   tamanos:
     - 320
     - 440
+- id: alcaucil
+  especie: Cynara scolymus
+  titulo: Artichoke- Cinara (32520933575).jpg
+  autor: Elizabeth Blackwell (dibujo, grabado y color)
+  obra: A curious herbal, lámina 458
+  anio: '1737'
+  licencia: Dominio público (obra de 1737; su autora murió en 1758)
+  origen: Wikimedia Commons (foto de la National Library of Medicine de Estados Unidos).
+  url: https://commons.wikimedia.org/wiki/File:Artichoke-_Cinara_(32520933575).jpg
+  ancho: 1600
+  alto: 2634
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: ashwagandha
+  especie: Withania somnifera
+  titulo: Withania somnifera illustration.jpg
+  autor: Ferdinand Bauer (dibujo), en la obra de John Sibthorp y James Edward Smith
+  obra: Flora Graeca, lámina 233
+  anio: '1819'
+  licencia: Dominio público (obra de 1819; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Withania_somnifera_illustration.jpg
+  nota: En la obra figura como Physalis somnifera, un nombre antiguo de la misma especie.
+  ancho: 714
+  alto: 1080
+  tamanos:
+    - 320
+    - 480
+    - 714
+- id: cardo-mariano
+  especie: Silybum marianum
+  titulo: Illustration Silybum marianum0 cleaned.jpg
+  autor: Ilustradores de la obra de Otto Wilhelm Thomé
+  obra: Flora von Deutschland, Österreich und der Schweiz
+  anio: '1885'
+  licencia: Dominio público (obra de 1885; figura como dominio público en Wikimedia Commons)
+  origen: Wikimedia Commons (escaneo de www.BioLib.de).
+  url: https://commons.wikimedia.org/wiki/File:Illustration_Silybum_marianum0_cleaned.jpg
+  ancho: 1423
+  alto: 2374
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: cedron
+  especie: Aloysia citriodora
+  titulo: Verbena triphylla - Verveine à trois feuilles (NYPL b14485031-1109252) - clean.jpg
+  autor: Pierre-Joseph Redouté (dibujo)
+  obra: Traité des arbres et arbustes (Nouveau Duhamel)
+  anio: 1800–1819
+  licencia: Dominio público (obra de 1800–1819; su autor murió en 1840)
+  origen: Wikimedia Commons (escaneo de la New York Public Library).
+  url: https://commons.wikimedia.org/wiki/File:Verbena_triphylla_-_Verveine_%C3%A0_trois_feuilles_(NYPL_b14485031-1109252)_-_clean.jpg
+  nota: En la obra figura como Verbena triphylla, un nombre antiguo del cedrón.
+  ancho: 1600
+  alto: 2104
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: cordyceps
+  especie: Cordyceps militaris
+  titulo: Coloured Figures of English Fungi or Mushrooms - t. 60.png
+  autor: James Sowerby
+  obra: Coloured figures of English fungi or mushrooms, lámina 60
+  anio: '1797'
+  licencia: Dominio público (obra de 1797; su autor murió en 1822)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Coloured_Figures_of_English_Fungi_or_Mushrooms_-_t._60.png
+  nota: Muestra Cordyceps militaris, una de las dos especies que nombra el material.
+  ancho: 900
+  alto: 1818
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 900
+- id: equinacea
+  especie: Echinacea purpurea
+  titulo: The Botanical Magazine, Plate 2 (Volume 1, 1787).png
+  autor: Dibujantes de la revista de William Curtis
+  obra: The Botanical Magazine, lámina 2
+  anio: '1787'
+  licencia: Dominio público (obra de 1787; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:The_Botanical_Magazine,_Plate_2_(Volume_1,_1787).png
+  nota: El material no dice de qué especie de equinácea se trata; la lámina muestra Echinacea purpurea.
+  ancho: 1600
+  alto: 2857
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: llanten
+  especie: Plantago major
+  titulo: Illustration Plantago major0 clean.jpg
+  autor: Ilustradores de la obra de Otto Wilhelm Thomé
+  obra: Flora von Deutschland, Österreich und der Schweiz
+  anio: '1885'
+  licencia: Dominio público (obra de 1885; figura como dominio público en Wikimedia Commons)
+  origen: Wikimedia Commons (escaneo de www.BioLib.de).
+  url: https://commons.wikimedia.org/wiki/File:Illustration_Plantago_major0_clean.jpg
+  nota: El material no dice de qué especie de llantén se trata; la lámina muestra Plantago major.
+  ancho: 1407
+  alto: 2367
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: melena-de-leon
+  especie: Hericium erinaceus
+  titulo: Herbier de la France (Pl. 34) (6050085712).jpg
+  autor: Pierre Bulliard
+  obra: Herbier de la France, lámina 34
+  anio: '1780'
+  licencia: Dominio público (obra de 1780; su autor murió en 1793)
+  origen: Wikimedia Commons (escaneo de la Biodiversity Heritage Library).
+  url: https://commons.wikimedia.org/wiki/File:Herbier_de_la_France_(Pl._34)_(6050085712).jpg
+  nota: En la obra figura como Hydnum erinaceus, un nombre antiguo de la misma especie.
+  ancho: 942
+  alto: 1326
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 942
+- id: pasionaria
+  especie: Passiflora incarnata
+  titulo: Passiflora incarnata-2, by Mary Vaux Walcott.jpg
+  autor: Mary Vaux Walcott
+  obra: Acuarela
+  anio: s. f.
+  licencia: Dominio público (su autora murió en 1940, hace más de 70 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Passiflora_incarnata-2,_by_Mary_Vaux_Walcott.jpg
+  nota: Muestra Passiflora incarnata, una de las dos especies que nombra el material.
+  ancho: 398
+  alto: 600
+  tamanos:
+    - 320
+    - 398
+- id: reishi
+  especie: Ganoderma lucidum
+  titulo: Coloured Figures of English Fungi or Mushrooms - t. 134.png
+  autor: James Sowerby
+  obra: Coloured figures of English fungi or mushrooms, lámina 134
+  anio: '1797'
+  licencia: Dominio público (obra de 1797; su autor murió en 1822)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Coloured_Figures_of_English_Fungi_or_Mushrooms_-_t._134.png
+  ancho: 1600
+  alto: 2885
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: rhodiola
+  especie: Rhodiola rosea
+  titulo: Flora Danica Hft 04 Tab 0183.tif
+  autor: Ilustradores de la Flora Danica
+  obra: Flora Danica, lámina 183
+  anio: '1765'
+  licencia: Dominio público (obra de 1765; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons (escaneo de la Biblioteca Real de Dinamarca).
+  url: https://commons.wikimedia.org/wiki/File:Flora_Danica_Hft_04_Tab_0183.tif
+  ancho: 1600
+  alto: 2296
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: sabila
+  especie: Aloe vera
+  titulo: Plantarum historia succulentarum = (Plate 27) BHL280760.jpg
+  autor: Pierre-Joseph Redouté (dibujo), en la obra de Augustin Pyramus de Candolle
+  obra: Plantarum historia succulentarum, lámina 27
+  anio: '1802'
+  licencia: Dominio público (obra de 1802; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons (escaneo de la Biodiversity Heritage Library).
+  url: https://commons.wikimedia.org/wiki/File:Plantarum_historia_succulentarum_%3D_(Plate_27)_BHL280760.jpg
+  nota: En la obra figura como Aloe vulgaris, un nombre antiguo del aloe vera.
+  ancho: 1600
+  alto: 2157
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: sauce
+  especie: Salix alba
+  titulo: Salix alba — Flora Batava — Volume v1.jpg
+  autor: Jan Kops y colaboradores de la Flora Batava
+  obra: Flora Batava, tomo 1, lámina 80
+  anio: '1800'
+  licencia: Dominio público (obra de 1800; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons (escaneo de www.BioLib.de).
+  url: https://commons.wikimedia.org/wiki/File:Salix_alba_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v1.jpg
+  nota: El material no dice de qué especie de sauce se trata; la lámina muestra el sauce blanco (Salix alba).
+  ancho: 1566
+  alto: 2252
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: shiitake-y-maitake
+  especie: Grifola frondosa
+  titulo: Polyporus frondosus — Flora Batava — Volume v16.jpg
+  autor: Jan Kops, F. W. van Eeden y colaboradores de la Flora Batava
+  obra: Flora Batava, tomo 16, lámina 1240
+  anio: '1881'
+  licencia: Dominio público (obra de 1881; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons (escaneo de www.BioLib.de).
+  url: https://commons.wikimedia.org/wiki/File:Polyporus_frondosus_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v16.jpg
+  nota: >-
+    Muestra el maitake (en la obra, Polyporus frondosus). No se encontró una lámina antigua de dominio público del
+    shiitake.
+  ancho: 1600
+  alto: 1995
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080

@@ -4,43 +4,208 @@
 #   que se prueban. El script busca primero en la obra de Köhler (1887, dominio
 #   público) una lámina titulada «<nombre> - Köhler–s Medizinal-Pflanzen-NNN».
 # «archivo»: si se conoce una lámina concreta de otra obra de dominio público
-#   (Curtis's Botanical Magazine, Lindman, Thomé…), se pone acá el título exacto
-#   («File:...») después de revisarla a mano.
+#   (Curtis's Botanical Magazine, Flora Batava, Thomé…), se pone acá el título
+#   exacto («File:...») después de revisarla a mano. Con ella van:
+#     especie   la especie que muestra la lámina (comparada con la ficha)
+#     autor, obra, anio, origen   los créditos (Commons los trae incompletos)
+#     licencia  solo después de verificar a mano que es dominio público
+#     recorte   [x0, y0, x1, y1] en fracciones, para sacar reglas o márgenes
+# «nota»: aclaración que se muestra con la lámina (ficha de género, sinónimos,
+#   o ficha con dos especies y lámina de una sola).
 #
 # Sinónimos verificados: Matricaria recutita = M. chamomilla; Mentha piperita =
 # M. × piperita; Salvia rosmarinus = Rosmarinus officinalis; Aloysia citrodora /
-# Lippia citriodora = Aloysia citriodora; Ocimum sanctum = O. tenuiflorum.
-- { planta: alcaucil, buscar: [Cynara scolymus] }
-- { planta: anis-verde, buscar: [Pimpinella anisum] }
-- { planta: ashwagandha, buscar: [Withania somnifera] }
-- { planta: astragalo, buscar: [Astragalus membranaceus] }
-- { planta: boldo, buscar: [Peumus boldus] }
-- { planta: cardo-mariano, buscar: [Silybum marianum] }
-- { planta: cedron, buscar: [Aloysia citriodora, Aloysia citrodora, Lippia citriodora] }
-- { planta: comino, buscar: [Cuminum cyminum] }
-- { planta: cordyceps, buscar: [Cordyceps militaris] }
-- { planta: curcuma, buscar: [Curcuma longa] }
-- { planta: diente-de-leon, buscar: [Taraxacum officinale] }
-- { planta: equinacea, buscar: [Echinacea purpurea, Echinacea angustifolia] }
-- { planta: eucalipto, buscar: [Eucalyptus globulus] }
-- { planta: genciana, buscar: [Gentiana lutea] }
-- { planta: hinojo, buscar: [Foeniculum vulgare] }
-- { planta: jengibre, buscar: [Zingiber officinale] }
-- { planta: llanten, buscar: [Plantago major, Plantago lanceolata] }
-- { planta: malva, buscar: [Malva sylvestris] }
-- { planta: malvavisco, buscar: [Althaea officinalis] }
-- { planta: manzanilla, buscar: [Matricaria chamomilla, Matricaria recutita] }
-- { planta: melena-de-leon, buscar: [Hericium erinaceus] }
-- { planta: menta, buscar: [Mentha × piperita, Mentha piperita] }
-- { planta: pasionaria, buscar: [Passiflora incarnata] }
-- { planta: regaliz, buscar: [Glycyrrhiza glabra] }
-- { planta: reishi, buscar: [Ganoderma lucidum] }
-- { planta: rhodiola, buscar: [Rhodiola rosea] }
-- { planta: romero, buscar: [Rosmarinus officinalis, Salvia rosmarinus] }
-- { planta: sabila, buscar: [Aloe vera, Aloe barbadensis] }
-- { planta: sauce, buscar: [Salix alba, Salix fragilis] }
-- { planta: sauco, buscar: [Sambucus nigra] }
-- { planta: shiitake-y-maitake, buscar: [Lentinula edodes, Grifola frondosa] }
-- { planta: tilo, buscar: [Tilia cordata, Tilia platyphyllos] }
-- { planta: tomillo, buscar: [Thymus vulgaris] }
-- { planta: tulsi, buscar: [Ocimum tenuiflorum, Ocimum sanctum] }
+# Lippia citriodora / Verbena triphylla = Aloysia citriodora; Ocimum sanctum =
+# O. tenuiflorum; Physalis somnifera = Withania somnifera; Aloe vulgaris = Aloe
+# vera; Hydnum erinaceus = Hericium erinaceus; Polyporus frondosus = Grifola
+# frondosa.
+#
+# Revisadas y descartadas (2026-09-22):
+# - astragalo: no se encontraron láminas antiguas de Astragalus membranaceus en Commons.
+# - shiitake: no se encontraron láminas antiguas de dominio público (la ficha usa la del maitake).
+# - tulsi: la única lámina (Blanco, Flora de Filipinas, 2.257) figura en Commons
+#   como Ocimum tenuiflorum, O. canum y Ocimum sp.: la especie es dudosa.
+# - pasionaria: Curtis's Botanical Magazine t. 3697 y Botanical Register t. 332
+#   no confirman la especie y sus hojas no son las de P. incarnata; la del Códice
+#   de Gottorf parece P. caerulea.
+# - sabila: la de Medical Botany (rawpixel) es CC BY-SA, no dominio público; la
+#   del Códice de Gottorf no parece Aloe vera.
+- planta: alcaucil
+  buscar: [Cynara scolymus]
+  archivo: 'File:Artichoke- Cinara (32520933575).jpg'
+  especie: Cynara scolymus
+  autor: Elizabeth Blackwell (dibujo, grabado y color)
+  obra: A curious herbal, lámina 458
+  anio: '1737'
+  licencia: Dominio público (obra de 1737; su autora murió en 1758)
+  origen: Wikimedia Commons (foto de la National Library of Medicine de Estados Unidos).
+  recorte: [0.05, 0, 1, 1]
+- planta: anis-verde
+  buscar: [Pimpinella anisum]
+- planta: ashwagandha
+  buscar: [Withania somnifera]
+  archivo: 'File:Withania somnifera illustration.jpg'
+  especie: Withania somnifera
+  autor: Ferdinand Bauer (dibujo), en la obra de John Sibthorp y James Edward Smith
+  obra: Flora Graeca, lámina 233
+  anio: '1819'
+  licencia: Dominio público (obra de 1819; sus autores murieron hace más de 100 años)
+  nota: En la obra figura como Physalis somnifera, un nombre antiguo de la misma especie.
+- planta: astragalo
+  buscar: [Astragalus membranaceus]
+- planta: boldo
+  buscar: [Peumus boldus]
+- planta: cardo-mariano
+  buscar: [Silybum marianum]
+  archivo: 'File:Illustration Silybum marianum0 cleaned.jpg'
+  especie: Silybum marianum
+  autor: Ilustradores de la obra de Otto Wilhelm Thomé
+  obra: Flora von Deutschland, Österreich und der Schweiz
+  anio: '1885'
+  licencia: Dominio público (obra de 1885; figura como dominio público en Wikimedia Commons)
+  origen: Wikimedia Commons (escaneo de www.BioLib.de).
+- planta: cedron
+  buscar: [Aloysia citriodora, Aloysia citrodora, Lippia citriodora]
+  archivo: 'File:Verbena triphylla - Verveine à trois feuilles (NYPL b14485031-1109252) - clean.jpg'
+  especie: Aloysia citriodora
+  autor: Pierre-Joseph Redouté (dibujo)
+  obra: Traité des arbres et arbustes (Nouveau Duhamel)
+  anio: 1800–1819
+  licencia: Dominio público (obra de 1800–1819; su autor murió en 1840)
+  origen: Wikimedia Commons (escaneo de la New York Public Library).
+  nota: En la obra figura como Verbena triphylla, un nombre antiguo del cedrón.
+- planta: comino
+  buscar: [Cuminum cyminum]
+- planta: cordyceps
+  buscar: [Cordyceps militaris]
+  archivo: 'File:Coloured Figures of English Fungi or Mushrooms - t. 60.png'
+  especie: Cordyceps militaris
+  autor: James Sowerby
+  obra: Coloured figures of English fungi or mushrooms, lámina 60
+  anio: '1797'
+  licencia: Dominio público (obra de 1797; su autor murió en 1822)
+  nota: Muestra Cordyceps militaris, una de las dos especies que nombra el material.
+- planta: curcuma
+  buscar: [Curcuma longa]
+- planta: diente-de-leon
+  buscar: [Taraxacum officinale]
+- planta: equinacea
+  buscar: [Echinacea purpurea, Echinacea angustifolia]
+  archivo: 'File:The Botanical Magazine, Plate 2 (Volume 1, 1787).png'
+  especie: Echinacea purpurea
+  autor: Dibujantes de la revista de William Curtis
+  obra: The Botanical Magazine, lámina 2
+  anio: '1787'
+  licencia: Dominio público (obra de 1787; sus autores murieron hace más de 100 años)
+  nota: El material no dice de qué especie de equinácea se trata; la lámina muestra Echinacea purpurea.
+- planta: eucalipto
+  buscar: [Eucalyptus globulus]
+  nota: El material no dice de qué especie de eucalipto se trata; la lámina muestra Eucalyptus globulus.
+- planta: genciana
+  buscar: [Gentiana lutea]
+- planta: hinojo
+  buscar: [Foeniculum vulgare]
+- planta: jengibre
+  buscar: [Zingiber officinale]
+- planta: llanten
+  buscar: [Plantago major, Plantago lanceolata]
+  archivo: 'File:Illustration Plantago major0 clean.jpg'
+  especie: Plantago major
+  autor: Ilustradores de la obra de Otto Wilhelm Thomé
+  obra: Flora von Deutschland, Österreich und der Schweiz
+  anio: '1885'
+  licencia: Dominio público (obra de 1885; figura como dominio público en Wikimedia Commons)
+  origen: Wikimedia Commons (escaneo de www.BioLib.de).
+  nota: El material no dice de qué especie de llantén se trata; la lámina muestra Plantago major.
+- planta: malva
+  buscar: [Malva sylvestris]
+- planta: malvavisco
+  buscar: [Althaea officinalis]
+- planta: manzanilla
+  buscar: [Matricaria chamomilla, Matricaria recutita]
+  especie: Matricaria chamomilla
+  nota: En Wikimedia Commons figura como Matricaria recutita, otro nombre de la misma especie.
+- planta: melena-de-leon
+  buscar: [Hericium erinaceus]
+  archivo: 'File:Herbier de la France (Pl. 34) (6050085712).jpg'
+  especie: Hericium erinaceus
+  autor: Pierre Bulliard
+  obra: Herbier de la France, lámina 34
+  anio: '1780'
+  licencia: Dominio público (obra de 1780; su autor murió en 1793)
+  origen: Wikimedia Commons (escaneo de la Biodiversity Heritage Library).
+  nota: En la obra figura como Hydnum erinaceus, un nombre antiguo de la misma especie.
+  recorte: [0.09, 0.115, 0.89, 0.905]
+- planta: menta
+  buscar: [Mentha × piperita, Mentha piperita]
+- planta: pasionaria
+  buscar: [Passiflora incarnata]
+  archivo: 'File:Passiflora incarnata-2, by Mary Vaux Walcott.jpg'
+  especie: Passiflora incarnata
+  autor: Mary Vaux Walcott
+  obra: Acuarela
+  anio: s. f.
+  licencia: Dominio público (su autora murió en 1940, hace más de 70 años)
+  nota: Muestra Passiflora incarnata, una de las dos especies que nombra el material.
+- planta: regaliz
+  buscar: [Glycyrrhiza glabra]
+- planta: reishi
+  buscar: [Ganoderma lucidum]
+  archivo: 'File:Coloured Figures of English Fungi or Mushrooms - t. 134.png'
+  especie: Ganoderma lucidum
+  autor: James Sowerby
+  obra: Coloured figures of English fungi or mushrooms, lámina 134
+  anio: '1797'
+  licencia: Dominio público (obra de 1797; su autor murió en 1822)
+- planta: rhodiola
+  buscar: [Rhodiola rosea]
+  archivo: 'File:Flora Danica Hft 04 Tab 0183.tif'
+  especie: Rhodiola rosea
+  autor: Ilustradores de la Flora Danica
+  obra: Flora Danica, lámina 183
+  anio: '1765'
+  licencia: Dominio público (obra de 1765; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons (escaneo de la Biblioteca Real de Dinamarca).
+  recorte: [0, 0, 1, 0.925]
+- planta: romero
+  buscar: [Rosmarinus officinalis, Salvia rosmarinus]
+- planta: sabila
+  buscar: [Aloe vera]
+  archivo: 'File:Plantarum historia succulentarum = (Plate 27) BHL280760.jpg'
+  especie: Aloe vera
+  autor: Pierre-Joseph Redouté (dibujo), en la obra de Augustin Pyramus de Candolle
+  obra: Plantarum historia succulentarum, lámina 27
+  anio: '1802'
+  licencia: Dominio público (obra de 1802; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons (escaneo de la Biodiversity Heritage Library).
+  nota: En la obra figura como Aloe vulgaris, un nombre antiguo del aloe vera.
+- planta: sauce
+  buscar: [Salix alba]
+  archivo: 'File:Salix alba — Flora Batava — Volume v1.jpg'
+  especie: Salix alba
+  autor: Jan Kops y colaboradores de la Flora Batava
+  obra: Flora Batava, tomo 1, lámina 80
+  anio: '1800'
+  licencia: Dominio público (obra de 1800; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons (escaneo de www.BioLib.de).
+  nota: El material no dice de qué especie de sauce se trata; la lámina muestra el sauce blanco (Salix alba).
+- planta: sauco
+  buscar: [Sambucus nigra]
+  nota: El material no dice de qué especie de saúco se trata; la lámina muestra el saúco europeo (Sambucus nigra).
+- planta: shiitake-y-maitake
+  buscar: [Grifola frondosa]
+  archivo: 'File:Polyporus frondosus — Flora Batava — Volume v16.jpg'
+  especie: Grifola frondosa
+  autor: Jan Kops, F. W. van Eeden y colaboradores de la Flora Batava
+  obra: Flora Batava, tomo 16, lámina 1240
+  anio: '1881'
+  licencia: Dominio público (obra de 1881; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons (escaneo de www.BioLib.de).
+  nota: Muestra el maitake (en la obra, Polyporus frondosus). No se encontró una lámina antigua de dominio público del shiitake.
+- planta: tilo
+  buscar: [Tilia cordata, Tilia platyphyllos]
+  nota: El material no dice de qué especie de tilo se trata; la lámina muestra Tilia cordata.
+- planta: tomillo
+  buscar: [Thymus vulgaris]
+- planta: tulsi
+  buscar: [Ocimum tenuiflorum, Ocimum sanctum]

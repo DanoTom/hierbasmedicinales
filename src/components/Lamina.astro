@@ -29,7 +29,7 @@ const inicial = planta.data.nombre.charAt(0);
         sizes={sizes}
         width={lamina.data.ancho}
         height={lamina.data.alto}
-        alt={tamano === 'grande' ? `Lámina botánica antigua de ${lamina.data.especie}: la planta entera con sus flores y detalles.` : ''}
+        alt={tamano === 'grande' ? (planta.data.tipo === 'hongo' ? `Lámina antigua del hongo ${lamina.data.especie}.` : `Lámina botánica antigua de ${lamina.data.especie}.`) : ''}
         loading={prioridad ? 'eager' : 'lazy'}
         fetchpriority={prioridad ? 'high' : undefined}
         decoding="async"

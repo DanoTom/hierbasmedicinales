@@ -101,11 +101,20 @@ function buscarKohler(titulos, nombres) {
   return undefined;
 }
 
-/** Baja el archivo original (upload.wikimedia.org) y lo guarda achicado a ANCHO_ORIGINAL. */
-async function guardarOriginal(info, destino) {
+/**
+ * Baja el archivo original (upload.wikimedia.org) y lo guarda achicado a ANCHO_ORIGINAL.
+ * recorte: [x0, y0, x1, y1] en fracciones del original, para sacar reglas, sellos o márgenes del escaneo.
+ */
+async function guardarOriginal(info, destino, recorte) {
   const r = await pedir(info.url);
   if (!r.ok) return r.status;
-  await sharp(Buffer.from(await r.arrayBuffer()))
+  let imagen = sharp(Buffer.from(await r.arrayBuffer()), { limitInputPixels: false });
+  if (recorte) {
+    const { width, height } = await imagen.metadata();
+    const [x0, y0, x1, y1] = recorte;
+    imagen = sharp(await imagen.extract({ left: Math.round(x0 * width), top: Math.round(y0 * height), width: Math.round((x1 - x0) * width), height: Math.round((y1 - y0) * height) }).toBuffer());
+  }
+  await imagen
     .resize({ width: ANCHO_ORIGINAL, withoutEnlargement: true })
     .flatten({ background: '#ffffff' })
     .jpeg({ quality: 88, mozjpeg: true })
@@ -157,7 +166,8 @@ async function main() {
       resumen.fallidas.push(entrada.planta);
       continue;
     }
-    if (!esDominioPublico(info.extmetadata)) {
+    // «licencia:» en el manifiesto = licencia verificada a mano (por ejemplo, «No known copyright restrictions» de Flickr Commons en una obra de 1737).
+    if (!esDominioPublico(info.extmetadata) && !entrada.licencia) {
       console.log(`✗ ${entrada.planta}: ${candidato.titulo} no figura como dominio público (${info.extmetadata?.LicenseShortName?.value}). Se omite.`);
       resumen.fallidas.push(entrada.planta);
       continue;
@@ -171,7 +181,7 @@ async function main() {
     }
 
     await mkdir(path.join(RAIZ, 'assets/laminas/originales'), { recursive: true });
-    const error = await guardarOriginal(info, path.join(RAIZ, 'assets/laminas/originales', `${entrada.planta}.jpg`));
+    const error = await guardarOriginal(info, path.join(RAIZ, 'assets/laminas/originales', `${entrada.planta}.jpg`), entrada.recorte);
     if (error) {
       console.log(`  ✗ no se pudo descargar (${error})`);
       resumen.fallidas.push(entrada.planta);

@@ -47,6 +47,10 @@ Biodiversity Heritage Library** (la red solo permite npm/PyPI). Entonces:
   especie y un **script** (`npm run laminas`) que, desde una máquina con acceso
   a internet, las descarga, verifica la licencia con la API de Commons, las
   optimiza y actualiza la página de créditos.
+- **Actualización (22/9/2026):** con acceso a Commons se bajaron 32 láminas
+  más (18 de Köhler y 14 de otras obras antiguas elegidas a mano), todas
+  revisadas contra el nombre científico. Quedan sin lámina astrágalo y tulsi.
+  Detalle en `INFORME_CONTENIDO.md` §5.1.
 
 ## 3. Arquitectura de información
 
@@ -161,7 +165,7 @@ procedencia) · `Lamina` (figura con crédito o placeholder) · `NavInferior` ·
    Validación automática de fuentes~~ ✔
 6. ~~Componentes y páginas~~ ✔
 7. ~~Láminas disponibles, placeholders, manifiesto y script de descarga,
-   créditos~~ ✔ (faltan las láminas que requieren acceso a Commons)
+   créditos~~ ✔ (35 de 37 fichas con lámina; faltan astrágalo y tulsi)
 8. ~~PWA (manifest, ícono, service worker), vista de impresión~~ ✔
 9. ~~Verificación: build, links, capturas en móvil y escritorio, Lighthouse~~ ✔
    Lighthouse (móvil): rendimiento 98–100, accesibilidad 100, buenas prácticas

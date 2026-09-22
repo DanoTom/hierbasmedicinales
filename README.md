@@ -121,8 +121,9 @@ Ejemplos de pedidos:
   > van [tal cantidad] de líquido. Agregalo a la receta de tintura madre.»
 - **Poner el nombre de mi mamá en el sitio:**
   > «Que el sitio se llame “La Botica de Marta”.»
-- **Bajar las láminas que faltan:**
-  > «Corré `npm run laminas` y revisá que cada lámina corresponda a la planta.»
+- **Cambiar o sumar una lámina:**
+  > «La lámina del tulsi: buscá una de dominio público, revisala contra el nombre
+  > científico y agregala.»
   (Necesita una sesión con acceso a Wikimedia Commons; ver abajo.)
 
 Cuando Claude termina, guarda los cambios en GitHub y Cloudflare publica la
@@ -130,24 +131,30 @@ versión nueva sola.
 
 ---
 
-## Pendiente: láminas botánicas
+## Láminas botánicas
 
-Las ilustraciones son láminas antiguas de **dominio público** (sobre todo de
-*Köhler's Medizinal-Pflanzen*, 1887). Hoy hay tres (melisa, lavanda y valeriana);
-las demás fichas muestran un ornamento de etiqueta de botica.
+Las ilustraciones son láminas antiguas de **dominio público**: 21 de *Köhler's
+Medizinal-Pflanzen* (1887) y 14 de otras obras (Blackwell, *Flora Graeca*,
+Thomé, Redouté, Sowerby, Bulliard, *Flora Danica*, *Flora Batava*…). Cada una
+se revisó mirándola y comparándola con el nombre científico de su ficha. De
+dónde sale cada una está en la página Créditos del sitio.
 
-Las demás no se pudieron bajar porque el entorno donde se armó el sitio no tenía
-acceso a Wikimedia Commons. Está todo preparado para hacerlo en un paso:
+Sin lámina quedan el **astrágalo** y el **tulsi** (no se encontró una de
+dominio público con la especie segura); muestran un ornamento de etiqueta de
+botica.
 
-1. En una sesión de Claude Code con acceso a internet (en Claude Code en la web:
-   configuración del entorno → acceso a la red, habilitando
-   `commons.wikimedia.org` y `upload.wikimedia.org`), pedir:
-   > «Corré `npm run laminas`, revisá cada lámina nueva contra el nombre
-   > científico de la ficha, y publicá.»
-2. El script baja las láminas de Köhler que existan para cada especie, verifica
-   que sean de dominio público y que el nombre científico coincida, las optimiza
-   y actualiza la página de créditos. Para las especies que no están en Köhler
-   (por ejemplo los hongos o la ashwagandha) lista candidatas para revisar a mano.
+Para sumar o cambiar láminas:
+
+1. Hace falta una sesión de Claude Code con acceso a
+   `commons.wikimedia.org` y `upload.wikimedia.org` (en Claude Code en la web:
+   configuración del entorno → acceso a la red).
+2. `npm run laminas` baja las láminas de Köhler que existan para cada especie
+   de `scripts/laminas/manifiesto.yaml`, verifica que sean de dominio público
+   y que el nombre científico coincida, las optimiza y actualiza los créditos.
+   Las de otras obras se eligen a mano y se anotan en el manifiesto con
+   `archivo:`, la especie que muestran y sus créditos.
+3. Commons limita la cantidad de pedidos: si el script dice «Con error», se
+   vuelve a correr más tarde y sigue donde quedó.
 
 ---
 
@@ -191,6 +198,7 @@ acceso a Wikimedia Commons. Está todo preparado para hacerlo en un paso:
 
 - Contenido: material de los talleres de Mburucuyá hierbas (Ayelén Florencia
   Crespi).
-- Láminas: *Köhler's Medizinal-Pflanzen* (1887), dominio público, vía Wikimedia
-  Commons. Diagrama digestivo: Mariana Ruiz Villarreal, dominio público.
+- Láminas: *Köhler's Medizinal-Pflanzen* (1887) y otras obras antiguas (el
+  detalle está en la página Créditos), dominio público, vía Wikimedia Commons.
+  Diagrama digestivo: Mariana Ruiz Villarreal, dominio público.
 - Tipografías: Fraunces y Figtree (SIL Open Font License).
