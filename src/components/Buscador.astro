@@ -44,7 +44,8 @@ const idCampo = `busqueda-${Math.random().toString(36).slice(2, 7)}`;
     </div>
   </form>
   {ayuda && <p class="buscador__ayuda">No hace falta escribir tildes ni el nombre exacto.</p>}
-  <div class="resultados" aria-live="polite"></div>
+  <p class="solo-lector" role="status" data-estado></p>
+  <div class="resultados"></div>
 </div>
 <script>
   import { iniciarBuscador } from '../scripts/buscador';

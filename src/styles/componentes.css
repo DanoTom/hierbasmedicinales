@@ -425,6 +425,26 @@ a.chip:hover {
 .resultado__detalle i {
   font-family: var(--f-titulo);
 }
+.resultado__alerta {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: var(--t-chico);
+  font-weight: 700;
+  color: var(--lacre);
+  line-height: 1.35;
+}
+.resultados__cuidado {
+  background: var(--lacre-tenue);
+  border: 1px solid rgb(138 53 32 / 0.3);
+  border-left: 5px solid var(--lacre);
+  border-radius: var(--radio-m);
+  padding: var(--e-3) var(--e-4);
+  margin-bottom: var(--e-4);
+  line-height: 1.45;
+}
+.resultados__cuidado strong {
+  color: var(--lacre);
+}
 
 /* ---------- Grillas y tarjetas ---------- */
 .grilla {

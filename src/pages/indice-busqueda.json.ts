@@ -16,6 +16,10 @@ export interface DocBusqueda {
   /** Nombres y sinónimos: pesan más que el texto. */
   claves: string;
   texto: string;
+  /** Precauciones resumidas (solo plantas), para advertir en los resultados. */
+  alertas?: string[];
+  /** Texto de las precauciones (solo plantas): se busca aparte para poder advertirlo. */
+  precauciones?: string;
 }
 
 const recortar = (s: string, n = 4000) => (s.length > n ? s.slice(0, n) : s);
@@ -33,6 +37,7 @@ export const GET: APIRoute = async () => {
       titulo: x.nombre,
       detalle: x.cientifico.map((c) => c.nombre).join(' · '),
       url: `/plantas/${p.id}/`,
+      alertas: x.alertas.map((a) => ALERTAS[a]),
       claves: [x.nombre, ...x.otrosNombres.map((o) => o.nombre), ...x.cientifico.map((c) => c.nombre)].join(' '),
       texto: plano(
         [
@@ -42,9 +47,18 @@ export const GET: APIRoute = async () => {
           x.familia?.nombre ?? '',
           ...x.partes.map((pt) => PARTES[pt.parte]),
           ...x.indice.preparaciones.map((pr) => PREPARACIONES[pr]),
-          ...x.alertas.map((a) => ALERTAS[a]),
           ...x.usos.map((u) => u.texto),
           ...x.formaDeUso.map((f) => f.texto),
+        ].join(' '),
+      ),
+      precauciones: plano(
+        [
+          ...x.alertas.map((a) => ALERTAS[a]),
+          ...x.contraindicaciones.map((i) => i.texto),
+          ...x.efectosAdversos.map((i) => i.texto),
+          ...x.interacciones.map((i) => i.texto),
+          ...x.cuidados.map((c) => `${c.situacion}. ${c.texto}`),
+          ...x.recuadros.filter((r) => r.precaucion).map((r) => `${r.titulo}. ${r.texto}`),
         ].join(' '),
       ),
     });
