@@ -27,7 +27,7 @@ interacciones:
 formaDeUso:
   - texto: "Infusión de hojas: 10 g/L de agua, 1–2 tazas por día."
     de: taller-estres/6
-  - texto: "El cedrón es «excelente combinado con menta o melisa»."
+  - texto: "En la ficha del cedrón: «Excelente combinada con menta o melisa»."
     de: guia-digestiva/7
 comoActua:
   - texto: "Efecto relajante. Actúa sobre el sistema límbico (regulación de emociones, memoria y respuesta al estrés)."

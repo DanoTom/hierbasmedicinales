@@ -3,9 +3,9 @@ import { defineConfig } from 'astro/config';
 import { unified } from '@astrojs/markdown-remark';
 import rehypeFuentes from './src/lib/rehype-fuentes.mjs';
 
-// Dirección pública del sitio. Cloudflare Pages la informa en CF_PAGES_URL
-// durante el build; si no, se usa la dirección de producción esperada.
-const site = process.env.SITIO_URL || process.env.CF_PAGES_URL || 'https://la-botica.pages.dev';
+// Dirección pública del sitio. Si el proyecto de Cloudflare Pages tiene otro
+// nombre, definir la variable SITIO_URL (por ejemplo https://mi-botica.pages.dev).
+const site = process.env.SITIO_URL || 'https://la-botica.pages.dev';
 
 export default defineConfig({
   site,

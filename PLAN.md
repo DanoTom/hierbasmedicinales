@@ -155,13 +155,16 @@ procedencia) · `Lamina` (figura con crédito o placeholder) · `NavInferior` ·
 
 1. ~~Copiar documentos a `/fuentes`~~ ✔
 2. ~~Transcripciones e inventario~~ ✔
-3. Plan y sistema de diseño (este archivo) ✔
-4. Proyecto Astro, esquema de datos, tokens y tipografías.
-5. Carga de contenido: fichas, recetas, preparaciones, temas, glosario, usos.
-   Validación automática de fuentes.
-6. Componentes y páginas.
-7. Láminas disponibles, placeholders, manifiesto y script de descarga, créditos.
-8. PWA (manifest, ícono, service worker), vista de impresión.
-9. Verificación: build, links, capturas en móvil y escritorio, Lighthouse.
-   Iterar el diseño con ojo crítico.
-10. README para no programadores, informe de contenido final, deploy.
+3. ~~Plan y sistema de diseño (este archivo)~~ ✔
+4. ~~Proyecto Astro, esquema de datos, tokens y tipografías~~ ✔
+5. ~~Carga de contenido: fichas, recetas, preparaciones, temas, glosario, usos.
+   Validación automática de fuentes~~ ✔
+6. ~~Componentes y páginas~~ ✔
+7. ~~Láminas disponibles, placeholders, manifiesto y script de descarga,
+   créditos~~ ✔ (faltan las láminas que requieren acceso a Commons)
+8. ~~PWA (manifest, ícono, service worker), vista de impresión~~ ✔
+9. ~~Verificación: build, links, capturas en móvil y escritorio, Lighthouse~~ ✔
+   Lighthouse (móvil): rendimiento 98–100, accesibilidad 100, buenas prácticas
+   100; SEO 66–69 solo por el `noindex` deliberado.
+10. ~~README para no programadores, informe de contenido final~~ ✔. Deploy:
+    instrucciones en el README (no tengo acceso a la cuenta de Cloudflare).
