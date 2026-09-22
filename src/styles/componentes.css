@@ -590,16 +590,12 @@ a.tarjeta:hover .tarjeta__titulo {
 }
 @media (min-width: 40em) {
   .plantas {
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
     gap: var(--e-4);
   }
   .tarjeta-planta {
-    grid-template-columns: 1fr;
-    align-content: start;
-    padding: var(--e-3) var(--e-3) var(--e-4);
-  }
-  .tarjeta-planta__cuerpo {
-    padding-inline: var(--e-2);
+    grid-template-columns: 6.5rem 1fr;
+    padding: var(--e-3) var(--e-4) var(--e-3) var(--e-3);
   }
 }
 
@@ -1209,17 +1205,56 @@ thead th {
 }
 
 /* ---------- Filtros ---------- */
+.filtros-caja {
+  background: var(--papel-hondo);
+  border-radius: var(--radio-m);
+  margin-bottom: var(--e-5);
+}
+.filtros-caja__boton {
+  display: flex;
+  align-items: center;
+  gap: var(--e-3);
+  min-height: 3.5rem;
+  padding: var(--e-2) var(--e-4);
+  font-weight: 700;
+  color: var(--verde-hondo);
+  cursor: pointer;
+  list-style: none;
+  border-radius: var(--radio-m);
+}
+.filtros-caja__boton::-webkit-details-marker {
+  display: none;
+}
+.filtros-caja__boton::after {
+  content: '';
+  margin-left: auto;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-right: 2px solid var(--sepia);
+  border-bottom: 2px solid var(--sepia);
+  transform: rotate(45deg) translateY(-3px);
+  transition: transform 0.15s;
+}
+.filtros-caja[open] > .filtros-caja__boton::after {
+  transform: rotate(-135deg) translateY(-3px);
+}
+.filtros-caja__boton .icono {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--sepia);
+}
+.filtros-caja__activos {
+  white-space: nowrap;
+  font-size: var(--t-mini);
+  background: var(--verde);
+  color: var(--papel-claro);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+}
 .filtros {
   display: grid;
   gap: var(--e-3);
-  padding: var(--e-4);
-  background: var(--papel-hondo);
-  border-radius: var(--radio-m);
-  margin-bottom: var(--e-4);
-}
-.filtros__titulo {
-  font-weight: 700;
-  margin: 0;
+  padding: 0 var(--e-4) var(--e-4);
 }
 .campo label {
   display: block;
@@ -1257,7 +1292,6 @@ thead th {
     grid-template-columns: repeat(4, 1fr);
     align-items: end;
   }
-  .filtros__titulo,
   .filtros__pie {
     grid-column: 1 / -1;
   }

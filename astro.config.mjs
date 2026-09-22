@@ -10,7 +10,7 @@ const site = process.env.SITIO_URL || process.env.CF_PAGES_URL || 'https://la-bo
 export default defineConfig({
   site,
   trailingSlash: 'always',
-  build: { format: 'directory', inlineStylesheets: 'always' },
+  build: { format: 'directory', inlineStylesheets: 'never' },
   prefetch: false,
   devToolbar: { enabled: false },
   // Markdown de los temas: tablas (GFM) y notas de fuente. Sin «comillas

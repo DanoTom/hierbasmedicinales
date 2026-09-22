@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Encabezado from '../../components/Encabezado.astro';
 import TarjetaPlanta from '../../components/TarjetaPlanta.astro';
+import Icono from '../../components/Icono.astro';
 import { datos, GRUPOS_USO } from '../../lib/datos';
 import { PARTES, PREPARACIONES } from '../../lib/vocabulario';
 
@@ -20,8 +21,13 @@ const grupos = Object.entries(GRUPOS_USO).map(([id, nombre]) => ({
     bajada={`${d.plantas.length} fichas en orden alfabético. Podés filtrarlas por lo que necesitás.`}
   />
 
-  <form class="filtros no-imprimir" data-filtros hidden aria-labelledby="t-filtros">
-    <p class="filtros__titulo" id="t-filtros">Filtrar</p>
+  <details class="filtros-caja no-imprimir" data-caja hidden>
+  <summary class="filtros-caja__boton">
+    <Icono nombre="cuenco" />
+    <span>Filtrar por uso, parte o preparación</span>
+    <span class="filtros-caja__activos" data-activos hidden></span>
+  </summary>
+  <form class="filtros" data-filtros aria-label="Filtros">
     <div class="campo">
       <label for="f-uso">¿Para qué?</label>
       <select id="f-uso" name="uso">
@@ -64,6 +70,7 @@ const grupos = Object.entries(GRUPOS_USO).map(([id, nombre]) => ({
       <button type="reset" class="boton boton--secundario" data-limpiar hidden>Quitar filtros</button>
     </div>
   </form>
+  </details>
 
   <ul class="plantas" data-lista>
     {
@@ -80,6 +87,8 @@ const grupos = Object.entries(GRUPOS_USO).map(([id, nombre]) => ({
 </Base>
 
 <script>
+  const caja = document.querySelector<HTMLDetailsElement>('[data-caja]')!;
+  const activosEl = caja.querySelector<HTMLElement>('[data-activos]')!;
   const form = document.querySelector<HTMLFormElement>('[data-filtros]')!;
   const items = [...document.querySelectorAll<HTMLLIElement>('[data-lista] > li')];
   const cuenta = form.querySelector<HTMLElement>('[data-cuenta]')!;
@@ -87,7 +96,7 @@ const grupos = Object.entries(GRUPOS_USO).map(([id, nombre]) => ({
   const vacio = document.querySelector<HTMLElement>('[data-vacio]')!;
   const campos = ['uso', 'parte', 'preparacion', 'tipo'] as const;
   const atributo = { uso: 'usos', parte: 'partes', preparacion: 'preparaciones', tipo: 'tipo' } as const;
-  form.hidden = false;
+  caja.hidden = false;
 
   // Estado inicial desde la dirección (?uso=sueno)
   const params = new URLSearchParams(location.search);
@@ -110,7 +119,10 @@ const grupos = Object.entries(GRUPOS_USO).map(([id, nombre]) => ({
       li.hidden = !ok;
       if (ok) visibles++;
     }
-    const activos = campos.some((c) => valores[c]);
+    const nActivos = campos.filter((c) => valores[c]).length;
+    const activos = nActivos > 0;
+    activosEl.hidden = !activos;
+    activosEl.textContent = nActivos === 1 ? '1 activo' : `${nActivos} activos`;
     cuenta.textContent = activos
       ? `${visibles} de ${items.length} fichas`
       : `${items.length} fichas`;
@@ -120,6 +132,8 @@ const grupos = Object.entries(GRUPOS_USO).map(([id, nombre]) => ({
     for (const c of campos) valores[c] ? u.searchParams.set(c, valores[c]) : u.searchParams.delete(c);
     history.replaceState(null, '', u);
   }
+  // Abierto en pantallas grandes o si ya hay filtros elegidos
+  caja.open = matchMedia('(min-width: 48em)').matches || campos.some((c) => params.get(c));
   form.addEventListener('change', aplicar);
   form.addEventListener('reset', () => setTimeout(aplicar));
   form.addEventListener('submit', (e) => e.preventDefault());

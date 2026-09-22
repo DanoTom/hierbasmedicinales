@@ -58,12 +58,16 @@ const canonica = new URL(Astro.url.pathname, Astro.site);
     </main>
     <Pie />
     <NavInferior />
-    <script is:inline>
-      if ('serviceWorker' in navigator && location.hostname !== 'localhost') {
-        window.addEventListener('load', function () {
-          navigator.serviceWorker.register('/sw.js').catch(function () {});
-        });
-      }
-    </script>
+    {
+      import.meta.env.PROD && (
+        <script is:inline>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+              navigator.serviceWorker.register('/sw.js').catch(function () {});
+            });
+          }
+        </script>
+      )
+    }
   </body>
 </html>

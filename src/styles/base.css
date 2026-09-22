@@ -150,6 +150,19 @@ table {
   font-size: var(--t-base);
 }
 
+/* Íconos dentro de un renglón de texto */
+p > .icono,
+li > .icono {
+  display: inline-block;
+  vertical-align: -0.22em;
+  margin-right: 0.2em;
+}
+
+/* Lo oculto con el atributo hidden queda oculto aunque un componente cambie su display */
+[hidden] {
+  display: none !important;
+}
+
 /* Solo para lectores de pantalla */
 .solo-lector {
   position: absolute !important;

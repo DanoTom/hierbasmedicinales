@@ -1,0 +1,3 @@
+# Cuaderno personal con material de un taller: no se indexa en buscadores.
+User-agent: *
+Disallow: /

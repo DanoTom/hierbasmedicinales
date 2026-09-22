@@ -12,7 +12,8 @@
     "laminas": "node scripts/laminas/descargar.mjs",
     "iconos": "node scripts/generar-iconos.mjs",
     "links": "node scripts/verificar-links.mjs",
-    "capturas": "node scripts/capturas.mjs"
+    "capturas": "node scripts/capturas.mjs",
+    "offline": "node scripts/verificar-offline.mjs"
   },
   "engines": {
     "node": ">=22"
