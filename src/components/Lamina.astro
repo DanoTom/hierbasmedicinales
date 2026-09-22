@@ -37,6 +37,7 @@ const inicial = planta.data.nombre.charAt(0);
       {tamano === 'grande' && (
         <figcaption>
           <i>{lamina.data.especie}</i> · {lamina.data.obra} ({lamina.data.anio}). {lamina.data.licencia.split(' (')[0]}.{' '}
+          {lamina.data.nota && <>{lamina.data.nota}{' '}</>}
           <a href="/creditos/">Créditos</a>
         </figcaption>
       )}

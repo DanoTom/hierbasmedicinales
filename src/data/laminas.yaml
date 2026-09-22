@@ -5,7 +5,7 @@
   especie: Lavandula angustifolia
   titulo: Lavandula angustifolia
   autor: Walther Otto Müller (dibujo), en la obra de Franz Eugen Köhler
-  obra: Köhler's Medizinal-Pflanzen, lámina 87
+  obra: Köhler's Medizinal-Pflanzen
   anio: '1887'
   licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
   origen: Wikimedia Commons. Es la misma imagen que se usó en la presentación del taller de estrés y descanso (diap. 7).
@@ -19,7 +19,7 @@
   especie: Melissa officinalis
   titulo: Melissa officinalis
   autor: Walther Otto Müller (dibujo), en la obra de Franz Eugen Köhler
-  obra: Köhler's Medizinal-Pflanzen, lámina 94
+  obra: Köhler's Medizinal-Pflanzen
   anio: '1887'
   licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
   origen: Wikimedia Commons. Es la misma imagen que se usó en la presentación del taller de estrés y descanso (diap. 6).
@@ -33,7 +33,7 @@
   especie: Valeriana officinalis
   titulo: Valeriana officinalis
   autor: Dibujantes de la obra de Franz Eugen Köhler (Walther Otto Müller, C. F. Schmidt)
-  obra: Köhler's Medizinal-Pflanzen, lámina 143
+  obra: Köhler's Medizinal-Pflanzen
   anio: '1887'
   licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
   origen: Wikimedia Commons. Es la misma imagen que se usó en la presentación del taller de estrés y descanso (diap. 9).
@@ -43,3 +43,272 @@
   tamanos:
     - 320
     - 453
+- id: anis-verde
+  especie: Pimpinella anisum
+  titulo: Pimpinella anisum - Köhler–s Medizinal-Pflanzen-240.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Pimpinella_anisum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-240.jpg
+  ancho: 492
+  alto: 598
+  tamanos:
+    - 320
+    - 480
+    - 492
+- id: boldo
+  especie: Peumus boldus
+  titulo: Peumus boldus - Köhler–s Medizinal-Pflanzen-104.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Peumus_boldus_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-104.jpg
+  ancho: 399
+  alto: 598
+  tamanos:
+    - 320
+    - 399
+- id: comino
+  especie: Cuminum cyminum
+  titulo: Cuminum cyminum - Köhler–s Medizinal-Pflanzen-198.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Cuminum_cyminum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-198.jpg
+  ancho: 449
+  alto: 593
+  tamanos:
+    - 320
+    - 449
+- id: curcuma
+  especie: Curcuma longa
+  titulo: Curcuma longa - Köhler–s Medizinal-Pflanzen-199.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Curcuma_longa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-199.jpg
+  ancho: 489
+  alto: 598
+  tamanos:
+    - 320
+    - 480
+    - 489
+- id: eucalipto
+  especie: Eucalyptus globulus
+  titulo: Eucalyptus globulus - Köhler–s Medizinal-Pflanzen-147.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Eucalyptus_globulus_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-147.jpg
+  nota: El material no dice de qué especie de eucalipto se trata; la lámina muestra Eucalyptus globulus.
+  ancho: 440
+  alto: 596
+  tamanos:
+    - 320
+    - 440
+- id: genciana
+  especie: Gentiana lutea
+  titulo: Gentiana lutea - Köhler–s Medizinal-Pflanzen-066.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Gentiana_lutea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-066.jpg
+  ancho: 1682
+  alto: 2187
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: hinojo
+  especie: Foeniculum vulgare
+  titulo: Foeniculum vulgare - Köhler–s Medizinal-Pflanzen-148.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Foeniculum_vulgare_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-148.jpg
+  ancho: 472
+  alto: 589
+  tamanos:
+    - 320
+    - 472
+- id: malva
+  especie: Malva sylvestris
+  titulo: Malva sylvestris - Köhler–s Medizinal-Pflanzen-222.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Malva_sylvestris_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-222.jpg
+  ancho: 600
+  alto: 750
+  tamanos:
+    - 320
+    - 480
+    - 600
+- id: manzanilla
+  especie: Matricaria chamomilla
+  titulo: Matricaria recutita - Köhler–s Medizinal-Pflanzen-091.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Matricaria_recutita_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-091.jpg
+  nota: En Wikimedia Commons figura como Matricaria recutita, otro nombre de la misma especie.
+  ancho: 1767
+  alto: 2341
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: menta
+  especie: Mentha × piperita
+  titulo: Mentha × piperita - Köhler–s Medizinal-Pflanzen-095.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Mentha_%C3%97_piperita_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-095.jpg
+  ancho: 448
+  alto: 587
+  tamanos:
+    - 320
+    - 448
+- id: regaliz
+  especie: Glycyrrhiza glabra
+  titulo: Glycyrrhiza glabra - Köhler–s Medizinal-Pflanzen-207.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Glycyrrhiza_glabra_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-207.jpg
+  ancho: 484
+  alto: 594
+  tamanos:
+    - 320
+    - 480
+    - 484
+- id: romero
+  especie: Rosmarinus officinalis
+  titulo: Rosmarinus officinalis - Köhler–s Medizinal-Pflanzen-258.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Rosmarinus_officinalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-258.jpg
+  ancho: 454
+  alto: 591
+  tamanos:
+    - 320
+    - 454
+- id: sauco
+  especie: Sambucus nigra
+  titulo: Sambucus nigra - Köhler–s Medizinal-Pflanzen-127.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Sambucus_nigra_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-127.jpg
+  nota: El material no dice de qué especie de saúco se trata; la lámina muestra el saúco europeo (Sambucus nigra).
+  ancho: 483
+  alto: 597
+  tamanos:
+    - 320
+    - 480
+    - 483
+- id: tilo
+  especie: Tilia cordata
+  titulo: Tilia cordata - Köhler–s Medizinal-Pflanzen-139.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Tilia_cordata_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-139.jpg
+  nota: El material no dice de qué especie de tilo se trata; la lámina muestra Tilia cordata.
+  ancho: 467
+  alto: 583
+  tamanos:
+    - 320
+    - 467
+- id: tomillo
+  especie: Thymus vulgaris
+  titulo: Thymus vulgaris - Köhler–s Medizinal-Pflanzen-271.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Thymus_vulgaris_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-271.jpg
+  ancho: 461
+  alto: 591
+  tamanos:
+    - 320
+    - 461
+- id: diente-de-leon
+  especie: Taraxacum officinale
+  titulo: Taraxacum officinale - Köhler–s Medizinal-Pflanzen-135.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Taraxacum_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-135.jpg
+  ancho: 1600
+  alto: 2201
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: jengibre
+  especie: Zingiber officinale
+  titulo: Zingiber officinale - Köhler–s Medizinal-Pflanzen-146.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Zingiber_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-146.jpg
+  ancho: 1600
+  alto: 2204
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: malvavisco
+  especie: Althaea officinalis
+  titulo: Althaea officinalis - Köhler–s Medizinal-Pflanzen-008.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Althaea_officinalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-008.jpg
+  ancho: 440
+  alto: 593
+  tamanos:
+    - 320
+    - 440

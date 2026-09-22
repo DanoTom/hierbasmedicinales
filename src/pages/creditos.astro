@@ -32,6 +32,7 @@ const sinLamina = d.plantas.filter((p) => !p.data.lamina);
             <p>
               <strong>{planta.data.nombre}</strong> — <i>{l.data.especie}</i>
             </p>
+            {l.data.nota && <p>{l.data.nota}</p>}
             <p>{l.data.autor}.</p>
             <p>
               <i>{l.data.obra}</i>, {l.data.anio}.
