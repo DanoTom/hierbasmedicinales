@@ -59,7 +59,7 @@ const plantas = await plantasDePreparacion(p.clave);
     plantas.length > 0 && (
       <section class="seccion" aria-labelledby="t-plantas">
         <h2 id="t-plantas">Plantas que se preparan así</h2>
-        <p>Según las fichas del taller.</p>
+        <p>Según las fichas de cada planta.</p>
         <ul class="plantas">
           {plantas.map((pl) => (
             <li>

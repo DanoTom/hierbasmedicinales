@@ -8,10 +8,10 @@ import { datos } from '../../lib/datos';
 const d = await datos();
 const planta = (id: string) => d.plantas.find((p) => p.id === id)!;
 ---
-<Base titulo="Cómo actúan las plantas" descripcion="Las categorías de acción del taller digestivo: qué hace cada grupo de plantas y dónde actúa." ancho="texto">
+<Base titulo="Cómo actúan las plantas" descripcion="Las categorías de acción de las plantas digestivas: qué hace cada grupo de plantas y dónde actúa." ancho="texto">
   <a class="volver" href="/aprender/"><Icono nombre="izquierda" />Todos los temas</a>
   <Encabezado
-    antetitulo="Taller de sistema digestivo"
+    antetitulo="Sistema digestivo"
     titulo="Cómo actúan las plantas"
     bajada="Las plantas no actúan todas igual: cada una tiene un mecanismo específico."
   />

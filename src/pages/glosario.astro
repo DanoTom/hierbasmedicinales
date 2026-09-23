@@ -11,7 +11,7 @@ const letras = [...new Set(glosario.map((g) => letra(g.data.termino)))];
 const primeraDe = new Map<string, string>();
 for (const g of glosario) if (!primeraDe.has(letra(g.data.termino))) primeraDe.set(letra(g.data.termino), g.id);
 ---
-<Base titulo="Glosario" descripcion="Las palabras del taller, explicadas." ancho="texto">
+<Base titulo="Glosario" descripcion="Qué quiere decir cada término que aparece en las fichas." ancho="texto">
   <Encabezado
     antetitulo="Para leer las fichas"
     titulo="Glosario"
@@ -44,7 +44,7 @@ for (const g of glosario) if (!primeraDe.has(letra(g.data.termino))) primeraDe.s
             )}
             {g.data.agregado ? (
               <p class="fuente">
-                <span class="agregado">agregado</span> Definición general: no está en el material del taller.
+                <span class="agregado">agregado</span> Definición general: no está en el material original.
               </p>
             ) : (
               <Fuente refs={g.data.de ?? []} />

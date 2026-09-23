@@ -35,7 +35,7 @@ const GRUPOS: { tipos: Doc['tipo'][]; titulo: string }[] = [
   { tipos: ['uso'], titulo: 'Para qué' },
   { tipos: ['receta'], titulo: 'Recetas' },
   { tipos: ['preparacion'], titulo: 'Preparaciones' },
-  { tipos: ['tema'], titulo: 'Temas del taller' },
+  { tipos: ['tema'], titulo: 'Temas' },
   { tipos: ['glosario'], titulo: 'Glosario' },
 ];
 

@@ -23,10 +23,10 @@ const refsCuidados = d.cuidados.flatMap((c) => c.de);
   <h2 id="titulo-precauciones"><Icono nombre="atencion" />Precauciones</h2>
   {
     hay ? (
-      <p class="precauciones__intro">Lo que el material del taller pide tener en cuenta.</p>
+      <p class="precauciones__intro">Lo que el material original pide tener en cuenta.</p>
     ) : (
       <p class="precauciones__intro">
-        El material del taller no menciona precauciones específicas para {d.nombre.toLowerCase()}.
+        El material original no menciona precauciones específicas para {d.nombre.toLowerCase()}.
       </p>
     )
   }

@@ -24,7 +24,7 @@ const notas: Record<string, string> = {
     'Son plantas del «camino A», que acompañan el cuadro. El astrágalo, en cambio, se usa antes del invierno y no durante una infección con fiebre.',
 };
 ---
-<Base titulo={uso.data.nombre} descripcion={`Plantas y recetas del taller para ${uso.data.nombre.toLowerCase()}.`}>
+<Base titulo={uso.data.nombre} descripcion={`Plantas y recetas para ${uso.data.nombre.toLowerCase()}.`}>
   <a class="volver" href="/usos/"><Icono nombre="izquierda" />Todos los usos</a>
   <Encabezado antetitulo={GRUPOS_USO[uso.data.grupo]} titulo={uso.data.nombre} bajada={uso.data.descripcion} />
 

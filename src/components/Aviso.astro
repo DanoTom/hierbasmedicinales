@@ -1,6 +1,7 @@
 ---
 /** Aviso sereno: contenido informativo, no reemplaza la consulta. */
 import Icono from './Icono.astro';
+import { SITIO } from '../config';
 interface Props {
   variante?: 'caja' | 'pie';
 }
@@ -12,8 +13,8 @@ const { variante = 'caja' } = Astro.props;
       <Icono nombre="hoja" />
       <div>
         <p>
-          <strong>Para aprender y consultar, no para reemplazar a nadie.</strong> Este cuaderno reúne el material de los
-          talleres: es información, no una indicación médica.
+          <strong>Para aprender y consultar, no para reemplazar a nadie.</strong> Lo que hay acá sale del material de los
+          talleres de {SITIO.espacio} (<a href="/el-taller/">de dónde sale</a>): es información, no una indicación médica.
         </p>
         <p>
           Si estás embarazada o amamantando, si es para una niña o un niño, o si tomás medicamentos, consultá antes con tu
@@ -23,7 +24,7 @@ const { variante = 'caja' } = Astro.props;
     </aside>
   ) : (
     <p class="pie__aviso">
-      <strong>Contenido informativo de un taller.</strong> No reemplaza la consulta con un profesional de la salud. Con
+      <strong>Contenido informativo.</strong> No reemplaza la consulta con un profesional de la salud. Con
       especial cuidado en embarazo, lactancia, niñas y niños, y si se toman medicamentos.{' '}
       <a href="/seguridad/">Leer sobre seguridad</a>.
     </p>

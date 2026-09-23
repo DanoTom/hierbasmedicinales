@@ -1,5 +1,5 @@
 ---
-/** Página de un tema del taller (Markdown de src/content/temas). */
+/** Página de un tema (Markdown de src/content/temas). */
 import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Encabezado from './Encabezado.astro';
@@ -17,10 +17,10 @@ const { Content } = await render(tema);
 const d = await datos();
 const plantas = tema.data.plantas.map((id) => d.plantas.find((p) => p.id === id)!);
 const TALLER = {
-  digestivo: 'Taller de sistema digestivo',
-  estres: 'Taller de estrés y descanso',
-  inmunidad: 'Guía Inmunidad inteligente',
-  general: 'Del taller',
+  digestivo: 'Sistema digestivo',
+  estres: 'Estrés y descanso',
+  inmunidad: 'Inmunidad, hongos y adaptógenos',
+  general: 'Para todos los temas',
 } as const;
 ---
 <Base titulo={tema.data.titulo} descripcion={tema.data.bajada} ancho="texto">

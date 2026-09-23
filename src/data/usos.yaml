@@ -125,7 +125,7 @@
 - id: inmunidad
   nombre: Inmunidad
   grupo: defensas
-  descripcion: Acompañar al sistema inmune con uso sostenido (el «camino B» del taller).
+  descripcion: Acompañar al sistema inmune con uso sostenido (el «camino B», ver «Dos caminos»).
   buscar: [defensas, inmune, inmunologico, sistema inmune, modular, prevenir]
   orden: 21
 - id: energia

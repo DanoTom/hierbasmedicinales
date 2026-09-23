@@ -6,16 +6,16 @@ import { plano } from '../../lib/texto';
 
 const d = await datos();
 const temas = [
-  { id: 'digestivo', nombre: 'Del taller de sistema digestivo' },
-  { id: 'inmunidad', nombre: 'De la guía Inmunidad inteligente' },
+  { id: 'digestivo', nombre: 'Para el sistema digestivo' },
+  { id: 'inmunidad', nombre: 'Hongos y adaptógenos' },
 ] as const;
 const nombrePlanta = (id: string) => d.plantas.find((p) => p.id === id)?.data.nombre ?? id;
 ---
-<Base titulo="Recetas" descripcion="Las recetas del taller, paso a paso.">
+<Base titulo="Recetas" descripcion="Recetas con plantas medicinales y hongos, paso a paso.">
   <Encabezado
     antetitulo="Recetario"
     titulo="Recetas"
-    bajada="Paso a paso, tal como las dio el taller: ingredientes, preparación, cómo se usa y cómo se conserva."
+    bajada="Paso a paso: ingredientes, preparación, cómo se usa y cómo se conserva."
   />
   {
     temas.map((t) => (

@@ -4,7 +4,7 @@ import Buscador from '../components/Buscador.astro';
 import Aviso from '../components/Aviso.astro';
 import Filete from '../components/Filete.astro';
 import Icono from '../components/Icono.astro';
-import { datos, GRUPOS_USO, plantasDeUso } from '../lib/datos';
+import { datos, GRUPOS_USO, plantasDeUso, TEMAS_APARTE } from '../lib/datos';
 import { SITIO } from '../config';
 
 const d = await datos();
@@ -18,7 +18,8 @@ const usos = await Promise.all(
   }),
 );
 const hongos = d.plantas.filter((p) => p.data.tipo === 'hongo').length;
-const saludo = SITIO.duena ? `Hola, ${SITIO.duena}` : 'Tu cuaderno de plantas';
+const temas = d.temas.filter((t) => !TEMAS_APARTE.includes(t.id)).length;
+const saludo = SITIO.duena ? `Hola, ${SITIO.duena}` : 'Tu botica de bolsillo';
 ---
 <Base>
   <section class="portada">
@@ -26,8 +27,8 @@ const saludo = SITIO.duena ? `Hola, ${SITIO.duena}` : 'Tu cuaderno de plantas';
       <span class="antetitulo">{saludo}</span>
       <h1>¿Qué necesitás hoy?</h1>
       <p class="bajada">
-        Todo lo del taller en un solo lugar: {d.plantas.length - hongos} plantas, {hongos} hongos, {d.recetas.length} recetas y
-        cómo prepararlas.
+        {d.plantas.length - hongos} plantas y {hongos} hongos: para qué sirve cada uno, cómo se prepara y qué cuidados tener.
+        Y {d.recetas.length} recetas paso a paso.
       </p>
     </div>
     <div class="portada__buscador">
@@ -90,7 +91,7 @@ const saludo = SITIO.duena ? `Hola, ${SITIO.duena}` : 'Tu cuaderno de plantas';
           <Icono nombre="libro" class="tarjeta__icono" />
           <span class="tarjeta__titulo">Aprender</span>
           <span class="tarjeta__texto">El sistema digestivo, estrés y descanso, el sistema inmune, adaptógenos y hongos.</span>
-          <span class="tarjeta__meta">Temas del taller</span>
+          <span class="tarjeta__meta">{temas} temas</span>
         </a>
       </li>
       <li>

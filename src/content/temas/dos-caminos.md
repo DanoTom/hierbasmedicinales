@@ -1,6 +1,6 @@
 ---
 titulo: Los dos caminos
-bajada: Aliviar un síntoma y modular la inmunidad no son lo mismo. Es la idea central de todo el taller.
+bajada: Aliviar un síntoma y modular la inmunidad no son lo mismo. Es la idea central de la guía de inmunidad.
 orden: 5
 taller: inmunidad
 de: [guia-inmunidad/6, guia-inmunidad/7]

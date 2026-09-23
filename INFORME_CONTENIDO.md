@@ -280,6 +280,22 @@ Para que el texto se entienda fuera del documento original:
 - Algunas citas van entre comillas «» con una frase de introducción, por ejemplo «Para el día
   (estrés / ansiedad leve): melisa y lavanda «ayudan a reducir el nerviosismo…»».
 
+### 6.1 Textos del sitio pensados para cualquier lectora o lector (23 de septiembre de 2026)
+
+Pedido de la persona usuaria: que el sitio se presente por lo que contiene y no como «el material
+del taller», para que lo pueda usar cualquiera. No cambia ningún dato ni ninguna cita.
+
+- Subtítulo: «Cuaderno de plantas medicinales» → «Plantas medicinales y hongos». Descripción del
+  sitio, inicio, Aprender, Recetas, Glosario, Usos y el buscador hablan del contenido.
+- El taller se nombra en: el aviso del inicio (con enlace), el pie, Créditos, la página «De dónde
+  sale» (antes «El taller», misma dirección `/el-taller/`) y las citas de fuente de cada dato.
+- Las notas de edición dicen «material original» en lugar de «material del taller».
+- En la ficha, la sección «En las diapositivas del taller» pasó a llamarse «Grupo de acción».
+- Dos ajustes mínimos de texto: la bajada de «Dos caminos» decía «Es la idea central de todo el
+  taller» (cita de la guía de inmunidad, pág. 3) → «Es la idea central de la guía de inmunidad»; en
+  Seguridad, «las plantas del taller digestivo y del de estrés y descanso» → «las plantas para la
+  digestión y para el estrés y el descanso».
+
 ## 7. Cómo se verificó
 
 - **Esquema:** al compilar, cada ficha se valida (campos obligatorios, que cada fuente exista y que

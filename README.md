@@ -1,4 +1,4 @@
-# La Botica · Cuaderno de plantas medicinales
+# La Botica · Plantas medicinales y hongos
 
 Un sitio web, pensado sobre todo para el celular, que reúne en un solo lugar todo
 lo aprendido en los talleres de plantas medicinales de **Mburucuyá hierbas**

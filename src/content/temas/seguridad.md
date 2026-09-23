@@ -56,7 +56,7 @@ Este capítulo no está para asustar. Está porque la mayoría de los problemas 
 | **Inmunosupresores** | [Astrágalo](/plantas/astragalo/), cordyceps, y en general todo el grupo | Acción opuesta a la del tratamiento. |
 | **Cualquier medicación crónica** | Reishi, y como criterio general todo el grupo | Posible interferencia con enzimas hepáticas que metabolizan fármacos. |
 
-Las plantas del taller digestivo y del de estrés y descanso tienen sus interacciones en cada ficha (por ejemplo, [jengibre](/plantas/jengibre/) con anticoagulantes, o [valeriana](/plantas/valeriana/) y [pasionaria](/plantas/pasionaria/) con sedantes).
+Las plantas para la digestión y para el estrés y el descanso tienen sus interacciones en cada ficha (por ejemplo, [jengibre](/plantas/jengibre/) con anticoagulantes, o [valeriana](/plantas/valeriana/) y [pasionaria](/plantas/pasionaria/) con sedantes).
 
 ## Antes de una cirugía
 

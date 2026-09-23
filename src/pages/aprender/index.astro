@@ -30,17 +30,17 @@ const secciones = [
     titulo: 'Para todos los temas',
     items: [
       { href: '/seguridad/', titulo: 'Seguridad', texto: 'Precauciones generales, interacciones, antes de una cirugía y señales para consultar.' },
-      { href: '/glosario/', titulo: 'Glosario', texto: 'Las palabras del taller, explicadas.' },
-      { href: '/el-taller/', titulo: 'El taller', texto: 'Las cartas de la docente, los documentos y la bibliografía.' },
+      { href: '/glosario/', titulo: 'Glosario', texto: 'Qué quiere decir cada término que aparece en las fichas.' },
+      { href: '/el-taller/', titulo: 'De dónde sale', texto: 'El material original de los talleres, las cartas de la docente y la bibliografía.' },
     ],
   },
 ];
 ---
-<Base titulo="Aprender" descripcion="Los temas de los talleres: sistema digestivo, estrés y descanso, sistema inmune, adaptógenos y hongos.">
+<Base titulo="Aprender" descripcion="Para entender cómo funcionan el sistema digestivo, el estrés y el descanso, el sistema inmune, los adaptógenos y los hongos.">
   <Encabezado
-    antetitulo="Temas del taller"
+    antetitulo="Para entender"
     titulo="Aprender"
-    bajada="Lo que vimos en los talleres, con más aire, para leer de a poco y volver cuando haga falta."
+    bajada="Cómo funciona el cuerpo y cómo actúan las plantas y los hongos. Para leer de a poco y volver cuando haga falta."
   />
   {
     secciones.map((s, i) => (

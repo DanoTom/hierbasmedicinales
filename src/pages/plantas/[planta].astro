@@ -69,7 +69,7 @@ const hayAgregados = [...d.cientifico, d.familia, ...d.partes, ...d.otrosNombres
                 {c.agregado && (
                   <>
                     {' '}
-                    <span class="agregado" title="Dato agregado: no está en el material del taller">agregado</span>
+                    <span class="agregado" title="Dato agregado: no está en el material original">agregado</span>
                   </>
                 )}
               </>
@@ -123,7 +123,7 @@ const hayAgregados = [...d.cientifico, d.familia, ...d.partes, ...d.otrosNombres
                       {p.agregado && (
                         <>
                           {' '}
-                          <span class="agregado" title="Dato agregado: no está en el material del taller">agregado</span>
+                          <span class="agregado" title="Dato agregado: no está en el material original">agregado</span>
                         </>
                       )}
                     </>
@@ -141,7 +141,7 @@ const hayAgregados = [...d.cientifico, d.familia, ...d.partes, ...d.otrosNombres
                   {d.familia.agregado && (
                     <>
                       {' '}
-                      <span class="agregado" title="Dato agregado: no está en el material del taller">agregado</span>
+                      <span class="agregado" title="Dato agregado: no está en el material original">agregado</span>
                     </>
                   )}
                   {d.familia.nota && <span class="fuente-item">{d.familia.nota}</span>}
@@ -161,7 +161,7 @@ const hayAgregados = [...d.cientifico, d.familia, ...d.partes, ...d.otrosNombres
                       {o.agregado && (
                         <>
                           {' '}
-                          <span class="agregado" title="Dato agregado: no está en el material del taller">agregado</span>
+                          <span class="agregado" title="Dato agregado: no está en el material original">agregado</span>
                         </>
                       )}
                     </>
@@ -186,7 +186,7 @@ const hayAgregados = [...d.cientifico, d.familia, ...d.partes, ...d.otrosNombres
           d.breve && (
             <div class="recuadro recuadro--nota ficha__breve">
               <p>
-                <strong>Ficha breve.</strong> El material del taller solo menciona {d.tipo === 'hongo' ? 'este hongo' : 'esta planta'}, sin
+                <strong>Ficha breve.</strong> El material original solo menciona {d.tipo === 'hongo' ? 'este hongo' : 'esta planta'}, sin
                 una ficha completa. Acá está todo lo que dice; lo que no figura, no está en el material.
               </p>
             </div>
@@ -215,7 +215,7 @@ const hayAgregados = [...d.cientifico, d.familia, ...d.partes, ...d.otrosNombres
                   <li>{x}</li>
                 ))}
               </ul>
-              <p class="fuente">Nota de edición: compara lo que dicen los distintos documentos del taller.</p>
+              <p class="fuente">Nota de edición: compara lo que dicen los distintos documentos de origen.</p>
             </section>
           )
         }
@@ -297,7 +297,7 @@ const hayAgregados = [...d.cientifico, d.familia, ...d.partes, ...d.otrosNombres
         {
           categorias.length > 0 && (
             <section class="bloque" aria-labelledby="t-cat">
-              <h2 id="t-cat">En las diapositivas del taller</h2>
+              <h2 id="t-cat">Grupo de acción</h2>
               <p>
                 Aparece en {categorias.length === 1 ? 'la categoría' : 'las categorías'} de acción{' '}
                 {categorias.map((c, i) => (
@@ -360,7 +360,7 @@ const hayAgregados = [...d.cientifico, d.familia, ...d.partes, ...d.otrosNombres
           {
             hayAgregados && (
               <p class="fuente">
-                Los datos marcados <span class="agregado">agregado</span> no están en el material del taller: se sumaron para
+                Los datos marcados <span class="agregado">agregado</span> no están en el material original: se sumaron para
                 completar la ficha (nombre científico o familia botánica) y se verificaron aparte.
               </p>
             )

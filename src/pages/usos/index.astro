@@ -20,7 +20,7 @@ const grupos = await Promise.all(
   <Encabezado
     antetitulo="Índice por uso"
     titulo="¿Para qué la necesitás?"
-    bajada="Elegí lo que te pasa y vas a ver las plantas y recetas del taller que lo mencionan."
+    bajada="Elegí lo que te pasa y vas a ver las plantas y recetas que lo mencionan."
   />
   {
     grupos.map((g) => (
@@ -43,7 +43,7 @@ const grupos = await Promise.all(
     ))
   }
   <p class="fuente" style="margin-top: var(--e-6)">
-    Este índice lo armé a partir de lo que dice cada ficha: una planta aparece en un uso cuando el material del taller lo
+    Este índice lo armé a partir de lo que dice cada ficha: una planta aparece en un uso cuando el material original lo
     menciona.
   </p>
 </Base>
