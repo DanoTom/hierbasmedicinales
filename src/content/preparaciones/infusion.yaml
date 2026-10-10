@@ -35,4 +35,4 @@ secciones:
         - ["Concentración", "Menor", "Mayor — dosis en gotas"]
         - ["Conservación", "Horas a temperatura ambiente o hasta 48 hs en heladera", "Hasta 2 años en lugar fresco y oscuro"]
         - ["Duración del tratamiento", "A demanda", "Máximo 4-6 semanas continuas, luego descanso"]
-recetas: [infusion-antinauseas, infusion-de-tulsi]
+recetas: [infusion-antinauseas, infusion-de-tulsi, infusion-antihistaminica]

@@ -151,7 +151,12 @@
       texto: "Si hay hinchazón de labios, lengua o garganta, dificultad para respirar o caída de presión: urgencia médica, ninguna planta reemplaza esto."
       de: guia-alergia/25
       enlace: { href: /aprender/urgencia-alergica/, texto: Cuándo es una urgencia médica }
-    - texto: "Para un efecto sistémico (oral): ortiga, té verde, llantén, perilla o quercetina, solas o combinadas como en la infusión antihistamínica. Para un efecto local en piel: manzanilla por vía tópica, con precaución si hay alergia conocida a Asteráceas. En niños y niñas: no hay planta antihistamínica recomendada, consultar siempre al pediatra."
+    - texto: |-
+        **Para un efecto sistémico (oral):** ortiga, té verde, llantén, perilla o quercetina, solas o combinadas como en la infusión antihistamínica.
+
+        **Para un efecto local en piel:** manzanilla por vía tópica, con precaución si hay alergia conocida a Asteráceas.
+
+        **En niños y niñas:** no hay planta antihistamínica recomendada, consultar siempre al pediatra.
       de: guia-alergia/25
       enlace: { href: /aprender/plantas-y-alergia/, texto: "Plantas para la alergia: cómo usarlas" }
 - id: energia

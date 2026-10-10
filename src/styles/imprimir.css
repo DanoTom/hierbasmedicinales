@@ -80,7 +80,8 @@
   h1 {
     font-size: 24pt;
   }
-  .precauciones {
+  .precauciones,
+  .recuadro--urgencia {
     border: 2px solid #000;
   }
   .chip {

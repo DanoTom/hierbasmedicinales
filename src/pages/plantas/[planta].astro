@@ -279,7 +279,7 @@ const hayAgregados = [...d.cientifico, d.familia, ...d.partes, ...d.otrosNombres
                   )}
                 </dl>
               )}
-              {d.comoActua.length > 0 && <ListaDatos items={d.comoActua} comoTexto={d.comoActua.length === 1 || !d.breve} />}
+              {d.comoActua.length > 0 && <ListaDatos items={d.comoActua} comoTexto={d.comoActua.length === 1 || d.comoActua.some((i) => i.texto.length > 260)} />}
             </section>
           )
         }

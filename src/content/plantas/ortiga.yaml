@@ -3,10 +3,10 @@ tipo: planta
 cientifico:
   - nombre: Urtica dioica
     de: guia-alergia/11
-    nota: "ortiga mayor: planta perenne, de mayor porte. Es la especie más estudiada y la que más habitualmente se vende seca en dietéticas."
+    nota: "ortiga mayor"
   - nombre: Urtica urens
     de: guia-alergia/11
-    nota: "ortiga menor: planta anual, de porte más pequeño, frecuente en huertas y jardines caseros."
+    nota: "ortiga menor"
 familia: { nombre: Urticaceae, de: guia-alergia/11 }
 acciones: { lista: [Antihistamínica, Antiinflamatoria, Hipoglucemiante, Hepatoprotectora, Diurética], de: guia-alergia/11 }
 composicion:
@@ -60,7 +60,11 @@ recuadros:
   - titulo: "¿Qué ortiga se puede consumir?"
     de: guia-alergia/11-12
     texto: |-
-      En la naturaleza pueden encontrarse distintas especies de ortiga. Las dos más comunes en nuestra región son *Urtica dioica* (ortiga mayor) y *Urtica urens* (ortiga menor).
+      En la naturaleza pueden encontrarse distintas especies de ortiga. Las dos más comunes en nuestra región son:
+
+      ***Urtica dioica* (ortiga mayor):** planta perenne, de mayor porte. Es la especie más estudiada y la que más habitualmente se vende seca en dietéticas.
+
+      ***Urtica urens* (ortiga menor):** planta anual, de porte más pequeño, frecuente en huertas y jardines caseros.
 
       Ambas pican en fresco por los mismos pelos urticantes, y ambas son seguras una vez secas. Si hay dudas sobre la identificación en el campo, la recomendación es comprarla seca y de procedencia conocida.
 indice:

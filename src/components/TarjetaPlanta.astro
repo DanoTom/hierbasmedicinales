@@ -6,12 +6,14 @@ import { PARTES, PREPARACIONES } from '../lib/vocabulario';
 interface Props {
   planta: Planta;
   encabezado?: 'h2' | 'h3';
+  /** Id de un uso para mostrar primero en el resumen (en la página de ese uso). */
+  usoPrimero?: string;
 }
-const { planta, encabezado = 'h2' } = Astro.props;
+const { planta, encabezado = 'h2', usoPrimero } = Astro.props;
 const d = planta.data;
 const lamina = await laminaDe(planta);
 const nro = await numeroDe(planta.id);
-const usos = await resumenUsos(planta, 3);
+const usos = await resumenUsos(planta, 3, usoPrimero);
 const Titulo = encabezado;
 ---
 <a

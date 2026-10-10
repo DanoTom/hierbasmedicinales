@@ -4,7 +4,7 @@
  */
 import type { APIRoute } from 'astro';
 import { datos, TEMAS_APARTE } from '../lib/datos';
-import { plano } from '../lib/texto';
+import { normalizar, plano } from '../lib/texto';
 import { ALERTAS, PARTES, PREPARACIONES } from '../lib/vocabulario';
 
 export interface DocBusqueda {
@@ -20,6 +20,8 @@ export interface DocBusqueda {
   alertas?: string[];
   /** Texto de las precauciones (solo plantas): se busca aparte para poder advertirlo. */
   precauciones?: string;
+  /** Usos para los que está indicada (solo plantas), normalizados: nombre y palabras de búsqueda. */
+  usos?: string[];
 }
 
 const recortar = (s: string, n = 4000) => (s.length > n ? s.slice(0, n) : s);
@@ -38,6 +40,7 @@ export const GET: APIRoute = async () => {
       detalle: x.cientifico.map((c) => c.nombre).join(' · '),
       url: `/plantas/${p.id}/`,
       alertas: x.alertas.map((a) => ALERTAS[a]),
+      usos: [...new Set(usos.flatMap((u) => [u.data.nombre, ...u.data.buscar]).map((s) => normalizar(s)))],
       claves: [x.nombre, ...x.otrosNombres.map((o) => o.nombre), ...x.cientifico.map((c) => c.nombre)].join(' '),
       texto: plano(
         [

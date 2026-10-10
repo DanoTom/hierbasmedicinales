@@ -79,6 +79,10 @@ function validarRelaciones(d: {
   }
   for (const pr of d.preparaciones)
     for (const r of pr.data.recetas) if (!idsRecetas.has(r)) errores.push(`preparaciones/${pr.id}: receta desconocida «${r}»`);
+  for (const r of d.recetas) {
+    const pr = r.data.preparacion && d.preparaciones.find((x) => x.data.clave === r.data.preparacion);
+    if (pr && !pr.data.recetas.includes(r.id)) errores.push(`preparaciones/${pr.id}: falta la receta «${r.id}» en «recetas»`);
+  }
   for (const t of d.temas)
     for (const p of t.data.plantas) if (!idsPlantas.has(p)) errores.push(`temas/${t.id}: planta desconocida «${p}»`);
   for (const c of d.categorias)
@@ -131,9 +135,10 @@ export async function laminaDe(p: Planta) {
 }
 
 /** Resumen corto de para qué se usa (nombres de los usos del índice). */
-export async function resumenUsos(p: Planta, max = 3) {
+export async function resumenUsos(p: Planta, max = 3, primero?: string) {
   const { usos } = await datos();
-  const nombres = p.data.indice.usos
+  const ids = primero && p.data.indice.usos.includes(primero) ? [primero, ...p.data.indice.usos.filter((u) => u !== primero)] : p.data.indice.usos;
+  const nombres = ids
     .map((u) => usos.find((x) => x.id === u)?.data.nombre)
     .filter(Boolean) as string[];
   return nombres.slice(0, max);

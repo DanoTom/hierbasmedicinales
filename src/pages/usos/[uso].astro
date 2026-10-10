@@ -4,9 +4,9 @@ import Encabezado from '../../components/Encabezado.astro';
 import TarjetaPlanta from '../../components/TarjetaPlanta.astro';
 import Icono from '../../components/Icono.astro';
 import Aviso from '../../components/Aviso.astro';
+import Parrafos from '../../components/Parrafos.astro';
 import { datos, plantasDeUso, recetasDeUso, GRUPOS_USO, type Uso } from '../../lib/datos';
 import { textoRefs } from '../../lib/fuentes';
-import { enLinea } from '../../lib/texto';
 
 export async function getStaticPaths() {
   const { usos } = await datos();
@@ -19,6 +19,10 @@ const { uso } = Astro.props;
 const plantas = await plantasDeUso(uso.id);
 const recetas = await recetasDeUso(uso.id);
 const conPrecauciones = plantas.filter((p) => p.data.alertas.length).length;
+const nHongos = plantas.filter((p) => p.data.tipo === 'hongo').length;
+const nPlantas = plantas.length - nHongos;
+const cuenta = (n: number, uno: string, varios: string) => (n === 1 ? `1 ${uno}` : `${n} ${varios}`);
+const titulo = [nPlantas && cuenta(nPlantas, 'planta', 'plantas'), nHongos && cuenta(nHongos, 'hongo', 'hongos')].filter(Boolean).join(' y ');
 ---
 <Base titulo={uso.data.nombre} descripcion={`Plantas y recetas para ${uso.data.nombre.toLowerCase()}.`}>
   <a class="volver" href="/usos/"><Icono nombre="izquierda" />Todos los usos</a>
@@ -33,7 +37,7 @@ const conPrecauciones = plantas.filter((p) => p.data.alertas.length).length;
             {a.titulo}
           </h2>
         )}
-        <p set:html={enLinea(a.texto)} />
+        <Parrafos texto={a.texto} />
         <p class="fuente">
           {a.enlace && (
             <>
@@ -48,7 +52,7 @@ const conPrecauciones = plantas.filter((p) => p.data.alertas.length).length;
   }
 
   <section class="seccion" aria-labelledby="t-plantas" style="margin-top: var(--e-5)">
-    <h2 id="t-plantas">{plantas.length === 1 ? '1 planta' : `${plantas.length} plantas y hongos`}</h2>
+    <h2 id="t-plantas">{titulo}</h2>
     {
       conPrecauciones > 0 && (
         <p>
@@ -60,7 +64,7 @@ const conPrecauciones = plantas.filter((p) => p.data.alertas.length).length;
       {
         plantas.map((p) => (
           <li>
-            <TarjetaPlanta planta={p} encabezado="h3" />
+            <TarjetaPlanta planta={p} encabezado="h3" usoPrimero={uso.id} />
           </li>
         ))
       }

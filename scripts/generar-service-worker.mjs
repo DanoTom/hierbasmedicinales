@@ -22,7 +22,27 @@ async function listar(dir) {
   return salida;
 }
 
-const archivos = (await listar(DIST)).filter((f) => !EXCLUIR.has(path.relative(DIST, f)) && !/LICENSE/.test(f));
+const todos = (await listar(DIST)).filter((f) => !EXCLUIR.has(path.relative(DIST, f)) && !/LICENSE/.test(f));
+
+/*
+ * Láminas: de cada una se precargan solo dos tamaños, el chico (tarjetas) y
+ * uno de hasta 720 px (la ficha). Los demás se guardan a medida que se ven, y
+ * sin conexión se responde con el tamaño guardado más parecido. Así la primera
+ * descarga para usar el sitio sin conexión pesa la mitad.
+ */
+const ANCHO_FICHA = 720;
+const tamanosLamina = new Map();
+for (const f of todos) {
+  const m = /^laminas\/(.+)-(\d+)\.webp$/.exec(path.relative(DIST, f).split(path.sep).join('/'));
+  if (m) tamanosLamina.set(m[1], [...(tamanosLamina.get(m[1]) ?? []), Number(m[2])].sort((a, b) => a - b));
+}
+const precargarLamina = new Map(
+  [...tamanosLamina].map(([id, t]) => [id, [...new Set([t[0], t.filter((x) => x <= ANCHO_FICHA).at(-1) ?? t[0]])]]),
+);
+const archivos = todos.filter((f) => {
+  const m = /^laminas\/(.+)-(\d+)\.webp$/.exec(path.relative(DIST, f).split(path.sep).join('/'));
+  return !m || precargarLamina.get(m[1]).includes(Number(m[2]));
+});
 const hash = createHash('sha256');
 const urls = [];
 let bytes = 0;
@@ -40,6 +60,8 @@ const sw = `/* Service worker generado por scripts/generar-service-worker.mjs. N
 const VERSION = '${version}';
 const CACHE = 'botica-' + VERSION;
 const PRECARGA = ${JSON.stringify(urls)};
+/** Tamaños de cada lámina que quedan guardados de entrada (para responder sin conexión). */
+const LAMINAS = ${JSON.stringify(Object.fromEntries(precargarLamina))};
 
 self.addEventListener('install', (evento) => {
   evento.waitUntil(
@@ -73,6 +95,16 @@ self.addEventListener('fetch', (evento) => {
         if (respuesta.ok && respuesta.type === 'basic') cache.put(request, respuesta.clone());
         return respuesta;
       } catch (error) {
+        // Lámina en un tamaño que no estaba guardado: se responde con el guardado más parecido.
+        const lamina = /^\\/laminas\\/(.+)-(\\d+)\\.webp$/.exec(url.pathname);
+        if (lamina && LAMINAS[lamina[1]]) {
+          const pedido = Number(lamina[2]);
+          const opciones = [...LAMINAS[lamina[1]]].sort((a, b) => Math.abs(a - pedido) - Math.abs(b - pedido));
+          for (const ancho of opciones) {
+            const alternativa = await cache.match('/laminas/' + lamina[1] + '-' + ancho + '.webp');
+            if (alternativa) return alternativa;
+          }
+        }
         if (request.mode === 'navigate') {
           return (await cache.match('/404.html')) || Response.error();
         }
@@ -82,5 +114,8 @@ self.addEventListener('fetch', (evento) => {
   );
 });
 `;
+// Si el código generado tiene un error de sintaxis, el navegador no instala el service worker
+// y el sitio deja de andar sin conexión sin avisar: mejor que falle el build.
+new Function(sw);
 await writeFile(path.join(DIST, 'sw.js'), sw);
-console.log(`✓ sw.js: versión ${version}, ${urls.length} archivos para usar sin conexión (${(bytes / 1024 / 1024).toFixed(2)} MB)`);
+console.log(`✓ sw.js: versión ${version}, ${urls.length} archivos para usar sin conexión (${(bytes / 1024 / 1024).toFixed(2)} MB; las láminas en dos tamaños)`);

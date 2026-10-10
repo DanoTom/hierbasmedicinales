@@ -1,8 +1,9 @@
 ---
 /**
- * Lista de datos con su fuente. Si todos vienen del mismo lugar, la fuente
- * va una sola vez al final. Si vienen de documentos distintos, se agrupan por
- * fuente («Según la Guía digestiva, pág. 10:») en el orden en que aparecen.
+ * Lista de datos con su fuente. Si todos vienen del mismo documento, la fuente
+ * va una sola vez al final (con todas sus páginas). Si vienen de documentos
+ * distintos, se agrupan por documento («Según la Guía digestiva, págs. 5 y 13:»)
+ * en el orden en que aparecen.
  */
 import Fuente from './Fuente.astro';
 import { parrafos } from '../lib/texto';
@@ -19,13 +20,17 @@ interface Props {
 }
 const { items, comoTexto = false } = Astro.props;
 
-const grupos: { clave: string; refs: string[]; items: Item[] }[] = [];
+const grupos: { docs: string; clave: string; refs: string[]; items: Item[] }[] = [];
+const documentos = (refs: string[]) => [...new Set(refs.map((r) => r.split('/')[0]))].join('+');
 for (const i of items) {
-  const clave = textoRefs(i.de);
-  const g = grupos.find((x) => x.clave === clave);
-  if (g) g.items.push(i);
-  else grupos.push({ clave, refs: i.de, items: [i] });
+  const docs = documentos(i.de);
+  const g = grupos.find((x) => x.docs === docs);
+  if (g) {
+    g.items.push(i);
+    g.refs.push(...i.de.filter((r) => !g.refs.includes(r)));
+  } else grupos.push({ docs, clave: '', refs: [...i.de], items: [i] });
 }
+for (const g of grupos) g.clave = textoRefs(g.refs);
 const unaFuente = grupos.length <= 1;
 const lista = (its: Item[]) => !comoTexto && its.length > 1;
 ---

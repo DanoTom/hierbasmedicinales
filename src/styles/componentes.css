@@ -433,6 +433,10 @@ a.chip:hover {
   color: var(--lacre);
   line-height: 1.35;
 }
+.resultado__alerta--suave {
+  font-weight: 600;
+  color: var(--tinta-suave);
+}
 .resultados__cuidado {
   background: var(--lacre-tenue);
   border: 1px solid rgb(138 53 32 / 0.3);
@@ -1589,4 +1593,37 @@ thead th {
 /* En los temas, el título de una señal de alarma va en color lacre. */
 .prosa .recuadro--urgencia > p:first-child > strong:first-child {
   color: var(--lacre);
+}
+
+/* ---------- Ajustes de lectura (revisión 2026-10) ---------- */
+/* Datos consecutivos en párrafos: que se lean como ítems separados. */
+.parrafos + .parrafos {
+  margin-top: var(--e-3);
+}
+/* Un subtítulo después de una lista necesita aire. */
+.bloque > ul + h3,
+.bloque > .parrafos + h3,
+.bloque > .fuente + h3,
+.bloque > .grupo-fuente + h3 {
+  margin-top: var(--e-5);
+}
+/* Recuadros dentro del panel de precauciones: título como recuadro, no como rótulo. */
+.precauciones .recuadro h3,
+.precauciones .recuadro .recuadro__titulo {
+  font-family: var(--f-titulo);
+  font-size: var(--t-m);
+  font-weight: 560;
+  letter-spacing: 0;
+  text-transform: none;
+  margin: 0 0 var(--e-2);
+}
+@media (max-width: 40em) {
+  /* En el celular, cajas dentro de cajas: menos margen interno para no angostar el texto. */
+  .precauciones {
+    padding: var(--e-4);
+  }
+  .precauciones .recuadro,
+  .recuadro .recuadro {
+    padding: var(--e-3) var(--e-4);
+  }
 }

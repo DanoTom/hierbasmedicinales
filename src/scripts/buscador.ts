@@ -14,6 +14,7 @@ interface Doc {
   texto: string;
   alertas?: string[];
   precauciones?: string;
+  usos?: string[];
 }
 
 /** Palabras relacionadas con cada precaución, para reconocerlas en lo que se busca. */
@@ -64,7 +65,7 @@ function cargarIndice() {
     .then((docs) => {
       const ms = new MiniSearch<Doc>({
         fields: ['titulo', 'claves', 'texto', 'precauciones'],
-        storeFields: ['tipo', 'titulo', 'detalle', 'url', 'alertas'],
+        storeFields: ['tipo', 'titulo', 'detalle', 'url', 'alertas', 'usos'],
         processTerm: (t) => {
           const n = normalizar(t).replace(/[^a-z0-9]/g, '');
           return n.length > 1 && !VACIAS.has(n) ? n : null;
@@ -72,7 +73,8 @@ function cargarIndice() {
         searchOptions: {
           boost: { titulo: 5, claves: 3, texto: 1, precauciones: 0.6 },
           prefix: (t) => t.length > 2,
-          fuzzy: (t) => (t.length > 6 ? 0.25 : t.length > 3 ? 0.2 : false),
+          // Errores de tipeo: uno en palabras de 4 a 8 letras, dos en las más largas («alergia» no debe encontrar «energía»).
+          fuzzy: (t) => (t.length > 8 ? 2 : t.length > 3 ? 1 : false),
           weights: { fuzzy: 0.6, prefix: 0.8 },
         },
       });
@@ -112,12 +114,19 @@ function pintarResultados(cont: HTMLElement, consulta: string, res: (Doc & { sco
       return [r.id, a.length ? a : enPrecauciones(r) ? ['__texto__'] : []] as const;
     }),
   );
-  const hayAlertas = [...coincidencias.values()].some((a) => a.length);
+  /** La planta está indicada para lo que se busca (uno de sus usos coincide): la precaución es «además», no «en lugar de». */
+  const coincide = (frase: string) =>
+    terminos.some((t) => t.length > 3 && frase.split(/\s+/).some((w) => w.startsWith(t) || (w.length > 3 && t.startsWith(w))));
+  const indicada = (r: Resultado) => (r.usos ?? []).some(coincide);
+  const hayAlertas = (res as Resultado[]).some((r) => (coincidencias.get(r.id) ?? []).length && !indicada(r));
+  /** Si lo buscado es un uso («alergia», «tos»), ese uso va primero. */
+  const usoExacto = res.some((r) => r.tipo === 'uso' && coincide(normalizar(r.titulo)));
+  const grupos = usoExacto ? [...GRUPOS.filter((g) => g.tipos.includes('uso')), ...GRUPOS.filter((g) => !g.tipos.includes('uso'))] : GRUPOS;
   const partes: string[] = [`<p class="resultados__estado">${res.length === 1 ? '1 resultado' : `${res.length} resultados`} para «${esc(consulta)}»</p>`];
   if (hayAlertas) {
     partes.push(`<div class="resultados__cuidado" role="note"><strong>Ojo:</strong> varias fichas nombran «${esc(consulta)}» entre sus <strong>precauciones</strong>, no como recomendación. Abrí cada una y leé las precauciones antes de usarla.</div>`);
   }
-  for (const g of GRUPOS) {
+  for (const g of grupos) {
     const items = res.filter((r) => g.tipos.includes(r.tipo));
     if (!items.length) continue;
     partes.push(`<section class="resultados__grupo"><${nivel}>${g.titulo}</${nivel}><ul>`);
@@ -126,7 +135,9 @@ function pintarResultados(cont: HTMLElement, consulta: string, res: (Doc & { sco
       const alertas = coincidencias.get(r.id) ?? [];
       const aviso = !alertas.length
         ? ''
-        : alertas[0] === '__texto__'
+        : indicada(r as Resultado)
+          ? `<span class="resultado__alerta resultado__alerta--suave">Indicada para esto · revisá sus precauciones antes de usarla</span>`
+          : alertas[0] === '__texto__'
           ? `<span class="resultado__alerta">Lo nombra en sus precauciones</span>`
           : `<span class="resultado__alerta">Tiene precauciones con: ${alertas.map((a) => esc(a.toLowerCase())).join(', ')}</span>`;
       partes.push(
