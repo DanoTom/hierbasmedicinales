@@ -18,7 +18,7 @@
 # Lippia citriodora / Verbena triphylla = Aloysia citriodora; Ocimum sanctum =
 # O. tenuiflorum; Physalis somnifera = Withania somnifera; Aloe vulgaris = Aloe
 # vera; Hydnum erinaceus = Hericium erinaceus; Polyporus frondosus = Grifola
-# frondosa.
+# frondosa; Perilla nankinensis = Perilla frutescens var. crispa.
 #
 # Revisadas y descartadas (2026-09-22):
 # - astragalo: no se encontraron láminas antiguas de Astragalus membranaceus en Commons.
@@ -30,6 +30,8 @@
 #   de Gottorf parece P. caerulea.
 # - sabila: la de Medical Botany (rawpixel) es CC BY-SA, no dominio público; la
 #   del Códice de Gottorf no parece Aloe vera.
+# - perilla (2026-10-10): la del Seikei Zusetsu (Biblioteca de Leiden) es CC BY 4.0,
+#   no dominio público.
 - planta: alcaucil
   buscar: [Cynara scolymus]
   archivo: 'File:Artichoke- Cinara (32520933575).jpg'
@@ -116,7 +118,7 @@
   anio: '1885'
   licencia: Dominio público (obra de 1885; figura como dominio público en Wikimedia Commons)
   origen: Wikimedia Commons (escaneo de www.BioLib.de).
-  nota: El material no dice de qué especie de llantén se trata; la lámina muestra Plantago major.
+  nota: La guía de alergia nombra Plantago lanceolata y Plantago major; la lámina muestra Plantago major.
 - planta: malva
   buscar: [Malva sylvestris]
 - planta: malvavisco
@@ -138,6 +140,16 @@
   recorte: [0.09, 0.115, 0.89, 0.905]
 - planta: menta
   buscar: [Mentha × piperita, Mentha piperita]
+- planta: ortiga
+  buscar: [Urtica dioica, Urtica urens]
+  archivo: 'File:Illustration Urtica dioica0 clean.jpg'
+  especie: Urtica dioica
+  autor: Ilustradores de la obra de Otto Wilhelm Thomé
+  obra: Flora von Deutschland, Österreich und der Schweiz
+  anio: '1885'
+  licencia: Dominio público (obra de 1885; figura como dominio público en Wikimedia Commons)
+  origen: Wikimedia Commons (escaneo de www.BioLib.de).
+  nota: Muestra Urtica dioica (ortiga mayor), una de las dos especies que nombra el material.
 - planta: pasionaria
   buscar: [Passiflora incarnata]
   archivo: 'File:Passiflora incarnata-2, by Mary Vaux Walcott.jpg'
@@ -147,6 +159,16 @@
   anio: s. f.
   licencia: Dominio público (su autora murió en 1940, hace más de 70 años)
   nota: Muestra Passiflora incarnata, una de las dos especies que nombra el material.
+- planta: perilla
+  buscar: [Perilla frutescens]
+  archivo: 'File:Les plantes a feuillage coloré (plate 039 PL. XXXIX) (8717593906).jpg'
+  especie: Perilla frutescens
+  autor: Edward Joseph Lowe y William Howard
+  obra: Les plantes à feuillage coloré, lámina 39
+  anio: '1870'
+  licencia: Dominio público (obra de 1870; figura como dominio público en Wikimedia Commons)
+  origen: Wikimedia Commons (escaneo de la Biodiversity Heritage Library).
+  nota: Muestra una hoja de la perilla de hojas púrpura; en la obra figura como Perilla nankinensis, hoy una variedad de Perilla frutescens.
 - planta: regaliz
   buscar: [Glycyrrhiza glabra]
 - planta: reishi
@@ -202,6 +224,8 @@
   licencia: Dominio público (obra de 1881; sus autores murieron hace más de 100 años)
   origen: Wikimedia Commons (escaneo de www.BioLib.de).
   nota: Muestra el maitake (en la obra, Polyporus frondosus). No se encontró una lámina antigua de dominio público del shiitake.
+- planta: te-verde
+  buscar: [Camellia sinensis]
 - planta: tilo
   buscar: [Tilia cordata, Tilia platyphyllos]
   nota: El material no dice de qué especie de tilo se trata; la lámina muestra Tilia cordata.

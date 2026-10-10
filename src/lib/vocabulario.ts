@@ -37,6 +37,14 @@ export const DOCUMENTOS = {
     unidades: 'págs.',
     total: 41,
   },
+  'guia-alergia': {
+    corto: 'Guía de alergia',
+    titulo: 'Guía de acompañamiento «Plantas medicinales para la alergia»',
+    archivo: 'guia-plantas-alergia.pdf',
+    unidad: 'pág.',
+    unidades: 'págs.',
+    total: 26,
+  },
 } as const;
 
 export type IdDocumento = keyof typeof DOCUMENTOS;
@@ -99,6 +107,9 @@ export const ALERTAS = {
   hipolipemiantes: 'Medicamentos para el colesterol',
   corticoides: 'Corticoides',
   bipolar: 'Trastorno bipolar',
+  asma: 'Asma o vías respiratorias sensibles',
+  histaminosis: 'Histaminosis',
+  cafeina: 'Sensibilidad a la cafeína',
 } as const;
 
 export type Parte = keyof typeof PARTES;

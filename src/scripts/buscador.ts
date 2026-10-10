@@ -27,7 +27,10 @@ const SINONIMOS_ALERTA: Record<string, string[]> = {
   diabetes: ['diabetes', 'diabetico', 'diabetica', 'azucar', 'glucemia'],
   'cirugia programada': ['cirugia', 'operacion', 'operar', 'anestesia'],
   higado: ['higado', 'hepatico', 'hepatica'],
-  'sedantes o ansioliticos': ['sedante', 'sedantes', 'ansiolitico', 'ansioliticos', 'clonazepam', 'alprazolam', 'pastillas para dormir'],
+  'sedantes o ansioliticos': ['sedante', 'sedantes', 'ansiolitico', 'ansioliticos', 'clonazepam', 'alprazolam', 'pastillas para dormir', 'benzodiacepina', 'benzodiacepinas'],
+  'asma o vias respiratorias sensibles': ['asma', 'asmatico', 'asmatica', 'broncoespasmo', 'bronquios'],
+  histaminosis: ['histaminosis', 'intolerancia a la histamina'],
+  'sensibilidad a la cafeina': ['cafeina', 'cafe', 'mate', 'insomnio', 'migrana', 'migranas'],
 };
 
 const GRUPOS: { tipos: Doc['tipo'][]; titulo: string }[] = [

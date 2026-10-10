@@ -3,7 +3,7 @@ titulo: De dónde sale
 bajada: De dónde sale todo lo que hay en este cuaderno.
 orden: 0
 taller: general
-de: [guia-digestiva/2, guia-inmunidad/2, guia-inmunidad/40, guia-inmunidad/41]
+de: [guia-digestiva/2, guia-inmunidad/2, guia-inmunidad/40, guia-inmunidad/41, guia-alergia/26]
 ---
 
 Todo el contenido de este sitio sale del material de los talleres de **Mburucuyá hierbas**, dictados por **Ayelén Florencia Crespi** ([@mburucuya.hierbas](https://www.instagram.com/mburucuya.hierbas/)). Cada dato de cada ficha dice de qué documento y de qué página o diapositiva salió.
@@ -14,6 +14,7 @@ Todo el contenido de este sitio sale del material de los talleres de **Mburucuy�
 - **Presentación del taller «Plantas medicinales para el sistema digestivo. Cómo incorporarlas en tu día a día»** — categorías de acción, preparaciones y precauciones.
 - **Presentación «Plantas medicinales para el estrés y el descanso»** (18 de abril de 2026) — melisa, lavanda, pasionaria y valeriana.
 - **Guía de acompañamiento «Inmunidad inteligente»** — sistema inmune, adaptógenos, hongos, preparaciones, cómo elegir y seguridad.
+- **Guía de acompañamiento del taller en vivo «Plantas medicinales para la alergia»** — qué pasa en una alergia, cuándo es una urgencia, ortiga, té verde, llantén, perilla, quercetina, la infusión antihistamínica y alergias en niñas y niños.
 
 ## Una palabra antes de empezar
 
@@ -96,3 +97,16 @@ Las fuentes en las que se apoya cada afirmación de esa guía, en el orden de ap
 *Una nota sobre esta lista:* es una selección: las fuentes principales de cada sección, no todo lo consultado. Donde no pude confirmar el volumen o las páginas, dejé el código de la base de datos (PMID o PMC) en lugar de completar de memoria. Con ese código las encontrás buscándolo en PubMed.
 
 [[fuente: guia-inmunidad/40-41]]
+
+## Bibliografía de la guía de alergia
+
+- European Medicines Agency (EMA) — Community herbal monograph on *Urtica dioica* L., *Urtica urens* L., folium.
+- European Medicines Agency (EMA) — Community herbal monograph on *Plantago lanceolata* L., folium.
+- Commission E (Comisión E alemana) — Monografías de *Urtica* spp., *Camellia sinensis*, *Matricaria chamomilla*.
+- Roschek B. Jr. et al. (2009). «Nettle extract (*Urtica dioica*) affects key receptors and enzymes associated with allergic rhinitis». *Phytotherapy Research*.
+- Mittman P. (1990). «Randomized, double-blind study of freeze-dried *Urtica dioica* in the treatment of allergic rhinitis». *Planta Medica*.
+- Takano H. et al. (2004). «Extract of *Perilla frutescens* enriched for rosmarinic acid, a polyphenolic phytochemical, inhibits seasonal allergic rhinoconjunctivitis in humans». *Experimental Biology and Medicine*.
+- Estudios clínicos japoneses sobre EGCG (epigalocatequina galato) de *Camellia sinensis* y su efecto en síntomas de rinitis alérgica estacional.
+- Bibliografía general de fitoterapia y farmacognosia utilizada como referencia de composición química, mecanismos de acción y precauciones: monografías de quercetina, perfiles de interacción y reactividad cruzada entre pólenes y plantas de la familia Asteraceae.
+
+[[fuente: guia-alergia/26]]

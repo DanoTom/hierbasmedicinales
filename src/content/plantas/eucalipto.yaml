@@ -1,18 +1,36 @@
 nombre: Eucalipto
 tipo: planta
-breve: true
 cientifico:
   - nombre: "Eucalyptus spp."
     agregado: true
     nota: "El material no indica la especie. El género Eucalyptus incluye muchas especies, como Eucalyptus globulus."
 familia: { nombre: Myrtaceae, agregado: true }
+compuestoActivo: { texto: "1,8-cineol, su componente principal", de: guia-alergia/19 }
 usos:
   - texto: "Tos productiva."
     de: guia-inmunidad/7
+  - texto: "Es una planta muy usada tradicionalmente en vahos para descongestionar la nariz durante un resfrío común, y ahí tiene sentido."
+    de: guia-alergia/19
 comoActua:
   - texto: "Tomillo y eucalipto aportan aceites esenciales como el timol y el eucaliptol, con acción expectorante y antiséptica sobre la vía aérea."
     de: guia-inmunidad/7
+  - texto: "Su componente principal, el 1,8-cineol, tiene efecto descongestivo y mucolítico sobre una mucosa inflamada por una infección viral."
+    de: guia-alergia/19
+alertas: [asma]
+cuidados:
+  - situacion: "Asma o alergia respiratoria"
+    texto: "En personas con asma o con hiperreactividad de la vía aérea (algo frecuente en quienes tienen alergias respiratorias), la inhalación de vapores con aceites esenciales como el eucalipto puede actuar como irritante directo de una vía aérea ya sensibilizada y desencadenar broncoespasmo, es decir, empeorar el cuadro en lugar de aliviarlo."
+    de: guia-alergia/19
+recuadros:
+  - titulo: "El mito de los vahos de eucalipto"
+    precaucion: true
+    de: [guia-alergia/19, guia-alergia/5]
+    texto: |-
+      La diferencia está en el tipo de inflamación: en un resfrío común la mucosa está inflamada por una infección, y el efecto descongestivo ayuda; en una vía aérea con hiperreactividad alérgica, el mismo estímulo puede leerse como una agresión más y gatillar una respuesta defensiva del músculo bronquial.
+
+      La vía inhalatoria (vahos, aceites esenciales) tiene sentido para despejar una mucosa congestionada por una infección, pero no es la vía indicada para un cuadro alérgico respiratorio.
 
 indice:
-  usos: [tos]
+  usos: [tos, resfrio]
+  preparaciones: [aceite-esencial]
 lamina: eucalipto

@@ -50,6 +50,9 @@ cuidados:
   - situacion: "Alergia a solanáceas"
     texto: "Pertenece a esa familia botánica."
     de: guia-inmunidad/21
+  - situacion: "Alergias"
+    texto: "En una alergia el sistema inmune no está débil: está reaccionando de más frente a algo inofensivo. Una planta pensada para «reforzar las defensas» no tiene el efecto buscado en una alergia; estimularlo todavía más con una planta inmunoestimulante no corrige ese error de interpretación, y en teoría podría incluso intensificarlo."
+    de: guia-alergia/10
 formaDeUso:
   - texto: "Sobre el horario: los estudios usaron dos esquemas, repartida en dos tomas diarias o en una única toma nocturna cuando el objetivo era el sueño. Si la buscás por descanso, la toma de noche tiene respaldo directo."
     de: guia-inmunidad/21
@@ -61,6 +64,8 @@ recuadros:
       Una serie de casos publicada en 2020 en *Liver International*, con pacientes de Islandia y de la red estadounidense de daño hepático por fármacos, describió cinco casos de lesión hepática asociada a suplementos con ashwagandha. Todos presentaron ictericia y síntomas como náuseas, decaimiento y picazón, tras una latencia de dos a doce semanas. El patrón fue colestásico o mixto, ninguno evolucionó a insuficiencia hepática y las pruebas se normalizaron en uno a cinco meses. La base de datos LiverTox la clasifica hoy como causa probable de daño hepático clínicamente aparente y desaconseja su uso en personas con enfermedad hepática avanzada.
 
       En perspectiva: los casos son infrecuentes frente al enorme volumen de consumo, y en los ensayos clínicos a dosis habituales no aparecieron alteraciones de las enzimas hepáticas. Pero existen, y varios países emitieron alertas. Las señales para consultar sin demora son orina oscura, ojos o piel amarillos, picazón generalizada y cansancio inexplicable.
+diferencias:
+  - "Cómo actúa sobre el sistema inmune: la guía de alergia la nombra, junto con la equinácea, entre las plantas «pensadas para estimular un sistema inmune que está poco activo» (pág. 10). La guía de inmunidad la presenta como adaptógeno para el estrés y el sueño, con «actividad inmunomoduladora», y aclara que en ese material la palabra que se usa es modular, «no estimular» (págs. 5 y 21). Las dos coinciden en lo práctico: en una alergia no se busca estimular el sistema inmune."
 indice:
   usos: [estres, sueno]
   preparaciones: [extracto]

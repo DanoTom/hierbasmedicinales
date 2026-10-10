@@ -1,0 +1,25 @@
+nombre: Perilla
+tipo: planta
+cientifico:
+  - nombre: Perilla frutescens
+    de: guia-alergia/15
+familia: { nombre: Lamiaceae, de: guia-alergia/15 }
+usos:
+  - texto: "Planta de uso culinario y medicinal muy extendido en la medicina tradicional asiática, con evidencia clínica interesante sobre su efecto en la rinitis alérgica."
+    de: guia-alergia/15
+comoActua:
+  - texto: "Sus compuestos (entre ellos, el ácido rosmarínico) actúan inhibiendo la liberación de histamina y modulando mediadores inflamatorios implicados en la respuesta alérgica."
+    de: guia-alergia/15
+evidencia:
+  - texto: "Un ensayo clínico aleatorizado (Takano et al., 2004) evaluó un extracto de perilla en personas con rinitis alérgica estacional, encontrando mejoras en los síntomas frente a placebo."
+    de: guia-alergia/15
+recuadros:
+  - titulo: "Una aclaración honesta"
+    de: guia-alergia/15
+    texto: |-
+      La perilla no es una planta habitual en las dietéticas argentinas, a diferencia de la ortiga, el té verde o el llantén. Se incluye por su respaldo clínico, pero conseguirla puede requerir buscarla en comercios especializados o bajo otras presentaciones.
+
+      Vale la pena conocerla igual, más allá de su disponibilidad actual: es un buen ejemplo de que la fitoterapia con evidencia clínica no se agota en las plantas más vendidas en una dietética de barrio, y de que vale la pena seguir de cerca la bibliografía, porque la oferta de plantas disponibles va cambiando con el tiempo.
+indice:
+  usos: [alergia]
+lamina: perilla

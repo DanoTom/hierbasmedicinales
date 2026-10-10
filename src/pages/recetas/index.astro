@@ -8,6 +8,7 @@ const d = await datos();
 const temas = [
   { id: 'digestivo', nombre: 'Para el sistema digestivo' },
   { id: 'inmunidad', nombre: 'Hongos y adaptógenos' },
+  { id: 'alergia', nombre: 'Para la alergia' },
 ] as const;
 const nombrePlanta = (id: string) => d.plantas.find((p) => p.id === id)?.data.nombre ?? id;
 ---

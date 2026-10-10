@@ -12,10 +12,14 @@ usos:
 comoActua:
   - texto: "Tilo, saúco y equinácea acompañan el cuadro, favorecen la sudoración y el confort. La evidencia de que acorten la duración de la infección es modesta y discutida."
     de: guia-inmunidad/7
-alertas: [autoinmune]
+alertas: [autoinmune, alergias]
 contraindicaciones:
   - texto: "La equinácea tiene sus propias contraindicaciones en enfermedad autoinmune. Que una planta se venda suelta en una dietética no dice nada sobre su seguridad."
     de: guia-inmunidad/7
+cuidados:
+  - situacion: "Alergias"
+    texto: "En una alergia el sistema inmune no está débil: está reaccionando de más frente a algo inofensivo. Una planta pensada para «reforzar las defensas» no tiene el efecto buscado en una alergia; estimularlo todavía más con una planta inmunoestimulante no corrige ese error de interpretación, y en teoría podría incluso intensificarlo."
+    de: guia-alergia/10
 indice:
   usos: [resfrio]
 lamina: equinacea

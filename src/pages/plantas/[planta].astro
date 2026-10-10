@@ -46,7 +46,7 @@ const usosIndice = d.indice.usos.map((u) => usos.find((x) => x.id === u)!);
 const recuadros = d.recuadros.filter((r) => !r.precaucion);
 const deGuiaInmunidad = (x?: { de: string[] }) => !!x && x.de.some((r) => r.startsWith('guia-inmunidad')) && !d.breve;
 const tituloActua = deGuiaInmunidad(d.comoActua[0]) ? 'Por qué haría efecto' : 'Cómo actúa';
-const hayActua = d.comoActua.length > 0 || d.compuestoActivo || d.acciones;
+const hayActua = d.comoActua.length > 0 || d.compuestoActivo || d.composicion || d.acciones;
 const tipo = d.tipo === 'hongo' ? 'Hongo' : 'Planta';
 const alertasTexto = d.alertas.map((a) => ALERTAS[a].toLowerCase());
 const descripcion = `${d.nombre} (${d.cientifico.map((c) => c.nombre).join(', ')}): ${plano(d.usos[0]?.texto ?? '')}`;
@@ -248,7 +248,7 @@ const hayAgregados = [...d.cientifico, d.familia, ...d.partes, ...d.otrosNombres
           hayActua && (
             <section class="bloque" aria-labelledby="t-actua">
               <h2 id="t-actua">{tituloActua}</h2>
-              {(d.compuestoActivo || d.acciones) && (
+              {(d.compuestoActivo || d.composicion || d.acciones) && (
                 <dl class="ficha__datos" style="margin: 0 0 var(--e-4)">
                   {d.acciones && (
                     <div>
@@ -265,6 +265,15 @@ const hayAgregados = [...d.cientifico, d.familia, ...d.partes, ...d.otrosNombres
                       <dd>
                         {d.compuestoActivo.texto}
                         <span class="fuente-item">{textoRefs(d.compuestoActivo.de)}</span>
+                      </dd>
+                    </div>
+                  )}
+                  {d.composicion && (
+                    <div>
+                      <dt>Composición de interés</dt>
+                      <dd>
+                        {d.composicion.texto}
+                        <span class="fuente-item">{textoRefs(d.composicion.de)}</span>
                       </dd>
                     </div>
                   )}

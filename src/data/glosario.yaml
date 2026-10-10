@@ -218,6 +218,104 @@
   definicion: El sistema hepático que metaboliza buena parte de los medicamentos.
   de: guia-inmunidad/12
 
+# --- Alergia (guía de alergia) ------------------------------------------------
+- id: alergia
+  termino: Alergia
+  definicion: "Una respuesta exagerada del sistema inmune frente a una sustancia que, en sí misma, no es peligrosa: un polen, una proteína de un alimento, el pelo de un animal. El sistema inmune la identifica por error como una amenaza y monta una respuesta de defensa que termina generando los síntomas que conocemos como alergia."
+  de: guia-alergia/3
+  ver: /aprender/alergia/
+- id: alergeno
+  termino: Alérgeno
+  definicion: "La sustancia que dispara una alergia. Los más comunes se inhalan (pólenes, ácaros del polvo, esporas de hongos ambientales, epitelio de perros y gatos) o llegan por contacto o ingesta (alimentos, picaduras de insectos, látex, níquel, ciertos medicamentos)."
+  de: [guia-alergia/3, guia-alergia/6]
+  ver: /aprender/alergia/
+- id: mastocito
+  termino: Mastocito
+  definicion: "El protagonista de la respuesta alérgica: una célula que está apostada en los tejidos que están en contacto directo con el exterior (piel, mucosa respiratoria, mucosa digestiva). Dentro hay gránulos cargados de histamina y otros mediadores inflamatorios."
+  de: guia-alergia/3
+  ver: /aprender/alergia/
+- id: histamina
+  termino: Histamina
+  definicion: "La sustancia que libera el mastocito en una alergia. Se une a receptores específicos (los receptores H1, principalmente) en los vasos sanguíneos, las terminaciones nerviosas y el músculo liso de las vías respiratorias, y ahí aparecen los síntomas: hinchazón, enrojecimiento, moqueo, picazón, estornudos."
+  de: guia-alergia/3
+  ver: /aprender/alergia/
+- id: degranulacion
+  termino: Degranulación
+  definicion: "Cuando el alérgeno aparece y el sistema inmune ya lo tiene «fichado», el mastocito libera de golpe el contenido de sus gránulos: es lo que se llama degranulación."
+  de: guia-alergia/3
+- id: receptor-h1
+  termino: Receptor H1
+  definicion: "El receptor al que se une la histamina para producir los síntomas de la alergia. Los antihistamínicos actúan, en general, bloqueándolo; varias plantas, como la ortiga, también."
+  de: [guia-alergia/3, guia-alergia/8, guia-alergia/11]
+- id: leucotrienos
+  termino: Prostaglandinas y leucotrienos
+  definicion: "Otros mediadores que libera el mastocito junto con la histamina. Contribuyen a sostener la inflamación un rato después de que el pico de histamina ya bajó: por eso un síntoma alérgico puede «quedar dando vueltas» varias horas, incluso con un antihistamínico ya tomado."
+  de: guia-alergia/3
+- id: umbral
+  termino: Carga alergénica (umbral)
+  definicion: "La intensidad de la respuesta no depende solo del alérgeno en sí, sino también de la carga alergénica total que recibe una persona en un momento dado: es la suma de todos los estímulos (polen, mascota, ácaros) la que termina definiendo si los síntomas aparecen y con qué intensidad."
+  de: guia-alergia/3
+- id: sensibilizacion
+  termino: Sensibilización
+  definicion: "La primera etapa de una alergia, que no da síntomas. El sistema inmune «aprende» el alérgeno: los linfocitos B fabrican anticuerpos de tipo IgE específicos contra esa sustancia, que se anclan en los mastocitos como «centinelas». Puede durar meses o años, y no se nota. Los síntomas aparecen recién en un contacto posterior (reexposición)."
+  de: guia-alergia/4
+  ver: /aprender/alergia/
+- id: ige
+  termino: IgE (inmunoglobulina E)
+  definicion: "Anticuerpos que el sistema inmune fabrica contra un alérgeno puntual durante la sensibilización. Se anclan en la superficie de los mastocitos, a la espera de un próximo encuentro con ese mismo alérgeno."
+  de: guia-alergia/4
+- id: rinitis-alergica
+  termino: Rinitis alérgica
+  definicion: "Estornudos en salva, moqueo acuoso, picazón de nariz y ojos, congestión. Es la forma más frecuente en alergias estacionales (polen) y a ácaros."
+  de: guia-alergia/5
+- id: urticaria
+  termino: Urticaria
+  definicion: "Ronchas que pican, que aparecen y desaparecen."
+  de: guia-alergia/5
+- id: angioedema
+  termino: Angioedema
+  definicion: "Hinchazón de una zona puntual, por ejemplo un párpado o un labio. Cuando es localizado no compromete la respiración; la hinchazón de labios, lengua o garganta con dificultad para respirar es una urgencia médica."
+  de: [guia-alergia/5, guia-alergia/7]
+- id: anafilaxia
+  termino: Anafilaxia
+  definicion: "Reacción alérgica grave: hinchazón de labios, lengua o garganta (edema de glotis); dificultad para respirar o sensación de cierre en la garganta; caída brusca de la presión arterial, mareo o pérdida de conocimiento; urticaria generalizada de aparición súbita junto con alguno de los signos anteriores. Es una emergencia médica: requiere atención inmediata (adrenalina / guardia), no una infusión."
+  de: guia-alergia/7
+  ver: /aprender/urgencia-alergica/
+- id: antihistaminico
+  termino: Antihistamínico
+  definicion: "Medicamento que actúa, en general, bloqueando el receptor H1, por eso frena el efecto de la histamina ya liberada. Los «clásicos» (primera generación) suelen dar somnolencia marcada; los más modernos (segunda generación) fueron diseñados para minimizar ese efecto sedante."
+  de: guia-alergia/8
+  ver: /aprender/plantas-y-antihistaminicos/
+- id: inmunoestimulante
+  termino: Inmunoestimulante
+  definicion: "Planta pensada para estimular un sistema inmune que está poco activo, como en cuadros de defensas bajas o resfríos a repetición. No es lo mismo que calmar una alergia: en una alergia el sistema inmune no está débil, está reaccionando de más."
+  de: guia-alergia/10
+  ver: /aprender/plantas-y-alergia/
+- id: histaminosis
+  termino: Histaminosis
+  definicion: "Intolerancia a la histamina: una dificultad para degradar correctamente la histamina que ya está presente en el organismo o que se ingiere con ciertos alimentos (quesos curados, embutidos, vino, pescado en conserva). Da síntomas parecidos a los de una alergia sin que haya un alérgeno externo de por medio."
+  de: guia-alergia/23
+  ver: /aprender/histaminosis/
+- id: asteraceas
+  termino: Asteráceas (Compuestas)
+  definicion: "La familia de la manzanilla, la misma que la de la ambrosía, el crisantemo y otras plantas con alto potencial alergénico. En personas alérgicas a esta familia, la manzanilla puede generar una reacción cruzada."
+  de: guia-alergia/18
+- id: egcg
+  termino: EGCG (epigalocatequina galato)
+  definicion: "Una de las catequinas del té verde. Inhibe la liberación de histamina desde el mastocito y tiene evidencia de efecto antialérgico en estudios clínicos realizados en Japón."
+  de: guia-alergia/13
+  ver: /plantas/te-verde/
+- id: camazuleno
+  termino: Camazuleno
+  definicion: "Compuesto de la manzanilla que se forma durante la destilación y que inhibe la liberación de histamina a nivel local."
+  de: guia-alergia/18
+  ver: /plantas/manzanilla/
+- id: quercetina
+  termino: Quercetina
+  definicion: "Un flavonoide presente en muchos alimentos vegetales (cebolla, manzana, cítricos) con efecto estabilizador de la membrana del mastocito: reduce la cantidad de histamina que se libera frente al alérgeno."
+  de: guia-alergia/17
+  ver: /aprender/quercetina/
+
 # --- Definiciones agregadas (no están en el material del taller) --------------
 - id: dispepsia
   termino: Dispepsia
@@ -262,4 +360,12 @@
 - id: hipolipemiante
   termino: Hipolipemiante
   definicion: Medicamento para bajar el colesterol o los triglicéridos.
+  agregado: true
+- id: reactividad-cruzada
+  termino: Reactividad cruzada
+  definicion: Cuando una persona alérgica a una sustancia reacciona también a otra parecida, por ejemplo a plantas de la misma familia o a pólenes emparentados.
+  agregado: true
+- id: broncoespasmo
+  termino: Broncoespasmo
+  definicion: Contracción de los músculos de los bronquios que estrecha el paso del aire y da sensación de pecho cerrado o silbidos al respirar.
   agregado: true

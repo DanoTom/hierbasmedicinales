@@ -2,8 +2,8 @@ nombre: Manzanilla
 tipo: planta
 cientifico:
   - nombre: Matricaria chamomilla
-    de: guia-digestiva/7
-familia: { nombre: Asteraceae, agregado: true }
+    de: [guia-digestiva/7, guia-alergia/18]
+familia: { nombre: "Asteraceae (Asteráceas o Compuestas)", de: guia-alergia/18 }
 compuestoActivo: { texto: "Apigenina (flavonoide)", de: guia-digestiva/7 }
 acciones: { lista: [Antiespasmódica, Antiinflamatoria, Antiemética], de: guia-digestiva/7 }
 partes:
@@ -11,6 +11,8 @@ partes:
 usos:
   - texto: "Gastritis leve, espasmos digestivos, cólicos, náuseas, mucosa intestinal irritada, ansiedad con síntomas digestivos."
     de: guia-digestiva/7
+  - texto: "Es una de las plantas más usadas por vía tópica para acompañar irritaciones leves de piel, incluidas las de origen alérgico."
+    de: guia-alergia/18
 alertas: [alergias, embarazo, anticoagulantes]
 contraindicaciones:
   - texto: "Alergia a plantas de la familia Asteraceae. Precaución en embarazo en dosis altas."
@@ -26,11 +28,23 @@ interacciones:
 formaDeUso:
   - texto: "Infusión de flores: 1 cucharada por taza, dejar reposar tapado 10 minutos, colar. 2-4 tazas al día."
     de: guia-digestiva/7
+  - texto: "Para un efecto local en piel: manzanilla por vía tópica, con precaución si hay alergia conocida a Asteráceas."
+    de: guia-alergia/25
+comoActua:
+  - texto: "Por vía tópica, su acción pasa en buena parte por el camazuleno, un compuesto que se forma durante la destilación y que inhibe la liberación de histamina a nivel local, sumado a un efecto antiinflamatorio general."
+    de: guia-alergia/18
 recuadros:
+  - titulo: "Advertencia por reactividad cruzada"
+    precaucion: true
+    de: guia-alergia/18
+    texto: |-
+      La manzanilla pertenece a la familia de las Asteráceas (Compuestas), la misma familia que la ambrosía, el crisantemo y otras plantas con alto potencial alergénico. En personas con alergia conocida a esta familia de plantas, la manzanilla puede generar una reacción cruzada en lugar de aliviar el síntoma. Ante dermatitis de contacto o antecedentes de alergia a Asteráceas, no se recomienda su uso tópico sin antes probarlo en una zona pequeña de piel.
+
+      Una forma simple de probar tolerancia antes de aplicar una compresa de manzanilla en una zona extensa de piel es dejar actuar una compresa tibia sobre una zona pequeña (por ejemplo, el antebrazo) y esperar 20 a 30 minutos, observando si aparece enrojecimiento, picazón o hinchazón en esa zona antes de usarla en la zona que realmente molesta.
   - titulo: "Aliviar no es modular"
     texto: "Ni la manzanilla te va a levantar las defensas, ni el reishi te va a cortar la tos hoy."
     de: guia-inmunidad/6
 indice:
-  usos: [mucosa, espasmos, nauseas, digestion-nerviosa]
-  preparaciones: [infusion]
+  usos: [mucosa, espasmos, nauseas, digestion-nerviosa, alergia]
+  preparaciones: [infusion, uso-externo]
 lamina: manzanilla

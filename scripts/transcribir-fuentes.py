@@ -54,7 +54,7 @@ def lineas_de_pagina(pagina):
     return [l for l in lineas if l["t"]]
 
 
-def pdf_a_md(pdf: Path, titulo: str, nota: str) -> str:
+def pdf_a_md(pdf: Path, titulo: str, nota: str, ruido: frozenset = frozenset()) -> str:
     doc = pymupdf.open(pdf)
     partes = [f"# {titulo}\n", f"> Transcripción de `fuentes/{pdf.name}`. {nota}\n"]
     for n, pagina in enumerate(doc, start=1):
@@ -67,7 +67,7 @@ def pdf_a_md(pdf: Path, titulo: str, nota: str) -> str:
                 # El PDF dibuja las viñetas con una tipografía de símbolos.
                 vineta = True
                 continue
-            if l["t"] in RUIDO_PDF or re.fullmatch(r"\d{1,2}", l["t"]):
+            if l["t"] in RUIDO_PDF or l["t"] in ruido or re.fullmatch(r"(Pág\. )?\d{1,2}", l["t"]):
                 continue
             if l["t"].startswith("bullet"):
                 vineta, l["t"] = True, l["t"][len("bullet"):].strip()
@@ -129,6 +129,9 @@ def main():
          "Texto extraído del PDF (tiene texto digital, no hizo falta OCR). Las tablas quedan como bloques de texto seguidos."),
         ("guia-inmunidad-inteligente-2.pdf", "Guía de acompañamiento del taller: Inmunidad inteligente", pdf_a_md,
          "Texto extraído del PDF (tiene texto digital, no hizo falta OCR). Se omitieron el encabezado, el pie ('Material de divulgación · no reemplaza la consulta profesional') y el número de página que se repiten en cada hoja. Las tablas quedan como bloques de texto seguidos."),
+        ("guia-plantas-alergia.pdf", "Guía de acompañamiento del taller en vivo: Plantas medicinales para la alergia",
+         lambda *a: pdf_a_md(*a, ruido=frozenset({"@mburucuya.hierbas"})),
+         "Texto extraído del PDF (tiene texto digital, no hizo falta OCR). Se omitieron el encabezado '@mburucuya.hierbas' y el número de página ('Pág. N'), que se repiten en cada hoja; el número impreso coincide con la página del PDF."),
         ("taller_plantas_medicinales.pptx", "Presentación del taller: Plantas medicinales para el sistema digestivo", pptx_a_md,
          "Texto de cada diapositiva, en el orden en que aparece en el archivo. Las tablas de las diapositivas 6 a 11 están armadas con cuadros de texto sueltos: cada fila se lee como Planta / Nombre científico / Compuesto activo / Indicación principal / Forma de uso."),
         ("Taller_18-4.pptx", "Presentación del taller: Plantas medicinales para el estrés y el descanso", pptx_a_md,

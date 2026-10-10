@@ -420,7 +420,7 @@
   licencia: Dominio público (obra de 1885; figura como dominio público en Wikimedia Commons)
   origen: Wikimedia Commons (escaneo de www.BioLib.de).
   url: https://commons.wikimedia.org/wiki/File:Illustration_Plantago_major0_clean.jpg
-  nota: El material no dice de qué especie de llantén se trata; la lámina muestra Plantago major.
+  nota: La guía de alergia nombra Plantago lanceolata y Plantago major; la lámina muestra Plantago major.
   ancho: 1407
   alto: 2367
   tamanos:
@@ -540,6 +540,58 @@
     shiitake.
   ancho: 1600
   alto: 1995
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: ortiga
+  especie: Urtica dioica
+  titulo: Illustration Urtica dioica0 clean.jpg
+  autor: Ilustradores de la obra de Otto Wilhelm Thomé
+  obra: Flora von Deutschland, Österreich und der Schweiz
+  anio: '1885'
+  licencia: Dominio público (obra de 1885; figura como dominio público en Wikimedia Commons)
+  origen: Wikimedia Commons (escaneo de www.BioLib.de).
+  url: https://commons.wikimedia.org/wiki/File:Illustration_Urtica_dioica0_clean.jpg
+  nota: Muestra Urtica dioica (ortiga mayor), una de las dos especies que nombra el material.
+  ancho: 1468
+  alto: 2360
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: perilla
+  especie: Perilla frutescens
+  titulo: Les plantes a feuillage coloré (plate 039 PL. XXXIX) (8717593906).jpg
+  autor: Edward Joseph Lowe y William Howard
+  obra: Les plantes à feuillage coloré, lámina 39
+  anio: '1870'
+  licencia: Dominio público (obra de 1870; figura como dominio público en Wikimedia Commons)
+  origen: Wikimedia Commons (escaneo de la Biodiversity Heritage Library).
+  url: https://commons.wikimedia.org/wiki/File:Les_plantes_a_feuillage_color%C3%A9_(plate_039_PL._XXXIX)_(8717593906).jpg
+  nota: >-
+    Muestra una hoja de la perilla de hojas púrpura; en la obra figura como Perilla nankinensis, hoy una variedad de
+    Perilla frutescens.
+  ancho: 1226
+  alto: 1996
+  tamanos:
+    - 320
+    - 480
+    - 720
+    - 1080
+- id: te-verde
+  especie: Camellia sinensis
+  titulo: Camellia sinensis - Köhler–s Medizinal-Pflanzen-025.jpg
+  autor: Ilustradores de la obra de Franz Eugen Köhler
+  obra: Köhler's Medizinal-Pflanzen
+  anio: '1887'
+  licencia: Dominio público (obra de 1887; sus autores murieron hace más de 100 años)
+  origen: Wikimedia Commons.
+  url: https://commons.wikimedia.org/wiki/File:Camellia_sinensis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-025.jpg
+  ancho: 1424
+  alto: 1725
   tamanos:
     - 320
     - 480

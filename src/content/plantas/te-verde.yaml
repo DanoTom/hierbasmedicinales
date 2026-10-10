@@ -1,0 +1,51 @@
+nombre: Té verde
+tipo: planta
+cientifico:
+  - nombre: Camellia sinensis
+    de: guia-alergia/13
+familia: { nombre: Theaceae, de: guia-alergia/13 }
+compuestoActivo: { texto: "EGCG (epigalocatequina galato), una de sus catequinas", de: guia-alergia/13 }
+composicion:
+  texto: "Bases xánticas (cafeína), flavonoides, taninos, antocianidinas y catequinas (entre ellas, la EGCG)."
+  de: guia-alergia/13
+partes:
+  - { parte: hojas, agregado: true }
+usos:
+  - texto: "El té verde es conocido sobre todo como estimulante y antioxidante, pero una de sus catequinas, la EGCG (epigalocatequina galato), tiene evidencia de efecto antialérgico."
+    de: guia-alergia/13
+comoActua:
+  - texto: "La EGCG actúa inhibiendo la liberación de histamina desde el mastocito y modulando la respuesta inflamatoria asociada a los procesos alérgicos, sumado a su conocido efecto antioxidante general."
+    de: guia-alergia/13
+  - texto: "Otras acciones descriptas: estimulante del sistema nervioso central, actúa sobre el GABA, hipertensivo, genera vasodilatación periférica."
+    de: guia-alergia/13
+evidencia:
+  - texto: "La evidencia de efecto antialérgico de la EGCG viene de estudios clínicos realizados en Japón, donde se evaluó su impacto sobre los síntomas de la rinitis alérgica estacional."
+    de: guia-alergia/13
+alertas: [cafeina, embarazo, lactancia, anticoagulantes, sedantes, antidepresivos, presion, medicacion]
+contraindicaciones:
+  - texto: "Evitar en trastornos del sistema nervioso."
+    de: guia-alergia/13
+  - texto: "Precaución en el embarazo y la lactancia, por su contenido de cafeína."
+    de: guia-alergia/13
+efectosAdversos:
+  - texto: "En exceso puede producir molestias gástricas."
+    de: guia-alergia/13
+  - texto: "Por su contenido de cafeína, puede desencadenar migrañas en personas sensibles."
+    de: guia-alergia/13
+interacciones:
+  - texto: "Interacciones descriptas con fenobarbital, benzodiacepinas, IMAO, anticoagulantes, betabloqueantes, metotrexato, algunos antibióticos y cimetidina."
+    de: guia-alergia/13
+cuidados:
+  - situacion: "Con las comidas"
+    texto: "No tomarlo junto con las comidas: interfiere con la absorción del hierro."
+    de: guia-alergia/13
+  - situacion: "Si ya tomás café, mate u otro estimulante"
+    texto: "Por su contenido de cafeína, conviene evitar tomarlo sobre la tarde-noche en personas sensibles a estimulantes, y tenerlo en cuenta si ya se toma café, mate o algún otro estimulante durante el día, para no sumar más cafeína de la que esa persona tolera cómodamente."
+    de: guia-alergia/13
+formaDeUso:
+  - texto: "Aproximadamente 10 g por litro de agua, en infusión."
+    de: guia-alergia/13
+indice:
+  usos: [alergia]
+  preparaciones: [infusion]
+lamina: te-verde

@@ -10,6 +10,7 @@ const DOCS = {
   'taller-digestivo': ['Diapositivas del taller digestivo', 'diap.', 'diaps.'],
   'taller-estres': ['Taller de estrés y descanso', 'diap.', 'diaps.'],
   'guia-inmunidad': ['Guía Inmunidad inteligente', 'pág.', 'págs.'],
+  'guia-alergia': ['Guía de alergia', 'pág.', 'págs.'],
 };
 
 function formatear(refs) {

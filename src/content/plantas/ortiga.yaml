@@ -1,0 +1,69 @@
+nombre: Ortiga
+tipo: planta
+cientifico:
+  - nombre: Urtica dioica
+    de: guia-alergia/11
+    nota: "ortiga mayor: planta perenne, de mayor porte. Es la especie más estudiada y la que más habitualmente se vende seca en dietéticas."
+  - nombre: Urtica urens
+    de: guia-alergia/11
+    nota: "ortiga menor: planta anual, de porte más pequeño, frecuente en huertas y jardines caseros."
+familia: { nombre: Urticaceae, de: guia-alergia/11 }
+acciones: { lista: [Antihistamínica, Antiinflamatoria, Hipoglucemiante, Hepatoprotectora, Diurética], de: guia-alergia/11 }
+composicion:
+  texto: "Flavonoides, sales minerales (hierro, calcio, sílice, azufre, potasio), ácidos fenólicos, glucoproteínas y clorofila."
+  de: guia-alergia/11
+partes:
+  - { parte: hojas, de: guia-alergia/11 }
+usos:
+  - texto: "La ortiga es, probablemente, la planta antihistamínica por excelencia dentro de la fitoterapia."
+    de: guia-alergia/11
+  - texto: "Su monografía en la EMA (European Medicines Agency) la reconoce para el alivio sintomático de molestias articulares menores y, por uso tradicional, como diurético."
+    de: guia-alergia/11
+  - texto: "Su riqueza mineral es también la base de su uso tradicional como planta remineralizante."
+    de: guia-alergia/11
+comoActua:
+  - texto: "Bloqueo del receptor H1, de forma similar (aunque más suave) a un antihistamínico farmacológico (Roschek et al., 2009)."
+    de: guia-alergia/11
+  - texto: "Inhibición de la degranulación del mastocito, es decir, actúa también «antes», reduciendo la liberación de histamina."
+    de: guia-alergia/11
+  - texto: "Inhibición de COX-1 y COX-2, lo que suma un efecto antiinflamatorio adicional (Mittman, 1990)."
+    de: guia-alergia/11
+evidencia:
+  - texto: "Su uso antialérgico está respaldado sobre todo por estudios farmacológicos e in vitro, y por un uso tradicional muy extendido."
+    de: guia-alergia/11
+alertas: [embarazo, lactancia, diabetes, presion, sedantes, medicacion, alergias, histaminosis]
+contraindicaciones:
+  - texto: "Evitar en el embarazo y la lactancia."
+    de: guia-alergia/11
+  - texto: "Evitar si hay alergia conocida a otras plantas de la familia Urticaceae."
+    de: guia-alergia/11
+efectosAdversos:
+  - texto: "Puede producir molestias gastrointestinales."
+    de: guia-alergia/11
+interacciones:
+  - texto: "Puede potenciar el efecto de antihiperglucemiantes, antihipertensivos y sedantes."
+    de: guia-alergia/11
+  - texto: "Aumenta el efecto del diclofenac."
+    de: guia-alergia/11
+formaDeUso:
+  - texto: "15 g de hoja seca por litro de agua, en infusión."
+    de: guia-alergia/11
+  - texto: "Al ser una planta de efecto gradual, no está pensada para un alivio inmediato tipo «tomo una taza y en 20 minutos se me pasa»: su lugar es más el de un acompañamiento sostenido, tomada varias veces al día durante el período en que hay síntomas, o de forma preventiva en las semanas previas a una temporada conocida."
+    de: guia-alergia/12
+  - texto: "Si después de varios días de uso constante no se nota ninguna mejoría, no tiene sentido seguir aumentando la dosis esperando otro resultado."
+    de: guia-alergia/12
+recuadros:
+  - titulo: "Ortiga e histaminosis"
+    precaucion: true
+    de: guia-alergia/23
+    texto: "Los tricomas (pelitos) de la ortiga fresca contienen histamina en su composición. El secado reduce esa cantidad considerablemente, pero la tolerancia individual puede variar. En personas con histaminosis diagnosticada, vale la pena prestar atención a cómo responde el cuerpo incluso a la ortiga seca."
+  - titulo: "¿Qué ortiga se puede consumir?"
+    de: guia-alergia/11-12
+    texto: |-
+      En la naturaleza pueden encontrarse distintas especies de ortiga. Las dos más comunes en nuestra región son *Urtica dioica* (ortiga mayor) y *Urtica urens* (ortiga menor).
+
+      Ambas pican en fresco por los mismos pelos urticantes, y ambas son seguras una vez secas. Si hay dudas sobre la identificación en el campo, la recomendación es comprarla seca y de procedencia conocida.
+indice:
+  usos: [alergia, dolor, liquidos]
+  preparaciones: [infusion]
+lamina: ortiga

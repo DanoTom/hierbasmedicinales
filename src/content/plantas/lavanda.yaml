@@ -23,6 +23,8 @@ usos:
     de: taller-estres/7
   - texto: "Para el día (estrés / ansiedad leve): melisa y lavanda «ayudan a reducir el nerviosismo sin generar somnolencia marcada»."
     de: taller-estres/5
+  - texto: "Forma parte de la «infusión antiasmática» (ambay, lavanda, gordolobo), una combinación de uso tradicional pensada para acompañar cuadros de broncoespasmo o asma, que actúa principalmente relajando el músculo liso bronquial y favoreciendo la expectoración, no bloqueando receptores de histamina ni estabilizando mastocitos."
+    de: guia-alergia/20
 alertas: [embarazo, lactancia, sedantes, hormonas]
 contraindicaciones:
   - texto: "Embarazo (evitar aceite esencial en uso interno). El aceite esencial puro no debe ingerirse sin supervisión profesional."

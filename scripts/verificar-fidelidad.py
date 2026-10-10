@@ -21,6 +21,7 @@ DOCS = {
     "guia-inmunidad": RAIZ / "fuentes/guia-inmunidad-inteligente-2.pdf",
     "taller-digestivo": RAIZ / "fuentes/taller_plantas_medicinales.pptx",
     "taller-estres": RAIZ / "fuentes/Taller_18-4.pptx",
+    "guia-alergia": RAIZ / "fuentes/guia-plantas-alergia.pdf",
 }
 
 
@@ -106,8 +107,9 @@ for ruta in sorted(glob.glob(str(RAIZ / "src/content/plantas/*.yaml"))):
         chequear(c["situacion"] + ". " + c["texto"], c["de"], f"plantas/{n} cuidados[{i}]")
     for i, r in enumerate(d.get("recuadros", [])):
         chequear(r["texto"], r["de"], f"plantas/{n} recuadros[{i}]")
-    if d.get("compuestoActivo"):
-        chequear(d["compuestoActivo"]["texto"], d["compuestoActivo"]["de"], f"plantas/{n} compuestoActivo")
+    for campo in ["compuestoActivo", "composicion"]:
+        if d.get(campo):
+            chequear(d[campo]["texto"], d[campo]["de"], f"plantas/{n} {campo}")
 
 for ruta in sorted(glob.glob(str(RAIZ / "src/content/recetas/*.yaml"))):
     d = yaml.safe_load(open(ruta))
@@ -126,6 +128,44 @@ for ruta in sorted(glob.glob(str(RAIZ / "src/content/preparaciones/*.yaml"))):
         for i, it in enumerate(s.get("items", [])):
             chequear(it["texto"], it["de"], f"preparaciones/{n} «{s['titulo']}»[{i}]")
 
+# Glosario y avisos de los usos (src/data).
+for e in yaml.safe_load(open(RAIZ / "src/data/glosario.yaml")):
+    if e.get("de"):
+        chequear(e["definicion"], e["de"], f"glosario/{e['id']}")
+for u in yaml.safe_load(open(RAIZ / "src/data/usos.yaml")):
+    for i, a in enumerate(u.get("avisos", [])):
+        chequear(a["texto"], a["de"], f"usos/{u['id']} avisos[{i}]")
+
 print(f"\n{revisados} datos revisados; {problemas} con fragmentos que no aparecen literales en la fuente citada.")
+
+# Temas (Markdown): cada tramo de texto se compara con la fuente del [[fuente: …]] que lo cierra.
+# Se cuentan aparte porque los temas reordenan más el texto (tablas, listas, títulos propios).
+def plano_md(t):
+    # Las notas de edición (data-edicion) no salen de la fuente: no se comparan.
+    t = re.sub(r"<aside[^>]*data-edicion[^>]*>.*?</aside>", " ", t, flags=re.S)
+    t = re.sub(r"</?(aside|div)[^>]*>", " ", t)
+    t = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", t)
+    t = re.sub(r"^#+ .*$", " ", t, flags=re.M)
+    t = re.sub(r"^\|?[-| :]+\|?$", " ", t, flags=re.M)
+    t = t.replace("|", ". ")
+    t = re.sub(r"^\s*[-*] ", "", t, flags=re.M)
+    return t
+
+revisados_t = problemas_t = 0
+for ruta in sorted(glob.glob(str(RAIZ / "src/content/temas/*.md"))):
+    n = Path(ruta).stem
+    cuerpo = open(ruta).read().split("---", 2)[2]
+    tramos = re.split(r"\[\[fuente:\s*([^\]]+)\]\]", cuerpo)
+    for i in range(1, len(tramos), 2):
+        refs = [r.strip() for r in tramos[i].split(",")]
+        texto = plano_md(tramos[i - 1])
+        faltan = [f for f in fragmentos(texto) if f not in " ".join(FUENTE[d][p] for r in refs for d, ps in [paginas(r)] for p in ps)]
+        revisados_t += 1
+        if faltan:
+            problemas_t += 1
+            print(f"· temas/{n} [{', '.join(refs)}]")
+            for f in faltan:
+                print(f"    no literal: «{f[:140]}»")
+print(f"\nTemas: {revisados_t} tramos revisados; {problemas_t} con fragmentos que no aparecen literales.")
 print("Los que figuran arriba no son necesariamente errores (puede ser una cita recortada o una frase de")
 print("enlace), pero conviene mirarlos contra el documento original.")

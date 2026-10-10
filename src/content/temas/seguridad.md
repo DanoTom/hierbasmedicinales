@@ -3,7 +3,7 @@ titulo: Seguridad
 bajada: Natural no siempre significa inofensivo. Precauciones generales, interacciones y señales para consultar.
 orden: 10
 taller: general
-de: [taller-digestivo/14, guia-inmunidad/36, guia-inmunidad/37, guia-inmunidad/38]
+de: [taller-digestivo/14, guia-inmunidad/36, guia-inmunidad/37, guia-inmunidad/38, guia-alergia/7]
 ---
 
 Este capítulo no está para asustar. Está porque la mayoría de los problemas asociados a estos productos no vienen de que sean tóxicos, sino de **combinaciones** y de **situaciones particulares**, y ambas cosas son perfectamente evitables si uno las conoce de antemano.
@@ -56,7 +56,7 @@ Este capítulo no está para asustar. Está porque la mayoría de los problemas 
 | **Inmunosupresores** | [Astrágalo](/plantas/astragalo/), cordyceps, y en general todo el grupo | Acción opuesta a la del tratamiento. |
 | **Cualquier medicación crónica** | Reishi, y como criterio general todo el grupo | Posible interferencia con enzimas hepáticas que metabolizan fármacos. |
 
-Las plantas para la digestión y para el estrés y el descanso tienen sus interacciones en cada ficha (por ejemplo, [jengibre](/plantas/jengibre/) con anticoagulantes, o [valeriana](/plantas/valeriana/) y [pasionaria](/plantas/pasionaria/) con sedantes).
+Las plantas para la digestión, para el estrés y el descanso y para la alergia tienen sus interacciones en cada ficha (por ejemplo, [jengibre](/plantas/jengibre/) con anticoagulantes; [valeriana](/plantas/valeriana/) y [pasionaria](/plantas/pasionaria/) con sedantes; [ortiga](/plantas/ortiga/) con el diclofenac; o [té verde](/plantas/te-verde/) con benzodiacepinas y anticoagulantes).
 
 ## Antes de una cirugía
 
@@ -88,6 +88,20 @@ Si te llevás una sola indicación práctica de esta guía, que sea esta: contá
 Con estas cuatro cosas alcanza para que puedan ayudarte de verdad: la especie con su nombre científico, el formato (extracto, polvo, tintura, infusión), desde cuándo lo tomás, y qué otra cosa estás tomando, incluidas las que no considerás medicación. Sacarle una foto a la etiqueta y llevarla es la manera más simple de no olvidarse nada.
 
 [[fuente: guia-inmunidad/37-38]]
+
+## Reacción alérgica grave: urgencia médica
+
+<aside class="recuadro recuadro--urgencia">
+
+**Ninguna planta reemplaza esto**
+
+Hinchazón de labios, lengua o garganta (edema de glotis); dificultad para respirar o sensación de cierre en la garganta; caída brusca de la presión arterial, mareo o pérdida de conocimiento; urticaria generalizada de aparición súbita junto con alguno de los signos anteriores. Este cuadro se llama anafilaxia y es una emergencia médica: requiere atención inmediata (adrenalina / guardia), no una infusión.
+
+</aside>
+
+Entre el síntoma leve y la emergencia hay una zona intermedia que conviene vigilar: síntomas que no ceden con las medidas habituales, que empeoran rápido en lugar de estabilizarse, o que afectan a más de un sistema del cuerpo a la vez (por ejemplo, piel y digestivo juntos). Ahí es momento de consultar y no de insistir con remedios caseros. Más en [Cuándo es una urgencia médica](/aprender/urgencia-alergica/).
+
+[[fuente: guia-alergia/7]]
 
 ## Tinturas y preparaciones con alcohol
 

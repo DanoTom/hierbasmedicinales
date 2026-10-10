@@ -10,7 +10,7 @@ import { SITIO } from '../config';
 const d = await datos();
 const iconosGrupo = { digestion: 'cuenco', nervios: 'luna', defensas: 'pulmon', energia: 'sol' } as const;
 /** Usos destacados en el inicio (el resto está en /usos/). */
-const destacados = ['digestion', 'gases', 'nauseas', 'mucosa', 'estres', 'sueno', 'tos', 'resfrio', 'inmunidad', 'energia'];
+const destacados = ['digestion', 'gases', 'nauseas', 'mucosa', 'estres', 'sueno', 'tos', 'resfrio', 'alergia', 'inmunidad', 'energia'];
 const usos = await Promise.all(
   destacados.map(async (id) => {
     const u = d.usos.find((x) => x.id === id)!;
@@ -74,7 +74,7 @@ const saludo = SITIO.duena ? `Hola, ${SITIO.duena}` : 'Tu botica de bolsillo';
         <a class="tarjeta" href="/recetas/">
           <Icono nombre="taza" class="tarjeta__icono" />
           <span class="tarjeta__titulo">Recetas</span>
-          <span class="tarjeta__texto">Infusión antináuseas, amargo aperitivo, vinagre de lavanda, decocciones…</span>
+          <span class="tarjeta__texto">Infusión antináuseas, infusión antihistamínica, amargo aperitivo, vinagre de lavanda, decocciones…</span>
           <span class="tarjeta__meta">{d.recetas.length} recetas</span>
         </a>
       </li>
@@ -90,7 +90,7 @@ const saludo = SITIO.duena ? `Hola, ${SITIO.duena}` : 'Tu botica de bolsillo';
         <a class="tarjeta" href="/aprender/">
           <Icono nombre="libro" class="tarjeta__icono" />
           <span class="tarjeta__titulo">Aprender</span>
-          <span class="tarjeta__texto">El sistema digestivo, estrés y descanso, el sistema inmune, adaptógenos y hongos.</span>
+          <span class="tarjeta__texto">El sistema digestivo, estrés y descanso, el sistema inmune, adaptógenos, hongos y alergias.</span>
           <span class="tarjeta__meta">{temas} temas</span>
         </a>
       </li>

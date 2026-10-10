@@ -44,6 +44,7 @@ export const GET: APIRoute = async () => {
           ...usos.flatMap((u) => [u.data.nombre, ...u.data.buscar]),
           x.acciones?.lista.join(' ') ?? '',
           x.compuestoActivo?.texto ?? '',
+          x.composicion?.texto ?? '',
           x.familia?.nombre ?? '',
           ...x.partes.map((pt) => PARTES[pt.parte]),
           ...x.indice.preparaciones.map((pr) => PREPARACIONES[pr]),

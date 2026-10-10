@@ -1,0 +1,36 @@
+nombre: Infusión antihistamínica
+orden: 11
+bajada: "Llantén, ortiga y té verde, para acompañar una alergia leve a moderada. Solo para adultos."
+tema: alergia
+de: guia-alergia/16
+plantas: [llanten, ortiga, te-verde]
+usos: [alergia]
+preparacion: infusion
+recomendadoPara:
+  - texto: "Un uso sostenido durante el período en que hay síntomas, respetando la dosis máxima indicada (hasta 4 tazas por día) y las contraindicaciones de cada una de sus tres plantas."
+    de: guia-alergia/24
+ingredientes:
+  - "1 cucharadita (aprox. 2 g) de llantén"
+  - "1 cucharadita (aprox. 2 g) de ortiga"
+  - "1 cucharadita (aprox. 2 g) de té verde"
+  - "400 ml de agua (es la medida de una taza en esta receta)"
+pasos:
+  - texto: "Macerar las tres hierbas en 400 ml de agua durante 15 minutos."
+  - texto: "Colar."
+  - texto: "Tomar sin azúcar."
+formaDeUso:
+  - texto: "Tomar sin azúcar, hasta 4 tazas por día."
+    de: guia-alergia/16
+  - texto: "El efecto de estas plantas suele ser gradual: no conviene esperar un alivio en minutos. Tomadas de forma preventiva, el efecto se nota más sobre la intensidad general de la temporada que sobre un síntoma puntual."
+    de: guia-alergia/24
+conservacion:
+  - texto: "Preparar idealmente en el momento. Si no es posible, se conserva hasta 2 horas a temperatura ambiente o hasta 48 horas en la heladera."
+    de: guia-alergia/16
+porQue:
+  - texto: "Combina tres plantas que actúan sobre el mismo mecanismo (bloqueo de H1 e inhibición de la degranulación del mastocito) desde ángulos distintos."
+    de: guia-alergia/16
+precauciones:
+  - texto: "Esta infusión es para adultos. No está recomendada para uso pediátrico."
+    de: [guia-alergia/16, guia-alergia/21]
+  - texto: "Respetar las contraindicaciones de cada una de sus tres plantas. No hay evidencia de riesgos conocidos por combinarlas entre ellas; lo que sí hay que revisar es la lista de interacciones de cada planta con medicamentos."
+    de: guia-alergia/24

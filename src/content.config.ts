@@ -68,6 +68,8 @@ const plantas = defineCollection({
     cientifico: z.array(datoOAgregado).min(1),
     familia: datoOAgregado.optional(),
     compuestoActivo: dato.optional(),
+    /** «Composición de interés»: lista de componentes cuando el material no destaca uno solo. */
+    composicion: dato.optional(),
     acciones: z.object({ lista: z.array(z.string()).min(1), de: refs }).optional(),
     partes: z
       .array(
@@ -116,7 +118,7 @@ const recetas = defineCollection({
     orden: z.number(),
     bajada: z.string().optional(),
     de: refs,
-    tema: z.enum(['digestivo', 'estres', 'inmunidad']),
+    tema: z.enum(['digestivo', 'estres', 'inmunidad', 'alergia']),
     plantas: z.array(z.string()).default([]),
     usos: z.array(z.string()).default([]),
     preparacion: z.enum(CLAVES_PREPARACIONES).optional(),
@@ -173,7 +175,7 @@ const temas = defineCollection({
     titulo: z.string(),
     bajada: z.string(),
     orden: z.number(),
-    taller: z.enum(['digestivo', 'estres', 'inmunidad', 'general']),
+    taller: z.enum(['digestivo', 'estres', 'inmunidad', 'alergia', 'general']),
     de: refs,
     plantas: z.array(z.string()).default([]),
   }),
@@ -191,6 +193,18 @@ const usos = defineCollection({
     /** Palabras que la gente puede escribir en el buscador para llegar a este uso. */
     buscar: z.array(z.string()).default([]),
     orden: z.number(),
+    /** Recuadros arriba de la lista: aclaraciones («nota») o señales de alarma («urgencia»). */
+    avisos: z
+      .array(
+        z.object({
+          tipo: z.enum(['nota', 'urgencia']).default('nota'),
+          titulo: z.string().optional(),
+          texto: z.string(),
+          de: refs,
+          enlace: z.object({ href: z.string(), texto: z.string() }).optional(),
+        }),
+      )
+      .default([]),
   }),
 });
 

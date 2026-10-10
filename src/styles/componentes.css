@@ -832,6 +832,21 @@ a.tarjeta:hover .tarjeta__titulo {
   border-left-color: var(--lacre);
   background: var(--lacre-tenue);
 }
+/* Señal de alarma: más presente que un cuidado, para que no se pase por alto. */
+.recuadro--urgencia {
+  border: 1px solid rgb(138 53 32 / 0.45);
+  border-left: 6px solid var(--lacre);
+  background: var(--lacre-tenue);
+}
+.recuadro--urgencia .recuadro__titulo {
+  display: flex;
+  align-items: center;
+  gap: var(--e-2);
+  color: var(--lacre);
+}
+.recuadro--urgencia .recuadro__titulo .icono {
+  flex: none;
+}
 .recuadro--cita {
   border: 0;
   background: transparent;
@@ -1569,4 +1584,9 @@ thead th {
 }
 .boton--activo {
   background: var(--verde-tenue);
+}
+
+/* En los temas, el título de una señal de alarma va en color lacre. */
+.prosa .recuadro--urgencia > p:first-child > strong:first-child {
+  color: var(--lacre);
 }

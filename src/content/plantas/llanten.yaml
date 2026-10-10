@@ -1,18 +1,42 @@
 nombre: Llantén
 tipo: planta
-breve: true
 cientifico:
-  - nombre: "Plantago spp."
-    agregado: true
-    nota: "El material no indica la especie. Suele llamarse llantén a Plantago major y Plantago lanceolata."
-familia: { nombre: Plantaginaceae, agregado: true }
+  - nombre: Plantago lanceolata
+    de: guia-alergia/14
+  - nombre: Plantago major
+    de: guia-alergia/14
+familia: { nombre: Plantaginaceae, de: guia-alergia/14 }
+composicion:
+  texto: "Mucílagos, iridoides (aucubina), taninos y flavonoides."
+  de: guia-alergia/14
+partes:
+  - { parte: hojas, detalle: "en infusión", de: guia-alergia/14 }
 usos:
   - texto: "Tos y garganta irritada."
     de: guia-inmunidad/7
+  - texto: "Tiene un uso tradicional muy conocido para las vías respiratorias: por su contenido de mucílagos y su efecto expectorante y antiinflamatorio de la mucosa, se usa tradicionalmente en tos y procesos bronquiales."
+    de: guia-alergia/14
 comoActua:
   - texto: "Llantén, malva y malvavisco contienen mucílagos: polisacáridos que en contacto con agua forman un gel y recubren la mucosa irritada, actuando como una barrera física."
     de: guia-inmunidad/7
+evidencia:
+  - texto: "Hay estudios que muestran mejoras en parámetros espirométricos (FEV1/FVC) en algunos contextos respiratorios."
+    de: guia-alergia/14
+alertas: [alergias]
+contraindicaciones:
+  - texto: "Precaución en personas con alergia conocida a pólenes de gramíneas o malezas, por posible reactividad cruzada."
+    de: guia-alergia/14
+efectosAdversos:
+  - texto: "En general bien tolerado; pueden darse molestias gastrointestinales ocasionales."
+    de: guia-alergia/14
+recuadros:
+  - titulo: "El dato que suele sorprender"
+    de: guia-alergia/14
+    texto: |-
+      El polen de llantén es, él mismo, uno de los alérgenos estacionales más frecuentes: representa entre un 20 y un 30% de los casos de rinitis alérgica estacional en las regiones donde esta planta es común. Es decir: la misma planta que tradicionalmente se usa para acompañar síntomas respiratorios es, para otra persona, la causa de su alergia.
 
+      Esto no contradice su uso: la planta (hoja, en infusión) y el polen (que se libera al aire en la floración) son exposiciones distintas. Pero sí es un punto a tener en cuenta en personas con alergia estacional diagnosticada a gramíneas o malezas, por el riesgo de reactividad cruzada.
 indice:
-  usos: [tos]
+  usos: [tos, alergia]
+  preparaciones: [infusion]
 lamina: llanten

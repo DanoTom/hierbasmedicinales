@@ -148,6 +148,7 @@ export function refsDePlanta(p: Planta): string[] {
   d.otrosNombres.forEach(sumar);
   sumar(d.familia);
   sumar(d.compuestoActivo);
+  sumar(d.composicion);
   sumar(d.acciones);
   d.partes.forEach(sumar);
   for (const lista of [d.usos, d.contraindicaciones, d.efectosAdversos, d.interacciones, d.cuidados, d.formaDeUso, d.comoActua, d.evidencia, d.recuadros])

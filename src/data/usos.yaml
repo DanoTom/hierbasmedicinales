@@ -116,6 +116,10 @@
   descripcion: Acompañar un resfrío o un cuadro con fiebre.
   buscar: [resfrio, gripe, fiebre, catarro, sudar]
   orden: 19
+  avisos:
+    - texto: "Son plantas del «camino A», que acompañan el cuadro. El astrágalo, en cambio, se usa antes del invierno y no durante una infección con fiebre."
+      de: [guia-inmunidad/7, guia-inmunidad/22]
+      enlace: { href: /aprender/dos-caminos/, texto: Los dos caminos }
 - id: dolor
   nombre: Inflamación y dolor
   grupo: defensas
@@ -128,6 +132,28 @@
   descripcion: Acompañar al sistema inmune con uso sostenido (el «camino B», ver «Dos caminos»).
   buscar: [defensas, inmune, inmunologico, sistema inmune, modular, prevenir]
   orden: 21
+  avisos:
+    - texto: "Estas son plantas y hongos del «camino B»: se evalúan a las cuatro u ocho semanas y no sirven para cortar un resfrío. Para aliviar síntomas, mirá «Resfrío y fiebre» o «Tos y garganta»."
+      de: [guia-inmunidad/6, guia-inmunidad/7]
+      enlace: { href: /aprender/dos-caminos/, texto: Los dos caminos }
+    - texto: "Reforzar el sistema inmune no es lo mismo que calmar una alergia: son objetivos opuestos. Para una alergia, mirá «Alergia»."
+      de: guia-alergia/25
+      enlace: { href: /usos/alergia/, texto: Alergia }
+- id: alergia
+  nombre: Alergia
+  grupo: defensas
+  descripcion: Estornudos, picazón, congestión, moqueo o ronchas de una alergia leve a moderada.
+  buscar: [alergia, alergico, alergica, alergias, estornudo, estornudos, rinitis, picazon, pica, ronchas, urticaria, antihistaminico, polen, histamina, moqueo, congestion, ojos llorosos, primavera]
+  orden: 21.5
+  avisos:
+    - tipo: urgencia
+      titulo: Cuándo es una urgencia
+      texto: "Si hay hinchazón de labios, lengua o garganta, dificultad para respirar o caída de presión: urgencia médica, ninguna planta reemplaza esto."
+      de: guia-alergia/25
+      enlace: { href: /aprender/urgencia-alergica/, texto: Cuándo es una urgencia médica }
+    - texto: "Para un efecto sistémico (oral): ortiga, té verde, llantén, perilla o quercetina, solas o combinadas como en la infusión antihistamínica. Para un efecto local en piel: manzanilla por vía tópica, con precaución si hay alergia conocida a Asteráceas. En niños y niñas: no hay planta antihistamínica recomendada, consultar siempre al pediatra."
+      de: guia-alergia/25
+      enlace: { href: /aprender/plantas-y-alergia/, texto: "Plantas para la alergia: cómo usarlas" }
 - id: energia
   nombre: Energía y cansancio
   grupo: energia

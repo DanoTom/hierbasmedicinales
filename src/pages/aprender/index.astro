@@ -27,6 +27,10 @@ const secciones = [
     items: temas.filter((t) => t.data.taller === 'inmunidad').map((t) => ({ href: `/aprender/${t.id}/`, titulo: t.data.titulo, texto: t.data.bajada })),
   },
   {
+    titulo: 'Alergia',
+    items: temas.filter((t) => t.data.taller === 'alergia').map((t) => ({ href: `/aprender/${t.id}/`, titulo: t.data.titulo, texto: t.data.bajada })),
+  },
+  {
     titulo: 'Para todos los temas',
     items: [
       { href: '/seguridad/', titulo: 'Seguridad', texto: 'Precauciones generales, interacciones, antes de una cirugía y señales para consultar.' },
@@ -36,7 +40,7 @@ const secciones = [
   },
 ];
 ---
-<Base titulo="Aprender" descripcion="Para entender cómo funcionan el sistema digestivo, el estrés y el descanso, el sistema inmune, los adaptógenos y los hongos.">
+<Base titulo="Aprender" descripcion="Para entender cómo funcionan el sistema digestivo, el estrés y el descanso, el sistema inmune, los adaptógenos, los hongos y las alergias.">
   <Encabezado
     antetitulo="Para entender"
     titulo="Aprender"
