@@ -51,7 +51,7 @@ cuidados:
     texto: "Pertenece a esa familia botánica."
     de: guia-inmunidad/21
   - situacion: "Alergias"
-    texto: "En una alergia el sistema inmune no está débil: está reaccionando de más frente a algo inofensivo. Una planta pensada para «reforzar las defensas» no tiene el efecto buscado en una alergia; estimularlo todavía más con una planta inmunoestimulante no corrige ese error de interpretación, y en teoría podría incluso intensificarlo."
+    texto: "Una planta pensada para «reforzar las defensas» no tiene el efecto buscado en una alergia, y en algunos casos ni siquiera es la lógica correcta para ese cuadro. En una alergia el sistema inmune no está débil: está reaccionando de más frente a algo inofensivo. Estimularlo todavía más con una planta inmunoestimulante no corrige ese error de interpretación, y en teoría podría incluso intensificarlo."
     de: guia-alergia/10
 formaDeUso:
   - texto: "Sobre el horario: los estudios usaron dos esquemas, repartida en dos tomas diarias o en una única toma nocturna cuando el objetivo era el sueño. Si la buscás por descanso, la toma de noche tiene respaldo directo."

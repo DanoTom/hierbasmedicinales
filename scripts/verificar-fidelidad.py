@@ -134,7 +134,8 @@ for e in yaml.safe_load(open(RAIZ / "src/data/glosario.yaml")):
         chequear(e["definicion"], e["de"], f"glosario/{e['id']}")
 for u in yaml.safe_load(open(RAIZ / "src/data/usos.yaml")):
     for i, a in enumerate(u.get("avisos", [])):
-        chequear(a["texto"], a["de"], f"usos/{u['id']} avisos[{i}]")
+        if not a.get("edicion"):
+            chequear(a["texto"], a["de"], f"usos/{u['id']} avisos[{i}]")
 
 print(f"\n{revisados} datos revisados; {problemas} con fragmentos que no aparecen literales en la fuente citada.")
 

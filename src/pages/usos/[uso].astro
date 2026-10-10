@@ -44,7 +44,7 @@ const titulo = [nPlantas && cuenta(nPlantas, 'planta', 'plantas'), nHongos && cu
               Ver <a href={a.enlace.href}>{a.enlace.texto}</a>.{' '}
             </>
           )}
-          <span class="fuente__rotulo">Fuente: </span>
+          <span class="fuente__rotulo">{a.edicion ? 'Nota de edición, a partir de: ' : 'Fuente: '}</span>
           {textoRefs(a.de)}.
         </p>
       </aside>

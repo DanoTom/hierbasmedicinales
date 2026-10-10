@@ -201,6 +201,8 @@ const usos = defineCollection({
           titulo: z.string().optional(),
           texto: z.string(),
           de: refs,
+          /** true = resumen redactado para el sitio (nota de edición), no una cita del material. */
+          edicion: z.boolean().default(false),
           enlace: z.object({ href: z.string(), texto: z.string() }).optional(),
         }),
       )

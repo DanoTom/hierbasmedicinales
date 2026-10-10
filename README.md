@@ -9,9 +9,10 @@ recetas, las precauciones y los temas que se vieron.
   cómo actúa y, bien a la vista, sus **precauciones**.
 - **Buscador** que entiende aunque escribas sin tildes o con algún error
   («cedron», «manzaníla»).
-- **Buscar por lo que te pasa**: digestión, gases, sueño, estrés, tos, resfrío…
+- **Buscar por lo que te pasa**: digestión, gases, sueño, estrés, tos, resfrío, alergia…
 - **Recetas** paso a paso, **preparaciones** (infusión, decocción, tintura…),
-  **temas del taller**, **glosario** y una página de **seguridad**.
+  **temas para entender** (sistema digestivo, estrés, inmunidad, hongos, alergias),
+  **glosario** y una página de **seguridad**.
 - **Guardadas**: tocás «Guardar» en una ficha o receta y queda en tu lista.
 - **Funciona sin internet** una vez que lo abriste, y se puede **instalar en el
   celular** como una app.
@@ -133,8 +134,8 @@ versión nueva sola.
 
 ## Láminas botánicas
 
-Las ilustraciones son láminas antiguas de **dominio público**: 21 de *Köhler's
-Medizinal-Pflanzen* (1887) y 14 de otras obras (Blackwell, *Flora Graeca*,
+Las ilustraciones son láminas antiguas de **dominio público**: 22 de *Köhler's
+Medizinal-Pflanzen* (1887) y 16 de otras obras (Blackwell, *Flora Graeca*,
 Thomé, Redouté, Sowerby, Bulliard, *Flora Danica*, *Flora Batava*…). Cada una
 se revisó mirándola y comparándola con el nombre científico de su ficha. De
 dónde sale cada una está en la página Créditos del sitio.

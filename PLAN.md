@@ -51,6 +51,9 @@ Biodiversity Heritage Library** (la red solo permite npm/PyPI). Entonces:
   más (18 de Köhler y 14 de otras obras antiguas elegidas a mano), todas
   revisadas contra el nombre científico. Quedan sin lámina astrágalo y tulsi.
   Detalle en `INFORME_CONTENIDO.md` §5.1.
+- **Actualización (10/10/2026):** guía de alergia integrada (fichas de ortiga,
+  té verde y perilla, con sus láminas). 38 de 40 fichas con lámina. La
+  precarga sin conexión guarda dos tamaños de cada lámina (4,8 MB).
 
 ## 3. Arquitectura de información
 

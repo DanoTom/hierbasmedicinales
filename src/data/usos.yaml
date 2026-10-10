@@ -117,7 +117,8 @@
   buscar: [resfrio, gripe, fiebre, catarro, sudar]
   orden: 19
   avisos:
-    - texto: "Son plantas del «camino A», que acompañan el cuadro. El astrágalo, en cambio, se usa antes del invierno y no durante una infección con fiebre."
+    - edicion: true
+      texto: "Son plantas del «camino A», que acompañan el cuadro. El astrágalo, en cambio, se usa antes del invierno y no durante una infección con fiebre."
       de: [guia-inmunidad/7, guia-inmunidad/22]
       enlace: { href: /aprender/dos-caminos/, texto: Los dos caminos }
 - id: dolor
@@ -133,10 +134,12 @@
   buscar: [defensas, inmune, inmunologico, sistema inmune, modular, prevenir]
   orden: 21
   avisos:
-    - texto: "Estas son plantas y hongos del «camino B»: se evalúan a las cuatro u ocho semanas y no sirven para cortar un resfrío. Para aliviar síntomas, mirá «Resfrío y fiebre» o «Tos y garganta»."
+    - edicion: true
+      texto: "Estas son plantas y hongos del «camino B»: se evalúan a las cuatro u ocho semanas y no sirven para cortar un resfrío. Para aliviar síntomas, mirá «Resfrío y fiebre» o «Tos y garganta»."
       de: [guia-inmunidad/6, guia-inmunidad/7]
       enlace: { href: /aprender/dos-caminos/, texto: Los dos caminos }
-    - texto: "Reforzar el sistema inmune no es lo mismo que calmar una alergia: son objetivos opuestos. Para una alergia, mirá «Alergia»."
+    - edicion: true
+      texto: "Reforzar el sistema inmune no es lo mismo que calmar una alergia: son objetivos opuestos. Para una alergia, mirá «Alergia»."
       de: guia-alergia/25
       enlace: { href: /usos/alergia/, texto: Alergia }
 - id: alergia
@@ -158,7 +161,7 @@
 
         **En niños y niñas:** no hay planta antihistamínica recomendada, consultar siempre al pediatra.
       de: guia-alergia/25
-      enlace: { href: /aprender/plantas-y-alergia/, texto: "Plantas para la alergia: cómo usarlas" }
+      enlace: { href: /aprender/plantas-y-alergia/, texto: "Plantas para la alergia: cuándo y cómo" }
 - id: energia
   nombre: Energía y cansancio
   grupo: energia

@@ -19,7 +19,7 @@ comoActua:
   - texto: "Otras acciones descriptas: estimulante del sistema nervioso central, actúa sobre el GABA, hipertensivo, genera vasodilatación periférica."
     de: guia-alergia/13
 evidencia:
-  - texto: "La evidencia de efecto antialérgico de la EGCG viene de estudios clínicos realizados en Japón, donde se evaluó su impacto sobre los síntomas de la rinitis alérgica estacional."
+  - texto: "Una de sus catequinas, la EGCG (epigalocatequina galato), tiene evidencia de efecto antialérgico en estudios clínicos realizados en Japón, donde se evaluó su impacto sobre los síntomas de la rinitis alérgica estacional."
     de: guia-alergia/13
 alertas: [cafeina, embarazo, lactancia, anticoagulantes, sedantes, antidepresivos, presion, medicacion]
 contraindicaciones:

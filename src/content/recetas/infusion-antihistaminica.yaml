@@ -27,10 +27,10 @@ conservacion:
   - texto: "Preparar idealmente en el momento. Si no es posible, se conserva hasta 2 horas a temperatura ambiente o hasta 48 horas en la heladera."
     de: guia-alergia/16
 porQue:
-  - texto: "Combina tres plantas que actúan sobre el mismo mecanismo (bloqueo de H1 e inhibición de la degranulación del mastocito) desde ángulos distintos."
+  - texto: "«Esta es la infusión que preparo habitualmente combinando tres de las plantas ya descriptas, aprovechando que actúan sobre el mismo mecanismo (bloqueo de H1 e inhibición de la degranulación del mastocito) desde ángulos distintos.»"
     de: guia-alergia/16
 precauciones:
   - texto: "Esta infusión es para adultos. No está recomendada para uso pediátrico."
     de: [guia-alergia/16, guia-alergia/21]
-  - texto: "Respetar las contraindicaciones de cada una de sus tres plantas. No hay evidencia de riesgos conocidos por combinarlas entre ellas; lo que sí hay que revisar es la lista de interacciones de cada planta con medicamentos."
+  - texto: "No hay evidencia de riesgos conocidos por combinar estas plantas entre ellas, como ya se usa en la infusión antihistamínica. Lo que sí hay que revisar es la lista de interacciones de cada planta con medicamentos, que se detalla en cada ficha."
     de: guia-alergia/24
